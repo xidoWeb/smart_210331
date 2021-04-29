@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- html/basic_code_02.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>웹기초 리스트</title>
+  <style>
+    /* css */
+    /* border : 외곽선 */
+    h2 {
+      border-width:2px;
+      background-color:#af5;}
+    #listSet { 
+      border-color:#333; border-style:dotted;}
+    #moreListSet{
+      border-color:#f00; border-style:dashed;}
+
+    div { 
+      background-color:#ffa; 
+      border-width:1px; border-style:solid; border-color:#777;  }
+    .list_box {
+      background-color: #caf;
+      border-width:5px; border-color:#a7f;
+      padding:10px; }
+    .margin_down {
+      margin-bottom:100px;}
+
+    
+    .select_list {
+      color:#f06; font-weight:900;}
+   
+    .list_select { background-color:#fff; }
+    .list_select > li > a { 
+      color:#171717; font-weight: 900; }
+
+  </style>
+</head>
+<body>
+  <!-- layout -->
+  <h1><a href="./all_contents.html" title="목차로 돌아가기">웹기초</a></h1>
+  <hr />
+  <!-- 목록만들기-->
+  <div class="list_box margin_down">
+    <h2 id="listSet">목록만들기</h2>
+    <p>목록(리스트)이란? 단순히 내용의 나열- 검정펜, 파란색, 지우개, 샤프 </p>
+    <div>
+      <h3>순서가 있는 리스트 - order list</h3>
+      <ol>
+        <li class="select_list">웹에 대한 개념 파악</li>
+        <li>자료에대한 수집 분석</li>
+        <li class="select_list">자료를 방향성을 선정</li>
+        <li class="select_list">스케치</li>
+        <li>프로토타입 제작</li>
+        <li>디자인 제작</li>
+        <li>가이드라인 제작</li>
+        <li>코딩</li>
+      </ol>
+    </div>
+    <div>
+      <h3>순서가 없는 리스트 - unorder list</h3>
+      <ul class="list_select">
+        <li>
+          <a href="#">그래픽디자인</a>
+        </li>
+        <li>
+          <a href="#">웹디자인</a>
+        </li>
+        <li>영상디자인</li>
+        <li>인테리어디자인</li>
+        <li>패션디자인</li>
+      </ul>
+    </div>
+    <div>
+      <h3>자료를 관리하는 리스트 - data list</h3>
+      <dl>
+        <dt>데이터 제목</dt>
+        <dd>관리할 내용</dd>
+        <dd>관리할 내용</dd>
+        <dd>관리할 내용</dd>
+        <dd>관리할 내용</dd>
+      </dl>
+    </div>
+  </div><!-- // 목록만들기-->
+
+  <!-- 다단목록만들기 -->
+  <div class="list_box">
+    <h2 id="moreListSet">다단목록만들기</h2>
+    <p>웹디자인에 필요한 프로그램</p>
+    <ul>
+      <li>어도비 프로그램
+        <ul>
+          <li>illustrator</li>
+          <li>photoshop</li>
+          <li>indesign</li>
+          <li>XD</li>
+        </ul>
+      </li>
+      <li>내용 정리에 필요한 프로그램
+        <ul>
+          <li>markdown - typora</li>
+          <li>vscode</li>
+        </ul>
+      </li>
+      <li>
+        <dl>
+          <dt>웹 코딩 프로그램</dt>
+          <dd>
+            <ol>
+              <li>html</li>
+              <li>css</li>
+              <li>javascript</li>
+            </ol>
+          </dd>
+        </dl>
+      </li> 
+    </ul>
+  </div>
+  <!-- // 다단목록만들기 -->
+
+  <!-- script -->
+  <script>
+    // script
+  </script>
+</body>
+</html>
