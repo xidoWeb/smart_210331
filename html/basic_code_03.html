@@ -11,10 +11,20 @@
       margin:auto; padding:20px;
       background-color:#ddd; }
 
+    table {width:100%; height:auto;}
+    table > caption { width:100%; border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:#171717; }
+
+    table,
+    table tr,
+    table td,
+    table th { 
+      border-width:1px; border-style:solid; border-color:#03a;
+      border-spacing:0; border-collapse:collapse;
+    }
   </style>
 </head>
 <body>
-  <!-- layout -->
+  <!-- layout --> 
   <h1><a href="./all_contents.html">웹기초</a></h1>
   <hr />
 
@@ -23,6 +33,18 @@
     과거 웹페이지의 디자인작업에 빠지지 않는 형식이었지만, 지금은 표자체의 기능으로만 사용할 수 있도록 변경되었다.</p>
 
   <div class="table_module">
+    
+    <table summary="21년 4월 29일 잠실에서 sk와 삼성의 야구 경기현황">
+      <caption>21년 4월 29일 잠실에서 sk와 삼성의 야구 경기현황</caption>
+
+      <tr> <th></th>  <th>sk</th> <th>삼성</th> <th>승패</th> </tr>
+      <tr> <th>1</th> <td>1</td>  <td>3</td>    <td>삼성</td> </tr>
+      <tr> <th>2</th> <td>3</td> <td>2</td>     <td>sk</td> </tr>
+      <tr> <th>3</th> <td>4</td> <td>2</td>     <td>sk</td> </tr>
+      <tr> <th>4</th> <td>3</td> <td>3</td>     <td>-</td> </tr>
+      <tr> <th>5</th> <td>1</td> <td>4</td>     <td>삼성</td> </tr>
+      
+    </table>
 
   </div>
 
