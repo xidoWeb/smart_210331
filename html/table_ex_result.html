@@ -21,6 +21,7 @@
       border-width:1px; 
       border-style:solid;
       border-color:#777;
+      border-collapse: collapse;
       }
     caption {
       width:80%; height:auto;
@@ -32,6 +33,13 @@
       font-size:20px;
       font-weight:800;
     }
+    thead { background-color: #faa;}
+    th,td  {
+      border:1px solid #333;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    th {text-transform: uppercase;}
   </style>
 </head>
 <body>
@@ -45,9 +53,117 @@
       <table summary="3사통신사 휴대폰 기기별 생산 현황표">
         <caption>통신사별 휴대폰 생산현황</caption>
 
-        <thead></thead>
-        <tbody></tbody>
-        <tfoot></tfoot>
+        <thead>
+          <tr>
+            <th>업체명</th>
+            <th>모델명</th>
+            <th>수량</th>
+            <th>생산지</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td colspan="2">합계</td>
+            <td>4,930</td>
+            <td>-</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <th rowspan="12">sk</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th rowspan="3">kt</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th rowspan="3">lg u+</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+        
       </table>
     </div><!-- // .make_telecom -->
 
