@@ -7,8 +7,9 @@
   <style>
     /* css */
     .table_module {
-      width:700px; height:500px;
-      margin:auto; padding:20px;
+      width:700px; height:auto;
+      margin:auto; margin-bottom:10px;
+      padding:20px;
       background-color:#ddd; }
 
     table {width:100%; height:auto;}
@@ -32,21 +33,32 @@
   <p>테이블 구조란? 엑셀문서에서 표현하는 것과 같이 테이블 구조의 열과 행으로 이루어진 표 형식의 문서 구조이며, <br />
     과거 웹페이지의 디자인작업에 빠지지 않는 형식이었지만, 지금은 표자체의 기능으로만 사용할 수 있도록 변경되었다.</p>
 
-  <div class="table_module">
-    
+  <div class="table_module">    
     <table summary="21년 4월 29일 잠실에서 sk와 삼성의 야구 경기현황">
       <caption>21년 4월 29일 잠실에서 sk와 삼성의 야구 경기현황</caption>
-
       <tr> <th></th>  <th>sk</th> <th>삼성</th> <th>승패</th> </tr>
       <tr> <th>1</th> <td>1</td>  <td>3</td>    <td>삼성</td> </tr>
       <tr> <th>2</th> <td>3</td> <td>2</td>     <td>sk</td> </tr>
       <tr> <th>3</th> <td>4</td> <td>2</td>     <td>sk</td> </tr>
       <tr> <th>4</th> <td>3</td> <td>3</td>     <td>-</td> </tr>
-      <tr> <th>5</th> <td>1</td> <td>4</td>     <td>삼성</td> </tr>
-      
+      <tr> <th>5</th> <td>1</td> <td>4</td>     <td>삼성</td> </tr>      
     </table>
-
   </div>
+    <!-- // table_module = -->
+
+  <div class="table_module">
+    <table summary="">
+      <caption>칸 합치기</caption>
+
+      <tr> <td>1-1</td>  <td>1-2</td>  <td>1-3</td>  <td>1-4</td>  <td>1-5</td> </tr>
+      <tr> <td>1-1</td>  <td>1-2</td>  <td>1-3</td>  <td>1-4</td>  <td>1-5</td> </tr>
+      <tr> <td>3-1</td>  <td>3-2</td>  <td>3-3</td>  <td>3-4</td>  <td>3-5</td> </tr>
+      <tr> <td>4-1</td>  <td>4-2</td>  <td>4-3</td>  <td>4-4</td>  <td>4-5</td> </tr>
+      <tr> <td>5-1</td>  <td>5-2</td>  <td>5-3</td>  <td>5-4</td>  <td>5-5</td> </tr>
+    </table>
+  </div>
+  <!-- // table_module = -->
+
 
   <!-- script -->
   <script></script>
