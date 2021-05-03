@@ -7,39 +7,73 @@
     /* css */
     .table_ex {
       width:800px; height:auto;
-      margin:auto;
-      background-color:#ddd;
+      margin:auto; padding-bottom:50px;
+      background-color:#fafafa;
     }
     .make_telecom {
       width:90%; height:auto; min-height:100px;
-      margin:auto;
-      background-color: #ccf;
+      margin:auto; 
+      background-color: transparent;
     }
 
     table {
       width:100%; height:auto;
       border-width:1px; 
       border-style:solid;
-      border-color:#777;
+      border-color:transparent;
       border-collapse: collapse;
       }
     caption {
       width:80%; height:auto;
       margin:auto;
-      margin-bottom:10px;
+      margin-bottom:50px;
       border-bottom-width:1px;
       border-bottom-style:solid;
       border-bottom-color:#777;
-      font-size:20px;
-      font-weight:800;
+      font-size:40px;  font-weight:400; color:#555;
     }
-    thead { background-color: #faa;}
+
+    thead {
+      background-color: #fff;
+      border-bottom:2px solid #a00; 
+      color:#a00; font-weight:900;
+      font-size:18px;
+      }
+    tfoot{border-bottom:2px solid #aaa;}
+    thead tr{ 
+      padding-top:5px;
+      padding-bottom:5px;}
+    thead  th{border:0;}
+
+    thead  th:after {
+      content:"";
+      width:2px; height:10px;
+      margin-top:7px; float:right;
+      background-color: #a00;
+    }
+    
+    thead  th:last-of-type:after{
+      display: none;
+    }
+
+    thead  th:last-of-type{
+      border:0;
+    }
+    
+    tbody tr {height:30px; color:#333;}
     th,td  {
-      border:1px solid #333;
+      border:1px solid #aaa;
       border-collapse: collapse;
       text-align: center;
+      border-left:0;
     }
+    td:last-of-type {border-right: 0;}
     th {text-transform: uppercase;}
+
+    .title { background-color: #ddd;}
+    .contry {width:40%;}
+    
+    
   </style>
 </head>
 <body>
@@ -53,8 +87,15 @@
       <table summary="3사통신사 휴대폰 기기별 생산 현황표">
         <caption>통신사별 휴대폰 생산현황</caption>
 
+        <colgroup>
+          <col />
+          <col />
+          <col />
+          <col class="contry" />
+        </colgroup>
+
         <thead>
-          <tr>
+          <tr>            
             <th>업체명</th>
             <th>모델명</th>
             <th>수량</th>
@@ -64,103 +105,101 @@
         <tfoot>
           <tr>
             <td colspan="2">합계</td>
-            <td>4,930</td>
-            <td>-</td>
-          </tr>
+            <td>4,930</td>            <td>-</td>          </tr>
         </tfoot>
         <tbody>
           <tr>
-            <th rowspan="12">sk</th>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th class="title" rowspan="12">sk</th>   
+            <td>아이폰 XS</td>
+            <td>100</td>
+            <td>미국</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>아이폰 Max</td>
+            <td>100</td>
+            <td>미국</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>아이폰 XR</td>
+            <td>200</td>
+            <td>미국</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>아이폰 X</td>
+            <td>100</td>
+            <td>미국</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>갤럭시 노트 9</td>
+            <td>100</td>
+            <td>한국</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>갤럭시 S9 플러스</td>
+            <td>100</td>
+            <td>중국</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>갤럭시 J4 플러스</td>
+            <td>100</td>
+            <td>중국</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>갤럭시 A9 Pro</td>
+            <td>100</td>
+            <td>일본</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>갤럭시 A9</td>
+            <td>200</td>
+            <td>일본</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>갤럭시 A9 플러스</td>
+            <td>800</td>
+            <td>한국</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>갤럭시 A7</td>
+            <td>300</td>
+            <td>베트남</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>갤럭시 J4 플러스</td>
+            <td>200</td>
+            <td>한국</td>
           </tr>
           <tr>
-            <th rowspan="3">kt</th>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th class="title" rowspan="3">kt</th>    
+            <td>갤럭시 8</td>
+            <td>420</td>
+            <td>한국</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>갤럭시 On7 Prime</td>
+            <td>110</td>
+            <td>베트남</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>갤럭시 노트5</td>
+            <td>600</td>
+            <td>중국</td>
           </tr>
           <tr>
-            <th rowspan="3">lg u+</th>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th class="title" rowspan="3">lg u+</th> 
+            <td>엘지 Q7 BTS 에디션</td>
+            <td>400</td>
+            <td>베트남</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>엘지 V40 ThinQ</td>
+            <td>600</td>
+            <td>태국</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>엘지 Q9</td>
+            <td>400</td>
+            <td>한국</td>
           </tr>
         </tbody>
         
