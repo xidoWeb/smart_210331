@@ -1,0 +1,7 @@
+@charset "UTF-8"; 
+/* setting_test.css */
+
+html,body {
+  width:100%; height:100%;
+  background-color:#fca;
+}
