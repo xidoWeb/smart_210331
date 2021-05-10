@@ -8,7 +8,26 @@ html, body {
 /* design.css */
 
 #wrap {
-  width:600px; height:500px;
+  width:600; height:500px;
   margin:auto;
+
   background-color:#afa; }
 
+  /* #header ============================ */
+  #header{
+    width:600px; height:100px; 
+    margin:auto;
+    background-color:#f07;
+  }
+
+  /* #section ============================ */
+  #section{
+    width:600px; height:300px; 
+    background-color:#fa0;
+  }
+
+  /* #footer ============================ */
+  #footer{
+    width:600px; height:100px; 
+    background-color:#03f;
+  }
