@@ -18,7 +18,8 @@ html, body {
   }
 
   /* #section ============================ */
-  #section{
+  #section {
+    /* overflow:auto; */
     width:100%; height:auto; 
     background-color:#fa0;
   }
@@ -34,6 +35,13 @@ html, body {
     background-color:#555;
   }
 
+  #section:after {
+    content: " ";
+    display:block;
+    width:100%; height:0;
+    clear:both;
+  }
+
   /* #footer ============================ */
   #footer{
     width:100%; height:100px; 
@@ -47,4 +55,7 @@ html, body {
     width:auto -> 가로크기 100% - 부모의크기를따른다
     height:auto -> 자식요소의 크기만큼 - 자식의 크기를 따른다
     
+    float: left || right;
+    블럭요소를 가로로 배치하기위해 float을 사용했다면, 
+    사용하려는 요소의 형제요소 모두 float을 사용해라!
   */
