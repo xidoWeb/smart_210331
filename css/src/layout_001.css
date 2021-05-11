@@ -35,12 +35,19 @@ html, body {
     background-color:#555;
   }
 
-  #section:after {
+  /* .horizontal {
+    margin: 0; padding: 0; border:0; 
+    clear:both;
+  } */
+
+   #section:after,
+   #section::after {
     content: " ";
     display:block;
     width:100%; height:0;
     clear:both;
-  }
+  } 
+
 
   /* #footer ============================ */
   #footer{
@@ -58,4 +65,8 @@ html, body {
     float: left || right;
     블럭요소를 가로로 배치하기위해 float을 사용했다면, 
     사용하려는 요소의 형제요소 모두 float을 사용해라!
+
+    flot을 사용하면, 해당요소는 띄워주는 역할을해서 부모요소의 높이값이 auto일경우, 실제 부모요소의 높이는 0가 된다.
+    이를 해결하기 위해 float처리된 요소의 형제요소중 마지막 요소에 clear속성을 부여하면 해결이 된다.
+    단, clear속성은 반드시 block요소이어야한다.
   */
