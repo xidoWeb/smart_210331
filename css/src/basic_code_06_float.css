@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* css/src/basic_code_06_float.css */
+
+/* reset.css */
+html,body,h1,h2,h3,h4,h5,h6,p,div,ul,li,dl,dt,dd{
+  margin:0; padding:0;
+}
+ul,ol,li{
+  list-style:none;
+}
+
+
+/*  */
+#wrap {
+  width: 800px; height:auto; min-height:900px;
+  margin:auto;
+  background-color:#dfdfdf;
+}
+
+.part {
+  width:90%; height:auto; min-height:300px;
+  margin:auto; margin-bottom:100px;
+  background-color:#faa;
+}
+h3 { width: 100%; text-align: center;}
+
+.inner { width:95%; height:auto; margin:auto;}
+.overflow_type { background-color:#cdf;}
+.other_type { background-color:#daf;}
+.height_fix_type { background-color:#dfc;}
+.ghost_type { background-color:#dca;}
+
+.overflow_type > p ,
+.other_type > p ,
+.height_fix_type > div ,
+.ghost_type > li {
+  width:49%; height:200px; 
+  border-width:1px;
+  border-style:solid;
+  border-color:#171717;
+}
