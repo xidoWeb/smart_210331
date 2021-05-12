@@ -25,17 +25,31 @@ ul,ol,li{
 h3 { width: 100%; text-align: center;}
 
 .inner { width:95%; height:auto; margin:auto;}
-.overflow_type { background-color:#cdf;}
+.overflow_type {
+  overflow:auto; height:200px;
+  background-color:#cdf;}
+
 .other_type { background-color:#daf;}
-.height_fix_type { background-color:#dfc;}
+.height_fix_type {height:900px; background-color:#dfc;}
 .ghost_type { background-color:#dca;}
 
-.overflow_type > p ,
-.other_type > p ,
-.height_fix_type > div ,
+.overflow_type > p,
+.other_type > p,
+.height_fix_type > div,
 .ghost_type > li {
+  float:left;
   width:49%; height:200px; 
   border-width:1px;
   border-style:solid;
   border-color:#171717;
+}
+
+.clear { width:100%; height:0; clear:both; }
+
+.clearfix:after,
+.clearfix::after {
+  content:" ";
+  display: block;
+  width: 100%; height: 0;
+  clear: both;
 }
