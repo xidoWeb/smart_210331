@@ -2,6 +2,8 @@
 /* reset.css */
 * { margin:0; padding:0; border:0; outline:0; }
 
+/* common.css */
+
 
 /* ------------------------ */
 #wrap {
@@ -18,7 +20,24 @@
 
 /* #section ------------------------------- */
 #section {
-  width:100%; height:300px;
+  width:100%; height:auto;
+}
+
+/* 
+ - float을 사용하면 float을 감싸고 있는 부모요소의 높이값이 auto일 경우에 실제 높이는 0로 처리가됨
+ - 이에 float을 사용하는 형태의 요소들중 마지막요소는 float을 사용하지 않고 clear:both를 사용한다.
+ - clear:both는 반드시 형태를 가지고 있어야하며, 내용상 요소로 담을 수 없는 경우에는 가상의 요소로 처리하게 한다
+ - 이때 발생시키는 가상의 요소는 ::after이다.
+ - ::after의 속성에는 반드시 content:""; 속성을 꼭꼭꼭 입력해야한다.
+*/
+
+/* 선택자 내부의 끝에 이유불문 가상으로 태그 붙이기 */
+#section:after,
+#section::after {
+  content:" ";
+  display:block;
+  width:100%; height:0;
+  clear:both;
 }
 
   .sect_01 {
@@ -32,10 +51,21 @@
     background-color:#777;
   }
 
+
+
 /* #aside -------------------------------- */
 #aside {
-  width:100%; height:300px;
+  width:100%; height:auto;
 }
+
+#aside:after,
+#aside::after{
+  content:" ";
+  display: block;
+  width: 100%; height: 0;
+  clear: both;
+}
+
   .side_01 {
     float:left;
     width:33.333333%; height:300px; 
@@ -51,6 +81,8 @@
     width:33.333333%; height:300px; 
     background-color:#a7c;
   }
+
+
 
 /* #article ----------------------------- */
 #article { 
