@@ -33,10 +33,45 @@ dt{width:100%; height:30px;
 dd {width:100%; height:30px;   margin-bottom:10px; 
   background-color: #7cf; }
 
-/* ----------------------------------- */
-
+/* 형제 선택자----------------------------------- */
 .siblings dt:hover + dd {
   background-color: #fc7; }
 
 .siblings dt:hover ~ dd {
   font-size:1.2rem;  font-weight:900; }
+
+/* nth-child ------------------------------------ */
+
+ul, ol, li { list-style:none; }
+
+.child { 
+  width:100%; height:auto; 
+  padding:10px; box-sizing: border-box;
+}
+
+.child > li {
+  width: 100%; height:30px;
+  margin-bottom:10px; 
+  text-indent:20px;
+  background-color: #fff;
+}
+
+.one {  font-weight:900; }
+/* 첫번째 */
+.child > li:first-child {  color:#f07;}
+/* 5번째 */
+.child > li:nth-child(5) {  font-size:1.3rem;}
+/* 마지막번째 */
+.child > li:last-child {  color:#0aa;}
+/* 뒤에서2번째 */
+.child > li:nth-last-child(2) {  background-color: #acf;}
+/* 3번째 마다 */
+.child > li:nth-child(3n) { text-indent:3rem; }
+/* 3번째 마다 중 2번째 */
+.child > li:nth-child(3n-1) { border-radius:20px; }
+.child > li:nth-child(3n+2) { text-shadow:1px 1px 1px #333; }
+
+/* 
+:nth-child()는 반드시 연속되어진 요소들 사이에서 수행할 것
+*/
+
