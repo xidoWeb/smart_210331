@@ -75,3 +75,14 @@ ul, ol, li { list-style:none; }
 :nth-child()는 반드시 연속되어진 요소들 사이에서 수행할 것
 */
 
+/* nth-of-type ------------------------------------------------ */
+
+.of-type dt:nth-of-type(2) {  background-color: #fa0; }
+.of-type dd:nth-of-type(3n){ color:#fff; }
+/* 
+:nth-of-type( ) 형제중 동일요소 중 순번을 찾아 처리
+
+:first-of-type
+:last-of-type
+:nth-last-of-type()
+*/
