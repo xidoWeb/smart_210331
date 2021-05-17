@@ -12,7 +12,7 @@ ul {
 
 li {
   width:100%; height:30px;  background-color: #fff;  margin-bottom:10px;}
-  
+
 .m_1, 
 .m_2,
 .m_3 { font-weight:900; color:#777; }
@@ -36,4 +36,12 @@ li {
 .m_6 > a {color:#777;}
 .m_6 > a:visited {color:#4fc;}
 
-input:checked + span {font-size:20px; }
+.m_7 > input:checked + span {font-size:20px; }
+
+.m_8 {height:auto;}
+.m_8::first-letter {
+  color:#05a; font-weight:900; font-size:2rem;
+}
+.m_8::first-line {
+  color:#f00;
+}
