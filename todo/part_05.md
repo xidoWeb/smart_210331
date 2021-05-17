@@ -39,6 +39,12 @@
 
 - 레이아웃 파일 2 코딩
 
+#### 참고링크
+
+- [css-선택자 게임](https://flukeout.github.io/)
+- [emmet.io](https://docs.emmet.io/cheat-sheet/)
+- [html단축코드-emmet게임](https://ahndohun.github.io/emmet-game/)
+
 ---
 
 **2021.05.18**
