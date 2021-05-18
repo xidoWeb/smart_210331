@@ -51,7 +51,11 @@
 
 #### 코딩과정
 
-- [ ] **[MPBO](../work/b-02_mpbo.pdf)** : margin, padding, border, outline 개념 파악 1
+- [x] **[MPBO](../work/b-02_mpbo.pdf)** : margin, padding, border, outline 개념 파악 1
 - [ ] [layout-2](../work/c-02_layout_basic_02.jpg) 풀이
-- [ ] [layout_1 확장판 (1-2)](../work/c-01_layout_basic_01-2.pdf)
+- [ ] [layout_1 확장판 (1-2)](../work/c-01_layout_basic_01-2.pdf) - (수정전)
+
+#### 과제
+
+- [ ] [layout-3 제작](../work/c-02_layout_basic_03.pdf) - **HTML 문서명 : ** layout_003.html (css동일)
 
