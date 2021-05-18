@@ -1,0 +1,69 @@
+/* css/src/basic_code_10_mpbo.css */
+
+
+#wrap {
+  width: 1000px; height:auto;
+  margin:auto;
+  background-color: #ddd;
+}
+
+h1 {
+  width: 100%; height: auto;
+  background-color: #ccf;
+  text-align: center; font-size:1.3rem;
+}
+
+h2 {
+  width: 80%; height: auto;
+  margin:auto;
+  border-bottom:1px solid #333;
+}
+
+.part {
+  width:98%; height:auto; 
+  margin:auto; 
+  border:1px solid #333;
+  background-color: #fff;
+}
+
+h3 {
+  background-color: #ddd;
+}
+
+ul {
+  width: 100%; height:auto;
+  background-color: #fcc;
+}
+li {
+  float:left;
+  width:100px; height:100px;
+  background-color: #0cf;
+  background-image:linear-gradient(45deg, #0cf, #05c);
+  color:#fff; font-weight: 900;
+}
+li>a {
+  display: block; 
+  width: 100%; height: 100%;
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* -------------------------------------------------- */
+/* margin */
+
+.margin > li:nth-child(1) {  margin:10px; }
+.margin > li:nth-child(2) {  margin:20px 40px; }
+.margin > li:nth-child(3) {  margin:10px 30px 50px; }
+.margin > li:nth-child(4) {  margin:10px 20px 30px 40px; }
+
+
+/* margin
+    - margin은 공간 여백을 주는 속성
+    - margin:10px; -> 위/오른/아래/왼 모두 10px만큼 공간
+    - margin:20px 40px -> 위/아래는 20px, 좌/우는 40px
+    - margin:10px 30px 50x -> 위 10px, 좌/우 30px, 아래 50px
+    - margin:10px 20px 30px 40px -> 시계방향으로 위에서부터 순서대로
+
+    - 단, margin중 top부분은 float이 아니라면 부모요소를 끌고 내려온다
+    - float을 적용한 상태에서는 margin이 겹치면 둘 모두 활성화
+    - float이 없는 기본상태에서는 큰값만 적용
+*/
