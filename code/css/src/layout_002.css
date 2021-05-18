@@ -16,12 +16,17 @@ ul,ol,li { list-style:none; }
 #wrap {
   width:600px; height:auto;
   margin:auto;
-  background-color:transparent;
+  background-color:#ccc;
 }
 
 /* #header ------------------------------- */
 #header {
-  width:100%; height:auto;
+  width:100%;
+  /* width:calc(100% - 40px);  */
+  height:auto;
+  padding-top:30px;  padding-left:20px; 
+  padding-bottom:20px; padding-right:20px;
+  box-sizing: border-box;
   background-color: #f06;
 }
 
