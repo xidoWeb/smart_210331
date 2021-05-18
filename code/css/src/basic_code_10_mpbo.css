@@ -4,6 +4,7 @@
 #wrap {
   width: 1000px; height:auto;
   margin:auto;
+  padding-bottom:500px;
   background-color: #ddd;
 }
 
@@ -137,3 +138,51 @@ li>a {
   box-sizing:border-box;
 }
 
+/* ---------------------------------- */
+/* outline */
+.outline >li:nth-child(1) {
+  outline-width:20px;
+  outline-style:solid;
+  outline-color:aquamarine;
+}
+.outline > li:nth-child(2) {
+  outline:5px dotted #fa0;
+  border-radius:20px;
+  /* border:5px solid #333; */
+  /* outline-top-width:0;
+  outline-right-color:#000;
+  outline-bottom-style:double; */
+}
+
+.outline > li:nth-child(3) {
+  outline:3px solid #fff;
+  outline-offset:-1rem;
+}
+/* ----------------------------- */
+.outline2 > li {
+  margin-right:10px; padding:10px; box-sizing: border-box;
+  border-radius:15px;
+  text-align: center; line-height:80px;
+}
+
+.outline2 > li > a:focus { 
+  background-color: rgba(50,50,50,0.7);
+  outline:10px solid #fff;
+  color:#fff;  
+}
+
+/* outline
+  - outline은 margin,padding,border와 다르게 부피가 없다.
+  - 눈에 보이는 형태는 크기를 가지지만, 다른 주변의 요소들에게는 영향을 미치지 않는다.
+  - outline은 형태는 존재하지만 부피는 존재하지 않기에, 안개같은 형상
+  - outline은 layout구성에서 사용하지는 않는다.
+  - 접근성의 용도로 주로 사용한다. (focus를 잡는용도)
+  - outline은 오로지 4면을 모두 사용하게되는 형태(부분은 사용할 수 없다)
+ */
+
+
+ /* focus처리
+  - 특수하게 tabindex 속성을 사용하지 않는다면
+  - 기본은 모두 a요소 또는 form의 내부요소들이 forcus 처리가 가능
+  - form내부 focus요소 : input, button, textarea, select
+ */
