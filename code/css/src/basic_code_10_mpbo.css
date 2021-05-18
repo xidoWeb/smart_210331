@@ -66,9 +66,6 @@ li>a {
   margin:20px; margin-top:5px; margin-right:10px;
 }
 
-
-
-
 /* margin
     - margin은 공간 여백을 주는 속성
     - margin:10px; -> 위/오른/아래/왼 모두 10px만큼 공간
@@ -80,3 +77,63 @@ li>a {
     - float을 적용한 상태에서는 margin이 겹치면 둘 모두 활성화
     - float이 없는 기본상태에서는 큰값만 적용
 */
+
+/* --------------------------------------------------------- */
+/* padding */
+.padding > li:nth-child(1) { padding:10px; }
+.padding > li:nth-child(2) { padding:20px 40px; }
+.padding > li:nth-child(3) { padding:20px 40px 80px; }
+.padding > li:nth-child(4) { padding:10px 20px 30px 40px; }
+.padding > li:nth-child(5) { padding:20px; padding-left:40px; }
+.padding > li:nth-child(6) { padding:20px; box-sizing:content-box; }
+.padding > li:nth-child(7) { padding:20px; box-sizing:border-box; }
+
+/* .padding > li > a { background-color:transparent;} */
+/* pading
+  - padding은 공간의 면적이 늘어나는 것
+  - 기본 값은 margin의 개념과 똑같다.
+  - 단, padding:auto; 는 없는 기능 
+*/
+
+/* ----------------------------------------------- */
+/* border */
+
+.border > li:nth-child(1) {
+  border-width:10px;
+  border-style:solid; /* dashed dotted double */
+  border-color:#c0f;
+}
+
+.border > li:nth-child(2) {
+  border:10px   solid   #cfa;
+}
+
+.border > li:nth-child(3) {
+  border-top:10px solid #77a;
+  border-right:20px solid #ff5; 
+}
+
+.border > li:nth-child(4){
+  border:10px solid #cf9;
+  border-top-width:5px;
+  border-bottom-color:#333;
+  border-left-style:dotted;
+}
+
+.border > li:nth-child(5) {
+  width:0; height:0;
+  border:50px solid #fff;
+  border-top-color:transparent;
+  border-right-color:transparent;
+  border-bottom-color:transparent;
+  background-color: transparent;
+  background-image: none;
+  overflow: hidden;
+}
+
+.border > li:nth-child(6) {
+  width:100px; height:100px;
+  border:15px solid #ff5;
+  box-sizing:border-box;
+}
+
