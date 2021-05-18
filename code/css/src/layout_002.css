@@ -1,16 +1,16 @@
 /* layout_002.css */
 /* reset.css */
-html, body, 
+/* html, body, 
 h1,h2,h3,h4,h5,h6,
 div, ul, ol, li, dl, dt, dd { 
   margin:0; padding:0; border:0; outline:0; }
-ul,ol,li { list-style:none; }
+ul,ol,li { list-style:none; } */
 
 /* common.css */
-.clearfix:after, 
+/* .clearfix:after, 
 .clearfix::after {
   content:" "; display: block; width: 100%; height: 0; clear:both;
-}
+} */
 
 /* ------------------------ */
 #wrap {
@@ -24,15 +24,15 @@ ul,ol,li { list-style:none; }
   width:100%;
   /* width:calc(100% - 40px);  */
   height:auto;
-  padding-top:30px;  padding-left:20px; 
-  padding-bottom:20px; padding-right:20px;
+  padding:20px;
+  padding-top:30px;
   box-sizing: border-box;
   background-color: #f06;
 }
 
 .logo {
   float:left;
-  width:120px; height:100px;
+  width:120px; height:50px;
   background-color: #ccc;
 }
 .logo > a {
@@ -43,22 +43,26 @@ ul,ol,li { list-style:none; }
 
 .navigation {
   float:right;
-  width:400px; height:100px;
+  width:400px; height:auto;
+  padding-top:10px;
   background-color: #fc0;
 }
   .navigation ul {
-    width: 100%; height: 100%;
-    background-color: #cdd;
+    width: 100%; height:auto;
   }
   .navigation li {
     float:left;
-    width:16.666666%; height:100%;
-    padding:10px; box-sizing: border-box;
-    background-image:linear-gradient(45deg, #cca, #adf);
+    width:50px; height:40px;
+    margin-right:20px;
+    /* padding:10px; box-sizing: border-box; */
+    background-image:linear-gradient(45deg, #79a, #57f);
   }
+  .navigation li:last-child {margin-right:0}
+
   .navigation li > a {
     display:block;
     width:100%; height:100%;
+    color:#fff;
     background-color: rgba(100,100,100, 0.3);
     /* background-color: #fff;
     opacity:0.5; */
