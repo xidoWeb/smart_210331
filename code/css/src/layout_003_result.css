@@ -1,7 +1,7 @@
 /* css/src/layout_003_result.css */
 
 #wrap {
-  width:1600px; height:auto; min-height:500px;
+  width:95%; min-width:1600px; height:auto; min-height:500px;
   margin:auto; background-color: #dfdfdf;
 }
 
@@ -39,9 +39,24 @@
 
 /* #adViewBox =============== */
 #adViewBox {
+ position: relative;
  height:750px;
+ padding-top:28px; box-sizing: border-box;
  background-color: rgba(189,22,139, 0.2);
 }
+  .view_indicator {
+    position: absolute;
+    bottom:28px; left:0; right:0;
+    width: 850px; height: 60px;
+    margin:auto;
+    background-color: #47a;
+  }
+  .view_outer {
+    width: 1300px; height: 600px;
+    margin:auto; 
+    background-color: #7cf;
+  }
+
 
 /* #localNavBox =============== */
 #localNavBox {
