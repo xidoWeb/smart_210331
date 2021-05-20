@@ -1,0 +1,45 @@
+/* css/src/basic_code_11_position.css */
+
+#wrap {
+  width: 900px; height: 500px;
+  margin:auto; margin-bottom:1000px;
+  background-color: #ddd;
+}
+
+.part {
+  width:90%; height:200px;
+  margin:auto; margin-top:20px;
+  padding:20px; box-sizing: border-box;
+  border-top:1px solid #777;
+  background-color: #fff;
+}
+
+.part > ul {
+  width: 100%; height:100%;
+  border:1px solid #07a;
+  box-sizing: border-box;
+}
+
+.part li {
+  float:left;
+  width:100px; height:100px;
+  text-align: center;
+  line-height:100px;
+  color:#fff;
+  font-weight: 900;
+  cursor:pointer;
+}
+
+.part li:hover {
+  color:#333;
+  background-color: #fa0;
+}
+
+
+
+.default { background-color:#777;}
+.static { background-color:#167;}
+.fixed { background-color:#761;}
+.absolute { background-color:#f06;}
+.absolute2 { background-color:#60f;}
+.relative { background-color:#07f;}
