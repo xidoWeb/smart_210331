@@ -1,9 +1,10 @@
 /* css/src/basic_code_11_position.css */
 
 #wrap {
-  width: 900px; height: 500px;
-  margin:auto; margin-bottom:1000px;
+  width: 900px; height: 5000px;
+  margin:auto; 
   background-color: #ddd;
+  background-image:linear-gradient(#ddd, #cfd, #999);
 }
 
 .part {
@@ -35,11 +36,53 @@
   background-color: #fa0;
 }
 
-
-
 .default { background-color:#777;}
 .static { background-color:#167;}
 .fixed { background-color:#761;}
 .absolute { background-color:#f06;}
 .absolute2 { background-color:#60f;}
 .relative { background-color:#07f;}
+
+/* ----------------------------------------- */
+
+.part {
+  position:relative;
+  z-index:100;
+}
+/* .part ul {
+  position:relative;
+  z-index:10;
+} */
+
+.static {
+  position:static;
+  top:100px; left:20000px; z-index:-10000;
+}
+
+.fixed {
+  position: fixed;
+  top:0; left:0; 
+  z-index:1;
+}
+.absolute { 
+  position: absolute; 
+  top:50px; left:50px;
+}
+
+.absolute2 {
+  position: absolute;
+  bottom:100px; left:50px;
+  z-index:-1;
+}
+.relative {
+  position: relative;
+  top:110px; right:-200px;
+}
+
+/* 
+ * position은 정말 필요한 경우 사용
+ * position기능은 마지막에 필요한 위치를 파악해서 각위치의 설계를 한 다음에 사용
+ * position의 z-index값은 가장 큰 범위에서부터 설계하는 것이 좋다.
+ * inline요소 특히 a,input,button 같은 focus가 가능한 요소는 position 을 사용하지 않는것을 권장
+ 
+ */
