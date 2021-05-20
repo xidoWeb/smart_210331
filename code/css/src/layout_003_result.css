@@ -63,15 +63,32 @@
 /* #localNavBox =============== */
 #localNavBox {
  height:250px;
+ padding:18px 50px; box-sizing: border-box;
  background-color: rgba(8,204,111, 0.2);
  margin-bottom:50px;
 }
 
+  .local_nav_outer {
+    width:100%; max-width:1600px; height: 196px;
+    margin:auto;
+    background-color: #7cf;
+  }
 /* #popularContentBox =============== */
 #popularContentBox {
  height:600px;
  background-color: rgba(26,250,125, 0.2);
 }
+
+  h3 {
+    width:1300px; height:50px;
+    margin:auto; margin-bottom:30px;
+    background-color: #57a;
+  }
+  .pop_con_area {
+    width: 1300px; height:470px;
+    margin:auto;
+    background-color: #7cf;
+  }
 
 /* #newContentBox =============== */
 #newContentBox {
@@ -79,6 +96,7 @@
  background-color: rgba(56,144,172, 0.2);
  margin-bottom: 80px;
 }
+
 
 /* #recommendedConttentBox =============== */
 #recommendedConttentBox {
