@@ -13,26 +13,28 @@
 /* #headBox =============== */
 #headBox {
  height:150px;
+ padding:34px 50px 0; box-sizing: border-box;
  background-color: rgba(7,13,29, 0.2);
 }
   h1 { 
     float:left;
     width:250px; height:80px;
-    margin-top:34px; margin-left:50px; 
+    /* margin-top:34px; margin-left:50px;  */
     background-color: #7cf;
   }
 
   .global_nav {
     float:left;
     width:850px; height:80px;
-    margin-top: 34px; margin-left: 75px;
+    /* margin-top: 34px; margin-left: 75px; */
+    margin:0 75px;
     background-color: #7cf;
   }
 
   .user_nav {
     float:left;
     width:250px; height:80px;
-    margin-top:34px; margin-left: 75px;
+    /* margin-top:34px; margin-left: 75px; */
     background-color: #7cf;
   }
 
