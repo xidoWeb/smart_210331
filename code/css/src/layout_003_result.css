@@ -38,13 +38,31 @@
     background-color: #7cf;
   }
 
+  /* -------- */
   .global_nav {
     position: absolute;
     top:34px; left:0; right:0; margin:auto;
-    width:850px; height:80px;
+    width:850px; height:auto; min-height:80px;
+    padding:5px 10px; box-sizing: border-box;
     background-color: #59f;
   }
+    .global_nav ul {
+      width: 100%; height: auto;
+      background-color: #fff;
+    }
+    .global_nav li {
+      float:left; 
+      width:150px; height:70px;
+      margin-left:20px;
+      background-color: #fc0;
+    }
+    .global_nav li:first-child{
+      margin-left:0;
+    }
 
+  .global_nav a {}
+
+  /* -------- */
   .user_nav {
     float:right;
     width:250px; height:80px;
