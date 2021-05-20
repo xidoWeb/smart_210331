@@ -1,0 +1,6 @@
+/* css/src/layout_003_result.css */
+
+#wrap {
+  width:1600px; height:auto; min-height:500px;
+  margin:auto; background-color: #dfdfdf;
+}
