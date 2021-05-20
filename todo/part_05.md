@@ -47,15 +47,32 @@
 
 ---
 
-**2021.05.18**
+### **2021.05.18**
 
 #### 코딩과정
 
 - [x] **[MPBO](../work/b-02_mpbo.pdf)** : margin, padding, border, outline 개념 파악 1
-- [ ] [layout-2](../work/c-02_layout_basic_02.jpg) 풀이
+- [ ] [layout-2](../work/c-02_layout_basic_02.jpg) 풀이 -> 핵심요약설명 (필요시 풀이진행)
 - [ ] [layout_1 확장판 (1-2)](../work/c-01_layout_basic_01-2.pdf) - (수정전)
 
 #### 과제
 
 - [ ] [layout-3 제작](../work/c-02_layout_basic_03.pdf) - **HTML 문서명 : ** layout_003.html (css동일)
+
+---
+
+### 2021.05.20
+
+#### 코딩과정
+
+- [ ] [layout-3 풀이](../work/c-02_layout_basic_03.pdf) - **HTML 문서명 : ** layout_003_result.html (css동일)
+- [ ] position 개념파악
+
+#### 과제
+
+- 시험 제출안 : 프로젝트 웹페이지 디자인 (최소: 메인, 1600,1920) 제작
+
+---
+
+
 
