@@ -3,7 +3,7 @@
 /* common */
 .blind {
   display: block;
-  width: 0; height: 0; 
+  width:0; height:0; 
   position: absolute; z-index: -1;
   overflow:hidden;
 }
@@ -89,7 +89,8 @@
   }
 
 /*===========================================  */
-.issue_content_wrap {
+.issue_content_wrap,
+.community_wrap {
   width: 100%; height:auto;
 }
 /* #popularContentBox =============== */
@@ -149,17 +150,29 @@
 
 /* #miniAdBox =============== */
 #miniAdBox {
- height:400px;
+ height:auto; min-height:400px;
  margin-bottom: 80px;
+ padding:40px; box-sizing: border-box;
  background-color: rgba(51,42,228, 0.2);
+}
+
+.mini_ad_outer {
+  width:100%; max-width: 1500px; height:300px;
+  margin:auto;
+  background-color: #7cf;
 }
 
 /* #footBox =============== */
 #footBox {
- height:200px;
+ height:auto;
+ padding:22px 0;
  background-color: rgba(232,45,10, 0.2);
 }
-
+.foot_con_area{
+  width: 1300px; height: 140px;
+  margin: auto;
+  background-color: #7cf;
+}
 
 
 
