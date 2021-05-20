@@ -4,3 +4,81 @@
   width:1600px; height:auto; min-height:500px;
   margin:auto; background-color: #dfdfdf;
 }
+
+#wrap > div {
+  width:100%;
+}
+
+
+/* #headBox =============== */
+#headBox {
+ height:150px;
+ background-color: rgba(7,13,29, 0.2);
+}
+
+/* #adViewBox =============== */
+#adViewBox {
+ height:750px;
+ background-color: rgba(189,22,139, 0.2);
+}
+
+/* #localNavBox =============== */
+#localNavBox {
+ height:250px;
+ background-color: rgba(8,204,111, 0.2);
+ margin-bottom:50px;
+}
+
+/* #popularContentBox =============== */
+#popularContentBox {
+ height:600px;
+ background-color: rgba(26,250,125, 0.2);
+}
+
+/* #newContentBox =============== */
+#newContentBox {
+ height:900px;
+ background-color: rgba(56,144,172, 0.2);
+ margin-bottom: 80px;
+}
+
+/* #recommendedConttentBox =============== */
+#recommendedConttentBox {
+ height:800px;
+ background-color: rgba(14,133,185, 0.2);
+ margin-bottom: 80px;
+}
+
+/* #communityBox =============== */
+#communityBox {
+ height:80px;
+ background-color: rgba(215,90,106, 0.2);
+}
+
+/* #miniAdBox =============== */
+#miniAdBox {
+ height:400px;
+ margin-bottom: 80px;
+ background-color: rgba(51,42,228, 0.2);
+}
+
+/* #footBox =============== */
+#footBox {
+ height:200px;
+ background-color: rgba(232,45,10, 0.2);
+}
+
+
+
+
+
+/* CSS 속성 작성 순서
+ * display : block, inline, inline-block, none
+ * position, top, left, right, bottom, z-index
+ * width - height
+ * margin - padding - border - box-sizing
+ * font
+ * background
+ * effect
+ * etc
+*/
