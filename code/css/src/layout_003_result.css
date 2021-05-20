@@ -12,6 +12,7 @@
 
 /* #headBox =============== */
 #headBox {
+ position:relative;
  height:150px;
  padding:34px 50px 0; box-sizing: border-box;
  background-color: rgba(7,13,29, 0.2);
@@ -24,9 +25,10 @@
   }
 
   .global_nav {
-    float:left;
+    position: absolute;
+    top:34px; left:0; right:0; margin:auto;
     width:850px; height:80px;
-    background-color: #7cf;
+    background-color: #59f;
   }
 
   .user_nav {
