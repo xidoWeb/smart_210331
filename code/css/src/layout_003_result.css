@@ -15,6 +15,26 @@
  height:150px;
  background-color: rgba(7,13,29, 0.2);
 }
+  h1 { 
+    float:left;
+    width:250px; height:80px;
+    margin-top:34px; margin-left:50px; 
+    background-color: #7cf;
+  }
+
+  .global_nav {
+    float:left;
+    width:850px; height:80px;
+    margin-top: 34px; margin-left: 75px;
+    background-color: #7cf;
+  }
+
+  .user_nav {
+    float:left;
+    width:250px; height:80px;
+    margin-top:34px; margin-left: 75px;
+    background-color: #7cf;
+  }
 
 /* #adViewBox =============== */
 #adViewBox {
