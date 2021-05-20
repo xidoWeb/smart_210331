@@ -7,6 +7,11 @@
   position: absolute; z-index: -1;
   overflow:hidden;
 }
+
+.first_float > li{ float:left; }
+.first_float > li:first-child { margin-left:0; }
+
+
 /* I.R 기법이란? image replace의 약자로
   - 해당하는 요소에 이미지로 글자를 대처하여 사용하는 기법
   - 필요한 내용이지만 눈에 보이지 않게 처리하는 방법
@@ -16,7 +21,7 @@
 
 #wrap {
   width:95%; min-width:1600px; height:auto; min-height:500px;
-  margin:auto; background-color: #dfdfdf;
+  margin:auto;
 }
 
 #wrap > div {
@@ -48,19 +53,20 @@
   }
     .global_nav ul {
       width: 100%; height: auto;
-      background-color: #fff;
     }
     .global_nav li {
-      float:left; 
       width:150px; height:70px;
       margin-left:20px;
       background-color: #fc0;
     }
-    .global_nav li:first-child{
-      margin-left:0;
-    }
 
-  .global_nav a {}
+  .global_nav a {
+    display: block;
+    width: 100%; height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    line-height:70px;
+  }
 
   /* -------- */
   .user_nav {
@@ -79,17 +85,39 @@
   .view_indicator {
     position: absolute;
     bottom:28px; left:0; right:0;
-    width: 850px; height: 60px;
+    width: 850px; height:auto;
     margin:auto;
+    padding:10px; box-sizing: border-box;
     background-color: #47a;
   }
+  .view_indicator ul {
+    width: 100%; height:auto;
+  }
+  .view_indicator li {
+    width: auto; height:auto;
+    margin-left:20px;
+  }
+
+  .view_indicator a {
+    display: block;
+    width:120px; height:40px;
+    border-radius:30px;
+    background-color: #fc0;
+  }
+  .view_indicator a:focus,
+  .action a {
+    /* width:200px; */
+    background-color: #afa;
+  }
+
+
   .view_outer {
     width: 1300px; height: 600px;
     margin:auto; 
     background-color: #7cf;
   }
 
-  a { display: inline-block; background-color: #fff;}
+  a { display: inline-block; background-color: #afa;}
 
 
 /* #localNavBox =============== */

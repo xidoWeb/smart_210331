@@ -41,7 +41,7 @@
       <div class="global_nav">
         <h2  class="blind">전체 네비게이션 메뉴</h2>
         <!-- ul>li*5>a[href=#]{link_$$} -->
-        <ul>
+        <ul class="clearfix first_float">
           <li><a href="#">link_01</a></li>
           <li><a href="#">link_02</a></li>
           <li><a href="#">link_03</a></li>
@@ -59,26 +59,25 @@
       <h2 class="blind">메인 광고영역</h2>
 
       <div class="view_indicator">
-        <a href="#view_01">해당광고 찾아가기</a>
-        <a href="#view_02">해당광고 찾아가기</a>
-        <a href="#view_03">해당광고 찾아가기</a>
+        <!-- ul>li*6>a[href="#view_0$"]>span.blind{광고 $번째} -->
+        <ul class="clearfix first_float">
+          <li class="action"><a href="#view_01"><span class="blind">광고 1번째</span></a></li>
+          <li><a href="#view_02"><span class="blind">광고 2번째</span></a></li>
+          <li><a href="#view_03"><span class="blind">광고 3번째</span></a></li>
+          <li><a href="#view_04"><span class="blind">광고 4번째</span></a></li>
+          <li><a href="#view_05"><span class="blind">광고 5번째</span></a></li>
+          <li><a href="#view_06"><span class="blind">광고 6번째</span></a></li>
+        </ul>
       </div>
 
       <div class="view_outer" >
-        <div class="view_con_01">
-          <h3>첫번째 대표 광고</h3>
-          <div><a href="#" id="view_01" tabindex="-1">광고 더보기</a></div>
-        </div>
-
-        <div class="view_con_02">
-          <h3>두번째 대표 광고</h3>
-          <div><a href="#" id="view_02" tabindex="-1">광고 더보기</a></div>
-        </div>
-
-        <div class="view_con_03">
-          <h3>세번째 대표 광고</h3>
-          <div><a href="#" id="view_03" tabindex="-1">광고 더보기</a></div>
-        </div>
+        <!-- div#view_$$*6>h3{광고타이틀}+p{설명}+div.more>a[href="#"]{해당광고 더보기} -->
+        <div id="view_01">view_01</div>
+        <div id="view_02">view_02</div>
+        <div id="view_03">view_03</div>
+        <div id="view_04">view_04</div>
+        <div id="view_05">view_05</div>
+        <div id="view_06">view_06</div>
 
       </div>
     </div>
