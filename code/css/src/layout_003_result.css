@@ -1,5 +1,19 @@
 /* css/src/layout_003_result.css */
 
+/* common */
+.blind {
+  display: block;
+  width: 0; height: 0; 
+  position: absolute; z-index: -1;
+  overflow:hidden;
+}
+/* I.R 기법이란? image replace의 약자로
+  - 해당하는 요소에 이미지로 글자를 대처하여 사용하는 기법
+  - 필요한 내용이지만 눈에 보이지 않게 처리하는 방법
+*/
+
+/* ------------------------- */
+
 #wrap {
   width:95%; min-width:1600px; height:auto; min-height:500px;
   margin:auto; background-color: #dfdfdf;
@@ -12,7 +26,7 @@
 
 /* #headBox =============== */
 #headBox {
- position:relative;
+ position:relative; z-index: 0;
  height:150px;
  padding:34px 50px 0; box-sizing: border-box;
  background-color: rgba(7,13,29, 0.2);
@@ -73,6 +87,11 @@
     margin:auto;
     background-color: #7cf;
   }
+
+/*===========================================  */
+.issue_content_wrap {
+  width: 100%; height:auto;
+}
 /* #popularContentBox =============== */
 #popularContentBox {
  height:600px;
@@ -84,30 +103,47 @@
     margin:auto; margin-bottom:30px;
     background-color: #57a;
   }
-  .pop_con_area {
-    width: 1300px; height:470px;
+
+  .container {
+    /* min-width, max-width 쓰기전 반드시 width:가변값; 을 쓰자 */
+    /* min-height, max-height 쓰기전 반드시 height:가변값; 을 쓰자 */
+    width: 1300px; height:auto; min-height:300px;
     margin:auto;
     background-color: #7cf;
+  }
+
+
+  .pop_con_area {
+    height:470px;
   }
 
 /* #newContentBox =============== */
 #newContentBox {
  height:900px;
- background-color: rgba(56,144,172, 0.2);
  margin-bottom: 80px;
+ padding-top:60px; box-sizing: border-box;
+ background-color: rgba(56,144,172, 0.2);
 }
 
+.new_con_area {
+   height:700px;  
+}
 
 /* #recommendedConttentBox =============== */
 #recommendedConttentBox {
- height:800px;
- background-color: rgba(14,133,185, 0.2);
+ height:auto; min-height:800px;
  margin-bottom: 80px;
+ padding-top: 30px; box-sizing: border-box;
+ background-color: rgba(14,133,185, 0.2);
 }
+  .recom_con_area{
+    min-height:440px;
+  }
 
 /* #communityBox =============== */
 #communityBox {
- height:80px;
+ height:auto; min-height:800px;
+ padding-top:60px; box-sizing: border-box;
  background-color: rgba(215,90,106, 0.2);
 }
 
