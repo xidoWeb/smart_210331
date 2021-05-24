@@ -1,16 +1,5 @@
 /* css/src/layout_003_result.css */
 
-/* common */
-.blind {
-  display: block;
-  width:0; height:0; 
-  position: absolute; z-index: -1;
-  overflow:hidden;
-}
-
-.first_float > li{ float:left; }
-.first_float > li:first-child { margin-left:0; }
-
 
 /* I.R 기법이란? image replace의 약자로
   - 해당하는 요소에 이미지로 글자를 대처하여 사용하는 기법

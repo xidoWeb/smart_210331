@@ -1,14 +1,22 @@
 /* @charset "UTF-8"; */
 /* css/base/common.css */
 
-.clearfix {
-  height: auto;
-}
+.clearfix { height: auto; }
 
 .clearfix:after,
 .clearfix::after{
   content:" ";
+  display: block;  clear: both; }
+
+.blind {
   display: block;
-  clear: both;
+  width:0; height:0; 
+  position: absolute; z-index: -1;
+  overflow:hidden;
 }
 
+.first_float > li{ float:left; }
+.first_float > li:first-child { margin-left:0; }
+
+.last_float > li { float:left; }
+.last_float > li:last-child { margin-right:0; }
