@@ -23,21 +23,36 @@ h2 {
     background-color: #faa;
     overflow: hidden;
     text-align: center;
+    margin: 0; padding: 0;
   }
   .img_cover > img {
     /* display:inline-block; */
     width:100%; height:auto;
   }
 
+ .sample {
+   /* display:block; */
+   float:left;
+   width:500px; height:300px; 
+   padding:5px;
+   background-color: #f77; border:1px solid #77f;
+ }
 
-.bg_01 {
-  width:100px; height:100px;
-  background-color: #acf;
-  background-image: url("../../img/icon/webp.webp");
-  background-size: auto     100%;
+.bgi {
+  float:left;
+  width:150px; height:150px;
+  margin:10px;
+  border:1px solid #999;
+  background-color: #ddd;
 }
+
 
 abbr {
   text-transform:uppercase;
   text-decoration:none;
 }
+
+
+/* *
+  float을 사용하면 해당요소는 강제로 display:block;으로 변환
+*/
