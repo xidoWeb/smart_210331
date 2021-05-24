@@ -26,19 +26,16 @@
   <!-- layout -->
 
   <div id="wrap">
-    <div id="headBox">
+    <header id="headBox">
       <h1><a href="./all_contents.html">
-        <span class="blind">
-          웹디자인과 웹코딩을 시작하는 이들을 위한 xido가 전하는 
-        </span>
-        웹
-        <span class="blind"> 학습을 위한 </span>
-        기초
-        <span class="blind">
-          수업 과정
-        </span>
+        <span class="blind">xido가 전하는 </span>웹 <span class="blind">학습을 위한 </span> 기초<span class="blind">수업 과정</span>
       </a></h1>
-      <div class="global_nav">
+
+      <nav class="user_nav">
+        <h2 class="blind">사용자 관련 네비게이션</h2>
+      </nav>
+
+      <nav class="global_nav">
         <h2  class="blind">전체 네비게이션 메뉴</h2>
         <!-- ul>li*5>a[href=#]{link_$$} -->
         <ul class="clearfix first_float">
@@ -48,14 +45,11 @@
           <li><a href="#">link_04</a></li>
           <li><a href="#">link_05</a></li>
         </ul>
-      </div>
-      <div class="user_nav">
-        <h2 class="blind">사용자 관련 네비게이션</h2>
-      </div>
-    </div>
+      </nav>        
+    </header>
     <!-- // #headBox ============= -->
 
-    <div id="adViewBox">
+    <section id="adViewBox">
       <h2 class="blind">메인 광고영역</h2>
 
       <div class="view_indicator">
@@ -78,59 +72,61 @@
         <div id="view_04">view_04</div>
         <div id="view_05">view_05</div>
         <div id="view_06">view_06</div>
-
       </div>
-    </div>
+    </section>
     <!-- // #adViewBox ============= -->
-
-    <div id="localNavBox">
+  <main class="main_wrap">
+    <aside id="localNavBox">
       <h2 class="blind">주요 네비게이션</h2>
-      <div class="local_nav_outer"></div>
-    </div>
+      <nav class="local_nav_outer">
+        <h3>본문 핵심 메뉴</h3>
+      </nav>
+    </aside>
     <!-- // #localNavBox ============= -->
 
     <div class="issue_content_wrap">
       <h2 class="blind">이슈 내용</h2>
-      <div id="popularContentBox">
+      <article id="popularContentBox">
         <h3>인기 콘텐츠</h3>
         <div class="pop_con_area container"></div>
-      </div>
+      </article>
       <!-- // #popularContentBox ============= -->
 
-      <div id="newContentBox">
+      <article id="newContentBox">
         <h3>최신 콘텐츠</h3>
         <div class="new_con_area container"></div>
-      </div>
+      </article>
       <!-- // #newContentBox ============= -->
     </div>
     <!-- =========================================== -->
 
     <div class="community_wrap">
       <h2 class="blind">사용자 리뷰 및 의견수렴 항목</h2>
-      <div id="recommendedConttentBox">
+      <article id="recommendedConttentBox">
         <h3>추천 콘텐츠</h3>
         <div class="recom_con_area container"></div>
-      </div>
+      </article>
       <!-- // #recommendedConttentBox ============= -->
 
-      <div id="communityBox">
+      <article id="communityBox">
         <h3>community</h3>
         <div class="com_con_area container"></div>
-      </div>
+      </article>
       <!-- // #communityBox ============= -->
     </div>
+  </main>
 
-    <div id="miniAdBox">
+    <section id="miniAdBox">
       <h2 class="blind">sub 광고영역</h2>
       <div class="mini_ad_outer"></div>
-    </div>
+    </section>
     <!-- // #miniAdBox ============= -->
 
-    <div id="footBox">
+    <footer id="footBox">
       <div class="foot_con_area">
         <h2>site infomation</h2>
       </div>
-    </div>
+    </footer>
     <!-- // #footBox ============= -->
 
   </div>

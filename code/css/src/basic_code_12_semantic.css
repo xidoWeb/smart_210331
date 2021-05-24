@@ -1,0 +1,99 @@
+/* css/src/basic_code_12_semantic.css */
+
+#wrap {
+  position:relative;
+  width:100%; max-width:1800px;
+  margin:auto;
+  /* padding-top:150px; */
+}
+
+/* #headBox ---------------------------- */
+#headBox{
+  position:fixed; left:0; top: 0;
+  width:100%; height:150px;
+  padding:30px 50px 20px; box-sizing: border-box;
+  background-color: rgba(50,255,255,0.7);
+}
+
+h1 {
+  float:left; 
+  width:150px; height:80px;
+  background-color: #fff;
+}
+
+#navBox {
+  display:block;
+  float:right;
+  width:800px; height:100px;
+  background-color: #acf;
+}
+
+.user_navigation {
+  float:right;
+  width:200px; height:30px;
+  background-color: #fa0;
+}
+
+.global_navigation {
+  float:right;
+  width:700px; height:40px;
+  background-color: #fff;
+}
+
+/* .page_wrap =================================== */
+.page_wrap {
+  width:100%; max-width: 1900px; height:auto;
+  background-color: #ccc;
+  margin:auto;
+}
+
+
+
+/* #viewBox ---------------------------- */
+#viewBox{
+  width:100%; height:900px;
+  padding-top:150px;
+  background-color: #aaa;
+}
+
+/* #sideBox ----------------------------- */
+#sideBox {
+  position: fixed;
+  top:200px; left:50%; margin-left:600px;
+  width: 120px; height: 400px; 
+  background-color: #aca;
+}
+
+
+/* #contentBox ---------------------------- */
+#contentBox{
+  width:800px; height:1200px;
+  margin:auto;
+  background-color: #ccf;
+  background-image:linear-gradient(45deg, #acf, #cdf);
+}
+
+/* #footBox ---------------------------- */
+#footBox{
+  width:90%; height:300px;
+  margin:auto;
+  background-color: #777;
+}
+
+
+/**semantic 구조
+  * 시멘틱 구조란? 각 영역에 해당하는 부분을 의미를 두고 제작하는 기법
+
+  * header : h1, #gnb영역을 담고있는 영역
+  * nav : navigation 형태를 취하는 영역
+  * aside : 있으면 좋고 없다고해도 크기 불편하지 않는 영역
+  * section : 주로 메인광고, 해당 내용이 별도로 연결되어있는 영역
+  * article : 내용이 담긴 영역, 본문을 파악할 수 있는 영역 
+  * footer : 사이트의 정보를 담고 있는 영역 (address, copyright, family site)
+
+  기타: 
+  * main : 
+    - header/footer를 제외하고 본문의 내용을 담는 영역을 main으로 사용 
+    - 하지만 보통의 시멘틱구조와는 성향이 다르므로 쉽게 쓰기 어렵다.
+  * figure : img 요소의 단점을 극복하기위해 생겨난 요소, figcaption과 함께 사용
+*/

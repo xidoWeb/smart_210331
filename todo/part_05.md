@@ -79,5 +79,18 @@
 
 ---
 
+### 2021.05.24
 
+#### 코딩과정
+
+- [ ] 시멘틱 구조 이해
+- [ ] [layout-3 풀이](../work/c-02_layout_basic_03.pdf) - **HTML 문서명 : ** layout_003_result.html (css동일)
+- [ ] reset.css 및 common.css 부분 일부 수정
+- [ ] css 내용 분리
+
+#### 시험
+
+- 포토샵 디자인파일 제출
+
+---
 
