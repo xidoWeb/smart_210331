@@ -1,0 +1,43 @@
+/* ../css/src/basic_code_13_image.html.css */
+
+#wrap {
+  width: 960px; height: auto;
+  margin:auto;
+}
+
+.part {
+  width: 100%; height: auto;
+  margin-bottom:16px;
+  padding:20px; box-sizing: border-box;
+  border:1px solid #777;
+}
+
+h2 {
+  width:90%; height:auto;
+  margin:auto;
+  border-bottom: 1px solid #333;
+  margin-bottom: 5px;}
+
+  .img_cover {
+    width:100px; height:200px; 
+    background-color: #faa;
+    overflow: hidden;
+    text-align: center;
+  }
+  .img_cover > img {
+    /* display:inline-block; */
+    width:100%; height:auto;
+  }
+
+
+.bg_01 {
+  width:100px; height:100px;
+  background-color: #acf;
+  background-image: url("../../img/icon/webp.webp");
+  background-size: auto     100%;
+}
+
+abbr {
+  text-transform:uppercase;
+  text-decoration:none;
+}
