@@ -30,7 +30,12 @@ h2 {
     width:100%; height:auto;
   }
 
- .sample {
+  abbr {
+    text-transform:uppercase;
+    text-decoration:none;
+  }
+
+  .sample {
    /* display:block; */
    float:left;
    width:500px; height:300px; 
@@ -40,19 +45,109 @@ h2 {
 
 .bgi {
   float:left;
-  width:150px; height:150px;
+  width:150px; height:300px;
   margin:10px;
   border:1px solid #999;
   background-color: #ddd;
+  background-image: url("../../img/icon/circled_down.png");
+  background-size: 10% auto;
 }
 
+/* background-image는
+  - 기본형이 패턴처리가된다.
+*/
 
-abbr {
-  text-transform:uppercase;
-  text-decoration:none;
+.bg_01 {
+  background-repeat:no-repeat;
 }
 
+.bg_02 {
+  background-repeat: repeat-x;
+}
+
+.bg_03 {
+  background-repeat: repeat-y;
+}
+
+.bg_04 {
+  /* background-size: auto 50%; */
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.bg_05 {
+  background-image: url("../../img/bg/background_001.jpg");
+  /* background-size: contain; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* background-size:
+    contain;     -> 이미지를 모두 보이게
+    cover;       -> 이미지를 완전히 감싸게
+    x수치 auto;  -> 가로(x수치)의 크기기준으로 세로크기는 자동설정
+    auto y수치;  -> 세로(y수치)의 크기기준으로 가로크기는 자동설정
+
+* background-size는 구형브라우저에서는 동작 x
+*/
+
+
+.bg_06 {
+  background-size: 20%;
+  background-repeat: no-repeat;
+
+  /* background-position: right bottom; */
+  /* background-position: 0 0; */
+
+  /* background-position: 100%  100%; */
+  background-position: 100px 150px;
+}
+
+/* * background-position: x좌표  y좌표;
+
+     - x좌표(권장x) : left || center || right
+     - y좌표(권장x) : top || center || bottom
+
+     - x좌표 : %, px, em, rem, vw, vh등 단위를 사용하자!
+     - y좌표 : %, px, em, rem, vw, vh등 단위를 사용하자!
+ */
 
 /* *
   float을 사용하면 해당요소는 강제로 display:block;으로 변환
 */
+
+
+.test_place {
+  width: 100%; height:auto;
+}
+
+.test_place li{
+  float:left;
+  width: 46px; height: 45px;
+  margin:10px; padding: 5px;
+  border-radius:3px;
+  background-color: #7ff;
+}
+
+.test_place li > a {
+  display: block;
+  width: 100%; height: 100%; 
+  border:1px solid #57f;  
+  box-sizing: border-box;
+  border-radius:5px; 
+  background-image: url("../../img/icon/icon_m.png");
+  background-repeat: no-repeat;
+  background-size:auto auto;
+}
+
+/* 반드시 해당하는 이미지가 움직인다!!!!!!! */
+.test_place li:nth-child(1) > a{
+  background-position:-58px -62px;
+}
+
+.test_place li:nth-child(2) > a{
+  background-position: -207px -272px;
+}
+
+.test_place li:nth-child(3) > a{
+  background-position: -508px -202px;
+}
