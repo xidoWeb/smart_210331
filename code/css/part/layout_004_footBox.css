@@ -2,6 +2,27 @@
 
 /* #footBox ============= */
 #footBox{
-  width:100%; height:120px; 
+  width:100%; height:300px; 
+  padding:30px 10px; box-sizing: border-box;
   background-color: #ddf;
+}
+
+#footBox > h2 {
+  float: left;
+  width:120px; height:100px;
+  margin-right:50px; margin-top:-20px;
+  background-color: #a30;
+}
+
+.foot_address_area {
+  float: left;
+  width: 600px; height: 70px;
+  font-size:12px;
+  background-color: #fff;
+}
+
+.foot_sns_area {
+  float: right;
+  width:100px; height:40px;
+  background-color: #caf;
 }
