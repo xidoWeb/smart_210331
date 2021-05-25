@@ -1,6 +1,16 @@
 /* css/src/layout_004.css */
+@charset "UTF-8";
+/* @import url("../base/reset.css");
+@import url("../base/common.css"); */
+@import url("../part/layout_004_wrap.css");
+@import url("../part/layout_004_headBox.css");
+@import url("../part/layout_004_viewBox.css");
+@import url("../part/layout_004_footBox.css");
 
-
+/* css파일은
+   - 하나의 문서에서 가급적 200줄을 넘기 않는것을 원칙
+   - 너무 많은 라인을 만들어서 찾기 어렵게 하는 것보다, 파일을 나눠서 관리하기 용이하게 제작
+*/
 /** kakao(다음)에서 사용하는 네이밍기법
   * id이름은 camelCase
   * class이름은 under_score
