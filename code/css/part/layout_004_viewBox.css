@@ -92,6 +92,36 @@
       background-color: #f77;
     }
 
+    /* .con_area_02 --------------------------- */
+    .con_area_02 {
+      height:auto;
+    }
+    .con_card_part {
+      width: 100%; height:auto;
+    }
+
+    .con_card_part > ul {
+      width: 100%; height:auto;
+      padding:10px; box-sizing: border-box;
+    }
+
+    .con_card_part > ul > li {
+      float:left;
+      width:20%; height:150px;
+      margin-right:6%;
+      padding:5px;
+      border:1px solid #777;
+      border-radius:3px;
+      box-sizing: border-box;
+      background-color: #fff;
+    }
+
+    .con_card_part > ul > li:last-child {
+      margin-right: 0;
+    }
+
+    
+
 
 
     /* * margin, padding 을 % 사용시
