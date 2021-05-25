@@ -1,0 +1,14 @@
+/* css/src/layout_004.css */
+
+
+/** kakao(다음)에서 사용하는 네이밍기법
+  * id이름은 camelCase
+  * class이름은 under_score
+  * 이름을 지을때, 특수문자는 _
+  * 숫자는 뒤에, 2자리이상
+  * 큰범위에 해당하는 경우 id로 영역
+  * level 1 -  id, *Box  ( conBox )
+  * level 2 - class, 상위이름_in_wrap ( con_in_wrap )
+  * level 3 - class, 상위이름_추가기능_area ( con_news_area )
+  ...
+ */

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- html/layout_004.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--[if IE]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/ie9js/ie9.min.js"></script>
+    <script src="../ie/csspie/PIE.js"></script>
+    <script src="../ie/responsive.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  
+  <link rel="stylesheet" href="../css/src/layout_004.css">
+  <link rel="stylesheet" href="../css/part/layout_004_wrap.css">
+  <link rel="stylesheet" href="../css/part/layout_004_headBox.css">
+  <link rel="stylesheet" href="../css/part/layout_004_viewBox.css">
+  <link rel="stylesheet" href="../css/part/layout_004_footBox.css">
+
+  <title>웹 레이아웃 구성 - 시멘틱처리</title>
+  
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1>logo</h1>
+      <nav id="navBox">
+        <h2 class="blind">navigation</h2>
+      </nav>
+    </header><!-- // #headBox -->
+
+    <section id="viewBox" class="clearfix">
+      <h2 class="blind">view Box area</h2>
+
+      <aside id="sideBox">
+        <h3 class="blind">sideBox</h3>
+
+      </aside>
+      <article id="conBox">
+        <h3 class="blind">conBox</h3>
+        <article class="con_area_01 con_area">
+          <h4 class="blind">con are 01</h4>
+        </article>
+        <article class="con_area_02 con_area">
+          <h4 class="blind">con are 02</h4>
+        </article>
+        <article class="con_area_03 con_area">
+          <h4 class="blind">con are 03</h4>
+        </article>
+        <article class="con_area_04 con_area">
+          <h4 class="blind">con are 04</h4>
+        </article>
+      </article>
+    </section><!-- // #viewBox -->
+
+    <footer id="footBox">
+      <h2 class="blind">site info</h2>
+
+    </footer><!-- // #footBox -->
+  </div><!-- // #wrap -->
+
+
+  <!-- script -->
+  <!-- <script src="../js/src/layout_004.js"></script> -->
+</body>
+</html>
