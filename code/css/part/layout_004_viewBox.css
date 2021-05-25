@@ -62,20 +62,37 @@
 
 
     .con_area_01 {
+      position: relative;
       height:250px;
       margin-bottom: 30px;
       border:1px solid #777;
       box-sizing: border-box;
     }
 
-    .con_view_button {
-      width: 97%; height: 95%;
-      /* margin-top:2.5%; */
+      .con_view_button {
+        position:absolute;
+        top:0; left:0; right:0; bottom:0; margin:auto;
+        width: 97%; height:0;
+        background-color: rgba(50,50,200,0.2);
+      }
+
+      .con_view_button > button {
+        width:30px; height:200px;
+        margin-top:-100px; 
+        background-color: #fa0;
+      }
+      .next_btn { float:right; }
+      .prev_btn { float:left; }
+        
+    .con_view_part {
+      width: 100%; height: 100%;
+      background: #aca;
+    }
+    .con_view_part:hover {
+      background-color: #f77;
     }
 
-    .con_view_button > button {
-      
-    }
+
 
     /* * margin, padding 을 % 사용시
      * margin-left, margin-right에서 10%사용시 자신의 부값기준 10%만큼 여백을 가짐
