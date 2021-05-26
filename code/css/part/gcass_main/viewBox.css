@@ -1,7 +1,37 @@
 /* "../part/gcass_main/viewBox.css" */
 
 #viewBox {
-  float:right; 
+  float:right; position: relative;
   width:730px; height:710px;
   background-color: #fff;
 }
+.pattern {
+  width: 100%; height:50px;
+  background-color: var(--color-gray1);
+}
+
+.view_area {
+  position: absolute; right:40px; bottom: 78px;
+  width: 600px; height: 520px;
+}
+
+  .issue_image {
+    position: absolute; bottom:0; right:260px; z-index:50;
+    width:340px; height:510px; 
+    background-color: var(--color-gray4);
+    transition:all 300ms linear;
+  }
+  .issue_text {
+    position: absolute; bottom:0; right:0;
+    width:300px; height:485px; 
+    background-color: var(--color-gray3);
+    transition:all 500ms linear 100ms;
+  }
+
+  .view_area:hover > .issue_image {
+    right:300px; 
+  }
+
+  .view_area:hover > .issue_text {
+    right:-40px;
+  }
