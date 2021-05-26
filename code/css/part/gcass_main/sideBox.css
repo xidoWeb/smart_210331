@@ -1,0 +1,7 @@
+/* "../part/gcass_main/sideBox.css" */
+
+#sideBox {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 30px;
+  background-color: #888;
+}

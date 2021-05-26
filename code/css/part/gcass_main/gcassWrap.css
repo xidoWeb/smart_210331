@@ -1,0 +1,13 @@
+/* "../part/gcass_main/gcassWrap.css" */
+
+#gcassWrap {
+  position: relative;
+  width:980px;  height:auto; 
+  margin:auto; padding-top:30px;
+  background-color: #ddd;
+}
+
+.container {
+  width: 100%; height:auto; min-height:500px;
+  background-color: #ffc;
+}
