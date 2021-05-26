@@ -2,6 +2,21 @@
 
 #headBox {
   float:left; 
-  width:250px; height:710px;
+  width:250px; height:auto; min-height:500px;
+
+  padding:55px 53px 100px 40px;
+  box-sizing: border-box;
+
   background-color: #757575;
+  background-color: var(--color-gray3);
+}
+
+h1 {
+  width:100%; height:104px;
+  margin-bottom:38px;
+  background-color: var(--color-yellow1);
+}
+#gnbBox {
+  width:100%; height:auto; min-height:500px;
+  background-color: var(--color-yellow2);
 }

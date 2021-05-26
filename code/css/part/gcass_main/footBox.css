@@ -3,5 +3,10 @@
 #footBox {
   width: 100%; height:110px;
   border-top:1px solid #333;
+  border-top:var(--border-line1);
   background-color: #ddf;
+  /* 
+  background-color: #fff;
+  background-color: var(--color-white); 
+  */
 }
