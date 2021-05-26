@@ -5,11 +5,9 @@
   padding:20px 40px 25px;
   border-top:1px solid #333;
   border-top:var(--border-line1);
-  background-color: #ddf;
-  /* 
+  /* background-color: #ddf; */  
   background-color: #fff;
   background-color: var(--color-white); 
-  */
 }
 
 #footBox > h2 {
@@ -25,7 +23,6 @@
   width:95px; height:54px;
   margin-right: 18px; padding-top:12px;
   box-sizing: border-box;
-  background-color: var(--color-gray1);
   }
   .company_location {
     float:left;
@@ -42,7 +39,6 @@
 .site_add {
   float:left; 
   width:360px; height:54px;
-  background-color: var(--color-gray1);
 }
 
 address {
