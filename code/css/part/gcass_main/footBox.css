@@ -30,11 +30,22 @@
     margin-right:15px;
     background-color: var(--color-gray2);
   }
+  .company_location a{
+    background-image: url("../../../img/gcass/map-marker-alt-solid.svg");
+    background-size: contain;
+  }
+
   .company_social_net {
     float:left;
     width:36px; height:36px;
     background-color: var(--color-gray2);
   }
+  .company_social_net a {
+    background-image: url("../../../img/gcass/facebook.svg");
+    background-size:95%;
+  }
+
+
 /* ------------- */
 .site_add {
   float:left; 
