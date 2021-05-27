@@ -5,12 +5,20 @@
   width:730px; height:710px;
   /* background-color: #fff; */
 }
-.pattern {
+
+#viewBox:before,
+#viewBox::before {
+  content:""; display: block;
   width: 100%; height:50px;
   background-image: url("../../../img/gcass/pattern_sample.png");
   opacity:0.5;
-  /* background-color: var(--color-gray1); */
 }
+
+/* .pattern {
+  width: 100%; height:50px;
+  background-image: url("../../../img/gcass/pattern_sample.png");
+  opacity:0.5;
+} */
 
 .view_area {
   position: absolute; right:40px; bottom: 78px;
