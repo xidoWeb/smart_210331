@@ -1,2 +1,60 @@
 /* css/src/basic_code_15_unit1.css */
 
+.part {
+  width:800px; height:800px;
+  margin:auto;
+  margin-bottom:100px;
+  padding:20px;
+  border:1px solid #333;
+  background-color: #ddd;
+}
+
+.level_01 {
+  font-weight: bold;
+  box-sizing: border-box;
+  border:1px solid #f00;
+  color:#f00;
+  background-color: rgba(255,0,0,0.2);
+}
+
+.level_02 {
+  box-sizing: border-box;
+  border:1px solid #ff0;
+  color:#ff0;
+  background-color: rgba(255,255,0,0.2);
+}
+.level_03 {
+  box-sizing: border-box;
+  display: block;
+  border:1px solid #090;
+  color:#090;
+  background-color: rgba(0,200,0,0.2);
+}
+.level_04 {
+  box-sizing: border-box;
+  display: block;
+  border:1px solid #171717;
+  color:#171717;
+  background-color: rgba(17,17,17,0.1);
+}
+i {
+  font-style: normal;
+  display: block;
+  border:1px solid #ddd;
+  color:#ddd;
+  background-color: (200,200,200,0.5);
+}
+/* ------------------------------------------------ */
+:root {
+  font-size:10px;
+}
+
+/* px */
+
+/* pt */
+
+/* % */
+
+/* em */
+
+/* rem */
