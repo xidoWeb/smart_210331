@@ -44,12 +44,34 @@ li:nth-child(5) {
 li:nth-child(6) {
   font-family:'KT&G SangSangBody M';
 }
+/* ---------------------------- */
+li { font-family:'Noto Sans KR', sans-serif; }
 
-
-
+li:nth-child(7) {
+  border-top-width:3px;
+  /* font-style: normal; */
+  font-style: italic;
+}
+li:nth-child(8) {
+  /* font-weight:normal; */
+  font-weight:600;
+}
+:root{
+  font-size:10px;
+} 
+li:nth-child(9){
+  color:#077;
+  /* font-size:16px; */
+  /* font-size:200%; */
+  /* font-size:12pt; -> 인쇄용으로 사용하는 수치 */
+  /* font-size:2em;  */
+  font-size:2rem;
+}
 
 
 
 /* * font
  * font-family: '사용할 서체명', '앞서체가 없다면 적용할 서체', '대체 서체', '대체 서체' '최종 계통서체';
+  font-style: normal;
+  font-weight:100 ~ 900;
  */
