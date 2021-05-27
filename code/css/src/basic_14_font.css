@@ -56,9 +56,11 @@ li:nth-child(8) {
   /* font-weight:normal; */
   font-weight:600;
 }
+
 :root{
   font-size:10px;
 } 
+
 li:nth-child(9){
   color:#077;
   /* font-size:16px; */
@@ -68,10 +70,80 @@ li:nth-child(9){
   font-size:2rem;
 }
 
+li:nth-child(10) {
+  line-height:40px;
+  padding: 0;
+}
+
+li:nth-child(11) {
+  padding: 0; height:30px;
+  margin-bottom: 150px;
+  line-height:30px;
+}
+
+li:nth-child(12){
+  font-size:10px;
+  line-height:120%;
+}
+
+li:nth-child(13){
+   /* font: style weight size/line-height font-family; */
+   font: italic 900 20px/120% Pattaya,'Noto Sans KR',sans-serif;
+}
+
+li:nth-child(14){
+  letter-spacing:0.5rem;
+}
+
+li:nth-child(15){
+  word-spacing:-0.3rem; 
+  text-transform:uppercase;
+}
+li:nth-child(16){
+  text-transform:lowercase;
+}
+li:nth-child(17) {
+  width:300px;
+  text-transform:capitalize;
+  text-align:right;
+}
+
+li:nth-child(18) {
+  width:400px; height:auto;
+  text-align:justify;
+}
+
+li:nth-child(19) {
+  width:200px;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+li:nth-child(20) {
+  text-decoration:underline;
+  text-decoration-color: #f07;
+  text-decoration-style: dotted;
+}
 
 
 /* * font
  * font-family: '사용할 서체명', '앞서체가 없다면 적용할 서체', '대체 서체', '대체 서체' '최종 계통서체';
   font-style: normal;
   font-weight:100 ~ 900;
+  font-size
+  line-height
+ ----------------------------
+  letter-spacing
+  word-spacing
+  text-transform
+  text-align
+  -------------------------
+  white-spac
+  text-overflow
+  (overflow)
+  ----------------------------
+  text-decoration
+  text-decoration-color
+  text-decoration-style
  */
