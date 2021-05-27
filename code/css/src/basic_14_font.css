@@ -113,11 +113,17 @@ li:nth-child(18) {
   text-align:justify;
 }
 
+/* 말줄임처리 */
 li:nth-child(19) {
   width:200px;
   white-space:nowrap;
   overflow: hidden;
   text-overflow:ellipsis;
+  /* 지정영역이 넘치는 것은 숨겨라 - overflow:hidden
+    이때 넘치는 것이 글자면, 해당하는 내용을 
+    말줄임표로 -> text-overflow:ellipsis;
+    글씨잘림 -> text-overflow:clip;
+  */
 }
 
 li:nth-child(20) {
