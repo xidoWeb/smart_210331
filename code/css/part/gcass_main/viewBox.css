@@ -37,6 +37,10 @@
     /* background-color: var(--color-gray4); */
     transition:all 300ms linear;
   }
+
+
+
+
   .issue_text {
     position: absolute; bottom:0; right:0;
     width:300px; height:485px; 
@@ -47,8 +51,22 @@
     background-size: contain;
     /* background-color: var(--color-gray3); */
 
+    /* box-shadow:5px 5px 5px rgba(0,0,0,0.7); */
+    filter:drop-shadow( 5px 5px 5px rgba(0,0,0,0.7) );
     transition:all 500ms linear 100ms;
+    
   }
+
+/* shadow
+  - text-shadow : x축 y축 번짐의정도 색상;
+  - box-shadow : x축 y축 번짐의정도 (offset양) 색상 (내부그림자처리허용-inset);
+  - filter: drop-shadow( x축 y축 번짐의정도 색상 );
+
+
+*/
+
+
+
 
   .view_area:hover > .issue_image {
     right:300px; 
