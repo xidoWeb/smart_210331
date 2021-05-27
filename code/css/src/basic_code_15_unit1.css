@@ -47,7 +47,7 @@ i {
 h2, h3 {margin-bottom: 20px;}
 /* ------------------------------------------------ */
 :root {
-  font-size:10px;
+  font-size:16px;
 }
 
 /* px */
@@ -74,23 +74,75 @@ h2, h3 {margin-bottom: 20px;}
 .point i {
   width:56.25pt; height:56.25pt; font-size: 5.625pt;}
 
-/* % */
-.percent .level_01 {}
-.percent .level_02 {}
-.percent .level_03 {}
-.percent .level_04 {}
-.percent i {}
+/* % : 
+부모의 크기가 없는 경우는 최초설정, 
+부모의 크기가 존재하면 부모기준*/
+.percent .level_01 {
+  width:400px; height: 400px; font-size:250%;}
+.percent .level_02 {
+  width:50%; height:50%; font-size:50%;}
+.percent .level_03 {
+  width:150%; height:150%; font-size:150%;}
+.percent .level_04 {
+  width:50%; height:50%; font-size:50%;}
+.percent i {
+  width:50%; height:50%; font-size:50%;}
 
-/* em */
-.em .level_01 {}
-.em .level_02 {}
-.em .level_03 {}
-.em .level_04 {}
-.em i {}
+
+/* em: 
+ - 최초설정시에는 :root의 서체크기를 기준으로 font-size가 적용되지만,
+ - em단위의 서체크기를 지정시 width, height는 바로 font-size에 따라간다.
+ - 이후 자식요소는 동일요소에있는 font-size를 따라가거나 없을경우, 부모의 font-size를 따라감
+ - font-size는 부모의 서체 크기가 있다면 부모의 크기를 따라간다.
+*/
+
+.em .level_01 { display: none;
+  /* w:400, h400 */
+  /* width:25em; height:25em;  */
+  width:10em; height:10em; 
+  font-size:2.5em;
+}
+.em .level_02 {
+  /* width:12.5em; height:12.5em; */
+  /* font-size:1.25rem; */
+}
+.em .level_03 {
+  width:18.75em; height:18.75em;
+}
+.em .level_04 {
+  width:9.375em; height:9.375em;
+}
+.em i {
+  width:4.6875em; height:4.6875em;
+}
 
 /* rem */
-.rem .level_01 {}
-.rem .level_02 {}
-.rem .level_03 {}
-.rem .level_04 {}
-.rem i {}
+.rem { padding-bottom: 1000px;}
+.rem .level_01 {
+  width: 400px; height: 400px;
+  width: 25rem; height: 25rem;
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+.rem .level_02 {
+  width: 200px; height: 200px;
+  width: 12.5rem; height: 12.5rem;
+  font-size: 20px;
+  font-size:1.25rem;
+}
+.rem .level_03 {
+  /* width: 300px; height: 300px; */
+  width: 18.75rem; height: 18.75rem;
+  font-size: 1.875rem;
+}
+.rem .level_04 {
+  /* width: 150px; height: 150px; */
+  width:9.375rem; height:9.375rem;
+  font-size: 0.9375rem;
+}
+.rem i {
+  /* width: 75px; height: 75px; */
+  width:4.6875rem; height:4.6875rem;
+  font-size: 0.4688rem;
+}
+
