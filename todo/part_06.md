@@ -24,7 +24,40 @@
 
 #### 디자인과정
 
-- [ ] 기존 제출 디자인 내용을 부분 변경
+- [x] 기존 제출 디자인 내용을 부분 변경
 
 ---
 
+### 2021.05.26
+
+#### 코딩과정
+
+- [x] gcass 메인페이지 레이아웃 코딩 설명 (부분)
+
+---
+
+### 2021.05.26
+
+#### 코딩과정
+
+- [x] gcass 메인페이지 레이아웃 코딩 설명
+- [x] font: family, style, weight, line-height, spacint, text-transform
+- [x] family : CDN으로 불러오는 방법,  @font-face, font convert (  https://transfonter.org )
+
+#### 과제
+
+- [ ] 기존 제출 디자인 내용을 부분 변경
+
+- [ ] [삼양사 AM BU-이미지](http://www.gdweb.co.kr/sub/view.asp?displayrow=60&Txt_key=all&Txt_word=&Txt_agnumber=&Txt_fgbn=5&Txt_bcode1=&Txt_gbflag=&Txt_bcode2=&Txt_bcode3=&Txt_bcode4=&Txt_bcode5=&Page=2&str_no=14897)
+
+  [https://www.samyangep.com/kr/index **(사이트바로가기)**](https://www.samyangep.com/kr/index)
+
+---
+
+### 참고주소
+
+- https://fonts.google.com/
+- https://noonnu.cc/
+- https://transfonter.org/
+- https://gs.statcounter.com/
+- 
