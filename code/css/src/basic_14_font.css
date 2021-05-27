@@ -1,0 +1,55 @@
+/* css/src/basic_14_font.css */
+
+#wrap {
+  width: 960px; height: auto;
+  margin:auto;  padding:20px;
+  border:1px solid #777;
+}
+
+ul {
+  width: 100%; height: auto;
+  padding:10px; box-sizing: border-box;
+  background-color: #fdd;
+}
+
+li {
+  width: 100%; height: 40px;
+  margin-bottom:10px;
+  padding:5px; box-sizing: border-box;
+  border:1px solid #07a;
+}
+
+/* ------------------------------------------ */
+
+
+li:nth-child(1) {
+  font-family:Pattaya;
+}
+li:nth-child(2) {
+  font-family:'Noto Sans KR'; 
+}
+li:nth-child(3) {
+  /* font-family:'Noto Sans KR', Pattaya;  */
+  font-family:Pattaya, 'Noto Sans KR', sans-serif; 
+}
+li:nth-child(4) {
+  /* font-family:'Noto Sans KR', Pattaya;  */
+  font-family:'apple-SD-gothic', 'apple-gothic', 'myriad pro' ,arial,'Noto Sans KR', '돋움', dotum, sans-serif; 
+}
+
+li:nth-child(5) {
+  font-family:tsky;
+}
+
+li:nth-child(6) {
+  font-family:'KT&G SangSangBody M';
+}
+
+
+
+
+
+
+/* * font
+ * font-family: '사용할 서체명', '앞서체가 없다면 적용할 서체', '대체 서체', '대체 서체' '최종 계통서체';
+ */

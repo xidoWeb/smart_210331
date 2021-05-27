@@ -1,0 +1,23 @@
+/* tway.css - font */
+
+/* @font-face -> 서체를 세팅
+    font-family: 서체명을 제작/변경
+    src: url(서체를 불러오는 주소/확장자) format(서체확장자)
+
+
+*/
+
+@font-face {
+  font-family: 'tair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tsky';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') 
+       format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
