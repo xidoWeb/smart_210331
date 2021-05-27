@@ -1,9 +1,9 @@
 /* css/src/basic_code_15_unit1.css */
 
 .part {
-  width:800px; height:800px;
+  width:800px; height:auto;
   margin:auto;
-  margin-bottom:100px;
+  margin-bottom:20px;
   padding:20px;
   border:1px solid #333;
   background-color: #ddd;
@@ -35,26 +35,62 @@
   display: block;
   border:1px solid #171717;
   color:#171717;
-  background-color: rgba(17,17,17,0.1);
+  background-color: rgba(17,17,17,0.3);
 }
 i {
   font-style: normal;
   display: block;
-  border:1px solid #ddd;
-  color:#ddd;
+  border:1px solid #fff;
+  color:#dfff;
   background-color: (200,200,200,0.5);
 }
+h2, h3 {margin-bottom: 20px;}
 /* ------------------------------------------------ */
 :root {
   font-size:10px;
 }
 
 /* px */
+.pixel .level_01 {  
+  width:400px; height: 400px; font-size:40px; }
+.pixel .level_02 {  /* 부모의 50% */
+  width:200px; height:200px; font-size:20px; }
+.pixel .level_03 {  /* 부모기준의 150% */
+  width:300px; height:300px; font-size:30px; }
+.pixel .level_04 {  /* 부모기준의 50% */
+  width:150px; height:150px; font-size:15px; }
+.pixel i {  /* 부모기준의 50% */
+  width:75px; height:75px; font-size:7.5px; }
 
-/* pt */
+/* pt => 16px -> 12pt */
+.point .level_01 {
+  width:300pt; height:300pt; font-size:30pt;}
+.point .level_02 {
+  width:150pt; height:150pt; font-size:15pt;}
+.point .level_03 {
+  width:225pt; height:225pt; font-size:22.5pt;}
+.point .level_04 {
+  width:112.5pt; height:112.5pt; font-size: 11.25pt;}
+.point i {
+  width:56.25pt; height:56.25pt; font-size: 5.625pt;}
 
 /* % */
+.percent .level_01 {}
+.percent .level_02 {}
+.percent .level_03 {}
+.percent .level_04 {}
+.percent i {}
 
 /* em */
+.em .level_01 {}
+.em .level_02 {}
+.em .level_03 {}
+.em .level_04 {}
+.em i {}
 
 /* rem */
+.rem .level_01 {}
+.rem .level_02 {}
+.rem .level_03 {}
+.rem .level_04 {}
+.rem i {}
