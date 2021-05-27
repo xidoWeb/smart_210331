@@ -2,7 +2,7 @@
 
 #footBox {
   width: 100%; height:auto; min-height:110px;
-  padding:20px 40px 25px;
+  padding:20px 40px 25px; box-sizing: border-box;
   border-top:1px solid #333;
   border-top:var(--border-line1);
   /* background-color: #ddf; */  
@@ -23,27 +23,32 @@
   width:95px; height:54px;
   margin-right: 18px; padding-top:12px;
   box-sizing: border-box;
+
+  font-size:30px;
+  color:#555;
+  color:var(--color-gray4);
+  text-align:center;
   }
   .company_location {
     float:left;
     width:28px; height:38px;
     margin-right:15px;
-    background-color: var(--color-gray2);
+    /* background-color: var(--color-gray2); */
   }
-  .company_location a{
+  /* .company_location a{
     background-image: url("../../../img/gcass/map-marker-alt-solid.svg");
     background-size: contain;
-  }
+  } */
 
   .company_social_net {
     float:left;
     width:36px; height:36px;
-    background-color: var(--color-gray2);
+    /* background-color: var(--color-gray2); */
   }
-  .company_social_net a {
+  /* .company_social_net a {
     background-image: url("../../../img/gcass/facebook.svg");
     background-size:95%;
-  }
+  } */
 
 
 /* ------------- */
@@ -108,3 +113,4 @@ address {
     white-space:nowrap;
     text-align: right;
  }
+
