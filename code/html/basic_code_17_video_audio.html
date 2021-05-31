@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- html/basic_code_17_video_audio.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--[if IE]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/ie9js/ie9.min.js"></script>
+    <script src="../ie/csspie/PIE.js"></script>
+    <script src="../ie/responsive.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  
+    <!-- font.google : noto sans -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+    <!-- fontawesome5 -->
+    <link rel="stylesheet" href="../fonts/fontawesome5/css/all.min.css">
+
+    <!-- css design -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/basic_code_17_video_audio.css">
+
+  <title>웹 기초</title>
+  
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./all_contents.html">웹기초</a></h1>
+
+    <h2>audio</h2>
+    <div class="part">
+      <p>audio요소를 직접 만들어서 바로 불러오기</p>
+      <audio src="../multi/audio/Ultimate-Victory-WST010901.mp3" controls muted loop preload></audio>
+    </div>
+    <div class="part">
+      <p>audio요소에서 여러개의 음성파일을 불러오기</p>
+      <audio controls muted loop preload>
+        <source src="../multi/audio/Ultimate-Victory-WST010901.ogg" type="audio/ogg" />
+        <source src="../multi/audio/Ultimate-Victory-WST010901.mp3" type="audio/mp3" />
+        <p>
+          사용하고 계신 브라우저는 audio 재생이 되지 않습니다.
+          <a href="http://google.com/chrome">최신 브라우저</a>를 이용하여 주세요.
+        </p>
+      </audio>
+    </div>
+
+
+    <hr />
+    <h2>video</h2>
+    <div class="part movie">
+      <p>video를 이용하여 파일 불러오기</p>
+      <video class="video" poster="../img/bg/background_001.jpg"
+             controls="controls" autoplay="autoplay" muted="muted"
+             preload="auto" loop="true"
+             src="../multi/video/Pexels_1851768.mp4"></video>
+    </div>
+    <div class="part movie">
+      <p>video요소에 여러개의 영상을 불러오기</p>
+      <video class="video" controls autoplay muted preload="auto" loop poster="../img/bg/background_001.jpg">
+        <source  src="../multi/video/Pexels_1851768.webm" type="video/webm">
+        <source  src="../multi/video/Pexels_1851768.mp4" type="video/mp4">
+        <p>
+          사용하고 계신 브라우저는 영상이 지원되지 않습니다. <br />
+          최신 브라우저를 설치하여 이용하세요.
+        </p>
+      </video>
+    </div>
+
+  <!-- script -->
+  <!-- <script src="../js/src/basic_code_17_video_audio.js"></script> -->
+</body>
+</html>

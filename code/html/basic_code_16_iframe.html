@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- html/basic_code_16_iframe.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--[if IE]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/ie9js/ie9.min.js"></script>
+    <script src="../ie/csspie/PIE.js"></script>
+    <script src="../ie/responsive.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  
+    <!-- font.google : noto sans -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+    <!-- fontawesome5 -->
+    <link rel="stylesheet" href="../fonts/fontawesome5/css/all.min.css">
+
+    <!-- css design -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/basic_code_16_iframe.css">
+
+  <title>웹 기초</title>
+  
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./all_contents.html">웹기초</a></h1>
+    <h2>외부문서 불러오기</h2>
+
+    <div class="part">
+      <h3>html문서 불러오기</h3>
+      <iframe src="./all_contents.html"></iframe>
+      <!-- 
+        iframe 을 사용하였을경우, 불러오는 문서의 a요소는
+        target="_parent" 또는 target="_top" , target="_blank" 중 하나를 써야한다.
+
+        _self : 자신의 페이지에서 이동 (기본속성)
+        _parent : iframe내부 위치의 부모요소에서 페이지 이동
+        _top : iframe내부 위치의 가장 상위 위치에서 페이지 이동 -> 현시점에선 _top을 주로사용
+        _blank : 새창에서 이동
+       -->
+    </div>
+
+    <div class="part youtube">
+      <h3>외부 동영상 불러오기</h3>
+      <iframe       
+      src="https://www.youtube.com/embed/47QRWYh_oH0?start=30" 
+      title="YouTube video player" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen></iframe>
+    </div>
+  </div>
+  
+
+
+  <!-- script -->
+  <!-- <script src="../js/src/basic_code_16_iframe.js"></script> -->
+</body>
+</html>

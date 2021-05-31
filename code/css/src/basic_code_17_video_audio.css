@@ -1,0 +1,19 @@
+.part {
+  overflow: hidden;
+  border:1px solid #333;
+}
+
+.movie {
+  width: 600px; height: 400px;
+  background-color: #ff7;
+  background-image: url("../../img/bg/background_002.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.movie > .video {
+  width: auto; height:auto;
+  min-width:100%; min-height:100%;  
+}
+
