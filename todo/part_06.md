@@ -67,7 +67,7 @@
 #### 코딩과정
 
 - [x] video/audio
-- [ ] border-radius
+- [x] border-radius
 - [ ] transform
 - [ ] background : gradient
 
