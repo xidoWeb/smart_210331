@@ -1,0 +1,36 @@
+/* basic_code_18_borderRadius */
+
+.part {
+  width: 500px; width: 31.25rem; 
+  height: auto;
+  margin-bottom:16px;
+  margin-bottom:1rem;
+  padding: 16px; 
+  padding: 1rem; 
+  border:1px solid #777;
+  border:0.0625rem solid #777;
+}
+
+.part > ul {
+  width: 100%; height:auto;
+}
+
+.radius_001 {
+  background-color: #ccc;
+}
+
+.part li {
+  width:200px; height:200px;
+  width:12.5rem; height:12.5rem;
+  margin:16px;
+  margin:1rem;
+  background-color: #fcc;
+  border:1px solid #07f;
+  border:0.0625rem solid #07f;
+}
+
+/* ------------------------------------ */
+.radius_001 li:nth-child(1) {
+  border-radius:16px;
+  border-radius:1rem;
+}

@@ -71,9 +71,12 @@
 - [ ] transform
 - [ ] background : gradient
 
----
+### 안되는거 파악
 
-- video/audio
+- [ ] `.gitignore` 파일 동작하지 않음 내용 파악
+
+
+
 - form
 - border-radius, transform, perspective
 - animation - transition/animation
