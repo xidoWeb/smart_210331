@@ -1,22 +1,29 @@
 @charset "UTF-8";
 /* css/base/reset.css */
+:root {
+  font-size:16px;
+  --color-white : #fff;
+  --color-black : #171717; }
 
 html, body {
   width:100%; height:100%;
-  margin:0; padding:0; }
+  margin:0; padding:0; 
+  font-family:'Noto Sans KR', sans-serif; 
+  color:#171717;
+  color:var(--color-black);
+  background-color: #fff; 
+  background-color: var(--color-white); 
+}
 
 h1,h2,h3,h4,h5,h6,
 p,pre,blockquote,address,
 ul,ol,li,dl,dt,dd,
 img,br,hr,div {
-  margin: 0; padding: 0; border:0; outline:0; }
-
+  margin: 0; padding: 0; border:0; outline:0; 
+  font-size:16px; font-size:1rem; }
 ul,ol,li { list-style:none;}
-
-a {
-  color:inherit;
+a {color:inherit;
   text-decoration:none; }
-
 button {
   -webkit-appearance:none;
   -moz-appearance:none;
@@ -24,12 +31,8 @@ button {
   -o-appearance:none;
   appearance:none;
 
-  border:0;
-  opacity:1;
-  background-color: transparent;
-  cursor:pointer;
-}
+  border:0; opacity:1; cursor:pointer;
+  background-color: transparent; }
 
 address { font-style:normal; }  
-
 header,nav,section,article,footer,aside,main,figure,figcaption { display:block; }
