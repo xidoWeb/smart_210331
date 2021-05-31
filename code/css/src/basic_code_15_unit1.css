@@ -145,5 +145,50 @@ h2, h3 {margin-bottom: 20px;}
   width:4.6875rem; height:4.6875rem;
   font-size: 0.46875rem;
 }
-
 /* 20px -> ( 20/16 ) rem  */
+.part {display: none;}
+.test_circle {
+  position: relative;
+  width: 300px; height: 300px;
+  background-color: #acf;
+  background-image:conic-gradient(#07f 90%, #acf 90%);
+  border-radius:100%; 
+  text-align: center; font-size: 1.3rem;
+  text-transform: uppercase;
+  transition: all 300ms linear;
+  opacity: 0;
+}
+.test_circle:hover{
+  opacity: 1;
+  background-image:conic-gradient(#07f 90%, #acf 90%);
+}
+
+
+.inner_circle {
+  position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto;
+  width: 80%; height: 80%; 
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.inner_circle > p {
+  position: absolute;
+  top: 50%; 
+  width: 100%; height: 0; 
+}
+
+.inner_circle > p > span {
+  display: block;
+  transform:translateY(-50%); 
+}
+
+.subject{ 
+  position: relative;
+  font-size: 1.7rem; margin-bottom: 2rem;}
+.subject:after {
+  content:""; display:block; 
+  position: absolute; bottom:-0.2rem; left: 50%;
+  width:20%; height:2px; background-color: #0af;
+  transform: translateX(-50%);
+}
+.per{ font-size: 2rem; font-weight: bold;}

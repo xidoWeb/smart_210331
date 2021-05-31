@@ -4,12 +4,20 @@
 
 ---
 
-## 능력단위 : 웹표준
+## 능력단위 : 웹표준 퍼블리싱
 
-**시험** : 
+**시험** :  6.24 (목요일) 
 
-- 
+- 프로젝트페이지 완성 제출
 
+- 메인, 서브페이지까지 클릭시 페이지 이동되게 제작 - 전체 5페이지 이상
+
+- 제출방식 
+
+  - 코드 압축 구글드라이브에 제출
+  - 각 페이지 캡쳐 후 이미지 모두 압축해서 제출
+  - 코드 제출시 - 수업내용은 제거하고 프로젝트만 제출 - 이미지 포함
+  
   
 
 ---
@@ -51,6 +59,27 @@
 - [ ] [삼양사 AM BU-이미지](http://www.gdweb.co.kr/sub/view.asp?displayrow=60&Txt_key=all&Txt_word=&Txt_agnumber=&Txt_fgbn=5&Txt_bcode1=&Txt_gbflag=&Txt_bcode2=&Txt_bcode3=&Txt_bcode4=&Txt_bcode5=&Page=2&str_no=14897)
 
   [https://www.samyangep.com/kr/index **(사이트바로가기)**](https://www.samyangep.com/kr/index)
+
+---
+
+### 2021.05.31
+
+#### 코딩과정
+
+- [x] video/audio
+- [ ] border-radius
+- [ ] transform
+- [ ] background : gradient
+
+---
+
+- video/audio
+- form
+- border-radius, transform, perspective
+- animation - transition/animation
+- responsive-web
+- display:flex
+- etc ( filter, data(attribute) )
 
 ---
 
