@@ -1,15 +1,3 @@
 # readmefile
-
-readme.md
-README.md
-**/README.md
-*/README.md
-
-# mdfile
-todo/**
-
-## html
-code/*
-
-todo/*
-work/*
+# 지정폴더, 파일 모두 처리가 가능하지만
+# 먼저 자료를 올렸던 경우에는 해당영역이 제대로 인식 되지 않을 수 있다.

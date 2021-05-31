@@ -92,4 +92,6 @@
 - https://noonnu.cc/
 - https://transfonter.org/
 - https://gs.statcounter.com/
-- 
+- https://www.pexels.com/ko-kr
+- https://www.videvo.net
+
