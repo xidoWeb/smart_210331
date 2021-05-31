@@ -22,12 +22,70 @@ li > span {
   background-color: rgba(201, 255, 65, 0.6); 
   transition:all 200ms linear;
 }
+i { display: block;  width: 100%; height:100%;
+  background-color: #fca;}
 
 /* ------------------------------------------- */
 
 .transform_01 > li:nth-child(1):hover > span {
   transform: scale(1.3, 2);
 }
+.transform_01 > li:nth-child(2):hover > span {
+  transform: translate(100px, -100px);
+  /* transform, translate, transition 주의 */
+}
+.transform_01 > li:nth-child(3):hover > span {
+  transform: skew(-50deg, 30deg);
+}
+.transform_01 > li:nth-child(3):hover > span i {
+  transform: skew(50deg, -30deg);
+}
+.transform_01 > li:nth-child(4):hover > span {
+  transform:rotateX(180deg);
+  /* rotate는 기본 z축으로 회전 */
+}
+
+.transform_01 > li:nth-child(5):hover > span {
+  transition:all 1000ms linear;
+  transform:perspective(1000px) rotateY(360deg);
+}
+
+.transform_01 > li:nth-child(6):hover > span {
+  transform:rotate(180deg) translate(150px, 150px) scale(0.5);
+}
+.transform_01 > li:nth-child(7):hover > span {
+  transform:translate(150px, 150px) scale(0.5) rotate(180deg);
+}
+
+.transform_01 > li:nth-child(8):hover > span {
+  transform:perspective(500px) rotateY(180deg);
+  -webkit-backface-visibility: hidden; 
+  -moz-backface-visibility: hidden; 
+  -ms-backface-visibility: hidden; 
+  -o-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+.transform_01 > li:nth-child(9) {  
+  position: relative; 
+  perspective:500px;}
+.transform_01 > li:nth-child(9):hover .front{  transform:rotateY(180deg); }
+.transform_01 > li:nth-child(9):hover .back{  transform:rotateY(0);}
+
+.transform_01 > li:nth-child(9) span {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%; 
+  visibility:visible;   backface-visibility: hidden; }
+
+/* 정면에 보이는 카드 */
+.transform_01 > li:nth-child(9) .front {  background-color: #077;  }
+
+/* 뒷면에 보이는 카드 */
+.transform_01 > li:nth-child(9) .back {
+  background-color: #fda;
+  color:#171717;
+  transform:rotateY(-180deg); }
+
 
 /** transform 
   * 형태를 변형하게 하는 기능으로
