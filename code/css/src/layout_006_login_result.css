@@ -66,20 +66,25 @@ h1 {
   color:var(--color-white);
   text-transform:uppercase;
 }
-.welcome_part > p {
+.welcome_part dl {
+  width: 100%; height: auto;
+}
+
+.welcome_part dt {
   width: 100%; height: auto; 
   margin-bottom: 10px;
   color:var(--color-black);
   font-size:var(--font-size2);
 }
 
-.welcome_part > .signup_link {
+.signup_link {
   width:100%; height:auto;
+  padding-bottom:4px;
 }
 
-.welcome_part > .signup_link > a {
-  display: block; width:54px; height:auto;
-  margin:auto; padding:5px 0;
+.signup_link > a {
+  /* display: block; width:54px; height:auto; */
+  padding:3px 10px;
   color:var(--color-color1);
   font-size:12px;
   font-size:var(--font-size1);
@@ -87,8 +92,6 @@ h1 {
   background-color: #fff;
   background-color: var(--color-white);
 }
-
-
 
 /* ------------------------------ */
 .member_part {
