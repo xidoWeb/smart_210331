@@ -37,6 +37,7 @@ h1 {
 .log_in_area {
   width: 276px; height:auto; min-height: 400px;  
   margin:auto; margin-top:150px;
+  padding-bottom:54px;
   border-radius:7px;
   text-align: center;
   background-color: var(--color-white);
@@ -94,4 +95,26 @@ h1 {
   width: 130px; height: auto; min-height:120px;
   margin:auto;
   background-color: #fff;
+}
+
+.id_insert {
+  width: 100%; height:20px;
+  margin-bottom: 10px;
+  background-color: #ccc;
+}
+.pw_insert {
+  width: 100%; height: 20px;
+  margin-bottom: 15px;
+  background-color: #ccc;
+}
+.log_in_btn {
+  width: 52px; height:18px;
+  margin:auto; margin-bottom:15px;
+  background-color: #ccc;
+}
+.lost_pw {
+  width: 100%; height:auto;
+  letter-spacing:-0.05rem;
+  /* word-spacing:-0.2rem; */
+  font-size:var(--font-size1);
 }
