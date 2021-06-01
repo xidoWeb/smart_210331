@@ -68,8 +68,8 @@
 
 - [x] video/audio
 - [x] border-radius
-- [ ] transform
-- [ ] background : gradient
+- [x] transform
+- [x] background : gradient
 
 ### 안되는거 파악
 
@@ -86,10 +86,23 @@
   - `*.*` 은 파일명
   - `!`는 제외를 의미
 
+---
 
+### 2021.06.01
+
+#### 코딩과정
+
+- [ ] form
+  - [ ] 기본형 틀
+  - [ ] label, id 속성관계
+  - [ ] name, value 
+  - [ ] input -> type 체크
+  - [ ] 기타 기능 확인
+- [ ] form 예제 - 로그인페이지 만들기
+
+---
 
 - form
-- border-radius, transform, perspective
 - animation - transition/animation
 - responsive-web
 - display:flex
