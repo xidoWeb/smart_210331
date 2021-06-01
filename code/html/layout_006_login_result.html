@@ -47,14 +47,27 @@
         </dl> 
       </div><!-- // .welcome_part -->
       <div class="member_part">
-        <form action="">
+        <form action="" method="POST">
           <fieldset>
             <legend class="blind">
               log in 작성
             </legend>
-            <div class="id_insert"></div>
-            <div class="pw_insert"></div>
-            <div class="log_in_btn"></div>
+            <div class="id_insert">           
+              <label for="userId" class="blind">
+                사용자의 아이디를 입력하세요.</label>
+              <input type="text" id="userId" name="userId" value=""
+               required placeholder="user name" />
+            </div>
+            <div class="pw_insert">
+              <label for="userPw" class="blind">
+                사용자의 비밀번호를 입력하세요.</label>
+              <input type="password" id="userPw" name="userPw" value=""
+               required placeholder="password" />
+            </div> 
+            <div class="log_in_btn">
+              <!-- <input type="submit" value="log in" class="submit_btn" /> -->
+              <button type="submit" class="submit_btn">log in</button>
+            </div>
             <p class="lost_pw">
               <a href="#">
                 Forgot your Password?

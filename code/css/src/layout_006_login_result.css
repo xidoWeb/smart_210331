@@ -37,7 +37,7 @@ h1 {
 .log_in_area {
   width: 276px; height:auto; min-height: 400px;  
   margin:auto; margin-top:150px;
-  padding-bottom:54px;
+  padding-bottom:35px;
   border-radius:7px;
   text-align: center;
   background-color: var(--color-white);
@@ -105,25 +105,57 @@ form {
   margin: 0; padding: 0;
 }
 fieldset{
-  border:0;
-  margin: 0; padding: 0;
+  width: 100%; height:auto;
+  min-height:200px;
+  border:0; margin: 0; padding: 0;
 }
 
-.id_insert {
+fieldset > div {
   width: 100%; height:20px;
+}
+
+.id_insert { 
   margin-bottom: 10px;
-  background-color: #ccc;
 }
 .pw_insert {
-  width: 100%; height: 20px;
-  margin-bottom: 15px;
-  background-color: #ccc;
+   margin-bottom: 15px;
 }
+
+fieldset > div > input {
+  display:block;
+  width: 100%; height:100%;
+  border:0;
+  margin: 0; padding: 0;
+  border-radius:20px;
+  text-align:left;
+  text-indent:2rem;
+  color:var(--color-white);
+  background-color: var(--color-color1);
+}
+fieldset > div > input::placeholder {
+  color:var(--color-white);
+  word-spacing:-0.1rem;
+  text-transform:capitalize;
+  opacity:0.5;
+}
+
 .log_in_btn {
-  width: 52px; height:18px;
+  width: 60px; height:18px;
   margin:auto; margin-bottom:15px;
-  background-color: #ccc;
 }
+
+.submit_btn {
+  display: block;
+  width: 100%; height:100%;
+  border-radius:18px;
+  color:var(--color-white);
+  text-transform:uppercase;
+  word-spacing:-0.1rem;
+  font-size:var(--font-size1);
+  font-weight:700;
+  background-color: var(--color-color1);
+}
+
 .lost_pw {
   width: 100%; height:auto;
   letter-spacing:-0.05rem;
