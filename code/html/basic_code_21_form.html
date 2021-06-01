@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- html/basic_code_21_form.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--[if IE]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/ie9js/ie9.min.js"></script>
+    <script src="../ie/csspie/PIE.js"></script>
+    <script src="../ie/responsive.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  
+    <!-- font.google : noto sans -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+    <!-- fontawesome5 -->
+    <link rel="stylesheet" href="../fonts/fontawesome5/css/all.min.css">
+
+    <!-- css design -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/basic_code_21_form.css">
+
+  <title>웹 기초</title>
+  
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./all_contents.html">웹표준</a></h1>
+    <hr/>
+    <h2>form 기능 이해하기</h2>
+
+    <form action="#" method="POST">
+      <fieldset>
+        <legend>form 영역에따른 제목</legend>
+        <label for="userId">아이디를 입력하세요.</label>
+        <input type="text" id="userId" name="sendName" value="" />
+        <br />
+        <label for="userPw">비밀번호를 입력하세요.</label>
+        <input type="password" id="userPw" name="sendPw" value="" />
+
+        <!-- input
+           type속성 : hidden, text, password
+        -->
+      </fieldset>
+
+      <fieldset class="input_type">
+        <legend>입력</legend>
+        <ul>
+          <li>
+            <label for="textName">내용을 입력하세요.</label>
+            <input type="text" name="textName" id="textName" value="" />
+          </li>
+          <li>
+            <label for="textPassword">비밀번호 입력하세요.</label>
+            <input type="password" name="textPassword" id="textPassword" value="" />
+          </li>
+          <li>
+            <!-- <label for=""></label> -->
+            <input type="hidden" name="hiddenName" value="value_insert">
+          </li>
+          <li>
+            <label for="textSearch">검색어를 입력하세요</label>
+            <input type="search" name="textSearch" id="textSearch" value="" />
+          </li>
+          <li>
+            <label for="textUrl">홈페이지 주소입력</label>
+            <input type="url" name="textUrl" id="textUrl" value="" />
+          </li> 
+          <li>
+            <label for="textEmail">이메일 입력</label>
+            <input type="email" name="textEmail" id="textEmail" value="" />
+          </li>
+          <li>
+            <label for="textTel">연락처 입력</label>
+            <input type="tel" name="textTel" id="textTel" value="" />
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>체크 - radio</legend>
+      </fieldset>
+
+      <fieldset>
+        <legend>체크 - checkbox</legend>
+      </fieldset>
+
+      <fieldset>
+        <legend>체크 - other</legend>
+      </fieldset>
+
+      <fieldset>
+        <legend>버튼</legend>
+      </fieldset>
+
+      <fieldset>
+        <legend>확장형</legend>
+      </fieldset>
+    </form>
+  </div>
+  <!-- script -->
+  <!-- <script src="../js/src/basic_code_21_form.js"></script> -->
+</body>
+</html>

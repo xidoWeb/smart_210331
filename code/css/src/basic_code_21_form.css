@@ -1,0 +1,19 @@
+/* basic_code_21_form.css */
+
+#wrap {
+  width: 90%; 
+  max-width:1600px;  max-width:100rem;
+  height:3000px;
+  margin:auto;
+  padding:16px;  padding:1rem;
+  background-color: #f1f1f1;
+}
+
+h2 {
+  width:auto; height:auto;
+  margin-bottom:1rem; padding: 1rem; 
+  text-align: center; font-size:1.5rem;
+  background-color: #acf;
+}
+
+/* ------------------------------------------ */
