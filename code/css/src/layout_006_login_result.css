@@ -100,6 +100,15 @@ h1 {
   background-color: #fff;
 }
 
+form {
+  width: 100%; height:auto;
+  margin: 0; padding: 0;
+}
+fieldset{
+  border:0;
+  margin: 0; padding: 0;
+}
+
 .id_insert {
   width: 100%; height:20px;
   margin-bottom: 10px;
