@@ -1,0 +1,54 @@
+/* css/src/layout_006_login_result.css */
+
+/* variable --------------------------- */
+:root {
+  /* color */
+  --color-white:#fff;
+  --color-black:#252525;
+  --color-color1:#472a77;
+  --color-color2:#9f478e;
+
+  /* font-family */
+  --font-family:'Noto Sans KR', sans-serif;
+
+  /* font-size */
+  --font-size1:9pt;
+  --font-size2:10pt;
+  --font-size3:12pt;
+  --font-size4:20pt;
+}
+
+/* design --------------------------- */
+
+#wrap {
+  width: 100%; height: auto; 
+  min-height:1500px; min-height:93.75rem;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  width: 100%; height: auto;
+  padding:1rem; box-sizing: border-box;
+  color:#fff; text-align: center;
+  background-color: #9f478e;
+}
+/* -------------------------------- */
+
+.log_in_area {
+  width: 276px; height:auto; min-height: 400px;  
+  margin:auto; margin-top:150px;
+  border-radius:7px;
+  background-color: #ccc;
+}
+
+.welcome_part {
+  width: 100%; height:auto; min-height:212px;
+  background-color: #9f478e;
+  background-color: var(--color-color2);
+}
+.member_part {
+  width: 130px; height: auto;
+  margin:auto;
+  padding-top: 26px; 
+  background-color: #fff;
+}
