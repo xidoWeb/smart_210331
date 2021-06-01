@@ -55,11 +55,13 @@
         <ul>
           <li>
             <label for="textName">내용을 입력하세요.</label>
-            <input type="text" name="textName" id="textName" value="" required />
+            <input type="text" name="textName" id="textName" value="" maxlength="10" 
+                   placeholder="아이디"  required />
           </li>
           <li>
             <label for="textPassword">비밀번호 입력하세요.</label>
-            <input type="password" name="textPassword" id="textPassword" value="" required />
+            <input type="password" name="textPassword" id="textPassword" value="" 
+              placeholder="비밀번호" required />
           </li>
           <li>
             <!-- <label for=""></label> -->
@@ -168,11 +170,51 @@
 
       <fieldset>
         <legend>버튼</legend>
-        
+        <ul>
+          <li>
+            <input type="submit" value="확인 및 전송" />
+          </li>
+          <li>
+            <input type="reset" value="취소" />
+          </li>
+          <li>
+            <label for="location" class="blind">지도검색</label>
+            <input type="button" id="location" name="location" value="지도검색" />
+          </li>
+          <li>
+            <!-- image는 submit기능을 이미지버튼 -->
+            <input type="image" src="../img/icon/icon.png" alt="버튼에대한 설명" value="확인 및 전송" />
+          </li>
+          <li>
+            <label for="sendData">전송할 파일을 선택하세요</label>
+            <input type="file" name="sendFile" id="sendData" value="" />
+          </li>
+        </ul>
       </fieldset>
 
       <fieldset>
         <legend>확장형</legend>
+       <div>
+        <label for="sendMultiText">댓글을 입력하세요.</label>
+        <textarea name="sendMultiText" id="sendMultiText" cols="30" rows="10" value=""></textarea>
+       </div>
+      <div>
+        <label for="launch">점심메뉴고르세요</label>
+        <select name="launch" id="launch">
+          <option>메뉴를 선택하세요.</option>
+          <option value="청국장">청국장</option>
+          <option value="된장찌게">된장찌게</option>
+          <option value="김치찌게">김치찌게</option>
+          <option value="돈까스">돈까스</option>
+          <option value="햄버거">햄버거</option>
+          <option value="다이어트">다이어트</option>
+        </select>
+      </div>
+      <div>
+        <button type="submit">확인</button>
+        <button type="reset">취소</button>
+        <button type="button">버튼</button>
+      </div>
       </fieldset>
     </form>
   </div>
