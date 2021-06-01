@@ -38,17 +38,22 @@ h1 {
   width: 276px; height:auto; min-height: 400px;  
   margin:auto; margin-top:150px;
   border-radius:7px;
+  text-align: center;
   background-color: #ccc;
 }
 
 .welcome_part {
   width: 100%; height:auto; min-height:212px;
+  margin-bottom: 26px;
   background-color: #9f478e;
   background-color: var(--color-color2);
+  background-image: url("../../img/login/1x/log_in_bg.png");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
 }
+
 .member_part {
-  width: 130px; height: auto;
+  width: 130px; height: auto; min-height:120px;
   margin:auto;
-  padding-top: 26px; 
   background-color: #fff;
 }
