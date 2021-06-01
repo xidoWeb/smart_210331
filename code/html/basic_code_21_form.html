@@ -97,15 +97,57 @@
           </li>
         </ul>
 
-        <input type="submit" value="확인">
+        <!-- <input type="submit" value="확인"> -->
       </fieldset>
 
-      <fieldset>
+      <fieldset class="radio_type">
         <legend>체크 - radio</legend>
+        <p>당신의 성별을 선택하세요</p>
+        <ul>
+          <li>
+            <input type="radio" id="male" name="gender" value="남성" />
+            <label for="male">남성</label>
+          </li>
+          <li>
+            <input type="radio" id="female" name="gender" value="여성" />
+            <label for="female">여성</label>
+          </li>
+          <li>
+            <input type="radio" id="dual" name="gender" value="양성" />
+            <label for="dual">양성</label>
+          </li>
+          <li>
+            <input type="radio" id="none" name="gender" value="무성" />
+            <label for="none">무성</label>
+          </li>
+        </ul>
       </fieldset>
 
       <fieldset>
         <legend>체크 - checkbox</legend>
+        <p>저녁에 먹을 음식을 고르시오</p>
+        <!-- 
+          radio -> selectName = value1
+          checkbox -> selectName = [value1, value2, value3]
+         -->
+        <ul>
+          <li>
+            <input type="checkbox" id="food_01" name="dinnerSelect" value="삼겹살" />
+            <label for="food_01">삼겹살</label>
+          </li>
+          <li>
+            <input type="checkbox" id="food_02" name="dinnerSelect" value="피자" />
+            <label for="food_02">피자</label>
+          </li>
+          <li>
+            <input type="checkbox" id="food_03" name="dinnerSelect" value="치킨" />
+            <label for="food_03">치킨</label>
+          </li>
+          <li>
+            <input type="checkbox" id="food_04" name="dinnerSelect" value="짬뽕" />
+            <label for="food_04">짬뽕</label>
+          </li>
+        </ul>
       </fieldset>
 
       <fieldset>
