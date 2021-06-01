@@ -55,36 +55,49 @@
         <ul>
           <li>
             <label for="textName">내용을 입력하세요.</label>
-            <input type="text" name="textName" id="textName" value="" />
+            <input type="text" name="textName" id="textName" value="" required />
           </li>
           <li>
             <label for="textPassword">비밀번호 입력하세요.</label>
-            <input type="password" name="textPassword" id="textPassword" value="" />
+            <input type="password" name="textPassword" id="textPassword" value="" required />
           </li>
           <li>
             <!-- <label for=""></label> -->
-            <input type="hidden" name="hiddenName" value="value_insert">
+            <input type="hidden" name="hiddenName" value="value_insert" />
           </li>
           <li>
             <label for="textSearch">검색어를 입력하세요</label>
-            <input type="search" name="textSearch" id="textSearch" value="" />
+            <input type="search" name="textSearch" id="textSearch" value="" required />
           </li>
+          <!-- html5 -->
           <li>
             <label for="textUrl">홈페이지 주소입력</label>
-            <input type="url" name="textUrl" id="textUrl" value="" />
+            <input type="url" name="textUrl" id="textUrl" value="" required />
           </li> 
           <li>
             <label for="textEmail">이메일 입력</label>
-            <input type="email" name="textEmail" id="textEmail" value="" />
+            <input type="email" name="textEmail" id="textEmail" value="" required />
           </li>
           <li>
             <label for="textTel">연락처 입력</label>
-            <input type="tel" name="textTel" id="textTel" value="" />
+            <input type="tel" name="textTel" id="textTel" value="" required >
           </li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <!-- html5 추가되었지만 아직은... 시간, 색상 표기는 모두 사용하기 애매하다 -->
+          <li>  
+            <label for="selectColor">색상을 선택하세요</label>
+            <input type="color" name="selectColor" id="selectColor" value="" />
+          </li>
+          <li>
+            <label for="myDate">예약날짜를 선택하세요.</label>
+            <input type="date" name="myDate" id="myDate" value="" />
+          </li>
+          <li>
+            <label for="datetime">원하는 시간을 입력하세요.</label>
+            <input type="time" name="datetime" id="datetime">
+          </li>
         </ul>
+
+        <input type="submit" value="확인">
       </fieldset>
 
       <fieldset>
