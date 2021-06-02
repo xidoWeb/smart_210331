@@ -1,0 +1,31 @@
+- https://fonts.google.com/icons
+
+아이콘 : <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+이메일아이콘 : <span class="material-icons-outlined">email</span>
+사용자아이콘 : <span class="material-icons-outlined">account_circle</span>
+열쇠아이콘    : <span class="material-icons-outlined">lock</span>
+열쇠아이콘2  : <span class="material-icons-outlined">enhanced_encryption</span>
+
+회사아이콘   : <span class="material-icons-outlined">work_outline</span>
+회사아이콘2  : <span class="material-icons-outlined">business</span>
+지구아이콘   : <span class="material-icons-outlined">language</span>
+
+
+---------------------------------------------------------------
+https://fontawesome.com/
+
+이메일 : <i class="far fa-envelope"></i>
+사용자 : <i class="far fa-user"></i>
+방패 : <i class="fas fa-shield-alt"></i>
+방패2 : <i class="fas fa-shield-virus"></i>
+
+회사 : <i class="far fa-building"></i>
+지구 : <i class="fas fa-globe"></i>
+
+---------------------------------------------------------------
+svg파일 font로 변환
+https://icomoon.io/app/#/select
+
+
+
