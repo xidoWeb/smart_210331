@@ -1,2 +1,43 @@
 /* css/src/layout_007_join_001_result.css */
 
+#wrap {
+  width: 750px; height:auto; min-height: 800px;
+  margin:auto;
+  padding:12px 30px 16px;
+  box-sizing: border-box;
+  background-color: #ddd;
+}
+
+h1 {
+  width: 100%; height:66px;
+  margin-bottom: 15px;
+}
+
+h1 > a {
+  display: block; width: 280px; height: 100%;
+  margin:auto;
+  background-image: url("../../img/join_001/xidostudio_logo.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+#joinBox {
+  width:685px; height:auto;
+  margin:auto;
+}
+
+#joinBox > h2 {
+  width: 100%; height:auto; 
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.input_data_area {
+  width: 100%; height: auto;
+}
+
+form {
+  width: 100%; height:auto; 
+  min-height:500px;
+  background-color: #fff;
+}
