@@ -67,6 +67,35 @@ fieldset:nth-of-type(2) {
   margin-bottom: 0;
 }
 
+.input_part label {
+  float:left;
+  width:56px; height:100%;
+  border-right:1px solid #e5e5e5;
+  cursor: pointer;
+  /* background-color: #fa0; */
+}
+.input_part input {
+  float:left;
+  width:550px; height:100%;
+  width:calc(100% - 9.375rem);
+  padding-left:10px;
+  color:#151515;
+}
+.input_part input::placeholder {
+  color:#757575;
+}
+
+.input_part .check{
+  float:right;
+  width: 60px; height: 100%;
+  background-color: #cca;
+}
+
+
+
+
+
+
 
 /*  */
 fieldset:last-of-type > p {
