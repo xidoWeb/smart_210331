@@ -108,20 +108,24 @@
                        placeholder="소속 회사이름">
                 <div class="check"></div>
               </li>
-              <li>
+              <li class="contry_list">
                 <label for="usrCount">
                   <i class="fas fa-globe"></i>
                   <span class="blind">
                     사용자의 나라를 선택하세요.
                   </span>
                 </label> 
+                <div class="blind">
+                  <input type="text" value="" id="usrCount" name="usrCount" />
+                </div>
+                <!-- ul>li*4>button[type=button]>span.flag -->
+                <ul class="contry">
+                  <li><button type="button" data-value="korea"><span class="flag ko"></span>대한민국</button></li>
+                  <li><button type="button" data-value="USA"><span class="flag usa"></span>USA</button></li>
+                  <li><button type="button" data-value="Germany"><span class="flag ge"></span>Germany</button></li>
+                  <li><button type="button" data-value="France"><span class="flag fr"></span>France</button></li>
+                </ul>
 
-                <select id="usrCount" name="usrCount">
-                  <option value="korea"> <span class="flag"></span> 대한민국</option>
-                  <option value="USA"> <span class="flag"></span> USA</option>
-                  <option value="Germany"> <span class="flag"></span> Germany</option>
-                  <option value="France"> <span class="flag"></span> France</option>
-                </select>
                 
               </li>
             </ul>

@@ -56,14 +56,14 @@ fieldset:nth-of-type(2) {
   width: 100%; height:auto;
 }
 
-.input_part li {
+.input_part > li {
   width: 100%; height:58px;
   border:1px solid #e5e5e5;
   box-sizing: border-box;
   margin-bottom:12px;
   background-color: #fff;
 }
-.input_part li:last-child {
+.input_part > li:last-child {
   margin-bottom: 0;
 }
 
@@ -95,25 +95,55 @@ fieldset:nth-of-type(2) {
   background-color: #cca;
 }
 
-.input_part select {
-  float:left;
+/* .input_part #usrCount {
+  position: absolute;
+  z-index:-1; overflow: hidden;
+  width: 0; height: 0;
+} */
+
+.contry {
+  /* float:left; */
+  position:absolute; z-index:100;
+  top: 0; right: 0;
   width:620px; 
   width:calc(100% - 60px);
-  height:100%;
-  background-color: #acc;
+  height:auto;
+  background-color: #fff;
 }
-option {
-  height:100px;
+.contry li {
+  width: 100%; height:58px;
+  padding:0.5rem; box-sizing: border-box;
 }
+.contry button{
+  width: 100%; height:100%;
+  text-align: left;
+  text-indent:1rem;
+}
+
 .flag {
   display:inline-block;
-  width:50px; height:40px;
-  background-color: #77f;
+  width:38px; height:24px;
+  margin-right:1rem;
+  /* background-color: #77f; */
+  background-image: url("../../img/join_001/world_flag.png");
+  background-repeat: no-repeat;
+  background-size:691.891892%;
+  background-position: inherit;
 }
 
+button[data-value="korea"]{  background-position: -13px -98px; }
+button[data-value="USA"]{ background-position: -77px -24px;}
+button[data-value="Germany"]{ background-position: -78px -98px;}
+button[data-value="France"]{ background-position: -141px -23px;}
 
-
-
+/* --------- */
+.contry_list {
+  position: relative;
+  overflow-y:hidden;
+}
+.contry_list:hover {
+  overflow-y:visible;
+}
 
 
 /*  */
