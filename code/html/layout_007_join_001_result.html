@@ -21,6 +21,9 @@
     <!-- fontawesome5 -->
     <link rel="stylesheet" href="../fonts/fontawesome5/css/all.min.css">
 
+    <!-- icoMoon-makeicon -->
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+
     <!-- css design -->
   <link rel="stylesheet" href="../css/base/reset.css">
   <link rel="stylesheet" href="../css/base/common.css">
@@ -46,24 +49,81 @@
             <ul class="input_part">
               <li>
                 <label for="usrId">
-                  <i></i>
-                  <span class="blind">가입할 아이디 또는 이메일을 입력하세요.</span>
+                  <i class="far fa-envelope"></i>
+                  <span class="blind">
+                    가입할 아이디 또는 이메일을 입력하세요.
+                  </span>
                 </label> 
                 <input type="text" id="usrId" name="usrId" value="" required 
                        placeholder="아이디 및 이메일">
                 <div class="check"></div>
               </li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>
+                <label for="usrName">
+                  <i class="far fa-user"></i>
+                  <span class="blind">
+                    사용자의 이름을 입력해 주세요.
+                  </span>
+                </label> 
+                <input type="text" id="usrName" name="usrName" value="" required 
+                       placeholder="사용자 이름">
+                <div class="check"></div>
+              </li>
+              <li>
+                <label for="usrPw">
+                  <i class="fas fa-shield-alt"></i>
+                  <span class="blind">
+                    비밀번호 최소 8자리 이상 최대20자리까지 입력하세요.
+                  </span>
+                </label> 
+                <input type="text" id="usrPw" name="usrPw" value="" required 
+                       maxlength="20" placeholder="비밀번호">
+                <div class="check"></div>
+              </li>
+              <li>
+                <label for="usrPwRe">
+                  <i class="fas fa-shield-virus"></i>
+                  <span class="blind">
+                    비밀번호를 다시한번 입력하세요.
+                  </span>
+                </label> 
+                <input type="text" id="usrPwRe" name="usrPwRe" value="" required 
+                       placeholder="비밀번호 확인">
+                <div class="check"></div>
+              </li>
             </ul>
           </fieldset>
 
           <fieldset>
             <legend>소속</legend>
             <ul class="input_part">
-              <li></li>
-              <li></li>
+              <li>
+                <label for="usrComp">
+                  <i class="far fa-building"></i>
+                  <span class="blind">
+                    소속 회사명을 입력하세요.
+                  </span>
+                </label> 
+                <input type="text" id="usrComp" name="usrComp" value="" required 
+                       placeholder="소속 회사이름">
+                <div class="check"></div>
+              </li>
+              <li>
+                <label for="usrCount">
+                  <i class="fas fa-globe"></i>
+                  <span class="blind">
+                    사용자의 나라를 선택하세요.
+                  </span>
+                </label> 
+
+                <select id="usrCount" name="usrCount">
+                  <option value="korea"> <span class="flag"></span> 대한민국</option>
+                  <option value="USA"> <span class="flag"></span> USA</option>
+                  <option value="Germany"> <span class="flag"></span> Germany</option>
+                  <option value="France"> <span class="flag"></span> France</option>
+                </select>
+                
+              </li>
             </ul>
           </fieldset>
           

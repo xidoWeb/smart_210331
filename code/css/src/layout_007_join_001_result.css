@@ -73,7 +73,12 @@ fieldset:nth-of-type(2) {
   border-right:1px solid #e5e5e5;
   cursor: pointer;
   /* background-color: #fa0; */
+  text-align: center;
+  font-size:1.5rem;
+  line-height:58px;
+  color:#757575;
 }
+
 .input_part input {
   float:left;
   width:550px; height:100%;
@@ -84,13 +89,27 @@ fieldset:nth-of-type(2) {
 .input_part input::placeholder {
   color:#757575;
 }
-
 .input_part .check{
   float:right;
   width: 60px; height: 100%;
   background-color: #cca;
 }
 
+.input_part select {
+  float:left;
+  width:620px; 
+  width:calc(100% - 60px);
+  height:100%;
+  background-color: #acc;
+}
+option {
+  height:100px;
+}
+.flag {
+  display:inline-block;
+  width:50px; height:40px;
+  background-color: #77f;
+}
 
 
 
