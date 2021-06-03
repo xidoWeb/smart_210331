@@ -119,27 +119,40 @@
             </dt>
 
             <dd>
-              <input type="tel" name="usrFirstYear" id="usrFirstYear" value="" title="태어난 해" maxlength="4" required class="part_n3" />
+              <ul>
+                <li>
+                  <input type="tel" name="usrFirstYear" id="usrFirstYear" 
+                  value="" title="태어난 해" placeholder="년 (숫자 4자)"
+                  maxlength="4" required class="part_n3" />
+                </li>
 
-              <label for="usrFirstMonth" class="blind">태어난 달을 선택하세요.</label>
-              <select name="usrFirstMonth" id="usrFirstMonth"  title="월" class="part_n3" required>
-                <option>선택하세요</option>
-                <option value="01">1월</option>
-                <option value="02">2월</option>
-                <option value="03">3월</option>
-                <option value="04">4월</option>
-                <option value="05">5월</option>
-                <option value="06">6월</option>
-                <option value="07">7월</option>
-                <option value="08">8월</option>
-                <option value="09">9월</option>
-                <option value="10">10월</option>
-                <option value="11">11월</option>
-                <option value="12">12월</option>
-              </select>
+                <li>
+                  <label for="usrFirstMonth" class="blind">태어난 달을 선택하세요.</label>
+                  <select name="usrFirstMonth" id="usrFirstMonth"  
+                   title="월" class="part_n3" required>
+                    <option>선택하세요</option>
+                    <option value="01">1월</option>
+                    <option value="02">2월</option>
+                    <option value="03">3월</option>
+                    <option value="04">4월</option>
+                    <option value="05">5월</option>
+                    <option value="06">6월</option>
+                    <option value="07">7월</option>
+                    <option value="08">8월</option>
+                    <option value="09">9월</option>
+                    <option value="10">10월</option>
+                    <option value="11">11월</option>
+                    <option value="12">12월</option>
+                  </select>
+                </li>
 
-              <label for="usrFirstDay" class="blind">태어난 날짜를 숫자로 입력하세요.</label>
-              <input type="tel" name="usrFirstDay" id="usrFirstDay" value="" title="날짜" maxlength="2" required class="part_n3" />
+                <li>
+                  <label for="usrFirstDay" class="blind">태어난 날짜를 숫자로 입력하세요.</label>
+                  <input type="tel" name="usrFirstDay" id="usrFirstDay" 
+                  value="" title="날짜" maxlength="2" placeholder="날짜"
+                  required class="part_n3" />
+                </li>
+              </ul>  
             </dd>
 
             <dd class="none result">
