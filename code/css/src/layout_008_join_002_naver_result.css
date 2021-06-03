@@ -32,3 +32,51 @@
 
 /* ------------------------------------------------------ */
 
+body {
+  background-color:var(--color-gray2);
+}
+
+#wrap {
+  width: 28.75rem; height:auto; min-height:50rem;
+  margin:auto; padding-top: 3.625rem;}
+h1 {
+  width: 16.25rem; height:3rem;
+  margin:auto; margin-bottom: 2.25rem;}
+h1 > a {
+  background-image: url("../../img/naver/naver_logo.svg");}
+  
+/* #joinBox --------------------- */
+#joinBox{
+  width: 100%; height:auto; min-height:43.75rem;
+  margin-bottom: 2.5rem;
+  }
+
+form {width: 100%; height:auto;}
+fieldset {
+  width: 100%; height:auto; min-height:50px;
+  margin-bottom:40px;
+  background-color: #aaa; 
+}
+fieldset:last-of-type {
+  margin-bottom: 0;
+}
+
+/* --------------------------------- */
+.none {display:none;}
+.none span {display: none;}
+
+.result.success {display:block;}
+.result.success > span:nth-of-type(3){display:inline; color:#03c75a;}
+
+.result.error {display: block;}
+.result.error > span:nth-of-type(2) {display:inline; color:#f00; }
+
+/* --------------------------------- */
+
+
+/* #footBox --------------------- */
+#footBox {
+  width: 100%; height:auto; min-height: 1.25rem;
+  text-align: center;
+}
+
