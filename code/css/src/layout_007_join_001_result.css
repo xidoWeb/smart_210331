@@ -111,7 +111,7 @@ fieldset:nth-of-type(2) {
   background-color: #fff;
 }
 .contry li {
-  width: 100%; height:58px;
+  width: 100%; height:60px;
   padding:0.5rem; box-sizing: border-box;
 }
 .contry button{

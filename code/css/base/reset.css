@@ -11,7 +11,7 @@ html, body {
   font-family:'Noto Sans KR', sans-serif; 
   color:#171717;
   color:var(--color-black);
-  line-height:120%;
+  line-height:1;
   background-color: #fff; 
   background-color: var(--color-white); 
 }
