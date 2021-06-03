@@ -47,6 +47,7 @@
       <form action="#" method="POST">
         <fieldset>
           <legend>계정 생성</legend>
+          <!-- 아이디 -->
           <dl class="inser_data">
             <dt><label for="usrId">아이디</label></dt>
             <dd>
@@ -58,7 +59,38 @@
               <span>잘못된 내용입니다. 다시 입력하세요.</span>
               <span>생성 가능한 아이디 입니다. 사용하셔도 좋습니다. </span>
             </dd>
-          </dl>
+          </dl><!-- // .insert_data -->
+
+          <!-- 비밀번호 -->
+          <dl class="inser_data">
+            <dt><label for="usrPw">비밀번호</label></dt>
+            <dd>
+              <input type="password" name="usrPw" id="usrPw" value="" title="비밀번호 입력" required />
+              <span class="side_text">
+                <i class="material-icons-outlined" aria-hidden="true">lock</i>
+              </span>
+            </dd>
+            <dd class="none result">
+              <span>생성할 비밀번호를 숫자 및 영문을 조합하여 10 글자이상 생성하세요</span>
+              <span>잘못된 내용입니다. 다시 입력하세요.</span>
+              <span>올바르게 작성하였습니다.</span>
+            </dd>
+          </dl><!-- // .insert_data -->
+
+          <!-- 비밀번호 확인 -->
+          <dl class="inser_data">
+            <dt><label for="usrPwRe">비밀번호 확인</label></dt>
+            <dd>
+              <input type="password" name="usrPwRe" id="usrPwRe" value="" title="비밀번호 재확인" required />
+              <span class="side_text">
+                <i class="material-icons-outlined" aria-hidden="true">enhanced_encryption</i>
+              </span>
+            </dd>
+            <dd class="none result">
+              <span>비밀번호가 동일하지 않습니다. 다시입력하세요.</span>
+              <span>올바르게 작성하였습니다.</span>
+            </dd>
+          </dl><!-- // .insert_data -->
         
 
         </fieldset>
