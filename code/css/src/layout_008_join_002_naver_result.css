@@ -4,6 +4,7 @@
   /* color */
   --color-green1:#08a600;
   --color-green2:#03c75a;
+  --color-green3-op:#03c75b36;
   --color-red:#f00;
   --color-black:#151515;
   --color-gray1:#8e8e8e;
@@ -28,7 +29,14 @@
 /* .material {  font-family: 'Material Icons'; } */
 [class^="material"]{font-family: 'Material Icons';}
 
-
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+select:focus {
+  background-color: rgba(50,255,50,0.2);
+  background-color: var(--color-green3-op);
+  border-bottom:1px solid var(--color-green2);
+}
 
 /* ------------------------------------------------------ */
 
@@ -55,7 +63,7 @@ form {width: 100%; height:auto;}
 fieldset {
   width: 100%; height:auto; min-height:50px;
   margin-bottom:40px;
-  background-color: #aaa; 
+  /* background-color: #aaa;  */
 }
 fieldset:last-of-type {
   margin-bottom: 0;
@@ -108,11 +116,25 @@ fieldset:last-of-type {
   transform:translateY(-50%);
 }
 
+.birthday dd:nth-of-type(1){
+  padding: 0;  border: 0;
+  background-color: transparent;
+}
+.birthday dd > ul {
+  width: 100%; height:100%;
+}
+
+.birthday li {
+  float:left;   width:30%; height:100%;
+  margin-right:5%;  border:var(--line-gray1);  padding:0.3rem; box-sizing: border-box;
+  background-color: #fff; }
+.birthday li:last-child {  margin-right: 0; }
+
 .birthday .part_n3 {
   float:left;
-  width:30%; height:100%;
+  width:100%; height:100%;
   margin-right:5%;
-  background-color: #fca;
+  /* background-color: #fca; */
 }
 .birthday .part_n3:last-child {
   margin-right:0;
