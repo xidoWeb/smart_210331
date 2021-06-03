@@ -90,13 +90,63 @@
               <span>비밀번호가 동일하지 않습니다. 다시입력하세요.</span>
               <span>올바르게 작성하였습니다.</span>
             </dd>
-          </dl><!-- // .insert_data -->
-        
+          </dl><!-- // .insert_data -->       
 
         </fieldset>
         <fieldset>
           <legend>개인 정보</legend>
+          <!-- 이름 -->
+          <dl class="inser_data">
+            <dt><label for="usrName">이름<span class="blind">을 입력하세요.</span></label></dt>
+            <dd>
+              <input type="text" name="usrName" id="usrName" value="" title="이름 작성" required />
+              <span class="side_text">
+                <i class="material-icons-outlined" aria-hidden="true">account_circle</i>
+              </span>
+            </dd>
+            <dd class="none result">
+              <span>다시입력하세요.</span>
+              <span>확인되었습니다.</span>
+            </dd>
+          </dl><!-- // .insert_data -->
 
+          <!-- 생년월일 -->
+          <dl class="inser_data birthday">
+            <dt>
+              <label for="usrFirstYear">생년월일
+                <span class="blind">을 모두 입력하세요. 우선 태어난 해를 4자리 숫자로 작성하세요.</span>
+              </label>
+            </dt>
+
+            <dd>
+              <input type="tel" name="usrFirstYear" id="usrFirstYear" value="" title="태어난 해" maxlength="4" required class="part_n3" />
+
+              <label for="usrFirstMonth" class="blind">태어난 달을 선택하세요.</label>
+              <select name="usrFirstMonth" id="usrFirstMonth"  title="월" class="part_n3" required>
+                <option>선택하세요</option>
+                <option value="01">1월</option>
+                <option value="02">2월</option>
+                <option value="03">3월</option>
+                <option value="04">4월</option>
+                <option value="05">5월</option>
+                <option value="06">6월</option>
+                <option value="07">7월</option>
+                <option value="08">8월</option>
+                <option value="09">9월</option>
+                <option value="10">10월</option>
+                <option value="11">11월</option>
+                <option value="12">12월</option>
+              </select>
+
+              <label for="usrFirstDay" class="blind">태어난 날짜를 숫자로 입력하세요.</label>
+              <input type="tel" name="usrFirstDay" id="usrFirstDay" value="" title="날짜" maxlength="2" required class="part_n3" />
+            </dd>
+
+            <dd class="none result">
+              <span>생년월일을 숫자로 정확하게 입력/선택하세요.</span>
+              <span>올바르게 작성하였습니다.</span>
+            </dd>
+          </dl><!-- // .insert_data -->
         </fieldset>
         <fieldset>
           <legend>인증 체크</legend>
