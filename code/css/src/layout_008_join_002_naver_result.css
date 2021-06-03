@@ -161,3 +161,55 @@ fieldset:last-of-type {
   text-align: center;
 }
 
+.info_navigation {
+  width: 100%; height:auto;
+  margin-bottom:1.5rem;
+  padding-bottom:0.3rem;
+  border-bottom:var(--line-gray1);
+}
+
+.info_navigation li {
+  position: relative;
+  display:inline-block;
+  margin-right:9px;
+  font-size:var(--font-size4);
+}
+
+.info_navigation li:last-child {
+  margin-right: 0;
+}
+
+.info_navigation li:after,
+.info_navigation li::after {
+  content:""; display: block;
+  position: absolute; top: 50%; right:-5px;
+  width:1px; height:60%; transform:translateY(-50%);
+  background-color: var(--color-gray1);
+}
+
+.info_navigation li:last-child:after,
+.info_navigation li:last-child::after {
+  display: none;
+}
+
+/* ----------------- */
+
+#footBox address {
+  width: 100%; height: auto;
+  font-style: normal;
+  text-transform:capitalize; }
+
+#footBox p {
+  width: 100%; height: auto; }
+
+.naver_icon {
+  display:inline-block; 
+  width:100px; height:20px;
+  margin-right:1rem;
+  background-image: url("../../img/naver/naver_logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100% 50%; } 
+
+#footBox address em { font-style: normal; font-weight: 700;}
+.upper { text-transform:uppercase; }
