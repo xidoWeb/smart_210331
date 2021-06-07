@@ -1,0 +1,46 @@
+/* css.src/basic_coe_22_rwd_02.css */
+
+/* 공통범위 */
+#wrap {
+  width: 100%; height:500px;
+  background-color: #ddd;
+}
+
+/* ~479px */
+@media screen and (max-width:479px) {
+
+  #wrap {
+    width: 100%; height:500px;
+    background-color: #0cf;
+  }
+
+}/* @media screen and (max-width:479px) */
+
+/* 480 ~ 767px */
+@media screen and (min-width:480px) and (max-width:767px) {
+
+  #wrap {
+    width:100%; height:900px;
+    background-color: #aca;
+  }
+
+}/* @media screen and (min-width:480px) and (max-width:767px) */
+
+/* 768 ~ 959px */
+@media screen and (min-width:768px) and (max-width:959px) {
+
+  #wrap {
+    width:100%; height:700px;
+    background-color: #fcf;
+  }
+
+}/* @media screen and (min-width:768px) and (max-width:959px)  */
+
+
+/* 960px ~ */
+@media screen and (min-width:960px) {
+  #wrap {
+    width: 100%; height:1200px;
+    background-color: #ffc;
+  }
+}
