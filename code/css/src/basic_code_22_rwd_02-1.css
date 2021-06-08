@@ -1,0 +1,15 @@
+/* css.src/basic_coe_22_rwd_02-1.css */
+
+/* 공통범위 디자인 */
+@import url("../pwd_02-1/a_basic_layout.css");
+/* 스마트폰 v 디자인 : ~479px */
+@import url("../pwd_02-1/b_smartphone_v.css");
+/* 스마트폰 h 디자인 : 480 ~ 767px  */
+@import url("../pwd_02-1/c_smartphone_h.css");
+/* 태블릿 : 768 ~ 959px  */
+@import url("../pwd_02-1/d_tablet.css");
+/* pc : 960px ~ */
+@import url("../pwd_02-1/e_pc.css");
+
+
+

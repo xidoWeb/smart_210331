@@ -1,0 +1,109 @@
+/* pwd_02/b_smartphone_v.css */
+/*
+* vw단위는 브라우저의 가로값 전체를 기준으로 크기를 설정하는 단위로, 
+  실제로 가로 또는 세로 , font-size 등 어떠한 크기에 적용하든 관계가 없다.
+
+* vh단위는 브라우저의 세로값 전체를 기준으로 실제 해당요소의 
+  가로,세로,font-size 등 단위가 설정되는 것은 모두 적용된다.
+
+* 그래서 vw/vh단위를 사용하면, 부모크기를 기준으로 보는 것이아니다!!! -> 브라우저 크기를 기준으로 본다.
+* 단, 스크롤바의 영역또한 포함되기 때문에 주의하자!
+* 계산방법 : 요소의크기 / 기준의크기(가로전체 또는 세로전체) * 100 = 값vw(vh)
+
+*/
+
+/* ~479px ------------------------------------------------------ */
+@media screen and (max-width:479px) {
+/* vw단위 기준 : 320px  */
+  html, body{
+    width: 100%;
+    min-width:320px;
+  }
+
+  #wrap {
+    height:500px;
+    background-color: #0cf;
+  }
+
+  #headBox{
+    position: fixed; top: 0; left:50%; z-index:1500;
+    transform:translateX(-50%);
+    width:100%; 
+    height:40px; height:2.5rem;  height:12.5vw; 
+    overflow-x:auto;
+    min-height:40px; min-height:2.5rem; 
+    padding:5px 1.5rem; box-sizing: border-box;
+    background-color: #333; 
+  }
+
+  .headBox_innerwrap {
+    width: 100%; height:auto;
+    /* min-width:320px; */
+  }
+
+  h1 {
+    float:left;
+    width: 100px; height: 30px;
+    background-color: #fff;
+  }
+  #navBox {
+    float:right;
+    width: 60px; height: 25px;
+    background-color: #fff;
+  }
+
+  .search_area {
+    float:left;
+    width:24px; height:25px;
+    box-sizing: border-box;
+    background-color: #33b88f;
+  }
+  .gnb_area {
+    float:right;
+    width:30px; height:25px;
+    background-color: #33b88f;
+  }
+
+  
+  /* #viewBox  */
+  #viewBox{
+    width:100%; height:480px; height:30rem; height:150vw;
+    min-height:30rem;
+    padding-top:12.5vw; box-sizing: border-box;
+    background-color: #bbaa77;
+  }
+  
+  /* #contentBox */
+  #contentBox{
+    width:100%; height:480px;
+    height:30rem; height:150vw; min-height:30rem;
+    padding:24px 16px; padding:1.5rem 1rem;  box-sizing: border-box;
+    background-color: #547d77;
+  }
+
+  .title_shape {
+    width: 192px; height: 156px;
+    width: 12rem; height: 9.75rem;
+    background-color: #33b88f;
+  }
+
+  /* #infoBox */
+  #infoBox{
+    width:100%; height:auto;
+    background-color: #33b88f;
+  }
+
+  .new_area{
+    width: 100%; height:480px;
+    background-color: #957de9;
+  }
+  .notice_area, .more_content{ display: none; }
+
+
+  /* #footBox */
+  #footBox{
+    width:100%; height:40px;
+    background-color: #333;
+  }
+
+}/* @media screen and (max-width:479px) */

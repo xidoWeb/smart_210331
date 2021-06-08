@@ -1,0 +1,119 @@
+/* pwd_02/pc.css */
+
+
+/* 960px ~ ------------------------------------------------------ */
+@media screen and (min-width:960px) {
+
+/* common class */
+.container {
+  width:100%; max-width:1200px;  max-width:75rem;
+  height:auto;
+  margin:auto; 
+}
+/* -------------- */
+
+  #wrap {
+    height:1200px;
+    background-color: #ffc;
+  }
+/*   #headBox */
+  #headBox {
+    position: fixed; top: 0; left: 0; z-index: 1500;
+    width:100%; height:auto;   
+    background-color: #333; 
+  }
+  .headBox_innerwrap {
+    height:60px;
+    padding:8px 25px; padding:0.5rem 1.5625rem; 
+    box-sizing: border-box;
+  }
+
+  /* 
+  #headBox:before {
+    content: " ";
+    display: block; 
+    position: absolute; z-index: -1; top: 0; left: 50%;
+    width:100vw; height:100%;
+    transform:translate(-50%);
+    background-color: inherit;  } */
+
+  h1 {
+    float:left;
+    width: 250px; height: 45px;
+    width: 15.625rem; height: 2.8125rem;
+    background-color: #fff;
+  }
+  #navBox {
+    float:right;
+    width: 500px; height: 30px;
+    width: 31.25rem; height: 1.875rem;
+    margin-top: 7px;
+    background-color: #fff;
+  }
+
+  .search_area {
+    float:left;
+    width:50px; height:30px;
+    width:3.125rem; height:1.875rem;
+    background-color: #33b88f;
+  }
+  .gnb_area {
+    float:right;
+    width:430px; height:30px;
+    width:26.875rem; height:1.875rem;
+    background-color: #33b88f;
+  }
+
+
+
+/*  #viewBox */
+  #viewBox{
+    width:100%; height:450px;
+    padding-top:60px; padding-top:3.75rem;
+    box-sizing: border-box;
+    background-color: #bbaa77;
+  }
+  .viewBox_innerwrap {
+    height: 100%;
+  }
+
+  /* #contentBox */
+  #contentBox{
+    width:100%; max-width:1200px; height:210px;
+    margin:auto;
+    padding:24px 16px; padding:1.5rem 1rem;  box-sizing: border-box;
+    background-color: #547d77;
+  }
+  
+  .title_shape {
+    width: 192px; height: 156px;
+    width: 12rem; height: 9.75rem;
+    background-color: #33b88f;
+  }
+
+
+  /* #infoBox */
+  #infoBox{
+    width:100%; max-width:1200px; height:540px;
+    margin:auto;
+    background-color: #33b88f;
+  }
+
+  .info_pc_area {
+    float:left;
+    width:33.333333%; width:calc(100% / 3);  height:540px; height:33.75rem; }
+  .new_area{ background-color: #957de9; }
+  .notice_area{ background-color: #95abe9; }
+  .more_content{ background-color: #95d2e9; }
+
+  /* #footBox */
+  #footBox{
+    width:100%; height:120px;
+    background-color: #333;
+  }
+  .footBox_innerwrap {
+    height:100%; 
+    background-color: #ddd;
+  }
+
+}/* @media screen and (min-width:960px) */
