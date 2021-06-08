@@ -9,21 +9,25 @@
   }
 /*   #headBox */
   #headBox {
-    position: relative; z-index:0;
-    width:100%; max-width:1200px; height:60px;
+    width:100%; height:auto;   
+    background-color: #333; 
+  }
+  .headBox_innerwrap {
+    width: 100%;  max-width:1200px;
+    height:60px;
     margin:auto;
     padding:8px 25px; padding:0.5rem 1.5625rem; 
     box-sizing: border-box;
-    background-color: #333; 
   }
-   
+
+  /* 
   #headBox:before {
     content: " ";
     display: block; 
     position: absolute; z-index: -1; top: 0; left: 50%;
     width:100vw; height:100%;
     transform:translate(-50%);
-    background-color: inherit;  }
+    background-color: inherit;  } */
 
   h1 {
     float:left;
