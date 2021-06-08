@@ -73,7 +73,14 @@
   #contentBox{
     width:100%; height:480px;
     height:30rem; height:150vw; min-height:30rem;
+    padding:24px 16px; padding:1.5rem 1rem;  box-sizing: border-box;
     background-color: #547d77;
+  }
+
+  .title_shape {
+    width: 192px; height: 156px;
+    width: 12rem; height: 9.75rem;
+    background-color: #33b88f;
   }
 
   /* #infoBox */
