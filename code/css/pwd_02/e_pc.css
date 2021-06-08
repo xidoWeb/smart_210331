@@ -101,7 +101,7 @@
 
   .info_pc_area {
     float:left;
-    width:33.333333%;  height:540px; height:33.75rem; }
+    width:33.333333%; width:calc(100% / 3);  height:540px; height:33.75rem; }
   .new_area{ background-color: #957de9; }
   .notice_area{ background-color: #95abe9; }
   .more_content{ background-color: #95d2e9; }

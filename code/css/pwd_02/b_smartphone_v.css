@@ -15,9 +15,12 @@
 /* ~479px ------------------------------------------------------ */
 @media screen and (max-width:479px) {
 /* vw단위 기준 : 320px  */
+  html, body{
+    width: 100%;
+    min-width:320px;
+  }
 
   #wrap {
-    min-width:320px;
     height:500px;
     background-color: #0cf;
   }
@@ -35,7 +38,7 @@
 
   .headBox_innerwrap {
     width: 100%; height:auto;
-    min-width:320px;
+    /* min-width:320px; */
   }
 
   h1 {
@@ -90,11 +93,11 @@
     background-color: #33b88f;
   }
 
-    .new_area{
-      width: 100%; height:480px;
-      background-color: #957de9;
-    }
-    .notice_area, .more_content{ display: none; }
+  .new_area{
+    width: 100%; height:480px;
+    background-color: #957de9;
+  }
+  .notice_area, .more_content{ display: none; }
 
 
   /* #footBox */

@@ -78,7 +78,8 @@
     height:45rem; height:150vw; 
     background-color: #957de9;
   }
-  .notice_area, .more_content{ display: none; }
+  .notice_area, 
+  .more_content{ display: none; }
 
   /* #footBox */
   #footBox{
