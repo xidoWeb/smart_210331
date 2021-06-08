@@ -51,6 +51,13 @@
     padding-top:3.75rem;
     background-color: #bbaa77;
   }
+
+  .indicator {display: none;}
+  .view_area {
+    padding: 138px 40px 65px;
+    padding: 8.625rem 2.5rem 4.0625rem;
+    box-sizing: border-box;
+   }
   
   /* #contentBox */
   #contentBox{

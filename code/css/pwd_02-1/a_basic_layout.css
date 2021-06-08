@@ -7,6 +7,7 @@
   height:auto;
   margin:auto; 
 }
+
 /* -------------- */
 
   #wrap {
@@ -25,14 +26,6 @@
     box-sizing: border-box;
   }
 
-  /* 
-  #headBox:before {
-    content: " ";
-    display: block; 
-    position: absolute; z-index: -1; top: 0; left: 50%;
-    width:100vw; height:100%;
-    transform:translate(-50%);
-    background-color: inherit;  } */
 
   h1 {
     float:left;
@@ -74,6 +67,10 @@
     height: 100%;
   }
 
+  .view_area {
+    width: 100%; height: 100%; 
+    background-color: #fdd;}
+    
   /* #contentBox */
   #contentBox{
     width:100%; max-width:1200px; height:210px;
