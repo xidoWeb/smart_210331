@@ -3,6 +3,7 @@
 
 /* 480 ~ 767px ------------------------------------------------------ */
 @media screen and (min-width:480px) and (max-width:767px) {
+/* 가로 기준 480px */
 
   #wrap {
     height:900px; height:56.25rem;
@@ -43,19 +44,28 @@
     }
 
 
+  /* #viewBox */
   #viewBox{
-    width:100%; height:720px;
+    width:100%; 
+    height:720px; height:45rem; height:150vw; 
     padding-top:3.75rem;
     background-color: #bbaa77;
   }
+  
+  /* #contentBox */
   #contentBox{
     width:100%; height:720px;
+    height:45rem; height:150vw;
     background-color: #547d77;
   }
+  
+  /* #infoBox */
   #infoBox{
     width:100%; height:720px;
     background-color: #33b88f;
   }
+
+  /* #footBox */
   #footBox{
     width:100%; height:60px;
     background-color: #333;

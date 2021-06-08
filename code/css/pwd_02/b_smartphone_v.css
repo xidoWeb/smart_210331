@@ -64,7 +64,6 @@
   /* #viewBox  */
   #viewBox{
     width:100%; height:480px; height:30rem; height:150vw;
-    /* 480 / 320 * 100 = 150vw */
     min-height:30rem;
     padding-top:12.5vw; box-sizing: border-box;
     background-color: #bbaa77;
@@ -73,6 +72,7 @@
   /* #contentBox */
   #contentBox{
     width:100%; height:480px;
+    height:30rem; height:150vw; min-height:30rem;
     background-color: #547d77;
   }
 
