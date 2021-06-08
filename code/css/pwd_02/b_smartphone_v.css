@@ -22,6 +22,8 @@
   }
 
   #headBox{
+    position: fixed; top: 0; left:50%; z-index:1500;
+    transform:translateX(-50%);
     width:100%; 
     height:40px; height:2.5rem;  height:12.5vw; 
     min-height:30px; min-height:1.875rem;
@@ -47,6 +49,7 @@
   .search_area {
     float:left;
     width:24px; height:25px;
+    box-sizing: border-box;
     background-color: #33b88f;
   }
   .gnb_area {
@@ -56,6 +59,7 @@
   }
   #viewBox{
     width:100%; height:480px;
+    padding-top:12.5vw;
     background-color: #bbaa77;
   }
   #contentBox{
