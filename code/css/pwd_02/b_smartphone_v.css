@@ -17,6 +17,7 @@
 /* vw단위 기준 : 320px  */
 
   #wrap {
+    min-width:320px;
     height:500px;
     background-color: #0cf;
   }
@@ -85,9 +86,16 @@
 
   /* #infoBox */
   #infoBox{
-    width:100%; height:480px;
+    width:100%; height:auto;
     background-color: #33b88f;
   }
+
+    .new_area{
+      width: 100%; height:480px;
+      background-color: #957de9;
+    }
+    .notice_area, .more_content{ display: none; }
+
 
   /* #footBox */
   #footBox{

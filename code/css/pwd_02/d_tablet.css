@@ -66,9 +66,23 @@
 
   /* #infoBox */
   #infoBox{
-    width:100%; height:540px;
+    width:100%; height:auto;
     background-color: #33b88f;
   }
+  .new_area{
+    float:left;
+    width:50%; height:540px; height:33.75rem; height:70.3125vw; 
+    /* 540 / 768 *100 */
+    background-color: #957de9;
+  }
+  .notice_area{
+    float:left;
+    width:50%; height:540px; height:33.75rem; height:70.3125vw; 
+    /* 540 / 768 *100 */
+    background-color: #95abe9;
+  }
+  .more_content{ display: none; }
+
 
   /* #footBox */
   #footBox{
