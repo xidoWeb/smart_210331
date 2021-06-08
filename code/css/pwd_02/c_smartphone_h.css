@@ -1,0 +1,57 @@
+/* pwd_02/c_smartphone_h.css */
+
+
+/* 480 ~ 767px ------------------------------------------------------ */
+@media screen and (min-width:480px) and (max-width:767px) {
+
+  #wrap {
+    height:900px;
+    background-color: #aca;
+  }
+
+  #headBox{
+    width:100%; height:60px;
+    padding:10px 1rem; box-sizing: border-box;
+    background-color: #333; 
+  }
+    h1 {
+      float:left;
+      width: 126px; height: 30px;
+      background-color: #fff;
+    }
+    #navBox {
+      float:right;
+      width: 90px; height: 40px;
+      background-color: #fff;
+    }
+
+    .search_area {
+      float:left;
+      width:36px; height:40px;
+      background-color: #33b88f;
+    }
+    .gnb_area {
+      float:right;
+      width:45px; height:40px;
+      background-color: #33b88f;
+    }
+
+
+  #viewBox{
+    width:100%; height:720px;
+    background-color: #bbaa77;
+  }
+  #contentBox{
+    width:100%; height:720px;
+    background-color: #547d77;
+  }
+  #infoBox{
+    width:100%; height:720px;
+    background-color: #33b88f;
+  }
+  #footBox{
+    width:100%; height:60px;
+    background-color: #333;
+  }
+
+}/* @media screen and (min-width:480px) and (max-width:767px) */

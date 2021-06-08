@@ -1,0 +1,34 @@
+/* pwd_02/pc.css */
+
+
+/* 960px ~ ------------------------------------------------------ */
+@media screen and (min-width:960px) {
+  #wrap {
+    height:1200px;
+    background-color: #ffc;
+  }
+
+  #headBox{
+    width:100%; height:60px;
+    background-color: #333; 
+  }
+  #viewBox{
+    width:100%; height:450px;
+    background-color: #bbaa77;
+  }
+  #contentBox{
+    width:100%; max-width:960px; height:210px;
+    margin:auto;
+    background-color: #547d77;
+  }
+  #infoBox{
+    width:100%; max-width:960px; height:540px;
+    margin:auto;
+    background-color: #33b88f;
+  }
+  #footBox{
+    width:100%; height:120px;
+    background-color: #333;
+  }
+
+}/* @media screen and (min-width:960px) */
