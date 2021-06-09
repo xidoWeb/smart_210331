@@ -28,15 +28,6 @@
     box-sizing: border-box;
   }
 
-  /* 
-  #headBox:before {
-    content: " ";
-    display: block; 
-    position: absolute; z-index: -1; top: 0; left: 50%;
-    width:100vw; height:100%;
-    transform:translate(-50%);
-    background-color: inherit;  } */
-
   h1 {
     float:left;
     width: 250px; height: 45px;
@@ -69,13 +60,41 @@
 /*  #viewBox */
   #viewBox{
     width:100%; height:450px;
-    padding-top:60px; padding-top:3.75rem;
-    box-sizing: border-box;
+    padding-top:60px; padding-top:3.75rem;  box-sizing: border-box;
     background-color: #bbaa77;
   }
-  .viewBox_innerwrap {
-    height: 100%;
+
+  .viewBox_innerwrap {  height: 100%;  }
+  
+  .indicator { display: none; }
+
+  .view_area {
+    width: 100%; height: 100%;
+    padding:1rem; box-sizing: border-box;
+    background-color: #ccf;
   }
+
+  .view_guide {
+    width: 100%; height: 100%;
+    border:1px solid #333;  box-sizing: border-box;
+    overflow-x:auto;
+    /* overflow: hidden; */
+  }
+
+  .view_inner {
+    width:700%;    height: 100%;  }
+  .view_inner > li {
+    float:left;  
+    width:14.285714%; width:calc(100% / 7); height: 100%; }
+
+  .view_inner > li:nth-child(1){ background-color: rgb(43,88,188); }
+  .view_inner > li:nth-child(2){ background-color: rgb(168,38,7); }
+  .view_inner > li:nth-child(3){ background-color: rgb(133,50,17); }
+  .view_inner > li:nth-child(4){ background-color: rgb(95,22,125); }
+  .view_inner > li:nth-child(5){ background-color: rgb(110,137,13); }
+  .view_inner > li:nth-child(6){ background-color: rgb(118,255,17); }
+  .view_inner > li:nth-child(7){ background-color: rgb(227,183,38); }
+
 
   /* #contentBox */
   #contentBox{
