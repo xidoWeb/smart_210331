@@ -3,9 +3,7 @@
 @media screen and (min-width:768px) {
 
 
-.viewBox_innerwrap {
-  position: relative;
-}
+.viewBox_innerwrap { position: relative; }
 
   .indicator { 
     position: absolute; 
@@ -31,7 +29,7 @@
 
     margin-right:20px; margin-right:1.25rem;
     width:var(--i-size); height:var(--i-size);}
-    
+
   .indicator li:last-child { margin-right: 0; }
 
   .indicator li a {

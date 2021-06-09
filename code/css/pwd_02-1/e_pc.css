@@ -66,20 +66,7 @@
 
   .viewBox_innerwrap {  height: 100%;  }
   
-  /* #contentBox */
-  #contentBox{
-    width:100%; max-width:1200px; height:210px;
-    margin:auto;
-    padding:24px 16px; padding:1.5rem 1rem;  box-sizing: border-box;
-    background-color: #547d77;
-  }
-  
-  .title_shape {
-    width: 192px; height: 156px;
-    width: 12rem; height: 9.75rem;
-    background-color: #33b88f;
-  }
-
+  /* #contentBox : 공통영역으로 통합처리  */
 
   /* #infoBox */
   #infoBox{

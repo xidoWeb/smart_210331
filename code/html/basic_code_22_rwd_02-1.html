@@ -38,7 +38,21 @@
         <h1><a href="./all_contents.html">site name</a></h1>
         <nav id="navBox">
           <h2 class="blind">navigation</h2>
-          <div class="search_area"></div>
+          <div class="search_area">
+            <div class="search_open_btn">
+              <button type="button"><span>검색창 띄우기</span></button>
+            </div>
+            <div class="search_part">
+              <form action="" method="get">
+                <fieldset>
+                  <legend>검색</legend>
+                  <label for="search">검색하세요</label>
+                  <input type="search" id="search" name="search" value="" placeholder="검색하세요" />
+                  <button type="button"><span>검색</span></button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
           <div class="gnb_area"></div>
         </nav>
       </div>      
@@ -56,6 +70,7 @@
             <li><a href="#"><span>광고 5에대한 요약설명</span></a></li>
             <li><a href="#"><span>광고 6에대한 요약설명</span></a></li>
             <li><a href="#"><span>광고 7에대한 요약설명</span></a></li>
+          
           </ul>
         </div>
 
@@ -77,6 +92,7 @@
 
     <article id="contentBox">
       <div class="title_shape"></div>
+      <div class="content_area"></div>
     </article>
     <article id="infoBox" class="clearfix">
       <div class="new_area info_tablet_area info_pc_area"></div>
