@@ -40,7 +40,10 @@
           <h2 class="blind">navigation</h2>
           <div class="search_area">
             <div class="search_open_btn">
-              <button type="button"><span>검색창 띄우기</span></button>
+              <button type="button">
+                <i class="fas fa-search"></i>
+                <span class="blind">검색창 띄우기</span>
+              </button>
             </div>
             <div class="search_part">
               <form action="" method="get">
@@ -48,12 +51,31 @@
                   <legend>검색</legend>
                   <label for="search">검색하세요</label>
                   <input type="search" id="search" name="search" value="" placeholder="검색하세요" />
-                  <button type="button"><span>검색</span></button>
+                  <button type="button">                    
+                    <span>검색</span></button>
                 </fieldset>
               </form>
             </div>
           </div>
-          <div class="gnb_area"></div>
+          <div class="gnb_area">
+            <div class="gnb_btn">
+              <button type="button">
+                <i class="far fa-minus-square"></i>
+                <span class="blind">메뉴</span></button>
+            </div>
+            <div class="gnb_nav">
+              <div class="gnb_close_btn">
+                <button type="button"><span>닫기</span></button>
+              </div>
+
+              <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">product</a></li>
+                <li><a href="#">notice</a></li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>      
     </header>
