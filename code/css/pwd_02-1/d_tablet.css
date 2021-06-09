@@ -63,15 +63,13 @@
   }
 
   .view_inner {
-    position: relative;
-    width:100%;
+    width:700%;
     height: 100%;
   }
   .view_inner > li {
-    position: absolute; top: 0; left: 0;
-    /* float:left; */
-    width:100%;
-    /* width:calc(100% / 7); */
+    float:left;
+    width:14.285714%;
+    width:calc(100% / 7);
     height: 100%;
   }
 
