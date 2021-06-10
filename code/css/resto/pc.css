@@ -6,71 +6,29 @@
 
   
  /* #wrap ----------------------- */
- #wrap {
-  --headHeight:6.25rem; 
-
-  width: 100%; height: auto; min-height:500px;
-  margin:auto; padding-top: var(--headHeight); 
-  background-color: var(--color-gray1);
-}
+ #wrap {  --headHeight:6.25rem; }
 
 /* #headBox ----------------------- */
-#headBox {
-  position: fixed; top: 0; left: 0; z-index:1000;
-  width: 100%; height: var(--headHeight);
-  background-color: var(--color-gray5);
-}
+/* #headBox {} */
 
 /* #naviBox ----------------------- */
 /* #naviBox { } */
 
 /* #viewBox ----------------------- */
-#viewBox {
-  width: 100%; height: 920px; 
-  background-color: var(--color-gray4);
-}
-
+#viewBox {height: 57.5rem; }
 /* #discoverBox ----------------------- */
-#discoverBox {
-  width: 100%; height: 1452px;
-  background-color: var(--color-white);
-}
-
+#discoverBox {height: 90.75rem;}
 /* #guideBox ----------------------- */
-#guideBox {
-  width: 100%; height: 790px;
-  background-color: var(--color-gray4);
-}
-
+#guideBox {height: 49.375rem;}
 /* #eventBox ----------------------- */
-#eventBox {
-  width: 100%; height: 724px;
-  background-color: var(--color-white);
-}
+#eventBox { height: 45.25rem;}
 /* #galleryBox ----------------------- */
-#galleryBox {
-  position: relative; z-index:100;
-  width: 100%; height:auto; min-height: 1570px;
-  background-color: var(--color-gray1);
-}
-
+#galleryBox {height:auto; min-height: 98.125rem; }
 /* #chefBox ----------------------- */
-#chefBox {
-  width: 100%; height: 650px;
-  margin-top:-60px;
-  background-color: var(--color-gray2);
-}
-
+#chefBox { height: 40.625rem;}
 /* #locationBox ----------------------- */
-#locationBox {
-  width: 100%; height: 640px;  
-  background-color: var(--color-gray3);
-}
-
+#locationBox {height: 40rem; }
 /* #restoInfoBox ----------------------- */
-#restoInfoBox {
-  width: 100%; height: 380px;
-  background-color: var(--color-primary);
-}
+#restoInfoBox {height: 23.75rem;}
 
 } /* @media screen 1600~ */ 
