@@ -23,9 +23,11 @@
 /* #eventBox ----------------------- */
 #eventBox { height: 45.25rem;}
 /* #galleryBox ----------------------- */
-#galleryBox {height:auto; min-height: 98.125rem; }
+#galleryBox {
+  position: relative; z-index: 100;  
+  height:auto; min-height: 98.125rem; }
 /* #chefBox ----------------------- */
-#chefBox { height: 40.625rem;}
+#chefBox { height: 40.625rem; margin-top: -3.75rem; }
 /* #locationBox ----------------------- */
 #locationBox {height: 40rem; }
 /* #restoInfoBox ----------------------- */
