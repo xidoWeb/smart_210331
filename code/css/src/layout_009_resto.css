@@ -11,8 +11,8 @@
 /* tablet : 768 ~ 1279 */
 @import url("../resto/tablet.css");
 /* laptop : 1280 ~ 1599 */
-/* @import url("../resto/laptop.css"); */
+@import url("../resto/laptop.css");
 /* pc     : 1600 ~ */
-/* @import url("../resto/pc.css"); */
+@import url("../resto/pc.css");
 /* ============================================= */
 

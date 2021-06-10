@@ -1,0 +1,74 @@
+/* laptop : 1280 ~ 1599 */
+/* css/resto/laptop.css */
+
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+  /* 디자인 기준: 1280px */
+
+  
+ /* #wrap ----------------------- */
+ #wrap {
+  --headHeight:6.25rem; 
+
+  width: 100%; height: auto; min-height:500px;
+  margin:auto; padding-top: var(--headHeight); 
+  background-color: var(--color-gray1);
+}
+
+/* #headBox ----------------------- */
+#headBox {
+  position: fixed; top: 0; left: 0; z-index:1000;
+  width: 100%; height: var(--headHeight);
+  background-color: var(--color-gray5);
+}
+
+/* #naviBox ----------------------- */
+/* #naviBox { } */
+
+/* #viewBox ----------------------- */
+#viewBox {
+  width: 100%; height: 920px; 
+  background-color: var(--color-gray4);
+}
+
+/* #discoverBox ----------------------- */
+#discoverBox {
+  width: 100%; height: 1430px;
+  background-color: var(--color-white);
+}
+
+/* #guideBox ----------------------- */
+#guideBox {
+  width: 100%; height: 1190px;
+  background-color: var(--color-gray4);
+}
+
+/* #eventBox ----------------------- */
+#eventBox {
+  width: 100%; height: 1100px;
+  background-color: var(--color-white);
+}
+/* #galleryBox ----------------------- */
+#galleryBox {
+  width: 100%; height: 1424px;
+  background-color: var(--color-gray1);
+}
+
+/* #chefBox ----------------------- */
+#chefBox {
+  width: 100%; height: 630px;
+  background-color: var(--color-gray2);
+}
+
+/* #locationBox ----------------------- */
+#locationBox {
+  width: 100%; height: 640px;
+  background-color: var(--color-gray3);
+}
+
+/* #restoInfoBox ----------------------- */
+#restoInfoBox {
+  width: 100%; height: 380px;
+  background-color: var(--color-primary);
+}
+
+} /* @media screen 1280~1599 */ 
