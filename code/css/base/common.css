@@ -28,3 +28,5 @@
 
 .last_float > li { float:left; }
 .last_float > li:last-child { margin-right:0; }
+
+.none { display: none; }

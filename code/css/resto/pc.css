@@ -24,7 +24,25 @@
   /* #naviBox ----------------------- */
   #naviBox {
     width:142px; height:40px;
-   }
+    width:8.875rem; height:2.5rem;
+    margin-top:20px;
+  }
+
+  .navi_area {
+    display: block;
+    width: 100%; height: 100%;
+  }
+  .global_navi {
+    position: absolute; left:0; right:0; top:40px;
+    width: 940px; height: 40px;
+    width: 58.75rem; height: 2.5rem;
+    margin:auto;
+    background-color: var(--color-gray1);
+  }
+  .social_net {
+    width: 100%; height: 100%;
+    background-color: var(--color-primary);
+  }
 
   /* #viewBox ----------------------- */
   #viewBox {height: 57.5rem; }
