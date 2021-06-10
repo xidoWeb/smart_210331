@@ -1,0 +1,82 @@
+/* 공통 : 1280기준 - 구형브라우저 포함 */
+/* css/resto/basic_layout.css */
+
+
+ /* #wrap ----------------------- */
+ #wrap {
+  --headHeight:100px; 
+
+  width: 100%; height: auto; 
+  min-height:500px;
+  min-height:31.25rem;
+  margin:auto; 
+  padding-top: 100px; padding-top: 6.25rem; padding-top:var(--headHeight); 
+  background-color: #ccc; 
+  background-color:var(--color-gray1);
+}
+
+/* #headBox ----------------------- */
+#headBox {
+  position: fixed; top: 0; left: 0; z-index:1000;
+  width: 100%; height: 100px; height: var(--headHeight);
+  background-color: #555;
+  background-color: var(--color-gray5);
+}
+
+/* #naviBox ----------------------- */
+/* #naviBox { } */
+
+/* #viewBox ----------------------- */
+#viewBox {
+  width: 100%; height: 920px; height: 57.5rem; 
+  background-color: #777;
+  background-color: var(--color-gray4);
+}
+
+/* #discoverBox ----------------------- */
+#discoverBox {
+  width: 100%; height: 1430px;  height: 89.375rem;
+  background-color:#fff;
+  background-color: var(--color-white);
+}
+
+/* #guideBox ----------------------- */
+#guideBox {
+  width: 100%; height: 1190px; height: 74.375rem;
+  background-color:#777;
+  background-color: var(--color-gray4);
+}
+
+/* #eventBox ----------------------- */
+#eventBox {
+  width: 100%; height: 1100px; height: 68.75rem;
+  background-color: #fff;
+  background-color: var(--color-white);
+}
+/* #galleryBox ----------------------- */
+#galleryBox {
+  width: 100%; height: 1424px; height: 89rem;
+  background-color: #ccc;
+  background-color: var(--color-gray1);
+}
+
+/* #chefBox ----------------------- */
+#chefBox {
+  width: 100%; height: 630px; height: 39.375rem;
+  background-color: #aaa;
+  background-color: var(--color-gray2);
+}
+
+/* #locationBox ----------------------- */
+#locationBox {
+  width: 100%; height: 640px;  height: 40rem;
+  background-color:#999;
+  background-color: var(--color-gray3);
+}
+
+/* #restoInfoBox ----------------------- */
+#restoInfoBox {
+  width: 100%; height: 380px; height: 23.75rem;
+  background-color: #b27700;
+  background-color: var(--color-primary);
+}

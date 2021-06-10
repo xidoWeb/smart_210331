@@ -4,71 +4,54 @@
 @media screen and (max-width:479px) {
   /* design기준 : 480 */
 
-
   /* #wrap ----------------------- */
   #wrap {
-    --headHeight:4rem; 
-
-    width: 100%; height: auto; min-height:500px;
-    margin:auto; padding-top: var(--headHeight); 
-    background-color: var(--color-gray1);
+    --headHeight:2rem;  
   }
 
   /* #headBox ----------------------- */
-  #headBox {
-    position: fixed; top: 0; left: 0; z-index:1000;
-    width: 100%; height: var(--headHeight);
-    background-color: var(--color-gray5);
-  }
+  /* #headBox {} */
 
   /* #naviBox ----------------------- */
-  /* #naviBox { } */
+  /* #naviBox {} */
 
   /* #viewBox ----------------------- */
   #viewBox {
-    width: 100%; height: 584px; 
-    background-color: var(--color-gray4);
+    height: 36.5rem; 
   }
 
   /* #discoverBox ----------------------- */
   #discoverBox {
-    width: 100%; height: 1735px;
-    background-color: var(--color-white);
+    height: 108.4375rem;
   }
 
   /* #guideBox ----------------------- */
   #guideBox {
-    width: 100%; height: 830px;
-    background-color: var(--color-gray4);
+    height: 51.875rem;
   }
 
   /* #eventBox ----------------------- */
   #eventBox {
-    width: 100%; height: 2362px;
-    background-color: var(--color-white);
+    height: 147.625rem;
   }
   /* #galleryBox ----------------------- */
   #galleryBox {
-    width: 100%; height: 1650px;
-    background-color: var(--color-gray1);
+    height: 103.125rem;
   }
 
   /* #chefBox ----------------------- */
   #chefBox {
-    width: 100%; height: 867px;
-    background-color: var(--color-gray2);
+    height: 54.1875rem;
   }
 
   /* #locationBox ----------------------- */
   #locationBox {
-    width: 100%; height: 470px;
-    background-color: var(--color-gray3);
+    height: 29.375rem;
   }
 
   /* #restoInfoBox ----------------------- */
   #restoInfoBox {
-    width: 100%; height: 756px;
-    background-color: var(--color-primary);
+    height: 47.25rem;
   }
 
 

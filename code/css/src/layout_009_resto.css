@@ -2,8 +2,10 @@
 
 
 /* ============================================= */
+/* 변수 설정 */
 @import url("../resto/variable.css");
-/* @import url("../resto/basic_layout.css"); */
+/* 공통 : 1280기준 - 구형브라우저 포함 */
+@import url("../resto/basic_layout.css");
 /* phone_v : ~ 479 */
 @import url("../resto/phone_v.css");
 /* phone_h : 480~767 */
