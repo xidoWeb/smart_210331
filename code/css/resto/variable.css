@@ -1,0 +1,21 @@
+/* resto/variable.css */
+
+:root {
+  /* color */
+  --color-primary     : #b27700;
+  --color-transparent : transparent;
+  --color-white       : #fff; 
+  --color-gray1       : #ccc;
+  --color-gray2       : #aaa;
+  --color-gray3       : #999;
+  --color-gray4       : #777;
+  --color-gray5       : #555;
+  --color-gray6       : #333;
+  --color-black       : #111; 
+  /* font */
+  --font-size1    : 3rem;
+  --font-size2    : 3.75rem;
+  --font-size3    : 2.125rem;
+  --font-size4    : 1.0625rem;
+  --font-size5    : 0.875rem;
+}
