@@ -28,6 +28,69 @@ h1 {
 #viewBox {height: 57.5rem; }
 /* #discoverBox ----------------------- */
 #discoverBox {height: 111rem;}
+
+.our_store {
+  width: 100%; height: 870px; 
+  padding:130px 170px; box-sizing: border-box;
+}
+
+.store_area {
+  position: relative;
+  overflow: hidden;
+  width: 100%; height:520px; 
+  padding:34px 0;
+  /* background-color: var(--color-gray1); */
+}
+
+.store_area > ul {  
+  width:100%; height:520px;
+  background-color: #fa0;
+  /* margin-left:-100%; */
+}
+.store_area > ul > li {
+  float:left;
+  width:50%; height:520px;
+  border:1px solid #333;
+  box-sizing: border-box;
+  border-radius:0.3rem;
+  transition:all 300ms ease;
+}
+
+.store_area > ul > li.act {
+  position: absolute;
+  top: 50%; left: 50%; z-index:10;
+  transform:translate(-50%, -50%) scale(1.1);
+  box-shadow:0.3rem 0.3rem 0.3rem rgba(0,0,0,0.3);
+}
+
+
+.store_area > ul > li:nth-child(1) {background-color: rgba(25,255,203,1);}
+.store_area > ul > li:nth-child(2) {background-color: rgba(116,145,180,1);}
+.store_area > ul > li:nth-child(3) {background-color: rgba(125,89,112,1);}
+
+/* 
+.front {
+  width: 100%; height: 100%; background-color: var(--color-gray3);
+  padding:2rem; box-sizing: border-box;    
+  font-size:var(--font-size2);
+  opacity:1;
+  transition:all 300ms ease;
+  overflow: hidden;
+}
+.store_area > ul > li:hover > .front {
+  opacity:0;
+  height:0;
+  padding:0 2rem;
+} */
+
+
+  /* ------- */
+.our_service {
+  width: 100%; height: 985px; height: 61.5625rem;
+  border-top:1px solid #333;
+}
+
+
 /* #guideBox ----------------------- */
 #guideBox {height: 74.375rem;}
 /* #eventBox ----------------------- */
