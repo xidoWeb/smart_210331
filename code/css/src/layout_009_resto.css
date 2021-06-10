@@ -9,7 +9,7 @@
 /* phone_h : 480~767 */
 @import url("../resto/phone_h.css");
 /* tablet : 768 ~ 1279 */
-/* @import url("../resto/tablet.css"); */
+@import url("../resto/tablet.css");
 /* laptop : 1280 ~ 1599 */
 /* @import url("../resto/laptop.css"); */
 /* pc     : 1600 ~ */
