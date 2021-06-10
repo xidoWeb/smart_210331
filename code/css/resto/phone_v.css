@@ -6,14 +6,34 @@
 
   /* #wrap ----------------------- */
   #wrap {
-    --headHeight:2rem;  
+    --headHeight:4rem;  
   }
 
   /* #headBox ----------------------- */
   /* #headBox {} */
+  #headBox .container {
+    width: 100%; height:100%;
+    padding:10px 20.8px 0; 
+    padding:0.625rem 1.3rem 0;  
+  }
 
-  /* #naviBox ----------------------- */
-  /* #naviBox {} */
+  h1 {
+    float: left;
+    width: 80px; height: 50px;
+    width: 5rem; height: 3.125rem;
+    background-color: #fff;
+    background-color: var(--color-white);
+  }
+
+    /* #naviBox ----------------------- */
+  #naviBox {
+    float:right;
+    width: 38px; height: 25px;
+    width: 2.375rem; height: 1.5625rem;
+    margin-top:16px; margin-top:1rem;
+    background-color: #fff;
+    background-color: var(--color-white);
+  }
 
   /* #viewBox ----------------------- */
   #viewBox {

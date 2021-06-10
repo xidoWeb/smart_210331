@@ -22,6 +22,9 @@
   background-color: #555;
   background-color: var(--color-gray5);
 }
+.container {
+  box-sizing: border-box;
+}
 
 /* #naviBox ----------------------- */
 /* #naviBox { } */
