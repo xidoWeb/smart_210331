@@ -25,9 +25,18 @@
 .container {
   box-sizing: border-box;
 }
+h1{
+  float: left;
+  background-color: #fff;
+  background-color: var(--color-white);
+}
 
 /* #naviBox ----------------------- */
-/* #naviBox { } */
+#naviBox {
+  float:right;
+  background-color: #fff;
+  background-color: var(--color-white);
+ }
 
 /* #viewBox ----------------------- */
 #viewBox {
