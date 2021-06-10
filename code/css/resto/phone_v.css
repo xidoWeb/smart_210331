@@ -42,6 +42,51 @@
     height: 108.4375rem;
   }
 
+  .our_store {
+    width: 100%; height: 750px; height: 46.875rem; 
+    padding:84px 1rem; box-sizing: border-box;
+  }
+  .store_area {
+    overflow: hidden;
+    width: 100%; height: 510px; 
+    background-color: var(--color-gray1);
+  }
+
+  .store_area > ul {
+    width:300%; height:100%;
+    /* background-color: #fa0; */
+    margin-left:-100%;
+  }
+  .store_area > ul > li {
+    float:left;
+    width:33.333333%; width:calc(100% / 3); height:100%;
+  }
+  .store_area > ul > li:nth-child(1) {background-color: rgba(25,255,203,0.4);}
+  .store_area > ul > li:nth-child(2) {background-color: rgba(116,145,180,0.4);}
+  .store_area > ul > li:nth-child(3) {background-color: rgba(125,89,112,0.4);}
+
+  .front {
+    width: 100%; height: 100%; background-color: var(--color-gray3);
+    padding:2rem; box-sizing: border-box;    
+    font-size:var(--font-size2);
+    opacity:1;
+    transition:all 300ms ease;
+    overflow: hidden;
+  }
+  .store_area > ul > li:hover > .front {
+    opacity:0;
+    height:0;
+    padding:0 2rem;
+  }
+
+
+    /* ------- */
+  .our_service {
+    width: 100%; height: 985px; height: 61.5625rem;
+    border-top:1px solid #333;
+  }
+
+
   /* #guideBox ----------------------- */
   #guideBox {
     height: 51.875rem;
