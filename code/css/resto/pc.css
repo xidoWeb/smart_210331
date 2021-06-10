@@ -3,34 +3,33 @@
 
 @media screen and (min-width: 1600px) {
   /* 디자인 기준: 1600px */
+    
+  /* #wrap ----------------------- */
+  #wrap {  --headHeight:6.25rem; }
 
-  
- /* #wrap ----------------------- */
- #wrap {  --headHeight:6.25rem; }
+  /* #headBox ----------------------- */
+  /* #headBox {} */
 
-/* #headBox ----------------------- */
-/* #headBox {} */
+  /* #naviBox ----------------------- */
+  /* #naviBox { } */
 
-/* #naviBox ----------------------- */
-/* #naviBox { } */
-
-/* #viewBox ----------------------- */
-#viewBox {height: 57.5rem; }
-/* #discoverBox ----------------------- */
-#discoverBox {height: 90.75rem;}
-/* #guideBox ----------------------- */
-#guideBox {height: 49.375rem;}
-/* #eventBox ----------------------- */
-#eventBox { height: 45.25rem;}
-/* #galleryBox ----------------------- */
-#galleryBox {
-  position: relative; z-index: 100;  
-  height:auto; min-height: 98.125rem; }
-/* #chefBox ----------------------- */
-#chefBox { height: 40.625rem; margin-top: -3.75rem; }
-/* #locationBox ----------------------- */
-#locationBox {height: 40rem; }
-/* #restoInfoBox ----------------------- */
-#restoInfoBox {height: 23.75rem;}
+  /* #viewBox ----------------------- */
+  #viewBox {height: 57.5rem; }
+  /* #discoverBox ----------------------- */
+  #discoverBox {height: 90.75rem;}
+  /* #guideBox ----------------------- */
+  #guideBox {height: 49.375rem;}
+  /* #eventBox ----------------------- */
+  #eventBox { height: 45.25rem;}
+  /* #galleryBox ----------------------- */
+  #galleryBox {
+    position: relative; z-index: 100;  
+    height:auto; min-height: 98.125rem; }
+  /* #chefBox ----------------------- */
+  #chefBox { height: 40.625rem; margin-top: -3.75rem; }
+  /* #locationBox ----------------------- */
+  #locationBox {height: 40rem; }
+  /* #restoInfoBox ----------------------- */
+  #restoInfoBox {height: 23.75rem;}
 
 } /* @media screen 1600~ */ 
