@@ -106,15 +106,23 @@
 
 #### 코딩과정
 
-- [ ] form
-  - [ ] 회원가입페이지 만들기
-  - [ ] FTP 이용하여 웹페이지에 자료 업로드
+- [x] form
+  - [x] 회원가입페이지 만들기
+- [x] FTP 이용하여 웹페이지에 자료 업로드
+
+
 
 ---
 
-- form
+### 2021.06.03-9
+
+#### 코딩과정
+
+- [ ] 반응형웹페이지 만들기
+
+---
+
 - animation - transition/animation
-- responsive-web
 - display:flex
 - etc ( filter, data(attribute) )
 
