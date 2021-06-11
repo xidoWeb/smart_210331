@@ -34,13 +34,275 @@ h3{
 .transition_01 > li {
   width:100px; height: 100px;
   margin-bottom:1rem;
-  border:1px solid #55f
+  border:1px solid #55f;
 }
 
 .transition_01:hover > li:nth-child(1) {
-  /* transform:translate(500px); */
-  transform:rotateY(180deg);
+  transform:translate(500px);
+  /* transform:rotateY(180deg); */
   /* transform-origin:0 0; */
 }
 
-/* transform-origin: 기준위치 */
+.transition_01:hover > li:nth-child(2) {
+  transform:translate(500px);
+  transition-property:transform;
+  transition-duration:1000ms;  
+}
+
+.transition_01:hover > li:nth-child(3) {
+  width:1000px;
+  background-color: rgb(255, 0, 119, 1); 
+  color:#fff;
+  font-size:2rem;
+  transition-property:background-color,width,font-size;
+  transition-duration:5s;
+}
+
+.transition_01:hover > li:nth-child(4) {
+  transform:translate(1000px);
+  transition-property:all;
+  transition-duration:2s;
+  transition-timing-function:cubic-bezier(.08,1.63,1,-2.01);
+}
+
+.transition_01:hover > li:nth-child(5){
+  transform:translate(1000px);
+  transition-property:all;
+  transition-duration:2s;
+  transition-timing-function:ease-in-out;
+  transition-delay:500ms;
+}
+
+.transition_02 {
+  width: 100%; height: auto;
+  padding:1rem; box-sizing: border-box;
+  background-color: #cff;
+}
+
+.transition_02 li {
+  width:200px; height:100px;
+  margin-bottom: 0.5rem;
+  background-color: #37a;
+  color:#fff;
+  border-radius:0.3rem;
+  box-sizing: border-box;
+}
+
+.transition_02 li:nth-child(1):hover {
+  /* transition:선택자 시간 움직임 (지연); */
+  transition:all 1500ms linear;
+  background-color: #fff;
+  color:#000;
+  font-size: 1.2rem;
+  padding:0.2rem;  
+}
+
+.transition_02 li:nth-child(2) {
+  transition:all 500ms ease-in-out;
+}
+.transition_02 li:nth-child(2):hover {
+  width:500px; 
+  background-color: #a35;
+}
+
+.transition_02 li:nth-child(3) {
+  transition:width 1000ms ease 500ms;
+}
+
+.transition_02 li:nth-child(3):hover {
+  width:500px; 
+  background-color: #375;
+  transition:all 500ms linear;
+}
+
+.transition_03 {
+  position: relative;
+  width:300px; height:550px;
+  margin-top:1rem;  border:2px solid #77f;
+  padding:2rem;  background-color: #fff;}
+
+.outed {position: absolute; background-color: #77f;}
+.outed_01 {
+  top: 0; left: 0;  height:1rem; width:0;
+  transition:all 500ms linear 1500ms;
+}
+.outed_02 {
+  top: 0; right:0; width: 1rem; height: 0; 
+  transition:all 500ms linear 1000ms;
+}
+.outed_03 {
+  bottom: 0; right: 0;  height: 1rem; width: 0;
+  transition:all 500ms linear 500ms;
+}
+.outed_04 {
+  bottom: 0; left: 0; width: 1rem; height: 0; 
+  transition:all 500ms linear 0ms;
+}
+
+.transition_03:hover .outed_01 { 
+              width:100%;  
+              transition:all 500ms linear 0ms;}
+.transition_03:hover .outed_02 { 
+              height:100%; 
+              transition:all 500ms linear 500ms;}
+.transition_03:hover .outed_03 { 
+              width:100%;  
+              transition:all 500ms linear 1000ms;}
+.transition_03:hover .outed_04 { 
+              height:100%; 
+              transition:all 500ms linear 1500ms;}
+
+
+/*
+transform: 형태 변형; 
+transform-origin: 기준위치로 기본위치는 x,y축 모두 가운데가 기준 
+
+transition -> 단일성의 애니메이션
+
+transition: 일정시간동안 움직임을 표현;
+transition-property: 어떠한 속성을 선택할것인가?
+transition-duration: 어느정도의 시간동안 ?
+transition-timing-function: 움직임의 표현방법?
+transition-delay: 지연시간
+
+시간을 사용시 1초: 1s (1000ms) - 0.5초 : 0.5s (500ms)
+timeing-function: ease(자연스럽게), 
+                  ease-in(점점빠르게), 
+                  ease-out(점점느리게), 
+                  ease-in-out(빨라지다가느려지게), 
+                  linear(동일속도),
+                  cubic-bezier(축좌표를 입력하여 움직임을 구성)
+
+
+https://cubic-bezier.com/
+*/
+
+/* ------------------------------------------------------------------------ */
+
+/* animation -> 복합성 애니메이션기능;
+   @keyframes 이름{} -> 애니메이션의 역할(수행 형태)
+
+*/
+
+.animation_01 {
+  padding:1rem;
+  background-color: #fdd;
+}
+.animation_01 li {
+  width: 100%; height:auto;
+  margin-bottom: 1rem;
+  padding-bottom:0.3rem;
+  border-bottom:1px solid #057;
+}
+
+.animation_01 li > div {
+  width: 100px; height: 100px;
+  border-radius:100%;
+  text-align: center; line-height:100px;
+  background-color: #079;
+  color:#fff; font-weight: 700; 
+}
+
+@keyframes ani_01 {
+  from {
+    transform:translate(0) rotate(0);
+    background-color: #f06;
+    color:#fff;
+  }
+  to {
+    transform:translate(700px) rotate(720deg);
+    background-color: #acf;
+    color:#000;
+  }
+}
+
+.animation_01 li:nth-child(1):hover > div {
+  transition:all 3000ms ease;
+  transform:translate(500px) rotate(720deg);
+  background-color: #acf;
+  font-size:4rem;
+}
+
+.animation_01 li:nth-child(2):hover > div {
+  animation-name:ani_01;
+  animation-duration:3000ms;
+  animation-timing-function:linear;
+  animation-iteration-count:infinite;
+}
+
+.animation_01 li:nth-child(3) > div{
+  animation-name:ani_01;
+  animation-duration:5000ms;
+  animation-timing-function:ease;
+  animation-iteration-count:3;
+  animation-direction: alternate;
+}
+
+.animation_01 li:nth-child(4) > div {
+  animation-name:ani_01;
+  animation-duration:5000ms;
+  animation-timing-function:ease;
+  animation-iteration-count:3;
+  animation-direction: alternate;
+  animation-fill-mode:both;
+} 
+
+@keyframes ani_02 {
+  0% {
+    width:50px; height:50px;
+    line-height:50px;
+    background-color: #acf;
+  }
+  30% {
+    width:50px; height:50px;
+    line-height:50px;
+    transform:translate(300px, -100px) scale(1.4) rotate(360deg);
+  }
+  70% {
+    transform:translate(-100px, 200px) scale(1.4) rotate(0);
+  }
+  100% {
+    width:150px; height:150px;
+    line-height:150px;
+    transform:translateX(800px) scale(1) rotate(720deg);
+  }
+}
+
+.animation_01 li:nth-child(5) > div {
+  animation-name:ani_02;
+  animation-duration:4000ms;
+  animation-timing-function:linear;
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+  animation-delay:300ms;
+}
+
+.animation_01 li:nth-child(5):hover > div {
+  animation-play-state:paused;
+}
+
+.animation_01 li:nth-child(6) > div {
+  /* animation: 이름 시간 움직임 반복 (움직임방향 지연시간 일시정지여부); */
+  animation:ani_01 3000ms linear infinite alternate paused;
+}
+
+.animation_01 li:nth-child(6):hover > div {
+  animation-play-state: running;
+}
+
+/* animation
+
+animation-name -> 애니메이션은 별도의 @keyframes 를 이용하여 처리하므로 해당 keyframes의 이름을 선택
+animation-duration -> 움직이는 시간
+animation-timing-function -> 움직임에대한 형태 - linear || ease || ease-in || ease-out  || ease-in-out || cubic-bezier()
+animation-fill-mode -> 시작 || 끝나는 곳의 위치를 설정 - forwards(시작점) || backwards(끝점) || both(양쪽 상관없다)
+animation-iteration-count -> 애니메이션을 동작반복 횟수 - 1 || 2 || 3 ... infinite(무한반복)
+animation-direction -> 움직임에대한 방향 - normal(기본 순방향부터) || revese(역방향 부터) || 
+                                          alternate(순방향으로가서 끝에서 역방향으로) || 
+                                          alternate-reverse(역방향부터시작해서 처음으로면 순방향으로)
+animation-delay -> 애니메이션 지연시간
+animation-play-state -> 애니메이션 움직임을 동작/일시정지 - running(동작) || paused(일시정지)
+
+animation: 이름 시간 움직임 반복 (움직임방향 지연시간 일시정지여부);
+
+*/
