@@ -1,0 +1,46 @@
+/* css/src/basic_code_23_animation.css */
+
+#wrap {
+  width: 90%; 
+  min-width: 600px; max-width:1600px;
+  height: auto;
+  min-height: 700px;
+  margin:auto;
+  background-color: #ddd;
+}
+
+.part {
+  width: 100%; height:auto;
+  min-height: 400px;
+  margin-bottom:1rem;
+  padding:1rem;
+  border:1px solid #333;
+  box-sizing: border-box;
+}
+
+h3{
+  width: 95%; height: auto;
+  border-bottom: 1px solid #fa0;
+  line-height: 1.4;
+}
+
+/* ------------------ */
+
+.transition_01 {
+  width: 100%; height:auto;
+  padding:0.5rem; box-sizing: border-box;
+  background-color: #ffc;
+}
+.transition_01 > li {
+  width:100px; height: 100px;
+  margin-bottom:1rem;
+  border:1px solid #55f
+}
+
+.transition_01:hover > li:nth-child(1) {
+  /* transform:translate(500px); */
+  transform:rotateY(180deg);
+  /* transform-origin:0 0; */
+}
+
+/* transform-origin: 기준위치 */
