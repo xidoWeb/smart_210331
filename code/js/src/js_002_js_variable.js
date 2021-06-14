@@ -32,5 +32,43 @@ var 남은철수사과 = 철수사과 - 5;
 // 결과를 확인하는 방법
 // document.write('html 문서 내부에 강제로 삽입');
 // alert('메세지창을 이용하여 결과를 보여주는 기능');
-console.log('콘솔의 위치에 기록하는 기능');
+// console.log('콘솔의 위치에 기록하는 기능');
+// console.info('정보를 보여줄때');
+// console.error('에러메시지');
+
+
+
+var num = 10;
+console.log( num );
+var myN = 100;
+console.log( myN );
+var numPlus = num + myN;
+console.log( numPlus );
+
+var one = 1;
+console.log( one );
+var one2 = '1';
+console.log( one2 );
+// 숫자 + 숫자 => 숫자
+console.log( one + 1 ); 
+// 숫자 + 문자 => 나열
+console.log( one2 + 1 ); 
+
+var int = parseInt(one2);
+console.log( int + 1 );
+
+var width = parseInt('100px');
+console.log( width + 200 + 'px');
+
+
+// js를 작성하는 곳은 body가 끝나기 전에 작성
+// 변수는 어떠한 값을 담아서 쓰일 수 있도록 하는 이름으로 먼저 선언 후 이후에 값을 담아서 처리
+// 중간 확인을 하기 위해 console.log() 에 결과,진행 내용을 체크 -> 검증
+// 문자는 ' ' 안에 사용 ( " ", ' ' 관계없다.) 
+// 하나의 기능이 끝났을 때에는 ;으로 표기하여 구분
+// 변수명은 지정된 몇가지는 사용하는 것이 아니다. ( 주로 카멜케이스로 사용하는 편 ) 
+// 덧셈기호는 숫자와 숫자가 합하면 덧셈이 되고, 문자와 숫자(문자)가 합하면 연결이 된다.
+
+
+
 
