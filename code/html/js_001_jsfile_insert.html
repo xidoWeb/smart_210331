@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- js_001_jsfile_insert.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Document</title>
+  <style>
+    p {color:#f07;}
+  </style>
+  <script>
+    document.write('<p>head 내부에 script작성</p>');
+    // 1. head내부에 작성한 코드는 body요소가 생성되기 전에 작성하므로, body의 요소를 인식할 수 없다.
+    // 2. body요소가 먼저 구현이 된 이후에 script코드가 작성되는것이 사용자입장에서는 속도가 더 빠른것으로 인식
+    // 3. script는 css와는 다르게 내용이 존재해야 그기능을 수행할 수 있도록 처리
+
+    var li = document.getElementsByTagName('li')[0];
+    li.style.color = '#077';
+    // h1{color:#077;}
+  </script>
+</head>
+<body>
+  <h1><a href="./all_contents.html">웹표준</a></h1>
+  <h2>javascript를 작성하는 곳 4가지 체크</h2>
+  <ul>
+    <li>head요소 내부에 작성</li>
+    <li><del>body내부에서 요소들 사이에 작성</del></li>
+    <li>body 끝나기전 마지막에 작성</li>
+    <li>외부에서 불러오는 방법</li>
+    <li>요소 자체에 script를 작성하는 방법 - inline script -권장하지 않는다</li>
+    <script>
+      document.write('<li>추가 작성하는 방법을 찾아보자!</li>');
+    </script>
+  </ul>
+
+  <button type="button">버튼</button>
+
+  <script>
+    document.write('<p>body 끝나는 위치에 작성</p>');
+    // 1. 웹문서에서 가장 많이 사용하는 기법이며, 
+    // 2. body의 요소를 읽은 후에 처리할 수 있는 기능
+    // 3. 하지만 웹표준은 각 언어별로 문서를 분리해야한다! - html,css,js를 분리해서 사용
+    
+    var li = document.getElementsByTagName('li')[0];
+    li.style.color = '#070';
+  </script>
+
+  <script src="../js/src/js_001_jsfile_insert.js"></script>
+</body>
+</html>
