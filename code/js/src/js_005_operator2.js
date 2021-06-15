@@ -37,3 +37,32 @@ console.log( l );
 
 // ==, ===
 // !=, !==
+
+var a = 10;
+var b = '10';
+// var equal = a == b; 
+var equal = a === b; 
+// console.log( equal );
+// console.log( a + 10 );
+// console.log( b + 10 );
+
+// equal이참? 참이면 같아요라고 알려줘 : 거짓이면 달라요 라고 알려줘; 
+var r; 
+( equal ) ? r = "같아요!" : r = "달라요" ;
+console.log( r );
+
+var date = new Date();
+var h = date.getHours();
+console.log(h);
+(h < 12) ? console.log('지금은 오전입니다.') : console.log('오후입니다.'); 
+
+var t = !true;
+console.log( t );
+
+console.log( !(true && !false) );
+console.log('????: ',  !!0 );
+
+
+//  !=, !==
+(10 !== '10') ? t='맞아요!' : t="아니예요";
+console.log( t );
