@@ -68,19 +68,64 @@ if(조건){
 }
 */
 
-var dataN = '50';
+var dataN = 100;
 var result;
-if(dataN > 80){
-  result = '당신의 점수는 A입니다.';
-}else if(dataN <= 80 && dataN > 70){
-  result = '당신의 점수는 B입니다.';
-}else if(dataN <= 60){
-  result = '당신의 점수는 마음속의 A입니다.';
-}else {
-  result = '당신의 점수는 당신의 생각대로 입니다.';
-}
+// if(dataN >= 0 && typeof(dataN) === 'number' && dataN <= 100){
+  if(dataN > 80){
+    result = '당신의 점수는 A입니다.';
+  }else if(dataN <= 80 && dataN > 70){
+    result = '당신의 점수는 B입니다.';
+  }else if(dataN <= 60){
+    result = '당신의 점수는 마음속의 A입니다.';
+  }else { // 61 ~ 70, 위조건에 해당하지 않는 모든 것
+    result = '당신의 점수는 당신의 생각대로 입니다.';
+  }
+// }
 console.log( result );
 
 
 // ------------------------------------------
 // 다수 분기
+/*
+  switch(값){
+    case A:
+      값이 A이면 수행
+    break;
+    case B:
+      값이 B이면 수행
+    break;
+    case C:
+      값이 C이면 수행
+    break;
+    default:
+      값이 해당되지 않으면 수행;
+  }
+*/
+
+// 예: 키보드제어
+// switch 조건해당하는 값이 명확해야한다.
+ 
+
+var val = parseInt( prompt('당신의 태어난 월을 입력해 보세요.') );
+console.log( val );
+var rel;
+switch(val){
+  case 1:
+    rel = '1월에 태어난 당신-신년과 함께';
+  break;
+  case 2:
+    rel = '2월에 태어나셨군요?-추웠을텐데';
+  break;
+  case 3:
+  case 4:
+  case 5:
+    rel = "봄에 태어난 당신";
+  break;
+  case 6:
+    rel = "정말 좋은시기에 태어나셨군요?";
+  break;
+  default:
+    rel = '네 알겠습니다.';
+}
+
+console.log( rel );
