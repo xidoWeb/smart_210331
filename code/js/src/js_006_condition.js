@@ -44,7 +44,7 @@ var tBox1 = document.getElementById('testBox_01');
 // tBox1.style.fontSize = '2rem';
 // tBox1.style.backgroundColor = '#dda';
 
-tBox1.style = "width:250px; height:auto; color:#151515; font-size:2rem; background-color: #dda;"
+tBox1.style = "width:250px; height:auto; color:#151515; font-size:2rem; background-color: #dda;";
 
 // console.log( tBox1.style.width );
 var tBoxW = tBox1.style.width;
@@ -55,6 +55,31 @@ if(tBoxW >= '400px'){
   tBox1.style.backgroundColor = '#adf';
   tBox1.style.color = '#f00';
 }
+// ------------------------------------
+/*
+if(조건){
+  // 조건 참
+}else if(새로운 조건){
+  // 새로운 조건 참
+}else if(또다른 조건){
+  // 또다른 조건 참
+}else {
+ // 거짓 
+}
+*/
+
+var dataN = '50';
+var result;
+if(dataN > 80){
+  result = '당신의 점수는 A입니다.';
+}else if(dataN <= 80 && dataN > 70){
+  result = '당신의 점수는 B입니다.';
+}else if(dataN <= 60){
+  result = '당신의 점수는 마음속의 A입니다.';
+}else {
+  result = '당신의 점수는 당신의 생각대로 입니다.';
+}
+console.log( result );
 
 
 // ------------------------------------------
