@@ -134,15 +134,38 @@
 
 #### 그래픽과정 (XD)
 
-- [ ] 기본툴 사용법
-- [ ] 제플린공유(?)
+- [x] 기본툴 사용법
+- [x] 제플린공유(?)
 
 ### 코딩과정
 
-- [ ] javsscript 작성위치
+- [x] javsscript 작성위치
 
-- [ ] 변수, 숫자/문자 , 
-- [ ] 단순히 체크 -> 결과물확인
+- [x] 변수( var - hoisting ), 숫자( 100 ) /문자( '100' ) , null/undefined, {}, [], `function name(){ return }`
+
+- [ ] ``` javascript
+  function fnName() {
+      return
+  }
+  ```
+
+- [x] 단순히 체크 -> 결과물확인
+
+  - [ ] document.write
+  - [ ] alert
+  - [x] console.log
+
+---
+
+### 2021.06.15
+
+### 코딩과정 (javascript)
+
+- [ ] 사칙연산 (4가지의 법칙)
+- [ ] 비교연산 ( &&, ||, ==, ===, !=, !== )
+- [ ] function () {}
+- [ ] 삼항연산
+- [ ] 조건문 ( if, switch )
 
 ---
 
