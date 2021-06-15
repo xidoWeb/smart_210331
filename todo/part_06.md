@@ -143,7 +143,7 @@
 
 - [x] 변수( var - hoisting ), 숫자( 100 ) /문자( '100' ) , null/undefined, {}, [], `function name(){ return }`
 
-- [ ] ``` javascript
+- [x] ``` javascript
   function fnName() {
       return
   }
@@ -151,8 +151,8 @@
 
 - [x] 단순히 체크 -> 결과물확인
 
-  - [ ] document.write
-  - [ ] alert
+  - [x] document.write
+  - [x] alert
   - [x] console.log
 
 ---
