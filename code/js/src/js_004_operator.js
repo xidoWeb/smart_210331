@@ -53,3 +53,42 @@ console.log( 'n3: ', n3 );
 console.log( 'n3: ', n3 );
     n3 %= 3; // n3 = n3 % 3
 console.log( 'n3: ', n3 );
+
+// -----------------------------
+// 증감연산자
+n3 += 1; // n3 = n3 + 1;
+console.log( 'n3: ', n3 );
+  n3++; // n3 += 1
+console.log( 'n3: ', n3 );
+
+console.log( n3 );
+console.log( n3++ );
+console.log( n3++ );
+console.log( n3++ );
+console.log( n3++ );
+console.log( n3++ );
+console.log( n3++ );
+console.log( n3 );
+console.log( ++n3 );
+console.log( ++n3 );
+console.log( ++n3 );
+console.log( ++n3 );
+console.log( ++n3 );
+console.log( ++n3 );
+console.log( ++n3 );
+console.log( ++n3 );
+console.log( ++n3 );
+console.log( ++n3 );
+console.log( ++n3 );
+console.log( n3 );
+console.log( --n3 );
+console.log( --n3 );
+console.log( --n3 );
+console.log( --n3 );
+console.log( n3 );
+console.log( n3-- );
+console.log( n3-- );
+console.log( n3-- );
+console.log( n3-- );
+console.log( n3 );
+// 1을 더하거나 빼는 기능
