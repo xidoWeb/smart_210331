@@ -80,9 +80,23 @@ for(i in coffee){
 
 
 
-// forEach
+
+// ------------------------------------
+// forEach : 각각의
+// 배열.forEach( function(배열의각값, 각값의순서){ } );
 var fruits = [
-  '바나나', '포도', '오렌지', '자두', '키위'
+  '바나나', '포도', '오렌지', '자두', '키위', '아보카도'
 ];
 
+var t = 0;
+var fLen = fruits.length;
+console.log( fLen );
+for(;t < fLen; t++){
+  console.log( fruits[t] );
+}
 
+fruits.forEach( 
+  function(data, index){
+    console.log( (index + 1), data );
+  }
+);
