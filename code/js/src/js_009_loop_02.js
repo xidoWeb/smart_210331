@@ -39,22 +39,50 @@ for(; a <10; a++){
 
 line();
 
-// for-in
-var fruits = [
-  '바나나', '포도', '오렌지', '자두', '키위'
-];
-/*
-  var i = 0;
-  for(; i < 5 ; i += 1){
-    console.log( fruits[i] );
-  }
-*/
-
+// for-in :  for(임의변수  in 객체이름){}
 // 배열을 for-in 문에 사용하는 것은 성능에 매우 영향을 미치므로 X
 // for (i in fruits) {  console.log( fruits[i] ); }
 // for-in은 배열용이 아니라 {객체} 용
 
+var coffee = {
+  base : '에스프레소',
+  pop : '아메리카노',
+  soft : '카페라떼',
+  sweet : '캬라멜 마키아또'
+};
+coffee.etc = '믹스커피';
+// console.log( coffee );
+/*
+  var i;
+  for(i in coffee){
+    console.log( coffee[i] );
+  }
+  console.log( i );
+*/
+// for in test
+var testList = document.getElementsByClassName('test_list')[0];
+testList.style.padding = '10px';
+testList.style.backgroundColor = '#dfdfdf';
+
+var makeList = function(className, content){
+  var makeLi  = document.createElement('li');
+  makeLi.append(content);
+  makeLi.setAttribute('class',className);
+  testList.appendChild(makeLi);
+};
+
+var i, j, k;
+for(i in coffee){
+  j = coffee[i];
+  k = i;
+  makeList(k, j);
+}
 
 
 
 // forEach
+var fruits = [
+  '바나나', '포도', '오렌지', '자두', '키위'
+];
+
+
