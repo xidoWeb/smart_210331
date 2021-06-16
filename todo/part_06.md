@@ -180,12 +180,12 @@
 
 ### 코딩과정 (javascript)
 
-- [ ] 반복문
-  - [ ] while
-  - [ ] do-while
-  - [ ] for
-  - [ ] for-in
-  - [ ] forEach
+- [x] 반복문
+  - [x] while
+  - [x] do-while
+  - [x] for
+  - [x] for-in
+  - [x] forEach
 - [ ] 내장함수
 
 ---

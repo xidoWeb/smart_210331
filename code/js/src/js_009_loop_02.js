@@ -100,3 +100,20 @@ fruits.forEach(
     console.log( (index + 1), data );
   }
 );
+
+
+// DOM - (document object model) - 선택자
+// id :  document.getElementById('아이디 이름');
+// class: document.getElementsByClassName('클래스이름')[순번];
+// tag :  document.getElementsByTagName('태그이름')[순번];
+// attribute : document.getAttribute('속성명','속성값');
+// allInOne : document.querySelector('css형태의 선택자');
+// MultiAllInOne : document.querySelectorAll('css형태의 선택자')[순번];
+
+// makeElement : document.createElement('요소이름');
+// makeAttribute : 선택자.setAttribute('속성명', '값');
+// insert text(내부요소 삭제 후 삽입) : 선택자.innerText = '내용'; 
+// insert text(내부요소의 뒤에 추가) : 선택자.append(내용);
+// insert html(내부요소 삭제 후 삽입) : 선택자.innerHTML = '코드';
+// insert html(내부요소의 뒤에 추가) : 선택자.appendChild('코드');
+
