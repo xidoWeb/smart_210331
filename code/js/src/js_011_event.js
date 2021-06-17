@@ -9,6 +9,12 @@ var evtLi = evtUl.getElementsByTagName('li');
 // li: 첫번째에 '1:클릭시' '2:배경색상을 변경'
 evtLi[0].addEventListener('click', function(){
   evtLi[0].style.backgroundColor = '#5a3';
+  var hasClassCk = evtUl.getElementsByClassName('act').length;
+  if(hasClassCk > 0){
+    evtLi[0].classList.remove('act');
+  }else{
+    evtLi[0].classList.add('act');
+  }
 });
 
 evtLi[1].addEventListener('mouseenter', function(){
@@ -62,30 +68,24 @@ inputBox.addEventListener('focus', function(){
 });
 
 inputBox.addEventListener('keyup', function(e){
-  // console.log('key 눌렀음!!');
   // console.log( parseInt(e.key) <= 9 );
+  // console.log(   isNaN( parseInt(e.key) )  );
 
+  // value값 가져오기
   var val = inputBox.value;
-  var typeCheck = parseInt(e.key) <= 9;
-  if(!typeCheck){
-    console.log('숫자를 입력하세요.');
-  }else{
-    console.log('check !');
+  // value값 갯수파악해서 각각의 글자를 숫자인지 체크
+  var valLen = val.length;
+  var i=0;
+  var isNumber;
+  for(; i < valLen ; i++){
+    isNumber = isNaN( parseInt(val[i]) );
+    if(isNumber){
+      console.error('숫자만 적으세요!!!');
+      break;
+    }else{
+      console.log('잘 적고 있군요!!!');
+    }
   }
 
-  (function (text){
-    var tlen = text.length;
-    var i=0;
-    var parserNumber = parseInt(text[i]);
-    var checkN = isNaN(parserNumber);
-    for( ; i < tlen ; i+=1 ){
-      if(checkN){
-        console.error('숫자가 아닙니다.');
-        break;
-      }else{
-        console.log('모두 숫자입니다.');
-      }
-    }
-  })(val)
 });
 
