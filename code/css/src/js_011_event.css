@@ -2,6 +2,7 @@
 
 ul {
   width:32rem; height:auto;
+  min-height:1500px;
   margin:0;
   padding:1rem; box-sizing: border-box;
   background-color: #85ABB8;
