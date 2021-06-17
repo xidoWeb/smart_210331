@@ -190,6 +190,14 @@
 
 ---
 
+### 2021.06.17
+
+### 코딩과정 (javascript)
+
+- [x] event처리
+
+---
+
 - display:flex
 - etc ( filter, data(attribute) )
 
