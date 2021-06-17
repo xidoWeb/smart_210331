@@ -41,3 +41,36 @@ liAnker.addEventListener('blur', function(){
   liAnkerStyle.fontWeight = 'inherit';
   liAnkerStyle.color = 'inherit';
 });
+
+
+// 마우스가 움직일때 : mousemove
+var mv = document.getElementsByClassName('mv')[0];
+
+evtLi[3].addEventListener('mousemove', function(event){
+  // console.log( event.offsetX , event.offsetY );
+  mv.style.top =  (-event.offsetY / 2) + 'px';
+  mv.style.left = (-event.offsetX / 2) + 'px'; 
+});
+
+// 포커스되는 형태를 파악
+// 키보드처리시 발생되는 무언가도 체크
+// var inputBox = eveLi[4].getElementById('inputBox');
+var inputBox = document.getElementById('inputBox');
+
+inputBox.addEventListener('focus', function(){
+  console.log('키보드 입력을 해볼까요?');  
+});
+
+inputBox.addEventListener('keyup', function(e){
+  // console.log('key 눌렀음!!');
+  // console.log( e.key );
+
+  var val = inputBox.value;
+  var typeCheck = parseInt(val);
+  if(typeCheck === NaN) {
+    console.log('숫자만 입력하세요.');
+  }else{
+    console.log(typeCheck);
+  }
+});
+

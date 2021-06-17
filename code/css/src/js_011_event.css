@@ -29,3 +29,9 @@ li.act {
   border-radius:0.1rem;
   box-shadow:0.2rem 0.2rem 0.5rem #4f707a inset;
 }
+
+
+.mv {
+  position: relative; top: 0; left: 0;
+  width: 100%; height: 50px; 
+  background-color: #acf;}
