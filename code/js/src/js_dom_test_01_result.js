@@ -14,46 +14,41 @@ var product = procuctArea.getElementsByClassName('product')[0];
 // 하나만 세팅해보자!
 // 통으로 넣을것인지, 통으로 짜여진 데이터를 분류해서 다시 배치 인지 차후 고르자
 
-var listData = [
-  'http://naver.com',
-  '../img/undraw/undraw_001.png',
-  '카드에들어갈 이미지 설명1',
-  '카드 이미지'
-];
+// var listData = [
+//   'http://naver.com',
+//   '../img/undraw/undraw_001.png',
+//   '카드에들어갈 이미지 설명1',
+//   '카드 이미지'
+// ];
 
+var dataCheck = {
+  link   : 'http://naver.com',
+  imgSrc : '../img/undraw/undraw_001.png',
+  imgNarr : '카드에들어갈 이미지 설명_001',
+  cardTitle : '카드 제목 _ 001'
+};
 
-var makeLiFn = function (){
+var makeLiFn = function (listData){
   var makeLi = document.createElement('li');
-  /*
-  var insertCode = '<a href="'+ listData[0] 
-                   +'"><div class="img_set" ' + 'style=" background-image:url(' + listData[1] + ')" ' 
-                   + '><span class="blind">' + listData[2] 
-                   + '</span></div><p>'+ listData[3]
-                   + '</p></a>';
-  */
 
-  var insertCode = '<a href="#"><div class="img_set"><span class="blind"></span></div><p></p></a>'
-
+  var insertCode = '<a href="#"><div class="img_set"><span class="blind"></span></div><p></p></a>';
   makeLi.innerHTML = insertCode;
   // li내부에 코드로 인식되는 시점에서 내용을 추가
   // ---------------------------
   var a = makeLi.getElementsByTagName('a')[0];
-    a.setAttribute('href', listData[0]);
-
   var imgSet = a.getElementsByClassName('img_set')[0];
-    // imgSet.setAttribute('style', 'background-image:url('+listData[1]+')');
-    imgSet.style.backgroundImage = 'url(' + listData[1] + ')';
-
   var imgBlind = imgSet.getElementsByTagName('span')[0];
-    imgBlind.innerText = listData[2];
-
   var p = a.getElementsByTagName('p')[0];
-    p.innerText = listData[3];
+  // ---------------------------
+    a.setAttribute('href', listData.link );
+    imgSet.style.backgroundImage = 'url(' + listData.imgSrc  + ')';
+    imgBlind.innerText = listData.imgNarr ;
+    p.innerText = listData.cardTitle ;
   // ---------------------------
   product.appendChild(makeLi);
 }
 
 var i = 0;
 for( ; i < 10; i += 1 ){
-  makeLiFn();
+  makeLiFn(dataCheck);
 }
