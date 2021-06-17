@@ -24,13 +24,32 @@ var listData = [
 
 var makeLiFn = function (){
   var makeLi = document.createElement('li');
+  /*
   var insertCode = '<a href="'+ listData[0] 
                    +'"><div class="img_set" ' + 'style=" background-image:url(' + listData[1] + ')" ' 
                    + '><span class="blind">' + listData[2] 
                    + '</span></div><p>'+ listData[3]
                    + '</p></a>';
+  */
+
+  var insertCode = '<a href="#"><div class="img_set"><span class="blind"></span></div><p></p></a>'
 
   makeLi.innerHTML = insertCode;
+  // li내부에 코드로 인식되는 시점에서 내용을 추가
+  // ---------------------------
+  var a = makeLi.getElementsByTagName('a')[0];
+    a.setAttribute('href', listData[0]);
+
+  var imgSet = a.getElementsByClassName('img_set')[0];
+    // imgSet.setAttribute('style', 'background-image:url('+listData[1]+')');
+    imgSet.style.backgroundImage = 'url(' + listData[1] + ')';
+
+  var imgBlind = imgSet.getElementsByTagName('span')[0];
+    imgBlind.innerText = listData[2];
+
+  var p = a.getElementsByTagName('p')[0];
+    p.innerText = listData[3];
+  // ---------------------------
   product.appendChild(makeLi);
 }
 
