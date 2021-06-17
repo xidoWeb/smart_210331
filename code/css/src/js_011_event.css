@@ -1,0 +1,30 @@
+/* css/src/js_011_event.css */
+
+ul {
+  width:32rem; height:auto;
+  margin:0;
+  padding:1rem; box-sizing: border-box;
+  background-color: #85ABB8;
+}
+
+li {
+  list-style:none;
+  width: 100%; height:auto;
+  padding:0.3rem 0.5rem;
+  box-sizing: border-box;
+  border-bottom:0.05rem solid #fff;
+  margin:0;
+  margin-bottom:0.5rem;
+  color:#fff; font-size:1.3rem;
+}
+
+li:hover {
+  background-color: #ffc;
+  cursor: pointer;
+  color:#171717;
+}
+
+li.act {
+  border-radius:0.1rem;
+  box-shadow:0.2rem 0.2rem 0.5rem #4f707a inset;
+}
