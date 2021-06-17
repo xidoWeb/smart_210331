@@ -63,14 +63,29 @@ inputBox.addEventListener('focus', function(){
 
 inputBox.addEventListener('keyup', function(e){
   // console.log('key 눌렀음!!');
-  // console.log( e.key );
+  // console.log( parseInt(e.key) <= 9 );
 
   var val = inputBox.value;
-  var typeCheck = parseInt(val);
-  if(typeCheck === NaN) {
-    console.log('숫자만 입력하세요.');
+  var typeCheck = parseInt(e.key) <= 9;
+  if(!typeCheck){
+    console.log('숫자를 입력하세요.');
   }else{
-    console.log(typeCheck);
+    console.log('check !');
   }
+
+  (function (text){
+    var tlen = text.length;
+    var i=0;
+    var parserNumber = parseInt(text[i]);
+    var checkN = isNaN(parserNumber);
+    for( ; i < tlen ; i+=1 ){
+      if(checkN){
+        console.error('숫자가 아닙니다.');
+        break;
+      }else{
+        console.log('모두 숫자입니다.');
+      }
+    }
+  })(val)
 });
 
