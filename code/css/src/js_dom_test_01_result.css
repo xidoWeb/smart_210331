@@ -3,7 +3,7 @@
 .product {
   width:100%; max-width:1200px; 
   margin:auto; padding:0.5rem; box-sizing:border-box;
-  background-color: #dfdfdf;
+  background-color: #ffd;
 }
 li{
   float:left; width:200px; height:300px; 
