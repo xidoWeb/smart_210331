@@ -36,24 +36,25 @@ var dataCheck = {
 // 차후 dataCheck변수 대신 다른 내용이 들어갈 수 있도록 설정 -> dataCheck는 임시로 만든 형식
 
 var makeLiFn = function (listData){
-  var makeLi = document.createElement('li');
+  var makeLi     = document.createElement('li');
 
   var insertCode = '<a href="#"><div class="img_set"><span class="blind"></span></div><p></p></a>';
   makeLi.innerHTML = insertCode;
   // li내부에 코드로 인식되는 시점에서 내용을 추가
   // ---------------------------
-  var a = makeLi.getElementsByTagName('a')[0];
-  var imgSet = a.getElementsByClassName('img_set')[0];
+  var a        = makeLi.getElementsByTagName('a')[0];
+  var imgSet   = a.getElementsByClassName('img_set')[0];
   var imgBlind = imgSet.getElementsByTagName('span')[0];
-  var p = a.getElementsByTagName('p')[0];
+  var p        = a.getElementsByTagName('p')[0];
   // ---------------------------
     a.setAttribute('href', listData.link );
     imgSet.style.backgroundImage = 'url(' + listData.imgSrc  + ')';
-    imgBlind.innerText = listData.imgNarr ;
-    p.innerText = listData.cardTitle ;
+    imgBlind.innerText           = listData.imgNarr ;
+    p.innerText                  = listData.cardTitle ;
   // ---------------------------
   product.appendChild(makeLi);
-}
+} // makeLiFn();
+
 // ---------------------------------------------------
 // data 형식 생성
 var imgUrl = '../img/undraw/';
