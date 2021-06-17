@@ -3,10 +3,12 @@
 .product {
   width:100%; max-width:1200px; 
   margin:auto; padding:0.5rem; box-sizing:border-box;
+  background-color: #dfdfdf;
 }
 li{
   float:left; width:200px; height:300px; 
-  margin:1rem;    
+  margin:1rem;  
+  border:1px solid #f07;  
 }
 
 li > a { 
