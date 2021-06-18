@@ -47,7 +47,7 @@ var product = document.getElementsByClassName('product')[0];
 
 
 // 6. [v] 양이 많아지므로 반복처리되는 기능을 함수하나로 표현
-var makeLiFn = function(){
+var makeLiFn = function(data){
   var makeLi = document.createElement('li');
   product.appendChild(makeLi);
   // 6-1. 빠진 li내부 요소를 첨부
@@ -65,10 +65,20 @@ var makeLiFn = function(){
       // cardDetailBtn : .other button > span - 상품이미지 상세정보 (기본설정)
       // cardLink      : .other a - 상세내용에따른 주소 첨부
       // cardLinkNarr  : .other a > span - 상품명 + 상세내용 바로가기 (기본설정)
+// ------------------------------------------------------------------------
+var base = makeLi.getElementsByClassName('base')[0];
+// background-image:url();  -> backgroundImage = 'url('+ 소스 +')';
+base.style.backgroundImage = 'url('+ data.baseBg +')';
+
+var baseSpan = base.getElementsByTagName('span')[0];
+baseSpan.innerText = data.basePar;
+
+
+// ------------------------------------------------------------------------      
 };
 
 var testCard = {
-  baseBg        : '../img/card_list/001-.svg' ,
+  baseBg        : '../img/card_list/002--1.svg' ,
   basePar       : '카드 이미지 샘플 _001' ,
   cardTitle     : 'animal' ,
   cardNarr      : '상품 디테일 설명' ,
@@ -81,7 +91,7 @@ var testCard = {
 var i = 0;
 var cardLen = 10
 for( ; i < cardLen; i++){
-  makeLiFn();
+  makeLiFn(testCard);
 }
 
 // 8. [] 객체의 여러값을 내용을 만들어, 각각 하나씩 반영시킨다.
