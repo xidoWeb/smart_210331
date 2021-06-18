@@ -1,0 +1,23 @@
+
+li {
+  position: relative;
+  float:left;
+  width:200px;
+  height:200px;
+  margin:0.5rem;
+  border:1px solid #777;
+  cursor: pointer;
+}
+.other {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  padding:2rem; box-sizing: border-box;
+  background-color: rgba(255,0,0,0.4);
+}
+
+li:hover > .other,
+li:focus > .other {
+  display:block;
+}
