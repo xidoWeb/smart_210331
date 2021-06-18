@@ -57,7 +57,7 @@ var makeLiFn = function(data){
                   <div class="line_focus"><div class="line1"></div><div class="line2"></div></div>';
   
   makeLi.innerHTML = liContent;
-  // 7. [ ] 여러코드의 형태를 객체를 하나 만들어서 내용을 넣어본다.
+  // 7. [v] 여러코드의 형태를 객체를 하나 만들어서 내용을 넣어본다.
       // baseBg        : .base - 배경이미지
       // basePar       : .base > span - 상품 이름 - 이미지
       // cardTitle     : .other > dt - 상품 종류
@@ -102,14 +102,40 @@ var testCard = {
   cardLinkNarr  : '새관련 내용 상세 보기' ,
 };
 
+// 8. [v] 객체의 여러값을 내용을 만들어, 각각 하나씩 반영시킨다.
+// 8-1 객체의 내용이 들어가는 것을 확인했으니,추가 객체내용을 작성하거나, 속성의 이름을 변경해서 처리하도록 하자!
+var cardListData = [
+  {
+    baseBg        : '../img/card_list/002--1.svg' ,
+    basePar       : '카드 이미지 샘플 _001' ,
+    cardTitle     : 'animal' ,
+    cardNarr      : '상품 디테일 설명' ,
+    cardDetailBtn : '상세보기' ,
+    cardLink      : 'http://naver.com' ,
+    cardLinkNarr  : '새관련 내용 상세 보기' ,
+  },
+  {
+    baseBg        : '../img/card_list/003--2.svg' ,
+    basePar       : '카드 이미지 샘플 _002' ,
+    cardTitle     : 'fish' ,
+    cardNarr      : '상품 디테일 디테일 디테일 설명' ,
+    cardDetailBtn : '상세보기' ,
+    cardLink      : 'http://daum.net' ,
+    cardLinkNarr  : '물고기 내용 상세 보기' ,
+  }
+];
 
+
+
+
+// ---------------------------------------------------
 var i = 0;
-var cardLen = 10
+var cardLen = cardListData.length;
 for( ; i < cardLen; i++){
-  makeLiFn(testCard);
+  makeLiFn(cardListData[i]);
 }
 
-// 8. [] 객체의 여러값을 내용을 만들어, 각각 하나씩 반영시킨다.
+
 // 9. [] 생성자 함수를 만들어 양식을 정리
 
 //-----------------------------------------------------------------------------
