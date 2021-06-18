@@ -106,46 +106,92 @@ var testCard = {
 // 8-1 객체의 내용이 들어가는 것을 확인했으니,추가 객체내용을 작성하거나, 속성의 이름을 변경해서 처리하도록 하자!
 var cardListData = [
   {
-    baseBg        : '../img/card_list/002--1.svg' ,
-    basePar       : '카드 이미지 샘플 _001' ,
-    cardTitle     : 'animal' ,
-    cardNarr      : '상품 디테일 설명' ,
-    cardDetailBtn : '상세보기' ,
-    cardLink      : 'http://naver.com' ,
-    cardLinkNarr  : '새관련 내용 상세 보기' ,
+    baseImage             : '002--1.svg' ,
+    baseParagraph         : '카드 이미지 샘플 _001' ,
+    title                 : 'animal' ,
+    detail                : '상품 디테일 설명' ,
+    buttonNarration       : 'animal 상세보기' ,
+    linkUrl               : 'http://naver.com' ,
+    detailPageNarration   : '새관련 내용 상세 보기' ,
+    settingColor          : '#fdd'
   },
   {
-    baseBg        : '../img/card_list/003--2.svg' ,
-    basePar       : '카드 이미지 샘플 _002' ,
-    cardTitle     : 'fish' ,
-    cardNarr      : '상품 디테일 디테일 디테일 설명' ,
-    cardDetailBtn : '상세보기' ,
-    cardLink      : 'http://daum.net' ,
-    cardLinkNarr  : '물고기 내용 상세 보기' ,
+    baseImage             : '003--2.svg' ,
+    baseParagraph         : '카드 이미지 샘플 _002' ,
+    title                 : 'fish' ,
+    detail                : '상품 디테일 디테일 디테일 설명' ,
+    linkUrl               : 'http://daum.net' ,
+    detailPageNarration   : '물고기 내용 상세 보기' ,
+    settingColor          : '#dfd'
+  },
+  {
+    baseImage             : '021--18.svg' ,
+    baseParagraph         : '카드 이미지 샘플 _003' ,
+    title                 : 'fish' ,
+    detail                : '상품 설명' ,
+    linkUrl               : 'http://google.com' ,
+    detailPageNarration   : '물고기 내용 상세 보기' ,
+    settingColor          : '#ffd'
+  },
+  {
+    baseImage             : '016--13.svg' ,
+    baseParagraph         : '카드 이미지 샘플 _004' ,
+    title                 : 'beef' ,
+    detail                : '상품 설명에 대하여 주절주절' ,
+    linkUrl               : 'http://xidoweb.com' ,
+    detailPageNarration   : '고기는 사랑입니다.' ,
+    settingColor          : '#fa7'
   }
+
 ];
 
+// ---------------------------------------------------
+// 9. [v] 생성자 함수를 만들어 양식을 정리
+var imgUrl = '../img/card_list/';
 
-
+function SetCardData(url, data){
+  this.baseBg        = url + data.baseImage;
+  this.basePar       =       data.baseParagraph;
+  this.cardTitle     =       data.title;
+  this.cardNarr      =       data.detail;
+  this.cardDetailBtn =       data.buttonNarration || '상세보기';
+  this.cardLink      =       data.linkUrl;
+  this.cardLinkNarr  =       data.detailPageNarration;
+}
 
 // ---------------------------------------------------
 var i = 0;
 var cardLen = cardListData.length;
+var setCard;
 for( ; i < cardLen; i++){
-  makeLiFn(cardListData[i]);
+  setCard = new SetCardData(imgUrl, cardListData[i]);
+  makeLiFn(setCard);
 }
-
-
-// 9. [] 생성자 함수를 만들어 양식을 정리
 
 //-----------------------------------------------------------------------------
 // 팁. li요소 및 하위 요소는 변수를 따로 지정해서 사용,
 //     CSS를 굳이 js로 모두 작성하실 필요는 없다!
 
-// 10. [] 이벤트기능을 위해 li하나에 마우스 올릴경우 처리되는 기능을 만든다.
-// 11. [] 이벤트기능을 위해 li하나에 마우스 벗어날경우 처리되는 기능을 만든다.
-// 12. [] 이벤트기능을 위해 li하나에 focus 처리되는 기능을 만든다.
-// 13. [] 이벤트기능을 위해 li하나에 blur 처리되는 기능을 만든다.
-// 14. [] 10,11번의 기능이 동일하기 때문에 함수로 처리하여 기능을 동작하게 만든다.
-// 15. [] 12,13번의 기능이 동일하기 때문에 함수로 처리하여 기능을 동작하게 만든다.
+// 10. [v] 이벤트기능을 위해 li하나에 마우스 올릴경우 처리되는 기능을 만든다.
+// 11. [v] 이벤트기능을 위해 li하나에 마우스 벗어날경우 처리되는 기능을 만든다.
+// 12. [v] 이벤트기능을 위해 li하나에 focus 처리되는 기능을 만든다.
+// 13. [v] 이벤트기능을 위해 li하나에 blur 처리되는 기능을 만든다.
+// 14. [v] 10,11번의 기능이 동일하기 때문에 함수로 처리하여 기능을 동작하게 만든다.
+// 15. [v] 12,13번의 기능이 동일하기 때문에 함수로 처리하여 기능을 동작하게 만든다.
+
+var productLi = product.getElementsByTagName('li');
+// console.log(productLi);
+var addAct = function(){ 
+  productLi[0].classList.add('act');
+};
+var removeAct = function(){
+  productLi[0].classList.remove('act');
+};
+
+productLi[0].addEventListener('mouseenter', addAct );
+productLi[0].addEventListener('focus', addAct );
+productLi[0].addEventListener('mouseleave', removeAct);
+productLi[0].addEventListener('blur', removeAct);
+
+
 // 16. [] 기능들을 정리해본다.
