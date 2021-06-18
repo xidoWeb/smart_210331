@@ -68,12 +68,27 @@ var makeLiFn = function(data){
 // ------------------------------------------------------------------------
 var base = makeLi.getElementsByClassName('base')[0];
 // background-image:url();  -> backgroundImage = 'url('+ 소스 +')';
-base.style.backgroundImage = 'url('+ data.baseBg +')';
+    base.style.backgroundImage = 'url('+ data.baseBg +')';
 
 var baseSpan = base.getElementsByTagName('span')[0];
-baseSpan.innerText = data.basePar;
+    baseSpan.innerText = data.basePar;
 
+var otherArea = makeLi.getElementsByClassName('other')[0];
+var cardTitle = otherArea.getElementsByTagName('dt')[0];
+    cardTitle.innerText = data.cardTitle;
 
+var cardNarr = otherArea.getElementsByTagName('dd');
+cardNarr[0].innerText = data.cardNarr;
+// cardNarr[1] : 차후 버튼클릭시 나타나야하는 내용 연결부분 체크
+var cardBtnSpan = cardNarr[1].getElementsByTagName('span')[0];
+cardBtnSpan.innerText = data.cardDetailBtn;
+
+var cardLink = cardNarr[2].getElementsByTagName('a')[0];
+cardLink.setAttribute( 'href', data.cardLink );
+
+var cardLinkSpan = cardLink.getElementsByTagName('span')[0];
+cardLink.setAttribute( 'title', data.cardLinkNarr );
+cardLinkSpan.innerText = data.cardLinkNarr;
 // ------------------------------------------------------------------------      
 };
 
