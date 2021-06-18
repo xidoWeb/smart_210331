@@ -8,14 +8,70 @@ li {
   border:1px solid #777;
   cursor: pointer;
 }
+
+.base {
+  width: 100%; height: 100%;
+  background-image: url("../../img/card_list/001-.svg");
+  background-size: 70% auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .other {
   position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
   padding:2rem; box-sizing: border-box;
-  background-color: rgba(255,0,0,0.4);
+  background-color: rgba(0,50,200,0.7);
+  cursor: default;
 }
+.other > dl {
+  position: absolute; top: 50%; left: 50%;
+  width: 100%; height: auto; 
+  text-align: center;
+  color:#fff;
+  transform: translate(-50%, -50%);
+}
+
+.other > dl dt {
+  margin-bottom:0.5rem;
+  font-size: 0.875rem;
+  text-decoration:underline;
+}
+
+.btn {
+  position: absolute; left:50%;
+  width:3rem; height:3rem;
+  transform:translateX(-50%);
+}
+
+.btn>button,
+.btn>a {
+  display: block; 
+  width: 100%; height: 100%; 
+  color:inherit;
+  font-size:2rem;
+  line-height:2.3rem;
+  vertical-align:middle;
+  border:2px solid #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btn>button:focus,
+.btn>a:focus {
+  box-shadow:0.3rem 0.2rem 0.1rem rgba(0,0,0,0.5);
+}
+
+.other > dl dd:nth-of-type(2){
+  top: -3.5rem;
+}
+
+.other > dl dd:nth-of-type(3){
+  bottom: -3.5rem;
+}
+
 
 li:hover > .other,
 li:focus > .other {
