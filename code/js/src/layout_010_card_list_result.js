@@ -49,6 +49,7 @@ var product = document.getElementsByClassName('product')[0];
 // 6. [v] 양이 많아지므로 반복처리되는 기능을 함수하나로 표현
 var makeLiFn = function(data){
   var makeLi = document.createElement('li');
+  makeLi.setAttribute('tabIndex', 0)
   product.appendChild(makeLi);
   // 6-1. 빠진 li내부 요소를 첨부
   var liContent = '<div class="base"><span class="blind"></span></div>\
@@ -181,17 +182,31 @@ for( ; i < cardLen; i++){
 
 var productLi = product.getElementsByTagName('li');
 // console.log(productLi);
-var addAct = function(){ 
-  productLi[0].classList.add('act');
+var addAct = function(i){ 
+  return function(){
+    productLi[i].classList.add('act');
+  }
 };
-var removeAct = function(){
-  productLi[0].classList.remove('act');
+var removeAct = function(i){
+  return function(){
+    productLi[i].classList.remove('act');
+  }
 };
 
-productLi[0].addEventListener('mouseenter', addAct );
-productLi[0].addEventListener('focus', addAct );
-productLi[0].addEventListener('mouseleave', removeAct);
-productLi[0].addEventListener('blur', removeAct);
+var Act = function(i){
+  return function(){
+    console.log(i)
+  }
+}
 
+var i = 0; 
+for( ; i < cardLen ; i ++ ){
+  (function(index){
+    productLi[index].addEventListener('mouseenter', addAct(index) );
+    productLi[index].addEventListener('focus', addAct(index) );
+    productLi[index].addEventListener('mouseleave', removeAct(index));
+    productLi[index].addEventListener('blur', removeAct(index));
+  })(i);
+}
 
 // 16. [] 기능들을 정리해본다.

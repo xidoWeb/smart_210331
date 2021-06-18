@@ -36,7 +36,7 @@ li {
 
 .other {
   opacity: 0;
-  position: absolute;
+  position: absolute; z-index:100;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
@@ -112,10 +112,12 @@ li {
 li:focus > .other {  display:block; } */
 
 .line_focus {
+  position: absolute; top:0; left:0;
   width: 100%; height: 100%;
 }
 
 .line_focus > div {
+  position: absolute; top:0; left:0;
   width: 100%; height: 100%;
 }
 
