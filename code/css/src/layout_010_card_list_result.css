@@ -46,34 +46,30 @@ li {
   transform:translateX(-50%);
 }
 
+.btn>button:before,
+.btn>button:after {
+  content:" "; display: block;
+  position: absolute; top: 0; left: 0; bottom:0; right:0;
+  margin:auto;  
+  width:1.7rem; height:4px;
+  background-color: #fff;
+}
+.btn>button:after {  transform:rotate(90deg); }
+
 .btn>button,
 .btn>a {
-  display: block; 
-  width: 100%; height: 100%; 
-  color:inherit;
-  font-size:2rem;
-  line-height:2.3rem;
-  vertical-align:middle;
-  border:2px solid #fff;
-  box-sizing: border-box;
+  position: relative;
+  display: block; width: 100%; height: 100%; 
+  color:inherit; font-size:2rem; line-height:2.3rem; vertical-align:middle;
+  border:2px solid #fff; box-sizing: border-box;
   cursor: pointer;
 }
 
 .btn>button:focus,
-.btn>a:focus {
-  box-shadow:0.3rem 0.2rem 0.1rem rgba(0,0,0,0.5);
-}
+.btn>a:focus {  box-shadow:0.3rem 0.2rem 0.1rem rgba(0,0,0,0.5); }
 
-.other > dl dd:nth-of-type(2){
-  top: -3.5rem;
-}
-
-.other > dl dd:nth-of-type(3){
-  bottom: -3.5rem;
-}
-
+.other > dl dd:nth-of-type(2){  top: -3.5rem; }
+.other > dl dd:nth-of-type(3){  bottom: -3.5rem; }
 
 li:hover > .other,
-li:focus > .other {
-  display:block;
-}
+li:focus > .other {  display:block; }
