@@ -90,4 +90,7 @@
   dtParentsLi.css({border:'3px solid #0df', borderRadius:'1rem', height:'5rem' , padding:'1rem', boxSizing:'border-box'});
   liSiblings.css({marginBottom:'3rem', backgroundColor:'#fdd', boxShadow:'0.5rem 0.5rem 0.5rem #777'});
 
+  // ?.style = "";
+  // ?.css({ 'property' : 'value' , 'property' : 'value' ,  });
+  
 })(jQuery);
