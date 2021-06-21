@@ -183,69 +183,40 @@ for( ; i < cardLen; i++){
 
 var productLi = product.getElementsByTagName('li');
 // console.log(productLi);
-var productLiOther = productLi[0].getElementsByClassName('other')[0];
+// var productLiOther = productLi[0].getElementsByClassName('other')[0];
 
-productLi[0].addEventListener('focus', function(){
-  productLiOther.style.display = 'block';
-  setTimeout(function(){
-    productLi[0].classList.add('act');
-  }, 100);
-});
-
-productLi[0].addEventListener('mouseenter', function(){
-  productLiOther.style.display = 'block';
-  setTimeout(function(){
-    productLi[0].classList.add('act');
-  }, 100);
-});
-
-var liLink = productLi[0].getElementsByTagName('a')[0];
-liLink.addEventListener('blur', function(){
-  productLi[0].classList.remove('act');
-  setTimeout(function(){
-    productLiOther.style.display = 'none';
-  }, 300);
-});
-
-productLi[0].addEventListener('mouseleave', function(){
-  productLi[0].classList.remove('act');
-  setTimeout(function(){
-    productLiOther.style.display = 'none';
-  }, 300);
-});
-
-productLi[1].addEventListener('focus', function(){
-  //productLi[0].classList.remove('act');
-  productLi[1].classList.add('act');
-});
+var addAct = function(n){
+  return function(){
+    var productLiOther = productLi[n].getElementsByClassName('other')[0];
+    productLiOther.style.display = 'block';
+    setTimeout(function(){
+      productLi[n].classList.add('act');
+    }, 100);
+  }
+};
+var removeAct = function(n){
+ return function(){
+    var productLiOther = productLi[n].getElementsByClassName('other')[0];
+    productLi[n].classList.remove('act');
+    setTimeout(function(){
+      productLiOther.style.display = 'none';
+    }, 300);
+  }
+};
+var liEventAD = function(n){
+  productLi[n].addEventListener('focus',      addAct(n)  );
+  productLi[n].addEventListener('mouseenter', addAct(n)  );  
+  var liLink = productLi[n].getElementsByTagName('a')[0];
+        liLink.addEventListener('blur',       removeAct(n) );
+  productLi[n].addEventListener('mouseleave', removeAct(n) );
+};
 
 
-
-
-
-
-
-
-//setTimeout() 설정된 일정시간 뒤에 동작하게 만드는 함수
-/*
-  setTimeout( function(){
-    productLi[3].classList.add('act');
-  }, 2000 );
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var liLen = productLi.length;
+i = 0;
+for( ; i < liLen; i += 1){
+  liEventAD(i);
+}
 
 
 
