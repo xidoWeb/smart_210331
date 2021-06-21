@@ -12,10 +12,15 @@
               -0.2rem -0.2rem 0.8rem rgba(255,255,255,0.7);
 }
 
+h3 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #333;
+}
+
 .box {
-  position: absolute; top: 0; left: 50%;
-  transform: translate(-50%);
-  width: 100%; height:500px;
+ float:right;
+  width: 50%; height:auto;
   background-color: #7ac;
   margin-top: 1rem;
   padding:3rem; box-sizing: border-box;
@@ -25,8 +30,8 @@
 }
 
 ul {
+  float:left;
   width: 50%; height:auto; 
-  margin:auto; margin-top:520px
 }
 
 ul>li {
