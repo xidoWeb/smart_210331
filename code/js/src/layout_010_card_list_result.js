@@ -183,7 +183,7 @@ for( ; i < cardLen; i++){
 
 var productLi = product.getElementsByTagName('li');
 // console.log(productLi);
-var productLiOther = productLi[0].getElementsByClassName('.other')[0];
+var productLiOther = productLi[0].getElementsByClassName('other')[0];
 
 productLi[0].addEventListener('focus', function(){
   productLiOther.style.display = 'block';
