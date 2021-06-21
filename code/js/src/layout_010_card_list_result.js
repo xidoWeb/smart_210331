@@ -49,7 +49,8 @@ var product = document.getElementsByClassName('product')[0];
 // 6. [v] 양이 많아지므로 반복처리되는 기능을 함수하나로 표현
 var makeLiFn = function(data){
   var makeLi = document.createElement('li');
-  makeLi.setAttribute('tabIndex', 0)
+  // focus기능을 주기위한 속성
+  makeLi.setAttribute('tabIndex', 0);
   product.appendChild(makeLi);
   // 6-1. 빠진 li내부 요소를 첨부
   var liContent = '<div class="base"><span class="blind"></span></div>\
@@ -182,31 +183,98 @@ for( ; i < cardLen; i++){
 
 var productLi = product.getElementsByTagName('li');
 // console.log(productLi);
-var addAct = function(i){ 
-  return function(){
-    productLi[i].classList.add('act');
-  }
-};
-var removeAct = function(i){
-  return function(){
-    productLi[i].classList.remove('act');
-  }
-};
+var productLiOther = productLi[0].getElementsByClassName('.other')[0];
 
-var Act = function(i){
-  return function(){
-    console.log(i)
-  }
-}
+productLi[0].addEventListener('focus', function(){
+  productLiOther.style.display = 'block';
+  setTimeout(function(){
+    productLi[0].classList.add('act');
+  }, 100);
+});
 
-var i = 0; 
-for( ; i < cardLen ; i ++ ){
-  (function(index){
-    productLi[index].addEventListener('mouseenter', addAct(index) );
-    productLi[index].addEventListener('focus', addAct(index) );
-    productLi[index].addEventListener('mouseleave', removeAct(index));
-    productLi[index].addEventListener('blur', removeAct(index));
-  })(i);
-}
+productLi[0].addEventListener('mouseenter', function(){
+  productLiOther.style.display = 'block';
+  setTimeout(function(){
+    productLi[0].classList.add('act');
+  }, 100);
+});
+
+var liLink = productLi[0].getElementsByTagName('a')[0];
+liLink.addEventListener('blur', function(){
+  productLi[0].classList.remove('act');
+  setTimeout(function(){
+    productLiOther.style.display = 'none';
+  }, 300);
+});
+
+productLi[0].addEventListener('mouseleave', function(){
+  productLi[0].classList.remove('act');
+  setTimeout(function(){
+    productLiOther.style.display = 'none';
+  }, 300);
+});
+
+productLi[1].addEventListener('focus', function(){
+  //productLi[0].classList.remove('act');
+  productLi[1].classList.add('act');
+});
+
+
+
+
+
+
+
+
+//setTimeout() 설정된 일정시간 뒤에 동작하게 만드는 함수
+/*
+  setTimeout( function(){
+    productLi[3].classList.add('act');
+  }, 2000 );
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------
+// var addAct = function(i){ 
+//   return function(){
+//     productLi[i].classList.add('act');
+//   }
+// };
+// var removeAct = function(i){
+//   return function(){
+//     productLi[i].classList.remove('act');
+//   }
+// };
+
+// var Act = function(i){
+//   return function(){
+//     console.log(i)
+//   }
+// }
+
+// var i = 0; 
+// for( ; i < cardLen ; i ++ ){
+//   (function(index){
+//     productLi[index].addEventListener('mouseenter', addAct(index) );
+//     productLi[index].addEventListener('focus', addAct(index) );
+//     productLi[index].addEventListener('mouseleave', removeAct(index));
+//     productLi[index].addEventListener('blur', removeAct(index));
+//   })(i);
+// }
 
 // 16. [] 기능들을 정리해본다.
