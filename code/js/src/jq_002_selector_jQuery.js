@@ -66,9 +66,28 @@
   // h2 span -> $('h1 span')  ->  $('h1').find('span')
 
   // li:nth-child(2)  -> $('li:nth-child(2)')  -> $('li:nth(1)')  -> $('li:eq(1)')  -> $('li').eq(1)   ==> 2번째 li
+  // li:nth-of-type(2)  -> $('li:nth-of-type(2)')  -> $('li:nth(1)')  -> $('li:eq(1)')  -> $('li').eq(1)   ==> 2번째 li
 
+  // dt+dd  ->  $('dt + dd')  ->  $('dt').next('dd')
+  // dt~dd  ->  $('dt ~ dd')  ->  $('dt').nextAll()
 
+  // dd이전dt -> $('dd').prev('dt')
+  // li:nth-child(6) 이전의 모든 li  -> $('li').eq(5).prevAll()
 
+  // li:nth-child(2) 번째의 요소를 제외한 형제요소 모두  ->  $('li').eq(1).siblings()
 
+  // dd부모  -> $('dd').parent();
+  // dd부모의 부모  -> $('dd').parent().parent()
+  // dd의 조상에해당하는 것 중 #box  ->  $('dd').parents('#box')
+
+  var dt = $('dt');
+  var dtNext = dt.nextAll('dd');
+  var dtParentsLi = dt.parents('li');
+  var liSiblings =  dt.parents('li').siblings();
+
+  dt.css({float:'left', padding:'0.5rem', backgroundColor:'#fdd', width:'300px' });
+  dtNext.css({float:'left', fontSize:'1.2rem', 'color':'#f07' });
+  dtParentsLi.css({border:'3px solid #0df', borderRadius:'1rem', height:'5rem' , padding:'1rem', boxSizing:'border-box'});
+  liSiblings.css({marginBottom:'3rem', backgroundColor:'#fdd', boxShadow:'0.5rem 0.5rem 0.5rem #777'});
 
 })(jQuery);
