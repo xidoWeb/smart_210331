@@ -27,10 +27,11 @@ h2 {
 
 .accordion dt {
   width: 100%; height:auto; min-height:50px;
-  margin-top:0.7rem; margin-bottom:0.2rem;
+  margin-top:0.7rem; 
   padding:1rem; box-sizing: border-box;
   background-color: #acf;
   font-size:1.2rem; color:#171717;
+  border-bottom:1px solid #555;
 }
 
 .accordion dd {
@@ -38,5 +39,4 @@ h2 {
   width: 100%; height:auto;
   padding:2rem; box-sizing: border-box;
   background-color: #fda;
-  border-bottom:1px solid #555;
 }

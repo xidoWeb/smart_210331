@@ -19,8 +19,12 @@
   accDt.on('click', function(){
     var thisI = $(this);
     var viewDd = thisI.next(accDd);
-    viewDd.siblings('dd').slideUp();
-    viewDd.slideDown();
+    var vidwDdCheck = viewDd.css('display');
+
+    viewDd.siblings('dd').slideUp();    
+    // if(vidwDdCheck === 'none'){ viewDd.slideDown(); }else{ viewDd.slideUp(); }
+    // (vidwDdCheck === 'none') ?  viewDd.slideDown() : viewDd.slideUp();
+    viewDd.slideToggle();
   });
 
 
