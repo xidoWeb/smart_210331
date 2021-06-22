@@ -36,12 +36,17 @@ addBtn.on('click',function(e){
   var viewDd = thisI.next(accDd);
   var viewDdCheck = viewDd.css('display') === 'none'; // true || false
 
-  viewDd.siblings('dd').stop().slideUp();
+  var siblingDd = viewDd.siblings('dd');
+  siblingDd.stop().slideUp();
   thisI.siblings('dt').removeClass('act');
 
   // viewDd.stop().slideToggle();
   if(viewDdCheck){
-    viewDd.slideDown();
+    $(this).attr('tabindex', 0);
+    viewDd.slideDown(function(){
+      $(this).focus();
+      siblingDd.attr('tabindex', -1);
+    });
     thisI.addClass('act');
   }else{
     viewDd.slideUp();
