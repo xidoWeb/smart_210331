@@ -26,12 +26,46 @@ h2 {
 }
 
 .accordion dt {
-  width: 100%; height:auto; min-height:50px;
+  width: 100%; height:auto; 
   margin-top:0.7rem; 
-  padding:1rem; box-sizing: border-box;
   background-color: #acf;
   font-size:1.2rem; color:#171717;
   border-bottom:1px solid #555;
+}
+
+.accordion button {
+  width: 100%; height: auto; min-height:50px;
+  padding:0 1rem;
+  text-align: left;
+  font-size:1.3rem;
+  transition: all 300ms ease;
+}
+
+.accordion em {
+  float: left; 
+  margin-right:0.5rem;
+  font-size: 1.5rem;
+}
+
+.accordion .icon {
+  float:right;
+  font-size: 1.5rem;
+  transition:all 300ms linear;
+  transform:rotate(180deg);
+}
+
+.accordion dt.act em { color:#f07; }
+.accordion dt.act .icon{ transform:rotate(0); }
+
+
+
+.accordion button:hover {
+  color:#fff; font-weight: 700;
+  background-color: #599;
+}
+.accordion button:focus {
+  outline:0;
+  border-bottom: 0.5rem solid #355;
 }
 
 .accordion dd {

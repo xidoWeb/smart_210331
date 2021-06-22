@@ -16,16 +16,39 @@
   var accDd = accDl.children('dd');
 
   // 기능구현 1
+  /*
   accDt.on('click', function(){
     var thisI = $(this);
     var viewDd = thisI.next(accDd);
-    var vidwDdCheck = viewDd.css('display');
+    // var vidwDdCheck = viewDd.css('display'); // block ||  none
 
     viewDd.siblings('dd').slideUp();    
     // if(vidwDdCheck === 'none'){ viewDd.slideDown(); }else{ viewDd.slideUp(); }
     // (vidwDdCheck === 'none') ?  viewDd.slideDown() : viewDd.slideUp();
     viewDd.slideToggle();
   });
+*/
+
+var addBtn = accDt.children('button');
+addBtn.on('click',function(e){
+  e.preventDefault();
+  var thisI = $(this).parent();
+  var viewDd = thisI.next(accDd);
+  var viewDdCheck = viewDd.css('display') === 'none'; // true || false
+
+  viewDd.siblings('dd').stop().slideUp();
+  thisI.siblings('dt').removeClass('act');
+
+  // viewDd.stop().slideToggle();
+  if(viewDdCheck){
+    viewDd.slideDown();
+    thisI.addClass('act');
+  }else{
+    viewDd.slideUp();
+    thisI.removeClass('act');
+  }
+
+});
 
 
 
