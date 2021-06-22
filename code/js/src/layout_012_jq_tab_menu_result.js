@@ -19,16 +19,44 @@
   var tabList = $('.tab_list');
   var tabUl = tabList.children('ul');
   var tabLi = tabUl.children('li');
+  var tabBtn = tabLi.children('button');
   var tabContent = $('.content');
 
+  // level 01
+/*
   tabLi.on('click', function(){
     // 순서를 지정 : eq(순서), 순서를 파악 : index()
     var thisI = $(this).index();
     // console.log( thisI );
 
     var contentEq = tabContent.eq( thisI );
-    contentEq.slideDown();
-    contentEq.siblings().slideUp();
+    contentEq.show();
+    contentEq.siblings().hide();
   });
+*/
+
+//js     : selector.setAttribute('속성명', '값');
+//jQery  : seledtor.attr('속성명')  -> 해당속성의 값을 파악
+//jQuery : seledtor.attr('속성명','값')  -> 해당속성의 값 처리
+
+tabContent.attr('tabindex', -1);
+
+tabBtn.on('focus', function(e){
+  e.preventDefault();
+
+  var _this = $(this);
+  var _thisParent = _this.parent('li');
+  var _i = _thisParent.index();
+
+  var _contentEq = tabContent.eq( _i );
+  
+  // jQuery는 애니메이션기능이 들어있는 메소드는 콜백기능이 있다.
+  tabContent.attr('tabindex', 0);
+  _contentEq.show(function(){
+    $(this).focus();
+  });
+  _contentEq.siblings().hide();
+
+});
 
 })(jQuery);
