@@ -50,7 +50,7 @@ tabBtn.on('focus', function(e){
   var _this = $(this);
   var _thisParent = _this.parent('li');
   var _i = _thisParent.index();
-
+ 
   var _contentEq = tabContent.eq( _i );
   contentSelect = _contentEq;
 
