@@ -1,0 +1,40 @@
+/* layout_011_jq_accordion_menu_result.css */
+
+#wrap {
+  width: 800px; height:auto;
+  margin:auto; padding:0.5rem; 
+}
+
+.accordion {
+  width: 100%; height:auto;
+  padding:1rem; box-sizing: border-box;
+  border:1px solid #ccc;
+}
+
+h2 {
+  width: 100%; height: auto;
+  padding:0.5rem; box-sizing: border-box;
+  border-bottom:0.3rem solid #ddd;
+  margin-bottom:1rem;
+}
+
+.accordion > dl {
+  width: 100%; height:auto;
+}
+
+
+.accordion dt {
+  width: 100%; height:auto; min-height:50px;
+  margin-top:0.7rem; margin-bottom:0.2rem;
+  padding:1rem; box-sizing: border-box;
+  background-color: #acf;
+  font-size:1.2rem; color:#171717;
+}
+
+.accordion dd {
+  /* display:none; */
+  width: 100%; height:auto;
+  padding:2rem; box-sizing: border-box;
+  background-color: #fda;
+  border-bottom:1px solid #555;
+}

@@ -204,7 +204,6 @@
 ### 코딩과정 (javascript)
 
 - [x] 카드리스트 예제(달콤커피 메뉴 예시)
-- [ ] 
 
 ---
 
@@ -215,8 +214,19 @@
 - [x] 카드리스트 예제(달콤커피 메뉴 예시) - 추가 풀이
 - [x] jQuery기능 이해
   - [x] 선택자
+    - [x] $(' ')
+    - [x] children(), find(), parent(), parents(), siblings(), next(), nextAll() , prev(), prevAll(), eq()
+    - [x] 순서를 지정: `eq()`, 순서를 파악: `index()`
+    - [x] 이벤트가 발생항 그 주체 : `$(this)`
   - [x] 간단한 이벤트
+    - [x] on('이벤트',   function(){ })
+    - [x] 이벤트 : click, dblclick, mouseenter, mouseleave, keydown, keypress, keyup, scroll, mousewheel, resize ....
   - [x] show/hide개념 파악
+    - [x] css() : css({display: 'none' || 'block'})
+    - [x] show() / hide() / toggle()
+    - [x] fadeIn() / fadeOut() / fadeToggle()
+    - [x] slideIn() / slideOut() / slideToggle()
+    - [x] addClass() / removeclass() / toggleClass()
 
 ---
 
