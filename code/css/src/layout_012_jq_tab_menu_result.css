@@ -79,6 +79,17 @@ h3 {
   background-color: #5fa;
 }
 
+/* --------------------------------------- */
+.tab_list li.act {  
+  background-color: #057;
+}
+.tab_list li.act button{ 
+  color:#fff; font-weight: 700;
+  font-size: 1.2rem;
+  background-color: transparent; 
+}
+/* --------------------------------------- */
+
 .tab_content{
   width: 100%; height:700px;
   margin-top: 0.8rem;
@@ -93,6 +104,11 @@ h3 {
   padding:1rem; box-sizing: border-box;
   color:#fff; font-weight: 700; 
   line-height:1.5;
+  transition: all 300ms ease;
+}
+
+.content:focus{
+  border:1rem solid rgba(51,51,51,0.3);
 }
 
 

@@ -39,7 +39,10 @@
 //jQery  : seledtor.attr('속성명')  -> 해당속성의 값을 파악
 //jQuery : seledtor.attr('속성명','값')  -> 해당속성의 값 처리
 
+tabLi.eq(0).addClass('act');
 tabContent.attr('tabindex', -1);
+
+var contentSelect; 
 
 tabBtn.on('focus', function(e){
   e.preventDefault();
@@ -49,14 +52,33 @@ tabBtn.on('focus', function(e){
   var _i = _thisParent.index();
 
   var _contentEq = tabContent.eq( _i );
-  
+  contentSelect = _contentEq;
+
   // jQuery는 애니메이션기능이 들어있는 메소드는 콜백기능이 있다.
   tabContent.attr('tabindex', 0);
-  _contentEq.show(function(){
-    $(this).focus();
-  });
+  _contentEq.show();
+    // function(){  $(this).focus(); }
   _contentEq.siblings().hide();
 
+}); // tabBtn.on('focus')
+
+
+// js : 선택자.addEventListener('keyup', function(event){});
+
+// jQuery
+tabBtn.on('keyup', function(e){
+  // console.log( e.key.toLowerCase() );
+  var eKey = e.key;
+  var eKeyLower = eKey.toLowerCase();
+  var enterKey = eKeyLower === 'enter';
+  if(enterKey){
+    contentSelect.focus();
+  }
 });
+
+
+
+
+
 
 })(jQuery);
