@@ -34,20 +34,28 @@ galLi.on('click', liConvertText() );
 
 var gal_02 = $('.gallery_02');
 var gal_02_box = gal_02.find('.big_image');
+var gal_02_p = gal_02_box.find('p');
+
 var gal_02_list = gal_02.find('li');
 var galUrl = '../img/gallery/u_big/';
 
+// list 첫번째 내용에 있는 글자(a요소의 속성data-text)를 우선 담기
+var gal02_firstText = gal_02_list.eq(0).find('a').attr('data-text');
+gal_02_p.text(gal02_firstText);
+// -------------------------------------------------------------
+
 gal_02_list.children('a').on('focus click', function(e){
   e.preventDefault();
-  // 해당요소의 속성 (data-image) 값을 찾아라
+  // 해당요소의 속성 (data-image) 값을 찾아 배경이미지로 적용
   var select = $(this);
   var selectImg = select.attr('data-image');
   // console.log( selectImg );
   var useImg = galUrl + selectImg;
   gal_02_box.css({'backgroundImage':'url(' + useImg + ')'});
+
+  // 해당요소의 속성 (data-text)값을 p요소에 적용
+  var selectText = select.attr('data-text');
+  gal_02_p.text(selectText);
 });
-
-
-
 
 })(jQuery);
