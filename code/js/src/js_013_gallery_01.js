@@ -85,15 +85,26 @@ gallery_03_Ul.append(set_03_Li);
 */
 
 
-var n = 0;
+// var n = 0;
 var set_03_Li = function(n){
   var setText = '<li><a href="#"><span>이미지 '+ n +'</span></a></li>';
   return setText;  
 };
 
+// js는 실 사용하는 html문서를 기준
+var listUrl = '../img/gallery/u_thumnail/';
+var galleryImgList = [
+  'image_001.jpg',
+  'image_002.jpg',
+  'image_003.jpg',
+  'image_004.jpg',
+  'image_005.jpg',
+];
+
 // for(최초;비교;증감){}
 for( var i = 0 ; i < 5 ; i++){
   gallery_03_Ul.append( set_03_Li( i + 1 ) );
+  gallery_03_Ul.children('li').eq(i).children('a').css({'backgroundImage':'url('+ listUrl + galleryImgList[i] +')'});
 }
 
 
