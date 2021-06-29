@@ -91,7 +91,11 @@ var set_03_Li = function(n){
   return setText;  
 };
 
-gallery_03_Ul.append( set_03_Li( n += 1 ) );
+// for(최초;비교;증감){}
+for( var i = 0 ; i < 5 ; i++){
+  gallery_03_Ul.append( set_03_Li( i + 1 ) );
+}
+
 
 
 
