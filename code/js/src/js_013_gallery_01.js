@@ -69,19 +69,21 @@ gal_02_list.children('a').on('focus click', function(e){
 
 var gallery_03 = $('.gallery_03');
 var gallery_03_Ul = gallery_03.find('ul');
+var thum;
+
 /*
-var n = 1;
-var set_03_Li = '<li><a href="#"><span>이미지 '+ n +'</span></a></li>';
+  var n = 1;
+  var set_03_Li = '<li><a href="#"><span>이미지 '+ n +'</span></a></li>';
 
-gallery_03_Ul.append(set_03_Li);
+  gallery_03_Ul.append(set_03_Li);
 
-n = 2;
-set_03_Li = '<li><a href="#"><span>이미지 '+ n +'</span></a></li>';
-gallery_03_Ul.append(set_03_Li);
+  n = 2;
+  set_03_Li = '<li><a href="#"><span>이미지 '+ n +'</span></a></li>';
+  gallery_03_Ul.append(set_03_Li);
 
-n = 3;
-set_03_Li = '<li><a href="#"><span>이미지 '+ n +'</span></a></li>';
-gallery_03_Ul.append(set_03_Li);
+  n = 3;
+  set_03_Li = '<li><a href="#"><span>이미지 '+ n +'</span></a></li>';
+  gallery_03_Ul.append(set_03_Li);
 */
 
 
@@ -93,19 +95,77 @@ var set_03_Li = function(n){
 
 // js는 실 사용하는 html문서를 기준
 var listUrl = '../img/gallery/u_thumnail/';
+var bigUrl = '../img/gallery/u_big/';
 var galleryImgList = [
-  'image_001.jpg',
-  'image_002.jpg',
-  'image_003.jpg',
-  'image_004.jpg',
-  'image_005.jpg',
+  {
+    'thumnail':'image_001.jpg',
+    'contents':'001_thumnail_설명',
+    'big':'image_001.jpg',
+    'bigNarr':'001_디테일 설명을 작성하시면 됩니다.'
+  },
+  {
+    'thumnail':'image_002.jpg',
+    'contents':'002_thumnail_설명',
+    'big':'image_001.jpg',
+    'bigNarr':'002_디테일 설명을 작성하시면 됩니다.'
+  },
+  {
+    'thumnail':'image_003.jpg',
+    'contents':'003_thumnail_설명',
+    'big':'image_001.jpg',
+    'bigNarr':'003_디테일 설명을 작성하시면 됩니다.'
+  },
+  {
+    'thumnail':'image_004.jpg',
+    'contents':'004_thumnail_설명',
+    'big':'image_001.jpg',
+    'bigNarr':'004_디테일 설명을 작성하시면 됩니다.'
+  },
+  {
+    'thumnail':'image_005.jpg',
+    'contents':'005_thumnail_설명',
+    'big':'image_001.jpg',
+    'bigNarr':'005_디테일 설명을 작성하시면 됩니다.'
+  }
 ];
 
+// var test = ['a',['b','b-1','b-2',['bbb','34','1'] ],'c'];
+// var t2 = test[1];
+// // console.log( t2[2] );
+// console.log(  test[1][3][2] )
+
+// 아래 append를 적용후 추가 기능을 삽입하기위한 함수설정 : 내용이 많기에...
+var listContentFn = function(){
+  thum = listUrl + galleryImgList[i].thumnail;
+  galLink = gallery_03_Ul.children('li').eq(i).children('a');
+  galLink.css({'backgroundImage':'url('+ thum +')', color:'#fff'});
+  galLink.find('span').text( galleryImgList[i].contents );
+};
+
+
+
 // for(최초;비교;증감){}
-for( var i = 0 ; i < 5 ; i++){
+var galLink;
+var galListLen = galleryImgList.length;
+for( var i = 0 ; i < galListLen ; i++){
   gallery_03_Ul.append( set_03_Li( i + 1 ) );
-  gallery_03_Ul.children('li').eq(i).children('a').css({'backgroundImage':'url('+ listUrl + galleryImgList[i] +')'});
+  // thum = listUrl + galleryImgList[i].thumnail;
+  // galLink = gallery_03_Ul.children('li').eq(i).children('a');
+  // galLink.css({'backgroundImage':'url('+ thum +')', color:'#fff'});
+  // galLink.find('span').text( galleryImgList[i].contents );
+  listContentFn();
 }
+
+// .big_image에 첫 배경 이미지 적용
+var gal_03_big = gallery_03.find('.big_image');
+gal_03_big.css({'backgroundImage':'url('+ bigUrl + galleryImgList[0].big +')'});
+
+
+
+// .big_image p에 첫 내용 적용
+var gal_03_p = gal_03_big.find('p');
+gal_03_p.text(galleryImgList[0].bigNarr);
+
 
 
 
