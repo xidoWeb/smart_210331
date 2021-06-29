@@ -44,5 +44,32 @@ h3 {
 .list_image li a {
   display: block;
   width: 100%; height: auto;
-  padding:10px; box-sizing: border-box;
+  padding:30px 5px; box-sizing: border-box;
+  /* background-image: url("../../img/gallery/u_thumnail/image_001.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: all 300ms ease;
 }
+
+.list_image li:nth-child(1) a{ background-image:url("../../img/gallery/u_thumnail/image_001.jpg");}
+.list_image li:nth-child(2) a{ background-image:url("../../img/gallery/u_thumnail/image_002.jpg");}
+.list_image li:nth-child(3) a{ background-image:url("../../img/gallery/u_thumnail/image_003.jpg");}
+.list_image li:nth-child(4) a{ background-image:url("../../img/gallery/u_thumnail/image_004.jpg");}
+.list_image li:nth-child(5) a{ background-image:url("../../img/gallery/u_thumnail/image_005.jpg");}
+
+.big_image {
+  background-image: url("../../img/gallery/u_big/image_001.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.list_image li a:hover{
+  background-position: 50% 100%;
+}
+.list_image li a:focus {
+  outline:2px solid #fa0;
+}
+
+.blind_wrap a>span{ display: block; width: 0; height: 0; position:absolute; z-index:-1; overflow: hidden;}

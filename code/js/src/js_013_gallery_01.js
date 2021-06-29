@@ -18,7 +18,6 @@ var galP = gal_01_Box.children('p');
 var liConvertText = function(){
   return function(event){
     event.preventDefault();
-    
     var thisLink = $(this).children('a');
     var thisData = thisLink.attr('data-text');
     // console.log( thisData );
@@ -27,6 +26,14 @@ var liConvertText = function(){
 };
 
 galLi.on('click', liConvertText() );
+// ---------------------------------------------
+
+// 1. li클릭시(사실은 내부의 a를 클릭)
+// 2. 내부의 a에 들어있는 data-text속성값을 
+// 3. .big_image내부p에 전달
+
+
+
 
 
 })(jQuery);

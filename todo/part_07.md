@@ -21,8 +21,8 @@
 
 - [ ] jQuery - 삽입/확인
   - [ ] wrap, html, text, append, prepend
-  - [ ] attr
-  - [ ] remove, empty, remveAttr
+  - [x] attr
+  - [x] remove, empty, remveAttr
 - [ ] 갤러리페이지 
 - [ ] 모달 윈도우
 - [ ] 객체로 만들어서 불러오기
