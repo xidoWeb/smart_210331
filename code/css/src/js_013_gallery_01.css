@@ -17,12 +17,21 @@ h3 {
 
 .big_image{
   float:left;
+  position: relative;
   width: 80%; height:500px;
   margin:10px;
   background-color: #ddd;
   box-shadow:3px 3px 3px rgba(0,0,0,0.2);
   padding:15px; box-sizing: border-box;
   border-radius:3px;
+}
+
+.big_image p {
+  position: absolute;
+  left: 0; bottom: 0; 
+  width: 100%; height:auto;
+  padding:20px; box-sizing: border-box;
+  background-color: rgba(255,255,255,0.7);
 }
 
 .list_image {
@@ -69,7 +78,7 @@ h3 {
   background-position: 50% 100%;
 }
 .list_image li a:focus {
-  outline:2px solid #fa0;
+  outline:4px solid #fa0;
 }
 
 .blind_wrap a>span{ display: block; width: 0; height: 0; position:absolute; z-index:-1; overflow: hidden;}
