@@ -106,25 +106,25 @@ var galleryImgList = [
   {
     'thumnail':'image_002.jpg',
     'contents':'002_thumnail_설명',
-    'big':'image_001.jpg',
+    'big':'image_002.jpg',
     'bigNarr':'002_디테일 설명을 작성하시면 됩니다.'
   },
   {
     'thumnail':'image_003.jpg',
     'contents':'003_thumnail_설명',
-    'big':'image_001.jpg',
+    'big':'image_003.jpg',
     'bigNarr':'003_디테일 설명을 작성하시면 됩니다.'
   },
   {
     'thumnail':'image_004.jpg',
     'contents':'004_thumnail_설명',
-    'big':'image_001.jpg',
+    'big':'image_004.jpg',
     'bigNarr':'004_디테일 설명을 작성하시면 됩니다.'
   },
   {
     'thumnail':'image_005.jpg',
     'contents':'005_thumnail_설명',
-    'big':'image_001.jpg',
+    'big':'image_005.jpg',
     'bigNarr':'005_디테일 설명을 작성하시면 됩니다.'
   }
 ];
@@ -156,17 +156,32 @@ for( var i = 0 ; i < galListLen ; i++){
   listContentFn();
 }
 
-// .big_image에 첫 배경 이미지 적용
 var gal_03_big = gallery_03.find('.big_image');
-gal_03_big.css({'backgroundImage':'url('+ bigUrl + galleryImgList[0].big +')'});
+var gal_03_p = gal_03_big.find('p');
 
+var setBigInsertFn = function(n){
+  gal_03_big.css({
+    'backgroundImage':'url('+ bigUrl + galleryImgList[n].big +')',
+    'backgroundSize':'cover'
+});
+  gal_03_p.text(galleryImgList[n].bigNarr);
+};
 
+// .big_image에 첫 배경 이미지 적용
+// gal_03_big.css({'backgroundImage':'url('+ bigUrl + galleryImgList[0].big +')'});
 
 // .big_image p에 첫 내용 적용
-var gal_03_p = gal_03_big.find('p');
-gal_03_p.text(galleryImgList[0].bigNarr);
+// gal_03_p.text(galleryImgList[0].bigNarr);
+setBigInsertFn(0);
 
 
+var gal03Link = gallery_03_Ul.children('li').children('a');
+gal03Link.on('click', function(e){
+  e.preventDefault();
+  var setI = $(this).parent().index();
+  // console.log(setI);
+  setBigInsertFn(setI);
+});
 
 
 
