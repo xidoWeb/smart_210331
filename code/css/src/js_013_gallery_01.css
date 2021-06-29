@@ -52,13 +52,13 @@ h3 {
   transition: all 300ms ease;
 }
 
-.list_image li:nth-child(1) a{ background-image:url("../../img/gallery/u_thumnail/image_001.jpg");}
-.list_image li:nth-child(2) a{ background-image:url("../../img/gallery/u_thumnail/image_002.jpg");}
-.list_image li:nth-child(3) a{ background-image:url("../../img/gallery/u_thumnail/image_003.jpg");}
-.list_image li:nth-child(4) a{ background-image:url("../../img/gallery/u_thumnail/image_004.jpg");}
-.list_image li:nth-child(5) a{ background-image:url("../../img/gallery/u_thumnail/image_005.jpg");}
+.gallery_02 li:nth-child(1) a{ background-image:url("../../img/gallery/u_thumnail/image_001.jpg");}
+.gallery_02 li:nth-child(2) a{ background-image:url("../../img/gallery/u_thumnail/image_002.jpg");}
+.gallery_02 li:nth-child(3) a{ background-image:url("../../img/gallery/u_thumnail/image_003.jpg");}
+.gallery_02 li:nth-child(4) a{ background-image:url("../../img/gallery/u_thumnail/image_004.jpg");}
+.gallery_02 li:nth-child(5) a{ background-image:url("../../img/gallery/u_thumnail/image_005.jpg");}
 
-.big_image {
+.gallery_02 .big_image {
   background-image: url("../../img/gallery/u_big/image_001.jpg");
   background-repeat: no-repeat;
   background-size: cover;
