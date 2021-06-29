@@ -15,19 +15,18 @@ var galLi = galUl.children('li');
 var gal_01_Box = $('.gallery_box_01');
 var galP = gal_01_Box.children('p');
 
-var liConvertText = function(event){
-  event.preventDefault();
+var liConvertText = function(){
+  return function(event){
+    event.preventDefault();
+    
+    var thisLink = $(this).children('a');
+    var thisData = thisLink.attr('data-text');
+    // console.log( thisData );
+    galP.text(thisData);
+  }
+};
 
-  var thisLink = $(this).children('a');
-  var thisData = thisLink.attr('data-text');
-  // console.log( thisData );
-  galP.text(thisData);
-
-}
-
-galLi.on('click', function(event){
-  liConvertText();
-});
+galLi.on('click', liConvertText() );
 
 
 })(jQuery);
