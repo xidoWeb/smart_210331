@@ -58,4 +58,41 @@ gal_02_list.children('a').on('focus click', function(e){
   gal_02_p.text(selectText);
 });
 
+// -------------------------------------------------------------
+
+
+// 1. .gallery_03 내부의 li요를 생성
+// 2. 생성되는  li를 내가 만들고자 하는 갯수만큼
+// 3. 적용할 data속성을 생성해서 담기 - 차후: 삭제
+// 4. 나머지 기능은 위와 동일
+
+
+var gallery_03 = $('.gallery_03');
+var gallery_03_Ul = gallery_03.find('ul');
+/*
+var n = 1;
+var set_03_Li = '<li><a href="#"><span>이미지 '+ n +'</span></a></li>';
+
+gallery_03_Ul.append(set_03_Li);
+
+n = 2;
+set_03_Li = '<li><a href="#"><span>이미지 '+ n +'</span></a></li>';
+gallery_03_Ul.append(set_03_Li);
+
+n = 3;
+set_03_Li = '<li><a href="#"><span>이미지 '+ n +'</span></a></li>';
+gallery_03_Ul.append(set_03_Li);
+*/
+
+
+var n = 0;
+var set_03_Li = function(n){
+  var setText = '<li><a href="#"><span>이미지 '+ n +'</span></a></li>';
+  return setText;  
+};
+
+gallery_03_Ul.append( set_03_Li( n += 1 ) );
+
+
+
 })(jQuery);
