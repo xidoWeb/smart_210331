@@ -68,7 +68,7 @@ var makeLi = '<li><a href="#"><span>이미지_01</span></a></li>';
 var gallery = $('.gallery');
 var thumnail = gallery.find('.thumnail');
 var big_image = gallery.find('.big_image');
-
+var bigContent = big_image.children('.big_content');
 var thumUrl = '../img/gallery_02/mini/';
 var bigUrl = '../img/gallery_02/original/';
 var thumnailLi, listSource, listText;
@@ -76,7 +76,7 @@ var thumnailLi, listSource, listText;
 // for(최초;조건;증감){}
 var i=0;
 
-big_image.css({backgroundImage:'url('+ bigUrl + galleryData[i].bigImg +')'});
+// big_image.css({backgroundImage:'url('+ bigUrl + galleryData[i].bigImg +')'});
 
 var baseLiSetFn = function(i){
    // thumnail내부에 makeLi를 채우기(append : 내부에 뒤에 채우기)
@@ -99,16 +99,37 @@ for( ; i < thumLength ; i += 1 ){
 // 중복기능 함수로 제작
 var setGallerySystemFn = function( idx ){
   var bigImgSet = bigUrl + galleryData[ idx ].bigImg;
-  big_image.css({backgroundImage:'url('+ bigImgSet +')'});
+
+  // 큰이미지 위치 수정
+  //  bigContent.eq(0).css({backgroundImage:'url('+ bigImgSet +')'}); // 임시
+
+  bigContent = big_image.children('.big_content');
+  var beforeEl = bigContent.eq(0);
+  var afterEl  = bigContent.eq(1);
+
+      afterEl.css({backgroundImage:'url('+ bigImgSet +')'});
+      afterEl.show();
+      
+      setTimeout(function(){
+        beforeEl.fadeOut(200,function(){
+          beforeEl.removeClass('act');
+          afterEl.addClass('act');
+          // 1. append는 내부의 뒤에 생성의 기능을 가진다.
+          // 2. 기존에 있는 요소라면 뜯어서 옮기는 기능을 가진다.
+          big_image.append( $(this) );  // big_img 내부에 $(this)를 담겠다
+          // $(this).appendTo( big_image ); // $(this)를 big_img내부에 담겠다.
+        });
+      },10);
+
   thumnailLi.eq( idx ).siblings('li').removeClass('act');
   thumnailLi.eq( idx ).addClass('act');
-};
+};// setGallerySystemFn(); 
 
 // ---------------------------------------------------
 // 전체 thumnail 내부의 li를 재선정
 thumnailLi = thumnail.children('li');
 
-setGallerySystemFn(2);
+setGallerySystemFn(0);
 
 thumnailLi.on('mouseenter', function(e){
   var _thisI = $(this).index();
