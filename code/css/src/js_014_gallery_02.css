@@ -1,0 +1,56 @@
+/* js_014_gallery_02.css */
+
+.gallery {
+  position: relative;
+  width: 400px; height:auto;
+  margin:auto; margin-top:30px;
+  padding:10px; padding-bottom:100px;
+}
+
+.big_image {
+  width: 100%; height: 400px;
+  margin:10px auto;
+  border:1px solid #777;
+  box-sizing: border-box;
+  border-radius:5px;
+}
+
+.thumnail {
+  position: absolute; 
+  bottom: 10px; left: 0; right: 0;
+  margin:auto;
+  width: 100%; height:80px;
+  padding:10px 20px; box-sizing: border-box;
+}
+
+.thumnail li {
+  float:left; width:60px; height:60px;
+  margin-left:15px;
+}
+
+.thumnail li:first-child {  margin-left: 0; }
+
+.thumnail li a {
+  position: relative;
+  background-image: url("../../img/gallery_02/mini/agenlaku.jpg");
+  background-size:100%;
+  transition: all 100ms linear; 
+}
+.thumnail li a:before,
+.thumnail li a::before{
+  content:" "; display: block;
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  transition: all 50ms ease;
+}
+
+.thumnail li a:focus {  background-size:150%;}
+.thumnail li a:hover {  box-shadow:3px 3px 3px rgba(0,0,0,0.3);}
+.thumnail li.act a{  border:2px solid #0a0;}
+.thumnail li a:hover:before,
+.thumnail li a:hover::before,
+.thumnail li a:focus:before,
+.thumnail li a:focus::before{
+  background-color: rgba(255,255,255,0);
+}
