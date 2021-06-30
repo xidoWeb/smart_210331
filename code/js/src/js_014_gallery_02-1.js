@@ -30,3 +30,4 @@ closeBtn.on('click', function(e){
 
 
 })(jQuery);
+
