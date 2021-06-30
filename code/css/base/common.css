@@ -30,3 +30,10 @@
 .last_float > li:last-child { margin-right:0; }
 
 .none { display: none; }
+
+h1.center{text-align: center; padding: 1.5rem; font-size: 1.5rem; color:#777; font-weight: 700;}
+h1.center>a {font-size: 2rem; padding:5px 20px; padding-bottom: 15px; border-bottom:0 solid #555; transition: all 300ms linear;}
+h1.center>a:focus {
+  padding-bottom:10px; text-shadow:3px 3px 3px rgba(51,51,51,0.3); color:#fff;  
+  background-color: #555; border-bottom:3px solid #ccc; 
+  outline:3px solid rgba(100,100,100,0.3); outline-offset:3px;}

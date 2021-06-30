@@ -1,5 +1,15 @@
 /* js_014_gallery_02.css */
 
+
+.part{
+  border-bottom:2px solid #333;
+  margin-top:100px;
+}
+
+h2 {
+  text-align: center; padding: 10px;
+}
+
 .gallery {
   position: relative;
   width: 400px; height:auto;
@@ -25,8 +35,8 @@
   background-position: 50%  50%;
 }
 .big_content.act{ z-index:100; }
- .big_narr_01{background-color: #fa0a;}
- .big_narr_02{display:none; background-color: #0afa;} 
+ /* .big_narr_01{} */
+ .big_narr_02{display:none;} 
 
 .thumnail {
   position: absolute; 
@@ -58,9 +68,11 @@
   transition: all 50ms ease;
 }
 
-.thumnail li a:focus {  background-size:150%;}
+.thumnail li a:focus {  background-size:150%; outline: 0;}
 .thumnail li a:hover {  box-shadow:3px 3px 3px rgba(0,0,0,0.3);}
-.thumnail li.act a{  border:2px solid #0a0;}
+.thumnail li.act a{ border:2px solid #0a0; transform: scale(1.15); border-radius:5px;}
+.thumnail li.act a:before,
+.thumnail li.act a::before,
 .thumnail li a:hover:before,
 .thumnail li a:hover::before,
 .thumnail li a:focus:before,

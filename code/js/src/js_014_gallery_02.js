@@ -108,10 +108,10 @@ var setGallerySystemFn = function( idx ){
   var afterEl  = bigContent.eq(1);
 
       afterEl.css({backgroundImage:'url('+ bigImgSet +')'});
-      afterEl.show();
+      afterEl.stop().show();
       
       setTimeout(function(){
-        beforeEl.fadeOut(200,function(){
+        beforeEl.stop().fadeOut(200,function(){
           beforeEl.removeClass('act');
           afterEl.addClass('act');
           // 1. append는 내부의 뒤에 생성의 기능을 가진다.
@@ -143,4 +143,30 @@ thumnailLi.find('a').on('focus click', function(e){
 });
 
 //-------------------------------------------------------
+// thumnailLi.css({borderRadius:'30px', overflow:'hidden'});
+
+// javascript : jQuery 기능 비교
+// 1. 순서지정
+// 2. 기능 지정
+
+// 1. js에서는 순서지정이 배열형식과 같다, 
+// var li = document.querySelectorAll('li');
+// li[0]
+
+// 2. 자동으로 각각 처리되는 것이 없으로 for문을 이용하여 하나하나 처리되게 해야한다.
+// for(var i=0; i<10; i++){   li[i].style.color="#000"; }
+// for(var n=0; n<10; n++){  li[n].on('click', function(){   }); }
+
+//---------------------------------------------------------------------------
+
+// 1. jQuery에서는 메서드로 별도로 구성이되있어 eq(n)
+// var li = $('li');
+// li.eq(0)
+
+// 2. 선택자의 경우에는 요소를 선택함 과 동시에 반복문을 처리하게 만들수 있다. - for문을 사용할 필요가 없다.
+// li.css({color:'#345'});
+// li.on('click', function(){});
+//-------------------------------------------------------
+
+
 })(jQuery);
