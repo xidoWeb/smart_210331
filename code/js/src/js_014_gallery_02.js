@@ -55,16 +55,21 @@ var i=0;
 
 big_image.css({backgroundImage:'url('+ bigUrl + galleryData[i].bigImg +')'});
 
+var baseLiSetFn = function(i){
+   // thumnail내부에 makeLi를 채우기(append : 내부에 뒤에 채우기)
+   thumnail.append(makeLi);
+   thumnailLi = thumnail.children('li').eq(i);
+   listSource = 'url(' + thumUrl + galleryData[i].miniImg + ')';
+   listText = galleryData[i].miniText;
+ 
+   thumnailLi.children('a').css({backgroundImage:listSource});
+   thumnailLi.find('span').text(listText);
+};
+
+
 var thumLength = galleryData.length;
 for( ; i < thumLength ; i += 1 ){
-  // thumnail내부에 makeLi를 채우기(append : 내부에 뒤에 채우기)
-  thumnail.append(makeLi);
-  thumnailLi = thumnail.children('li').eq(i);
-  listSource = 'url(' + thumUrl + galleryData[i].miniImg + ')';
-  listText = galleryData[i].miniText;
-
-  thumnailLi.children('a').css({backgroundImage:listSource});
-  thumnailLi.find('span').text(listText);
+  baseLiSetFn(i);
 }
 // ------------------------------------------------------
 // [v] 1. 작은 이미지를 마우스 올릴경우 다음과 같은 기능을 수행
@@ -74,8 +79,8 @@ for( ; i < thumLength ; i += 1 ){
 // [v] 4. 이때, 작은이미지가 어떤 것이 선택되었는지 **주목성**이 있도록 처리
 // [v] 5. 주목성처리: class="act" 삽입
 // [v] 추가기능1 : 작은이미지를 선택할때, 다른영역에있는 형태는 act해제
-// [] 추가기능2 : 마우스가 아닌 키보드 focus 처리 
-// [] 추가기능3 : 클릭시 처리되는부분도 일부 해결
+// [v] 추가기능2 : 마우스가 아닌 키보드 focus 처리 
+// [v] 추가기능3 : 클릭시 처리되는부분도 일부 해결
 
 //-----------------------------------------------------
 // 이외에 첨부하면 좋을 기능
