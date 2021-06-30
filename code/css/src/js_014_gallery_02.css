@@ -8,15 +8,25 @@
 }
 
 .big_image {
+  position: relative;
   width: 100%; height: 400px;
   margin:10px auto;
-  border:1px solid #777;
-  box-sizing: border-box;
+  }
+
+.big_content{
+  position: absolute; top: 0; left: 0;
+  z-index:0;
+  width: 100%; height: 100%;
   border-radius:5px;
+  border:1px solid #777;
+  box-sizing: border-box;  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%  50%;
 }
+.big_content.act{ z-index:100; }
+ .big_narr_01{background-color: #fa0a;}
+ .big_narr_02{ display:none; background-color: #0afa;} 
 
 .thumnail {
   position: absolute; 
