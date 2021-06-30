@@ -90,39 +90,28 @@ for( ; i < thumLength ; i += 1 ){
 // 응용방법: 배너광고형태 중 fade형식으로 되는 형태를 이해 할 수 있다.
 //-----------------------------------------------------
 
+// 중복기능 함수로 제작
+var setGallerySystemFn = function( idx ){
+  var bigImgSet = bigUrl + galleryData[ idx ].bigImg;
+  big_image.css({backgroundImage:'url('+ bigImgSet +')'});
+  thumnailLi.eq( idx ).siblings('li').removeClass('act');
+  thumnailLi.eq( idx ).addClass('act');
+};
+
+// ---------------------------------------------------
 // 전체 thumnail 내부의 li를 재선정
 thumnailLi = thumnail.children('li');
 
 thumnailLi.on('mouseenter', function(e){
-  // 선택된 요소의 순번파악
   var _thisI = $(this).index();
-  var bigImgSet = bigUrl + galleryData[_thisI].bigImg;
-  // console.log( bigImgSet );
-
-  big_image.css({backgroundImage:'url('+ bigImgSet +')'});
-
-  //해당 요소에 class처리
-  // thumnailLi.eq(_thisI).attr('class','act');
-  thumnailLi.eq(_thisI).siblings('li').removeClass('act');
-  thumnailLi.eq(_thisI).addClass('act');
+  setGallerySystemFn(_thisI);
 });
 
 thumnailLi.find('a').on('focus click', function(e){
   e.preventDefault();
-
   var _thisI = $(this).parent().index();
-
-  var bigImgSet = bigUrl + galleryData[_thisI].bigImg;
-  // console.log( bigImgSet );
-
-  big_image.css({backgroundImage:'url('+ bigImgSet +')'});
-
-  //해당 요소에 class처리
-  // thumnailLi.eq(_thisI).attr('class','act');
-  thumnailLi.eq(_thisI).siblings('li').removeClass('act');
-  thumnailLi.eq(_thisI).addClass('act');
-
+  setGallerySystemFn(_thisI);
 });
 
-//--------------------------------------------------------------------------
+//-------------------------------------------------------
 })(jQuery);
