@@ -77,6 +77,19 @@ for( ; i < thumLength ; i += 1 ){
 // [] 추가기능2 : 마우스가 아닌 키보드 focus 처리 
 // [] 추가기능3 : 클릭시 처리되는부분도 일부 해결
 
+//-----------------------------------------------------
+// 이외에 첨부하면 좋을 기능
+// [] bigImage 영역에 이미지가 바뀌면 깜박이는 현상을 조정
+//    1. bigImage영역 내부에 2개의 영역 생성 앞/뒤로 배치
+//    2. 앞에있는것은 현재 보이는 것, 뒤에 존재하는건 기본 display:none
+//    3. 작은이미지에 마우스 처리하면, bigImage뒤에 내용을 삽입하고, 동시에 display:block
+//    4. 앞에있는 요소를 사라지게(방법은 자유)
+//    5. 뒤에 존재하는 요소를 앞으로 오게 처리(z-index를 이용, 앞의 요소를 뜯어서 뒤로 이동)
+//    6. 뒤로 이동한 요소는 내부를 비우기
+
+// 응용방법: 배너광고형태 중 fade형식으로 되는 형태를 이해 할 수 있다.
+//-----------------------------------------------------
+
 // 전체 thumnail 내부의 li를 재선정
 thumnailLi = thumnail.children('li');
 
@@ -92,6 +105,23 @@ thumnailLi.on('mouseenter', function(e){
   // thumnailLi.eq(_thisI).attr('class','act');
   thumnailLi.eq(_thisI).siblings('li').removeClass('act');
   thumnailLi.eq(_thisI).addClass('act');
+});
+
+thumnailLi.find('a').on('focus click', function(e){
+  e.preventDefault();
+
+  var _thisI = $(this).parent().index();
+
+  var bigImgSet = bigUrl + galleryData[_thisI].bigImg;
+  // console.log( bigImgSet );
+
+  big_image.css({backgroundImage:'url('+ bigImgSet +')'});
+
+  //해당 요소에 class처리
+  // thumnailLi.eq(_thisI).attr('class','act');
+  thumnailLi.eq(_thisI).siblings('li').removeClass('act');
+  thumnailLi.eq(_thisI).addClass('act');
+
 });
 
 //--------------------------------------------------------------------------
