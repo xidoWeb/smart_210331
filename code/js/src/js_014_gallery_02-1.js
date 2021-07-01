@@ -161,13 +161,14 @@ var modalData = [
 // [v] 2. 클릭시 .modal_view 나타나게
 // [v] 3. .modal_view내부의 .modal_content 에 이미지 나타나게
 // [v] 4. .modal_view내부의 닫기버튼 클릭시 .modal_view사라지게
-// [] 4-1. .modal_view 뒤에있는 .back_board를 클릭시 .modal_view사라지게
+// [v] 4-1. .modal_view 뒤에있는 .back_board를 클릭시 .modal_view사라지게
 // [v] 5. 리스트 클릭시 닫기버튼에 자동 포커스처리 및 닫기 
 //        클릭시 이전요소의 순번에 포커스
 // -------------------------------------------------------------
-// [] 6. li요소 생성
-// [] 7. 다음/이전버튼 html로 생성
+// [v] 6. li요소 생성
+// [v] 7. 다음/이전버튼 html로 생성
 // [] 8. 클릭시 이동
+// [] 8-1 다음버튼 클릭시 이동
 //-----------------------------------------------------------
 
 var miniUrl = '../img/gallery_02/mini/';
@@ -209,6 +210,21 @@ var getLiWidth = modalLi.eq(0).outerWidth(true);
 var setModalUlWidth = (getLiWidth*modalDataLen)+'px';
 modalListUl.css({width:  setModalUlWidth });
 modalListArea.css({overflow:'hidden'});
+
+// 8-1
+var slideBtn = $('.list_slide_btn');
+var nextBtn = slideBtn.children('.next_btn');
+var prevBtn = slideBtn.children('.prev_btn');
+var mv = 0;
+
+nextBtn.on('click', function(e){
+  e.preventDefault(); 
+  // mv -= 1;
+  (mv <= -(modalDataLen-5)) ? mv = -modalDataLen + 6 :  mv -= 1;
+  modalListUl.stop().animate({marginLeft: ( getLiWidth * mv ) + 'px' });
+  console.log( getLiWidth * -1 )
+});
+
 
 // -----------------------------------------------------
 var miniImgInsertFn = function(i){
