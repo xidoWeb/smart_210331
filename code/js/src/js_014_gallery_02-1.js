@@ -220,9 +220,9 @@ var mv = 0;
 nextBtn.on('click', function(e){
   e.preventDefault(); 
   // mv -= 1;
-  (mv <= -(modalDataLen-5)) ? mv = -modalDataLen + 6 :  mv -= 1;
+  (mv <= -(modalDataLen-7)) ? mv = -modalDataLen + 7 :  mv -= 1;
   modalListUl.stop().animate({marginLeft: ( getLiWidth * mv ) + 'px' });
-  console.log( getLiWidth * -1 )
+  // console.log( getLiWidth * -1 )
 });
 
 
