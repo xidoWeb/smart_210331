@@ -79,3 +79,85 @@ h2 {
 .thumnail li a:focus::before{
   background-color: rgba(255,255,255,0);
 }
+
+/*.modal ------------------------------------ */
+
+.modal {
+  width:700px; height:auto; min-height:60px;
+  margin:auto; margin-top: 100px;
+  padding-bottom:1500px;
+  background-color: #efefef;
+}
+
+.modal_list {
+  width: 80%; height:auto; min-height:80px; 
+  margin:auto; padding:10px;
+  border:1px solid #777;
+  box-sizing: border-box;
+}
+
+.modal_list ul {
+  width: 100%; height:auto; min-height: 60px;
+}
+
+.modal_list li {
+  float:left; width:60px; height:60px;
+  margin-right:15px; margin-bottom: 15px;
+  border:1px solid #04f;
+}
+
+.modal_list li:nth-child(7n){ margin-right: 0; }
+.modal_list li:last-child { margin-left: 0; }
+.modal_list li a {
+  display: block; width: 100%; height: 100%;
+  font-size:1rem; word-break: break-all;
+  /* text-indent:-9999px; overflow: hidden; */
+}
+
+.modal_view{
+  display: none;
+  position: fixed; z-index:2000; 
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%;
+  margin:auto;
+  transition: all 1000ms linear;
+  overflow: hidden;
+}
+/* .modal_view.act {
+  width: 0; height: 0;
+} */
+
+.front_board{ 
+  position: absolute; 
+  top: 0; bottom: 0; right: 0; left: 0; margin: auto;
+  width:70%; min-width:700px; height:400px;
+  padding:20px; box-sizing: border-box;
+  border:10px solid #fff;
+  background-color: #aaa;
+  border-radius:5px;
+  box-shadow:3px 3px 5px rgba(0,0,0,0.5);
+}
+  .close_btn{
+    position: absolute; 
+    right: -20px; top: -20px;
+    width: 40px; height: 40px; 
+  }
+  .close_btn button {
+    width: 100%; height: 100%;
+    background-color: #05a;
+    color:#fff;
+    border-radius:100%;
+    box-shadow:2px 2px 3px rgba(255,255,255,0.3) inset;
+  }
+
+.back_board{
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+.back_board:hover {
+  background-color: rgba(0,0,0,0.25);
+}
+
+
+.gallery {display: none;}
