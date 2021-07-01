@@ -88,20 +88,19 @@ modalLi.children('a').on('click', function(e){
 
 });
 
+var modalViewHideFn = function(){
+  modalView.stop().fadeOut(timed, function(){
+    modalLi.eq(idx).children('a').focus();
+  });
+};
 
 closeBtn.on('click', function(e){
   e.preventDefault();
   // jQuery에서는 animation기법이 있는 메소드는 모두 콜백기능이 가능
-  modalView.stop().fadeOut(timed, function(){
-    modalLi.eq(idx).children('a').focus();
-  });
+  modalViewHideFn();
 });
-backBoard.on('click', function(e){
-  e.preventDefault();
-  // jQuery에서는 animation기법이 있는 메소드는 모두 콜백기능이 가능
-  modalView.stop().fadeOut(timed, function(){
-    modalLi.eq(idx).children('a').focus();
-  });
+backBoard.on('click', function(){
+  modalViewHideFn();
 })
 
 })(jQuery);
