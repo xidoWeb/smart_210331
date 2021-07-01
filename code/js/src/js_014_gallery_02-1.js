@@ -89,19 +89,26 @@ modalLi.children('a').on('click', function(e){
 });
 
 var modalViewHideFn = function(){
-  modalView.stop().fadeOut(timed, function(){
-    modalLi.eq(idx).children('a').focus();
-  });
+  return function(e){
+    e.preventDefault();
+    modalView.stop().fadeOut(timed, function(){
+        modalLi.eq(idx).children('a').focus();
+      });
+  }
 };
 
-closeBtn.on('click', function(e){
-  e.preventDefault();
-  // jQuery에서는 animation기법이 있는 메소드는 모두 콜백기능이 가능
-  modalViewHideFn();
-});
-backBoard.on('click', function(){
-  modalViewHideFn();
-})
+closeBtn.on('click', modalViewHideFn() );
+backBoard.on('click', modalViewHideFn() );
+
+
+// forEach와 유사하지만 다른 jQuery each
+// [배열].forEach(function(배열의각 값, 순서){ 기능수행 })
+// $.each([배열], function( 순서, 배열의각값 ){ 기능수행 })
+
+// $.each([closeBtn, backBoard], function(i, data){
+//   data.on('click', modalViewHideFn());
+// });
+
 
 })(jQuery);
 
