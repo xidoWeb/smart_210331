@@ -112,6 +112,9 @@ h2 {
   display: block; width: 100%; height: 100%;
   font-size:1rem; word-break: break-all;
   /* text-indent:-9999px; overflow: hidden; */
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .modal_view{
@@ -123,6 +126,7 @@ h2 {
   transition: all 1000ms linear;
   overflow: hidden;
 }
+
 /* .modal_view.act {
   width: 0; height: 0;
 } */
@@ -149,6 +153,10 @@ h2 {
     border-radius:100%;
     box-shadow:2px 2px 3px rgba(255,255,255,0.3) inset;
   }
+
+.modal_content{
+  width: 100%; height: 100%; 
+  background-color: #fda;}
 
 .back_board{
   width: 100%; height: 100%;
