@@ -4,6 +4,126 @@
 
 var modalData = [
   {
+    "miniImg":"agenlaku.jpg",
+    "miniText":"thumnail_01",
+    "bigImg":"agenlaku-indonesia-FoUETBpb6mY-unsplash.jpg",
+    "bigText":"001 - 상세 설명 첨부"
+  },
+  {
+    miniImg:'alexander.jpg',
+    miniText:'thumnail_02',
+    bigImg:'alexander-andrews-BX4Q0gojWAs-unsplash.jpg',
+    bigText:'002 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'annie.jpg',
+    miniText:'thumnail_03',
+    bigImg:'annie-spratt-cxAZxTuL7Sk-unsplash.jpg',
+    bigText:'003 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'bench.jpg',
+    miniText:'thumnail_04',
+    bigImg:'bench-accounting-nvzvOPQW0gc-unsplash.jpg',
+    bigText:'004 - 상세 설명 첨부'
+  },  
+  {
+    miniImg:'c.jpg',
+    miniText:'thumnail_05',
+    bigImg:'c-d-x-PDX_a_82obo-unsplash.jpg',
+    bigText:'005 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'agenlaku.jpg',
+    miniText:'thumnail_01',
+    bigImg:'agenlaku-indonesia-FoUETBpb6mY-unsplash.jpg',
+    bigText:'001 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'alexander.jpg',
+    miniText:'thumnail_02',
+    bigImg:'alexander-andrews-BX4Q0gojWAs-unsplash.jpg',
+    bigText:'002 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'annie.jpg',
+    miniText:'thumnail_03',
+    bigImg:'annie-spratt-cxAZxTuL7Sk-unsplash.jpg',
+    bigText:'003 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'bench.jpg',
+    miniText:'thumnail_04',
+    bigImg:'bench-accounting-nvzvOPQW0gc-unsplash.jpg',
+    bigText:'004 - 상세 설명 첨부'
+  },  
+  {
+    miniImg:'c.jpg',
+    miniText:'thumnail_05',
+    bigImg:'c-d-x-PDX_a_82obo-unsplash.jpg',
+    bigText:'005 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'agenlaku.jpg',
+    miniText:'thumnail_01',
+    bigImg:'agenlaku-indonesia-FoUETBpb6mY-unsplash.jpg',
+    bigText:'001 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'alexander.jpg',
+    miniText:'thumnail_02',
+    bigImg:'alexander-andrews-BX4Q0gojWAs-unsplash.jpg',
+    bigText:'002 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'annie.jpg',
+    miniText:'thumnail_03',
+    bigImg:'annie-spratt-cxAZxTuL7Sk-unsplash.jpg',
+    bigText:'003 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'bench.jpg',
+    miniText:'thumnail_04',
+    bigImg:'bench-accounting-nvzvOPQW0gc-unsplash.jpg',
+    bigText:'004 - 상세 설명 첨부'
+  },  
+  {
+    miniImg:'c.jpg',
+    miniText:'thumnail_05',
+    bigImg:'c-d-x-PDX_a_82obo-unsplash.jpg',
+    bigText:'005 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'agenlaku.jpg',
+    miniText:'thumnail_01',
+    bigImg:'agenlaku-indonesia-FoUETBpb6mY-unsplash.jpg',
+    bigText:'001 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'alexander.jpg',
+    miniText:'thumnail_02',
+    bigImg:'alexander-andrews-BX4Q0gojWAs-unsplash.jpg',
+    bigText:'002 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'annie.jpg',
+    miniText:'thumnail_03',
+    bigImg:'annie-spratt-cxAZxTuL7Sk-unsplash.jpg',
+    bigText:'003 - 상세 설명 첨부'
+  },
+  {
+    miniImg:'bench.jpg',
+    miniText:'thumnail_04',
+    bigImg:'bench-accounting-nvzvOPQW0gc-unsplash.jpg',
+    bigText:'004 - 상세 설명 첨부'
+  },  
+  {
+    miniImg:'c.jpg',
+    miniText:'thumnail_05',
+    bigImg:'c-d-x-PDX_a_82obo-unsplash.jpg',
+    bigText:'005 - 상세 설명 첨부'
+  },
+  {
     miniImg:'agenlaku.jpg',
     miniText:'thumnail_01',
     bigImg:'agenlaku-indonesia-FoUETBpb6mY-unsplash.jpg',
@@ -55,6 +175,7 @@ var bigUrl = '../img/gallery_02/original/';
 
 var modal = $('.modal');
 var modalListArea = modal.children('.modal_list');
+var modalListUl = modalListArea.children('ul');
 
 var modalView = modal.find('.modal_view');
 var modalContent = modal.find('.modal_content');
@@ -70,13 +191,26 @@ var modalDataLen = modalData.length;
 var makeLi = '<li><a href="#"></a></li>';
 
 for( ; n<modalDataLen; n+=1 ){
-  modalListArea.children('ul').append(makeLi);
+  modalListUl.append(makeLi);
 }
 
-// ------------------
-
+// -----------------------------------------
 var modalLi = modalListArea.find('li');
 
+
+// li 첫번째의 가로값(마진포함) 파악
+// width() -> 가로값을 파악
+// innerWidth() -> padding값 포함 가로값 파악
+// outerWidth() -> border값 포함 가로값 파악
+// outerWidth(true) -> margin값 포함 가로값 파악
+
+var getLiWidth = modalLi.eq(0).outerWidth(true);
+// console.log( getLiWidth );
+var setModalUlWidth = (getLiWidth*modalDataLen)+'px';
+modalListUl.css({width:  setModalUlWidth });
+modalListArea.css({overflow:'hidden'});
+
+// -----------------------------------------------------
 var miniImgInsertFn = function(i){
   var modalLink, imgData; 
   modalLink = modalLi.eq(i).children('a');

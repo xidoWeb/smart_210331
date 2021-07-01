@@ -82,13 +82,32 @@ h2 {
 
 /*.modal ------------------------------------ */
 
-.modal {
-  width:700px; height:auto; min-height:60px;
-  margin:auto; margin-top: 100px;
-  padding-bottom:1500px;
-  background-color: #efefef;
+#wrap{
+  padding-bottom: 1000px;
 }
 
+.modal {
+  position: relative;
+  width:700px; height:auto; min-height:60px;
+  margin:auto; margin-top: 100px;
+  background-color: #efefef;
+}
+/* 모달 버튼영역 */
+.list_slide_btn{
+  position: absolute; top:50%; left:50%; transform: translateX(-50%);
+  width:calc(100% + 100px); height:0;
+}
+
+.list_slide_btn button{
+  width:40px; height:40px; background-color:#07a;
+  transform: translateY(-50%);
+  border-radius:100%; color:#fff;
+}
+
+.next_btn{ float:right; }
+.prev_btn{ float:left; } 
+
+/* 모달 썸네일 리스트 영역 */
 .modal_list {
   width: 80%; height:auto; min-height:80px; 
   margin:auto; padding:10px;
@@ -102,11 +121,11 @@ h2 {
 
 .modal_list li {
   float:left; width:60px; height:60px;
-  margin-right:15px; margin-bottom: 15px;
+  margin-right:15px;
   border:1px solid #04f;
 }
 
-.modal_list li:nth-child(7n){ margin-right: 0; }
+/* .modal_list li:nth-child(7n){ margin-right: 0; } */
 .modal_list li:last-child { margin-left: 0; }
 .modal_list li a {
   display: block; width: 100%; height: 100%;
