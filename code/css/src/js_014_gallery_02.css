@@ -111,7 +111,7 @@ h2 {
 .modal_list li a {
   display: block; width: 100%; height: 100%;
   font-size:1rem; word-break: break-all;
-  /* text-indent:-9999px; overflow: hidden; */
+  text-indent:-9999px; overflow: hidden;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -160,7 +160,10 @@ h2 {
 
 .modal_content{
   width: 100%; height: 100%; 
-  background-color: #fda;}
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  }
 
 .back_board{
   width: 100%; height: 100%;
