@@ -23,17 +23,19 @@ var count = 0;
 
 
 // 함수영역 =============================
-
+  //현재 배너위치 체크
+var nowCFn = function(){
+  var nowMvCount = count + 1;
+  countNow.text(nowMvCount);
+};
 
 // 기능수행 =============================
 
-// li갯수 파악 및, total에 삽입
-var liLen = productLi.length;
-countTotal.text(liLen);
-
-// 현재 배너 위치 체크
-var nowMvCount = count + 1;
-countNow.text(nowMvCount);
+  // li갯수 파악 및, total에 삽입
+  var liLen = productLi.length;
+  countTotal.text(liLen);
+  // 현재 배너 위치 체크
+  nowCFn();
 
 // 광고 영역의 크기 파악
 // 1. 범위 파악
@@ -49,11 +51,11 @@ slideBtn.on('click', function(e){
   e.preventDefault();
   // 다음 버튼클릭했으니 이제 이동
   count += 1; 
-   
+  if(count >= liLen) { count = 0; }
   var mv = -(100 * count) +'%';
   productUl.css({marginLeft: mv});
   console.log( count );
-
+  nowCFn();
 });
 
 
