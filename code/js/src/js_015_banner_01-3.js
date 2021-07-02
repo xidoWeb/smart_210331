@@ -31,31 +31,53 @@ var nowCFn = function(){
 
 // 기능수행 =============================
 
+  // animation기능 수행을 위해 마지막 요소를 복제( clone() ) 앞에다 붙이기
+  // 1. css에서는 js에서순서를바꿔도 그냥 바뀐대로의 순서로 배치
+  // 2. js에서는 먼저 존재하는 내용을 선택하면 그걸로 끝, 새로추가하면 다시 선택해야 함
+
+  var cloneLi = productLi.eq(-1).clone();
+  productUl.prepend(cloneLi);
+   
+
+
   // li갯수 파악 및, total에 삽입
   var liLen = productLi.length;
   countTotal.text(liLen);
+
   // 현재 배너 위치 체크
   nowCFn();
 
-// 광고 영역의 크기 파악
+// 광고 영역의 크기 파악(새로 생성형태를 파악)
+var newProductLi = productUl.children('li');
+var newLiLen = newProductLi.length;
+console.log(newLiLen);
+
 // 1. 범위 파악
-var productWidth = productArea.width();
-// 2. 전체 넓이 파악후 재배치
-// productUl.css({'width': (productWidth * liLen) + 'px' });
-productUl.css({'width': (100 * liLen) + '%' });
-// 3. 각각의 넓이 재배치
-productLi.css({'width': (100 / liLen) + '%'});
+// var productWidth = productArea.width();
+// 2. 전체 넓이 파악후 재배치(변경된 li개수를 파악후 처리)
+// productUl.css({'width': (productWidth * newLiLen) + 'px' });
+productUl.css({'width': (100 * newLiLen) + '%' });
+// 3. 각각의 넓이 재배치(변경된 li요소들의 갯수와 크기수정)
+newProductLi.css({'width': (100 / newLiLen) + '%'});
+// 4. 처음 보이는 내용을 첫li요소로 변경
+productUl.css({'position':'relative', 'left': -100+'%'});
+
 
 // 이벤트 ===================================
 slideBtn.on('click', function(e){
   e.preventDefault();
   // 다음 버튼클릭했으니 이제 이동
   count += 1; 
-  if(count >= liLen) { count = 0; }
+  
   var mv = -(100 * count) +'%';
-  productUl.css({marginLeft: mv});
-  console.log( count );
-  nowCFn();
+  productUl.animate({marginLeft: mv},function(){
+    // 애니메이션 기능 처리 후 수행
+    if(count >= liLen) { count = 0; }
+    mv = -(100 * count) +'%';
+    productUl.css({marginLeft: mv});
+    console.log( count );
+    nowCFn();
+  });
 });
 
 

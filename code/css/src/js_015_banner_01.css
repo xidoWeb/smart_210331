@@ -72,16 +72,16 @@ h3{
   background-size: cover;
 }
 
-.product li:nth-child(1){ background-color: #A9BC9277;}
-.product li:nth-child(2){ background-color: #250EE877;}
-.product li:nth-child(3){ background-color: #AB846C77;}
-.product li:nth-child(4){ background-color: #4E1AB377;}
-.product li:nth-child(5){ background-color: #77782177;}
-.product li:nth-child(6){ background-color: #6F67A977;}
-.product li:nth-child(7){ background-color: #5B18CD77;}
-.product li:nth-child(8){ background-color: #CA656477;}
-.product li:nth-child(9){ background-color: #FD684177;}
-.product li:nth-child(10){ background-color: #D1922A77;}
-.product li:nth-child(11){ background-color: #241E4177;}
-.product li:nth-child(12){ background-color: #F6D0DD77;}
-.product li:nth-child(13){ background-color: #C3412577;}
+.product .slide_01{ background-color: #f07;}
+.product .slide_02{ background-color: #250EE877;}
+.product .slide_03{ background-color: #AB846C77;}
+.product .slide_04{ background-color: #4E1AB377;}
+.product .slide_05{ background-color: #77782177;}
+.product .slide_06{ background-color: #6F67A977;}
+.product .slide_07{ background-color: #5B18CD77;}
+.product .slide_08{ background-color: #CA656477;}
+.product .slide_09{ background-color: #FD684177;}
+.product .slide_10{ background-color: #D1922A77;}
+.product .slide_11{ background-color: #241E4177;}
+.product .slide_12{ background-color: #F6D0DD77;}
+.product .slide_13{ background-color: #C3412577;}
