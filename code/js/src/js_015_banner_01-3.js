@@ -70,35 +70,45 @@ productUl.css({'position':'relative', 'left': -100+'%'});
 
 
 // 이벤트 ===================================
+var permission = true;
+
 slideBtn.on('click', function(e){
   e.preventDefault();
-  // 다음 버튼클릭했으니 이제 이동
-  count += 1; 
-  // var mv = -(100 * count) +'%';
- 
-  /*
-    productUl.animate({marginLeft: mv},function(){
-      // 애니메이션 기능 처리 후 수행
-      if(count >= liLen) { count = 0; }
-      mv = -(100 * count) +'%';
-      productUl.css({marginLeft: mv});
-      console.log( count );
-      nowCFn();
+
+  if(permission){
+    permission = false;
+
+    // 다음 버튼클릭했으니 이제 이동
+    count += 1; 
+    // var mv = -(100 * count) +'%';
+
+    /*
+      productUl.animate({marginLeft: mv},function(){
+        // 애니메이션 기능 처리 후 수행
+        if(count >= liLen) { count = 0; }
+        mv = -(100 * count) +'%';
+        productUl.css({marginLeft: mv});
+        console.log( count );
+        nowCFn();
+      });
+    */
+
+    if(count >= liLen){
+      productUl.css({marginLeft: 100+ '%'});
+      count = 0;
+      // productUl.animate({marginLeft: 0});
+    }
+    // else{
+      // productUl.animate({marginLeft: mv});
+    // }
+
+    productUl.stop().animate({marginLeft: mvFn()}, function(){
+      permission = true;
     });
-  */
 
-  if(count >= liLen){
-    productUl.css({marginLeft: 100+ '%'});
-    count = 0;
-    // productUl.animate({marginLeft: 0});
-  }
-  // else{
-    // productUl.animate({marginLeft: mv});
-  // }
+    nowCFn();
 
-  productUl.stop().animate({marginLeft: mvFn() });
-  nowCFn();
-
+  } // permission 조건
 
 });// slideBtn.on('click' ...)
 
