@@ -36,7 +36,7 @@
 - [x] 모달 윈도우
   - [x] 창이 나타나면 focus처리기능, index/eq 연동
   - [x] 요소.css('width'), width, innerWidth, outerWidth, outerWidth(true)
-  - [ ] 요소.css('height'), height, innerHeight, outerHeight, outerHeight(true)
+  - [x] 요소.css('height'), height, innerHeight, outerHeight, outerHeight(true)
   - [x] animate( )
 
 ---
