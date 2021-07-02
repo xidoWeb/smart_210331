@@ -26,15 +26,17 @@ h3{
   border-radius:100%;
   background-color: #057;
   color:#fff; font-weight: 700;
+  line-height: 1;
 }
 .btn button:first-of-type {margin-left: 10px;}
 
 .product {
   width: 70%; height:250px;
   margin:auto; margin-top: 20px;
+  padding:10px; box-sizing: border-box;
   /* background-color: #ddd; */
   border:5px solid #59f;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .product ul {
