@@ -15,21 +15,40 @@
 
 ---
 
-### 2021.06.29
+### 2021.06.29-30
 
 #### 코딩과정
 
-- [ ] jQuery - 삽입/확인
-  - [ ] wrap, html, text, append, prepend
+- [x] jQuery - 삽입/확인
+  - [x] wrap, html, text, append, prepend
   - [x] attr
   - [x] remove, empty, remveAttr
-- [ ] 갤러리페이지 
-- [ ] 모달 윈도우
-- [ ] 객체로 만들어서 불러오기
+- [x] 갤러리페이지 
+- [x] 모달 윈도우
+- [x] 객체로 만들어서 불러오기
 
 ---
 
-- 
+### 2021.07.01
+
+#### 코딩과정
+
+- [x] 모달 윈도우
+  - [x] 창이 나타나면 focus처리기능, index/eq 연동
+  - [x] 요소.css('width'), width, innerWidth, outerWidth, outerWidth(true)
+  - [ ] 요소.css('height'), height, innerHeight, outerHeight, outerHeight(true)
+  - [x] animate( )
+
+---
+
+### 2021.07.02
+
+#### 코딩과정
+
+- 슬라이드 형식의 배너 만들기 
+  - 좌/우 버튼 기능
+  - 인디케이터
+  - 슬라이드, fade기능
 
 ---
 
