@@ -52,10 +52,10 @@ h3{
 .product {
   width: 70%; height:250px;
   margin:auto; margin-top: 20px;
-  padding:10px; box-sizing: border-box;
+  padding:0; box-sizing: border-box;
   /* background-color: #ddd; */
   border:5px solid #59f;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .product ul {

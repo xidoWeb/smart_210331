@@ -29,6 +29,12 @@ var nowCFn = function(){
   countNow.text(nowMvCount);
 };
 
+  // 배너가 이동할 위치를 파악 체크
+var mvFn = function(){
+  var mv = -(100 * count) +'%';
+  return mv;
+};
+
 // 기능수행 =============================
 
   // animation기능 수행을 위해 마지막 요소를 복제( clone() ) 앞에다 붙이기
@@ -68,17 +74,33 @@ slideBtn.on('click', function(e){
   e.preventDefault();
   // 다음 버튼클릭했으니 이제 이동
   count += 1; 
-  
-  var mv = -(100 * count) +'%';
-  productUl.animate({marginLeft: mv},function(){
-    // 애니메이션 기능 처리 후 수행
-    if(count >= liLen) { count = 0; }
-    mv = -(100 * count) +'%';
-    productUl.css({marginLeft: mv});
-    console.log( count );
-    nowCFn();
-  });
-});
+  // var mv = -(100 * count) +'%';
+ 
+  /*
+    productUl.animate({marginLeft: mv},function(){
+      // 애니메이션 기능 처리 후 수행
+      if(count >= liLen) { count = 0; }
+      mv = -(100 * count) +'%';
+      productUl.css({marginLeft: mv});
+      console.log( count );
+      nowCFn();
+    });
+  */
+
+  if(count >= liLen){
+    productUl.css({marginLeft: 100+ '%'});
+    count = 0;
+    // productUl.animate({marginLeft: 0});
+  }
+  // else{
+    // productUl.animate({marginLeft: mv});
+  // }
+
+  productUl.stop().animate({marginLeft: mvFn() });
+  nowCFn();
+
+
+});// slideBtn.on('click' ...)
 
 
 
