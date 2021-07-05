@@ -39,8 +39,10 @@
       permission = false;
       n += 1;
 
-      if( n >= viewLiLen-1 ){
-        n = viewLiLen-1;
+      if( n > viewLiLen-1 ){
+        // n = viewLiLen-1;
+        n = 0;
+        viewUl.css({marginLeft:100+'%'});
       }
 
       viewUl.stop().animate({marginLeft:(-100 * n) + '%'},function(){
