@@ -24,6 +24,15 @@
   // 200. 이동 제한(최대값)
   // 300. 무한으로 돌아가게 만들기
 
+  var cloneLi = viewLi.eq(-1).clone();
+  viewUl.prepend(cloneLi);
+  var newViewLi = viewUl.children('li');
+  var newLiLen = newViewLi.length;
+
+  // ul의 길이를 변경
+  viewUl.css({width: newLiLen * 100 + '%', position:'relative', left: -100 + '%'});
+  newViewLi.css({width:100 / newLiLen + '%'});
+
   nextBtn.on('click', function(e){
     e.preventDefault();
     if(permission){
