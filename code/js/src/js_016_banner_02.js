@@ -10,6 +10,7 @@
   // 변수
   var slideBtn = $('.slide_btn');
   var nextBtn = slideBtn.children('.next');
+  var prevBtn = slideBtn.children('.prev');
   
   var viewArea = $('.view_area');
   var viewUl = viewArea.children('ul');
@@ -45,12 +46,28 @@
         viewUl.css({marginLeft:100+'%'});
       }
 
-      viewUl.stop().animate({marginLeft:(-100 * n) + '%'},function(){
+      viewUl.stop().animate({marginLeft:(-100 * n) + '%'}, function(){
         permission = true;
       });
     }
   });
 
+  // 200. 이전버튼 클릭시 1칸 이동
+  prevBtn.on('click', function(e){
+    e.preventDefault();
+    if(permission){
+      permission = false;
+      n -= 1;
+      viewUl.stop().animate({marginLeft:(-100 * n) + '%'}, function(){
+        if(n < 0){
+          n = viewLiLen-1;
+          var lastMv = -100 * n + '%';
+          viewUl.css({marginLeft: lastMv });
+        }// if(n<0){}
+        permission = true;
+      }); //  viewUl.stop().animate()
+    } // if(permission){
+  }); //  prevBtn.on('click' ...)
   
 
 })(jQuery);
