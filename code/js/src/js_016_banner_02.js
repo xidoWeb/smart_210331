@@ -5,7 +5,6 @@
 
   // 1. 다음버튼 클릭시 슬라이드 넘어가기
   // 2. 이전버튼 클릭시 슬라이드 이전내용 넘어가기
-
   
   
   // 변수
@@ -14,17 +13,27 @@
   
   var viewArea = $('.view_area');
   var viewUl = viewArea.children('ul');
+  var viewLi = viewUl.children('li');
+  var viewLiLen = viewLi.length;
+
   var n = 0;
   var permission = true;
+
   
   // 100. 1칸씩 이동
   // 200. 이동 제한(최대값)
+  // 300. 무한으로 돌아가게 만들기
 
   nextBtn.on('click', function(e){
     e.preventDefault();
     if(permission){
       permission = false;
       n += 1;
+
+      if( n >= viewLiLen-1 ){
+        n = viewLiLen-1;
+      }
+
       viewUl.stop().animate({marginLeft:(-100 * n) + '%'},function(){
         permission = true;
       });
