@@ -27,7 +27,6 @@ h2 {
   left:0; right:0; bottom:1rem;
   text-align: center;
   width:100%; height:auto;
-  background-color: #daa;
   margin:auto;
 }
 
@@ -43,6 +42,7 @@ h2 {
   display:inline-block;
   width:2rem; height:2rem;
   margin-right:1rem;
+  transition: all 200ms ease;
 }
 .indicator li:last-child {  margin-right: 0;}
 .indicator li a{
@@ -53,7 +53,7 @@ h2 {
   box-sizing: border-box;
 }
 
-.indicator li.act  { width:3rem;}
+.indicator li.act  { width:4rem;}
 .indicator li.act a{ background-color: #ff0;}
 .indicator a:hover { box-shadow: 0.2rem 0.2rem 0.2rem #171717;}
 .indicator a:focus {outline:0; border: 0.2rem solid #171717; }
@@ -61,6 +61,7 @@ h2 {
 
 /* .view_area */
 .view_area {
+  overflow: hidden;
   width: 80%; height:500px; 
   margin:auto; border:0.0625rem solid #555;
   box-sizing: border-box;
