@@ -3,7 +3,7 @@
 #wrap {
   width:100%; min-width:1280px; max-width:1920px; height:auto;
   margin:auto; 
-  background-color: #eee;
+  padding-bottom: 31.25rem;
 }
 
 /* .part 광고배너영역 큰 틀 세팅 */
