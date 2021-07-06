@@ -1,0 +1,84 @@
+/* js_017_banner_03_indicator.css */
+
+#wrap {
+  width:100%; min-width:1280px; max-width:1920px; height:auto;
+  margin:auto; 
+  background-color: #eee;
+}
+
+/* .part 광고배너영역 큰 틀 세팅 */
+.part {
+  position: relative;
+  width:100%; max-width:1600px; height:auto; 
+  margin:auto; margin-top:1rem; padding-bottom: 4rem;
+  background-color: #ccc;
+}
+
+h2 {
+  width: 100%; height:auto;
+  padding:1rem; box-sizing: border-box;
+  font-size: 1.5rem; margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* .indicator  */
+.indicator {
+  position: absolute;
+  left:0; right:0; bottom:1rem;
+  text-align: center;
+  width:100%; height:auto;
+  background-color: #daa;
+  margin:auto;
+}
+
+.indicator ul {
+  display: inline-block;
+  /* text-align: center; */
+  width:auto; height:auto;
+  padding:0.3rem;
+  border-radius:3rem;
+  background-color: #557;
+}
+.indicator li{
+  display:inline-block;
+  width:2rem; height:2rem;
+  margin-right:1rem;
+}
+.indicator li:last-child {  margin-right: 0;}
+.indicator li a{
+  display: block;
+  width: 100%; height: 100%;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-sizing: border-box;
+}
+
+.indicator li.act  { width:3rem;}
+.indicator li.act a{ background-color: #ff0;}
+.indicator a:hover { box-shadow: 0.2rem 0.2rem 0.2rem #171717;}
+.indicator a:focus {outline:0; border: 0.2rem solid #171717; }
+
+
+/* .view_area */
+.view_area {
+  width: 80%; height:500px; 
+  margin:auto; border:0.0625rem solid #555;
+  box-sizing: border-box;
+}
+
+.view_area ul{
+  width:500%; height:100%; 
+  background-color: #aaa;
+}
+.view_area li{
+  float:left;
+  width:calc(100% / 5); height:100%;
+  padding: 2rem; box-sizing: border-box;
+  font-size: 2rem;
+}
+
+#viewSelect_01{ background-color:#33FB01aa;}
+#viewSelect_02{ background-color:#1EDE89aa;}
+#viewSelect_03{ background-color:#2068B5aa;}
+#viewSelect_04{ background-color:#796F21aa;}
+#viewSelect_05{ background-color:#3F0420aa;}
