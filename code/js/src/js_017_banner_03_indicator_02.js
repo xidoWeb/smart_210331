@@ -44,6 +44,7 @@
 
   // 반복기능 -> clearInterval에서 제어하기위해 변수로 지정
   // 변수로 지정하더라도, 함수자체는 동작을 한다.
+  /*
  var autoMoveFn = setInterval(function(){
     // n의 수치가 일정범위 내에서 처리되는것을 파악
     n += 1;
@@ -56,11 +57,33 @@
   banner.on('mouseenter', function(){
     clearInterval( autoMoveFn );
   });
-
+  */
+  var autoMoveFn;
   // setInverval 함수를 넣었다, 뺏다 가능하도록 제작 -> 함수처리
 
+  var slideGoFn = function(){
+    autoMoveFn = setInterval(function(){
+      n += 1;
+      if(n >= indiLiLen){ n = 0; }
+      slideMoveFn(n);
+    }, timed*4);
+    return autoMoveFn;
+  };
 
+  var slideStopFn = function(){
+    clearInterval(autoMoveFn);
+  };
 
+  slideGoFn();
+
+  // viewArea.on('mouseenter', function(){
+  //   clearInterval( autoMoveFn );
+  // });
+  // viewArea.on('mouseleave', function(){
+  //   slideGoFn();
+  // });
+
+  viewArea.on({ 'mouseenter': slideStopFn, 'mouseleave': slideGoFn });
 
   // setInterval(기능수행, 시간); -> 일정 시간 마다 기능을 수행
   // setTimeout(기능수행, 시간); ->  일정 시간 후에 기능을 수행
