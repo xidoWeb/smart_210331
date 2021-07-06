@@ -75,7 +75,8 @@ h2 {
   float:left;
   width:calc(100% / 5); height:100%;
   padding: 2rem; box-sizing: border-box;
-  font-size: 2rem;
+  font-size: 3rem; font-weight: 700;
+  color:#fff; 
 }
 
 #viewSelect_01{ background-color:#33FB01aa;}
