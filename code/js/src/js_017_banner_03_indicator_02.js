@@ -7,8 +7,8 @@
   // 103. [v] 선택한 순서에 맞는 인디케이터에 act를 담기
   // ------------------------------------------------
   // 104. [v] 일정시간마다 광고배너영역이 움직이도록 처리 -> setInterval
-  // 105. 마우스 올리면 정지 -> clearInterval
-  // 106. 일정시간마다 움직이다 마우스올리면 정지, 벗어나면 다시 동작
+  // 105. [v] 마우스 올리면 정지 -> clearInterval
+  // 106. [v] 일정시간마다 움직이다 마우스올리면 정지, 벗어나면 다시 동작
   // 107. 마지막 내용이 보일때 처음으로 이동하는 형태를 수정
   // ------------------------------------------------
 
@@ -21,10 +21,20 @@
 
   var viewArea = banner.find('.view_area');
   var viewUl = viewArea.find('ul');
+  var viewLi = viewUl.find('li');
 
   var indiLiLen = indiLi.length;
   var n = 0;
   var timed = 500;
+
+  // 마지막요소를 앞에 붙여넣기, ul의 가로길이/li의 가로길이 조정
+  var cloneLi = viewLi.eq(-1).clone();
+  viewUl.prepend(cloneLi);
+  var newViewLi = viewUl.find('li');
+  var newLen = newViewLi.length;
+  // console.log(indiLiLen, newLen);
+  viewUl.css({width:( 100 * newLen )+ '%', left: -100 + '%', position:'relative'});
+  newViewLi.css({width: (100 / newLen) + '%'});
 
   // 함수 생성
   var slideMoveFn = function(n){
@@ -43,24 +53,7 @@
   });
 
   // 반복기능 -> clearInterval에서 제어하기위해 변수로 지정
-  // 변수로 지정하더라도, 함수자체는 동작을 한다.
-  /*
- var autoMoveFn = setInterval(function(){
-    // n의 수치가 일정범위 내에서 처리되는것을 파악
-    n += 1;
-    if(n >= indiLiLen){ n = 0; }
-    // console.log( n );
-    slideMoveFn(n);
-  }, timed*4);
-
-  // 마우스 올리면 setInterval을 삭제
-  banner.on('mouseenter', function(){
-    clearInterval( autoMoveFn );
-  });
-  */
   var autoMoveFn;
-  // setInverval 함수를 넣었다, 뺏다 가능하도록 제작 -> 함수처리
-
   var slideGoFn = function(){
     autoMoveFn = setInterval(function(){
       n += 1;
@@ -73,15 +66,7 @@
   var slideStopFn = function(){
     clearInterval(autoMoveFn);
   };
-
   slideGoFn();
-
-  // viewArea.on('mouseenter', function(){
-  //   clearInterval( autoMoveFn );
-  // });
-  // viewArea.on('mouseleave', function(){
-  //   slideGoFn();
-  // });
 
   viewArea.on({ 'mouseenter': slideStopFn, 'mouseleave': slideGoFn });
 
