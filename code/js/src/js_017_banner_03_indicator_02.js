@@ -37,7 +37,9 @@
   newViewLi.css({width: (100 / newLen) + '%'});
 
   // 함수 생성
-  var slideMoveFn = function(n){
+  var slideMoveFn = function(n, interval){
+    // setInterval기능과 마지막 위치에서 처음으로 이동시
+    if(n <= 0 && interval){ viewUl.css({marginLeft:100+'%'});  }
     // 광고이동
     viewUl.stop().animate({marginLeft: ( -100 * n ) + '%'}, timed);
     // .act 처리    
@@ -49,7 +51,7 @@
   indiLink.on('click', function(e){
     e.preventDefault();
     n = $(this).parent().index();
-    slideMoveFn(n);
+    slideMoveFn(n, false);
   });
 
   // 반복기능 -> clearInterval에서 제어하기위해 변수로 지정
@@ -58,7 +60,7 @@
     autoMoveFn = setInterval(function(){
       n += 1;
       if(n >= indiLiLen){ n = 0; }
-      slideMoveFn(n);
+      slideMoveFn(n, true);
     }, timed*4);
     return autoMoveFn;
   };
@@ -68,7 +70,7 @@
   };
   slideGoFn();
 
-  viewArea.on({ 'mouseenter': slideStopFn, 'mouseleave': slideGoFn });
+  banner.on({ 'mouseenter': slideStopFn, 'mouseleave': slideGoFn });
 
   // setInterval(기능수행, 시간); -> 일정 시간 마다 기능을 수행
   // setTimeout(기능수행, 시간); ->  일정 시간 후에 기능을 수행
