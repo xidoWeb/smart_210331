@@ -76,5 +76,6 @@
   // setTimeout(기능수행, 시간); ->  일정 시간 후에 기능을 수행
   // clearInterval( 반복수행기능이름 ); -> setInterval기능을 강제로 정지
 
+  // 선택자.trigger('이벤트') -> button.trigger('click') -> 버튼을 대신 클릭하겠다!
 
 })(jQuery);
