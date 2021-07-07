@@ -20,7 +20,7 @@ h2 { width: 90%; height: auto;
   }
 
 .button_area {
-  position: absolute;
+  position: absolute; z-index:200;
   right:1rem; bottom:1rem;
   width:auto; height:2.5rem;
   padding:0.5rem; background-color: rgba(0,0,0,0.5);
