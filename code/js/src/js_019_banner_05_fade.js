@@ -18,8 +18,8 @@
   var viewArea = banner.find('.view_area');
   var li = viewArea.find('li');
   var liLen = li.length;
-  var n = 0;
-  var n2 = n;
+  var newCount = 0;
+  var beforeCount = newCount;
 
   // 함수는 각 기능별로 별도로 만들어서
   // 필요시에 각각 불러와라.
@@ -28,10 +28,10 @@
   // 함수
   var slideFadeFn = function(n){
     li.eq(n).show();
-    li.eq(n2).fadeOut(function(){
-      li.eq(n2).removeClass('act');
+    li.eq(beforeCount).fadeOut(function(){
+      li.eq(beforeCount).removeClass('act');
       li.eq(n).addClass('act');
-      n2 = n;
+      beforeCount = n;
     });
   };
   var countFn = function(n){
@@ -49,31 +49,31 @@
     indiActionFn(n);
   };
 
- countFn(n);
- indiActionFn(n);
+ countFn(newCount);
+ indiActionFn(newCount);
 
   // 이벤트 
   // 다음버튼 클릭
   nextBtn.on('click', function(e){
     e.preventDefault();
-    n += 1;
-    if(n > liLen-1){ n = 0 }
-    slideAct(n);
+    newCount += 1;
+    if(newCount > liLen-1){ newCount = 0 }
+    slideAct(newCount);
   }); //  nextBtn.on('click')
   
   // 이전버튼 클릭
   prevBtn.on('click', function(e){
     e.preventDefault();
-    n -= 1;
-    if(n < 0){ n = liLen-1 }
-    slideAct(n);
+    newCount -= 1;
+    if(newCount < 0){ newCount = liLen-1 }
+    slideAct(newCount);
   }); //  prevBtn.on('click');
 
   // 인디케이터 클릭
   indiLiLink.on('click', function(event){
     event.preventDefault();
-    n = $(this).parent().index();
-    slideAct(n);
+    newCount = $(this).parent().index();
+    slideAct(newCount);
   });
 
 //---------------------------------------
@@ -86,6 +86,7 @@
   // 5. 인디케이터를 클릭시 해당 위치에 맞는 요소가 나타나게
   // 6. 인디케이터기능 시각효과 처리
   // 7. 중복수행중인 기능을 함수처리
+  // 8. 인디케이터를 광고의 갯수에따라 생성되네 만들기
 
 
 
