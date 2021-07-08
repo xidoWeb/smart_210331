@@ -105,6 +105,24 @@ for( ; i < liLen ; i+=1 ){
     slideAct(newCount);
   });
 
+  var timed = 1000;
+  // 트리거 수행
+  var slideClick;
+  var slideGoFn = function(){
+    slideClick = setInterval(function(){
+      nextBtn.trigger('click');
+    }, timed*4);
+  };
+  var slidePauseFn = function(){ clearInterval(slideClick); };
+  slideGoFn();
+
+  // 마우스 올릴경우 수행
+  // banner.on('mouseenter', function(){ slidePauseFn();  });
+  // banner.on('mouseleave', function(){ slideGoFn();     });
+
+  // 재생/일시정지버튼 수행
+
+
 //---------------------------------------
   // 1. 다음 버튼을 누르면 뒤에나올 요소를 나오게 해라
   // 2. 현재 보이는 요소를 fadeOut() 사라지게하고, 뒤에요소는 미리 배치
