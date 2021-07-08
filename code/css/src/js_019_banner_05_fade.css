@@ -110,9 +110,9 @@ h2 { width: 90%; height: auto;
 .slide_horizontal .view_area ul { width:500%; left:-100%}
 .slide_fade .view_area ul { width:100%; }
 .slide_fade .view_area li { position:absolute; top:0; left:0; width:100%; display:none; }
-.slide_fade .view_area li:nth-child(1) {display:block; }
-.slide_fade .view_area li:nth-child(2) {display:block; }
-.slide_fade .view_area li.act {z-index:20;}
+/* .slide_fade .view_area li:nth-child(1) {display:block; }
+.slide_fade .view_area li:nth-child(2) {display:block; } */
+.slide_fade .view_area li.act {z-index:20; display: block;}
 
 .view_area li:nth-child(4) { background-image: url("../../img/gallery/u_big/image_004.jpg");}
 .view_area li:nth-child(3) { background-image: url("../../img/gallery/u_big/image_003.jpg");}
