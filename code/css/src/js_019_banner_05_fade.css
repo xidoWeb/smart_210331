@@ -1,4 +1,5 @@
-/* js_018_banner_04.css */
+/* js_019_banner_05_fade.css */
+
 
 #wrap {
   width: 100%; height:auto;
@@ -8,7 +9,7 @@
 
 .part {
   position: relative;
-  width: 100%; height:auto;
+  width: 100%; max-width:800px; height:auto;
   margin:1rem auto; padding:1rem; box-sizing: border-box;
   background-color: #cdf;
 }
@@ -90,14 +91,30 @@ h2 { width: 90%; height: auto;
 }
 
 .view_area ul {
-  width: 400%; height:100%;
+  position: relative;
+  width: 100%; height:100%;
   background-image:linear-gradient(45deg, #fff, #fdd);
 }
 
 .view_area li{
   float: left;
-  width:calc(100% / 4); height: 100%;
+  width:100%; height: 100%;
   border-right:1px solid #777;
   box-sizing: border-box;
   padding:2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:#fff; font-size: 3rem;
 }
+
+.slide_horizontal .view_area ul { width:500%; left:-100%}
+.slide_fade .view_area ul { width:100%; }
+.slide_fade .view_area li { position:absolute; top:0; left:0; width:100%; display:none; }
+.slide_fade .view_area li:nth-child(1) {display:block; }
+.slide_fade .view_area li:nth-child(2) {display:block; }
+.slide_fade .view_area li.act {z-index:20;}
+
+.view_area li:nth-child(4) { background-image: url("../../img/gallery/u_big/image_004.jpg");}
+.view_area li:nth-child(3) { background-image: url("../../img/gallery/u_big/image_003.jpg");}
+.view_area li:nth-child(2) { background-image: url("../../img/gallery/u_big/image_002.jpg");}
+.view_area li:nth-child(1) { background-image: url("../../img/gallery/u_big/image_001.jpg");}
