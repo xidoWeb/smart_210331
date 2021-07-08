@@ -1,12 +1,10 @@
 // js_019_banner_05_fade.js
 (function($){
 // jQuery
-  var banner = $('.banner_01');
-  
-  var indicator = banner.find('.indicator');
-  var indiLi = indicator.find('li');
-  var indiLiLink = indiLi.children('a');  
-  
+  var banner = $('.banner_01');  
+ 
+  var indicatorArea = banner.find('.indicator');
+
   var viewCount = banner.find('p');
   var totalNum = viewCount.find('.total');
   var nowNum = viewCount.find('.now');
@@ -20,6 +18,36 @@
   var liLen = li.length;
   var newCount = 0;
   var beforeCount = newCount;
+
+// 인디케이터(ul) 생성 ----------------------
+indicatorArea.prepend('<ul class="indi_ul"></ul>');
+var indiUl = indicatorArea.find('.indi_ul');
+// console.log( indiUl );
+var i=0;
+var setNum = function(i){
+  var num = '0000000' + (i+1);
+  // 숫자 정수를 사용시 앞의 0은 사라지게되므로,
+  // 문자로 변경하여 마지막 숫자 2자리만 가져오게 하는 기법
+  var setN = num.slice(-2); 
+  return setN;
+};
+
+// var t;
+// if(i < 10){
+//   t = '00' + (i+1);
+// }else if(i < 100){
+//   t = '0' + (i+1);
+// }
+
+for( ; i < liLen ; i+=1 ){
+  indiUl.append('<li><a href="#">'+ setNum(i) +'</a></li>');
+}
+
+// --------------------------------------
+
+  var indicator = banner.find('.indicator');
+  var indiLi = indicator.find('li');
+  var indiLiLink = indiLi.children('a');  
 
   // 함수는 각 기능별로 별도로 만들어서
   // 필요시에 각각 불러와라.
@@ -36,6 +64,7 @@
   };
   var countFn = function(n){
     nowNum.text(n+1);
+    // nowNum.text( setNum(n) );
     totalNum.text(liLen);
   };
   var indiActionFn = function(n){
@@ -87,6 +116,8 @@
   // 6. 인디케이터기능 시각효과 처리
   // 7. 중복수행중인 기능을 함수처리
   // 8. 인디케이터를 광고의 갯수에따라 생성되네 만들기
+  // 9. 자동으로 화면이 이동되게 만들기
+  // 10. 일시정지, 재생버튼을 클릭하여 동작처리
 
 
 
