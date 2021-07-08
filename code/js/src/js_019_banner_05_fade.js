@@ -4,10 +4,12 @@
   var banner = $('.banner_01');  
  
   var indicatorArea = banner.find('.indicator');
-
   var viewCount = banner.find('p');
   var totalNum = viewCount.find('.total');
   var nowNum = viewCount.find('.now');
+
+  var playArea = banner.find('.play');
+  var playBtn = playArea.children('button');
 
   var btnSelect = banner.find('.button_select');
   var nextBtn = btnSelect.find('.next');
@@ -111,7 +113,7 @@ for( ; i < liLen ; i+=1 ){
   var slideGoFn = function(){
     slideClick = setInterval(function(){
       nextBtn.trigger('click');
-    }, timed*4);
+    }, timed);
   };
   var slidePauseFn = function(){ clearInterval(slideClick); };
   slideGoFn();
@@ -121,6 +123,31 @@ for( ; i < liLen ; i+=1 ){
   // banner.on('mouseleave', function(){ slideGoFn();     });
 
   // 재생/일시정지버튼 수행
+  var nowT = playBtn.text();
+  var pauseT = '정지';
+  var playState = [nowT, pauseT];
+  // console.log( playState[1] );
+  //일부러 재생중에는 .act를 삽입
+  playBtn.addClass('act'); 
+  
+  playBtn.on('click', function(e){
+    e.preventDefault();
+    // hasClass('이름') -> 클래스명이 있으면 true, 없으면 false
+    var isAct = $(this).hasClass('act');
+
+    if(isAct){
+      // act가 있으면 -> 재생중이니 정지
+      slidePauseFn();
+      playBtn.removeClass('act');
+      playBtn.text(playState[1]);
+    }else{
+      // act가 없으면 -> 멈춰있으니 재생
+      slideGoFn(); 
+      playBtn.addClass('act');
+      playBtn.text(playState[0]);
+    }
+  }); // playBtn.on('click')
+
 
 
 //---------------------------------------
