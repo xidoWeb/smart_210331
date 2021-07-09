@@ -1,0 +1,38 @@
+/* js_020_banner_06_move.css */
+
+#wrap {
+  width: 800px; height: auto;
+  margin: auto;
+  padding-bottom: 700px;
+}
+
+.part {
+  margin-top: 1rem;
+  width: 100%; height: auto;
+  padding:2rem; box-sizing: border-box;
+}
+
+.view_area {
+  width: 100%; height:500px;
+  margin-top: 1rem;
+  border:0.1rem solid #777;
+}
+
+.part ul {
+  position: relative; width: 100%; height: 100%;
+}
+
+.part li {
+  position: absolute; top: 0; left: 0; 
+  width: 100%; height: 100%;
+  box-sizing: border-box; padding: 5rem;
+  font-size: 3rem; color:#fff; font-weight: 700;
+  display: none;
+}
+
+.part li.act { z-index:100; display: block;}
+
+.view_01{ background-color: #C31789;}
+.view_02{ background-color: #F542F7;}
+.view_03{ background-color: #2765C2;}
+.view_04{ background-color: #9DB79B;}
