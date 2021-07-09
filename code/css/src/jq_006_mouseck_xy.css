@@ -2,7 +2,8 @@
 #wrap {
   width:800px; height:auto;
   margin:auto;
-  padding-bottom:500px;
+  padding-top:100px;
+  padding-bottom:1500px;
 }
 
 ol {
@@ -14,6 +15,7 @@ ol {
 li { list-style:decimal; padding:0.5rem 0;}
 
 .part {
+  
   width: 600px; height: auto;
   padding:1rem;
   margin:auto;
@@ -21,9 +23,9 @@ li { list-style:decimal; padding:0.5rem 0;}
   border-radius:0.3rem;
 }
 
-
 .area {
-  position: relative;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0; margin:auto;
   width: 600px; height: 500px; 
   border:1px solid #777; 
   box-sizing: border-box;
