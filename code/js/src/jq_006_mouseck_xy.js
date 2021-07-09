@@ -22,6 +22,8 @@
   // page : 문서전체의 크기를 기준으로 본다.
   // screen : 모니터 좌표기준
 
+  // hint : pageX, pageY값에서 무언가 처리!!!
+  // hint : offset().top, offset().left
 // ---------------------------------------------------
   var area = $('.area');
   // var area = $('#wrap');
