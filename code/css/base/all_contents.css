@@ -1,4 +1,4 @@
-
+abbr { text-decoration: none;}
 #wrap {
   width: 90%; height: auto;
   margin:auto;
@@ -23,20 +23,34 @@ hr {margin-bottom: 2rem;}
  margin-bottom:0.5rem; padding-bottom: 0.5rem;
 }
 .part h2 button{
+  width: 100%; height: auto;
   font-size: 1.3rem;
   font-weight: bold;
   color:#037;
+  text-align: left;
 }
+.part.act {background-color: rgba(15, 87, 182, 0.7);}
+.part.act h2 { border-bottom:5px solid #037;}
+.part.act button { color:#fff; text-shadow:0.1rem 0.1rem 0 #037;}
 
 .part ol {
-  padding: 0.7rem;
+  display: none;
+  padding: 0.7rem; margin-bottom: 0.3rem;
   background-color: #fff;
   border-radius: 0.3rem;
   box-shadow:-0.2rem -0.2rem -0.2rem rgba(255,255,255,0.5),
               0.2rem 0.2rem 0.3rem rgba(51,51,51,0.5);
+  padding-left: 2rem;
 }
 
 .part ol li {
-  padding:0.3rem; padding-left: 1rem; border-bottom: 1px solid #aaa;
+  padding:0.3rem; padding-left:0; border-bottom: 1px solid #aaa;
   margin-bottom: 0.3rem;
+  list-style-type: disc; 
 }
+
+.part a {
+  display: block; width: 100%; padding: 0.2rem;
+}
+.part a:hover{ color:#037; font-size: 1.1rem; font-weight: bold;}
+.part a:focus{ color:#037; font-size: 1.1rem; font-weight: bold; border-bottom: 1px solid #037;}
