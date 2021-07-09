@@ -23,7 +23,7 @@
   // screen : 모니터 좌표기준
 
   // hint : pageX, pageY값에서 무언가 처리!!!
-  // hint : offset().top, offset().left
+  // hint : offset().top, offset().left -> document 상단끝, document 왼쪽끝 에서부터 떨어진 양
 // ---------------------------------------------------
   var area = $('.area');
   // var area = $('#wrap');
@@ -31,18 +31,31 @@
   var chX    = $('.check_x');
   var chY    = $('.check_y');
 
-  // 체크 및 좌표함수
+
+  // 체크 및 좌표함수 -> 생성자 함수를 통해 필요시 값을 각각 파악할 수 있도록 체크
+  var OffsetFn = function(){
+    this.top = Math.round( area.offset().top );
+    this.left = Math.round( area.offset().left );
+  };
+  
   var checkTypeFn = function(e){    
     var eType = e.type;
     var evt = e.originalEvent;
-
-    var x = 0;
-    var y = 0;   
+  
     chType.text(eType);
-
+    var ofCk = new OffsetFn(); // { top:00, left:00 }
+    var x, y, evtTouches, pointX, pointY;
+    
     if(e.type === 'touchmove'){
-      x = evt.changedTouches[0].offsetX ;
-      y = evt.changedTouches[0].offsetY ;
+      evtTouches = evt.changedTouches[0];
+      pointX = evtTouches.pageX;
+      pointY = evtTouches.pageY;
+
+      // 전체 포인터 x위치값에서 선택영역의 pageX만큼을 뺀 값
+      x = pointX - ofCk.left;  
+      // 전체 포인터 y위치값에서 선택영역의 pageY만큼을 뺀 값
+      y = pointY - ofCk.top; 
+
       console.log( evt.changedTouches[0] );
     }else if(e.type === 'mousemove'){
       x = evt.offsetX;
