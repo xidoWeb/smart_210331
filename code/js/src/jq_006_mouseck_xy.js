@@ -37,7 +37,7 @@
   // area.on('click', function(e){
   //   console.log( e.type, e );
   // });
-/*
+
   area.on('mousedown', function(e){
     if(e.button === 0) {
       option = true;
@@ -80,7 +80,7 @@
     checkTypeFn(e);
     console.log('터치로 움직이는 중');
   });
-*/
+
 
 
 })(jQuery);
