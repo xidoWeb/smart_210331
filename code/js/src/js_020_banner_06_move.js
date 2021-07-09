@@ -60,12 +60,14 @@
       newN -= 1;
     }
 
+    // 제한점 기준으로 수치 강제이동
     if(newN > viewLiLen-1){
       newN = 0;
     }else if(newN < 0){
       newN = viewLiLen-1;
     }
 
+    // 값이 변한경우에 슬라이드 수행
     if(beforeN !== newN){
       viewLi.eq(newN).show();
       viewLi.eq(beforeN).fadeOut(function(){
@@ -75,7 +77,7 @@
       });
     }
 
-  });
+  }); // viewArea.on('mouseup touchend');
 
 
 })(jQuery);
