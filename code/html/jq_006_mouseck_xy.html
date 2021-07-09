@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- html/jq_006_mouseck_xy.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--[if IE]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/ie9js/ie9.min.js"></script>
+    <script src="../ie/csspie/PIE.js"></script>
+    <script src="../ie/responsive.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  
+  <!-- font.google : noto sans -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- fontawesome5 -->
+  <link rel="stylesheet" href="../fonts/fontawesome5/css/all.min.css">
+  
+  <!-- css design -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/jq_006_mouseck_xy.css">
+
+  <title>웹 기초</title>
+  
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1 class="center"><a href="./all_contents.html">웹표준</a></h1><hr />
+    <ol>
+      <li>마우스 클릭, 마우스를 누르는상태, 마우스를 띄는 순간, 마우스 이동하는 형태</li>
+      <li>터치 스타트, 터치 끝, 터치 움직임</li>
+      <li>clientX, clientY, offsetX, offsetY, pageX, pageY, screenX, screenY</li>
+    </ol>
+
+    <div class="part">
+      <h2>좌표 체크하기</h2>
+      <div class="area">
+        <p>이곳에 마우스를 움직이거나 터치를 해보세요.</p>
+        <dl>
+          <dt>사용기기 : <span class="check_type">none</span></dt>
+          <dd>좌표 : x ( <span class="check_x">0</span> ), y ( <span class="check_y">0</span> )</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <!-- script -->
+  <script src="../js/jquery/jquery-3.6.0.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <script src="../js/src/jq_006_mouseck_xy.js"></script>
+</body>
+</html>
