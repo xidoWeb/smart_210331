@@ -1,12 +1,13 @@
 /* js_021_scroll.css */
 
 #wrap {
+  position: relative;
   width: 100%; min-width:1024px; height:auto;
   margin:auto; 
   background-color: #ddf;
 }
 .popup_area {
-  display: none;
+  /* display: none; */
   width: 100%; height:300px;
   background-color: #fda;
   padding:2rem; box-sizing: border-box;
@@ -39,27 +40,29 @@ h1 {
 #navBox li:first-child {margin-left: 0;}
 #navBox li a{padding:1rem; font-size: 1.3rem; background-color: #fa0;}
 
-
 #viewBox {
   width: 100%; height: 800px;
   background-color: #afa;
 }
 
 #bestBox{
-  width:100%; max-width: 1440px; 
+  width:100%; max-width: 1300px; 
   height:auto; min-height:1200px;
   margin:auto;
   background-color: #da7;
 }
 #newBox{
-  width:100%; max-width: 1440px; 
+  width:100%; max-width: 1300px; 
   height:auto; min-height:1200px;
   margin:auto;
   background-color: #7af;
 }
-#sideBox{ display: none;
+#sideBox{
+  position: absolute;
+  /* top:광고영역의 50px 아래 배치 */
+  left:50%; margin-left:700px;
   width:80px;
-  height:auto; min-height:600px;
+  height:auto; min-height:300px;
   background-color: #7dd;
 }
 
