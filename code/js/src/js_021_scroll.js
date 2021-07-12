@@ -59,7 +59,7 @@ var headBoxSetFn = function(){
 
 var scrollFix2Fn = function(){
   var st = win.scrollTop();
-  console.log(checkViewBoxH,  st);
+  // console.log(checkViewBoxH,  st);
   // scrollTop()의 값과, 이미 설정된 headBox및 간격설정된 값(headBoxSetFn)으로 체크
   var myScrollTop = st + headBoxSetFn();
 

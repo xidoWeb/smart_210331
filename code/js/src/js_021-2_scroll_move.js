@@ -36,7 +36,7 @@ navLink.on('click', function(e){
   var linkTarget = $(this).attr('href');
   var target = $(linkTarget);
   var targetOffset = target.offset().top;
-  // console.log(linkTarget, targetOffset);
+  console.log(linkTarget, targetOffset);
 
   doc.animate({scrollTop:(targetOffset - headH) + 'px'});
 
