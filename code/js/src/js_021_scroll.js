@@ -10,6 +10,15 @@
 // 5. #sideBox의 위치를  top:#viewBox 의 50px 아래 배치
 // 6. #sideBox의 위치를 스크롤시 상황에따라 #headBox의 아래에 fixed처리
 // 601. #headBox의 높이값 + 필요한 #headBox에서 떨어져있는 공간(30px)
+//------------------------------------
+// 선택자.height() -> 내부의 높이확인
+// 선택자.innerHeight() -> 내부의 padding포함한 높이확인
+// 선택자.outerHeight() -> 내부의 padding + border 포함한 높이확인
+// 선택자.outerHeight(true) -> 내부의 padding + border + margin 포함한 높이확인
+// 선택자.offset().top -> 선택요소의 상단부터 떨어져있는 위치파악
+// 선택자.scrollTop()  -> 스크롤바의 위치가 어디에 배치되어있는가?(눈에보이는 스크롤바는 비율)
+// 선택자.removeAttr()  -> 선택요소의 속성을 삭제
+
 
 // 변수 ----------------------------
 var win = $(window);
