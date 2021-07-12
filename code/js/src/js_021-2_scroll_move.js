@@ -24,8 +24,9 @@ var scrollMoveFn = function(it){
   var target = $(linkTarget);
   var targetOffset = target.offset().top;
   var move;
-  (targetOffset === 0) ? move = targetOffset : move = targetOffset - headH;
-  // console.log(linkTarget, targetOffset);
+  var wrapOffset = $('#wrap').offset().top; 
+  (targetOffset === wrapOffset) ? move = wrapOffset : move = targetOffset - headH;
+
   doc.animate({scrollTop: move + 'px'});
 };
 
