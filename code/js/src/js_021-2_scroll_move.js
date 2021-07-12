@@ -19,6 +19,7 @@ var topMove = $('.top_move');
 var headH = headBox.outerHeight();
 
 // 함수
+// 필요한 스크롤 위치 이동에 대한 함수
 var scrollMoveFn = function(it){
   var linkTarget = it.attr('href');
   var target = $(linkTarget);
