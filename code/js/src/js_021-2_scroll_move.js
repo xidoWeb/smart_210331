@@ -18,28 +18,29 @@ var topMove = $('.top_move');
 // headBox높이값 파악
 var headH = headBox.outerHeight();
 
+// 함수
+var scrollMoveFn = function(it){
+  var linkTarget = it.attr('href');
+  var target = $(linkTarget);
+  var targetOffset = target.offset().top;
+  var move;
+  (targetOffset === 0) ? move = targetOffset : move = targetOffset - headH;
+  // console.log(linkTarget, targetOffset);
+  doc.animate({scrollTop: move + 'px'});
+};
+
 // 이벤트
 topMove.find('a').on('click', function(e){
   e.preventDefault();
   // win.scrollTop(0);
-  var linkTarget = $(this).attr('href'); // '#wrap'
-  var targetOffset = $(linkTarget).offset().top;
-  console.log(targetOffset);
-
-  // doc.animate({scrollTop:0});
-  doc.animate({scrollTop: targetOffset + 'px'});
+  var _this = $(this);
+  scrollMoveFn(_this);
 });
 
 navLink.on('click', function(e){
   e.preventDefault();
-
-  var linkTarget = $(this).attr('href');
-  var target = $(linkTarget);
-  var targetOffset = target.offset().top;
-  console.log(linkTarget, targetOffset);
-
-  doc.animate({scrollTop:(targetOffset - headH) + 'px'});
-
+  var _this = $(this);
+  scrollMoveFn(_this);
 });
 
 })(jQuery);
