@@ -42,7 +42,7 @@ sideBox.css({'top': checkViewBoxH + 'px'});
 // 스크롤 고정에따른 함수
 var scrollFixFn = function(){
   var st = win.scrollTop();
-  if(offHeadBox < st){
+  if(offHeadBox <= st){
     headBox.css({'position':'fixed'});
   }else{
     headBox.removeAttr('style');
@@ -63,7 +63,7 @@ var scrollFix2Fn = function(){
   // scrollTop()의 값과, 이미 설정된 headBox및 간격설정된 값(headBoxSetFn)으로 체크
   var myScrollTop = st + headBoxSetFn();
 
-  if(checkViewBoxH < myScrollTop){
+  if(checkViewBoxH <= myScrollTop){
     // 위치값 고정으로이하여, 기존 top의 값을 변경
     sideBox.css({'position':'fixed', top: headBoxSetFn() });
   }else{
