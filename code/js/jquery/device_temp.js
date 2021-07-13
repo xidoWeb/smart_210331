@@ -4,8 +4,8 @@
 // 1. 접속 브라우저 환경
 // 2. 브라우저의 크기값을 파악
 
-  // 변수
- 
+  // 변수 
+  
   var win = $(window);
 
   // 2. 접속 브라우저 환경
@@ -28,14 +28,14 @@
         break;
       }
     }
-  console.log( useRwd );
-  return useRwd;
+    console.log( useRwd );
+    return useRwd;
   }// browserSetFn();
   var rwdCheck = browserSetFn();
-
+  
   if(!rwdCheck){
     alert('접속 브라우저가 반응형구현 또는 flex 구조가 아니기 때문에 사용하기 불편할 수 있습니다.');
-  }
+  } 
   
   // 1. 브라우저의 크기값 파악(실시간으로 사이즈 체크)
   // 101. 브라우저의 가로값의 변경만 파악하여 처리
