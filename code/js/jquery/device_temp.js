@@ -41,9 +41,17 @@
   // 101. 브라우저의 가로값의 변경만 파악하여 처리
   // 102. 모든 가로값을 파악해서 그때마다 수정 X, 지정된 디바이스 환경을 고려하여 환경자체가 변경되면 처리 -> 새로고침
 
+  
   var deviceWidth = function(){
+    var deviceType = 1280;
+    var ck = ['small','big'];
     var winWidth = win.outerWidth(true);
-   return winWidth;
+    if(winWidth < deviceType){
+      return ck[0];
+    }else{
+      return ck[1];
+    }
+  //  return winWidth;
   };
 
   var beforeWidth = deviceWidth();
@@ -52,8 +60,13 @@
   // 브라우저의 크기가 변경되면 해당 수치를 파악
   win.on('resize', function(){
     var afterWidth = deviceWidth();
-    console.log('크기변경!!');
     console.log('after: ', afterWidth);
+
+    // 디바이스 환경이 변경되면(같지 않으면)
+    if(beforeWidth !== afterWidth){
+      //  새로고침
+      location.reload();
+    }
   });
   
 
