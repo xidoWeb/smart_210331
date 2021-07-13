@@ -1,5 +1,6 @@
 // device_temp.js
 (function($){
+  var importDevice;
 // jQuery
 // 1. 접속 브라우저 환경
 // 2. 브라우저의 크기값을 파악
@@ -62,15 +63,37 @@
 
   
   var deviceWidth = function(){
-    var deviceType = 1280;
-    var ck = ['small','big'];
+    // var deviceType =1280;
+    // [768, 1280, 1600] 기준으로 변경;
+
+    // 외부에서 불러와서 deviceType에 저장
+    var deviceType = importDevice; 
+    var checkType;   
     var winWidth = win.outerWidth(true);
-    if(winWidth < deviceType){
-      return ck[0];
-    }else{
-      return ck[1];
+
+    // if(winWidth >= deviceType[3].size){
+    //   checkType = deviceType[3].type;
+    // }else if(winWidth >= deviceType[2].size){
+    //   checkType = deviceType[2].type;
+    // }else if(winWidth >= deviceType[1].size){
+    //   checkType = deviceType[1].type;
+    // }else {
+    //   checkType = deviceType[0].type;
+    // }
+    var intSize;
+    var i= deviceType.length-1;    
+    for(; i >= 0 ; i-=1){ 
+      intSize = parseInt(deviceType[i].size);     
+      if(winWidth >= intSize){
+        checkType = deviceType[i].type;  
+        // for문을 10000번 반복했을경우, 조건이 100번째에 맞으면 100번까지만 하고 반복수행 끝내라해야하지만
+        // break를 사용하지 않는다면, 10000번 모두 반복수행
+        break;
+      }else{
+        checkType = deviceType[i].type;
+      }
     }
-  //  return winWidth;
+    return checkType;
   };
 
   var beforeWidth = deviceWidth();

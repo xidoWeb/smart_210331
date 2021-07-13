@@ -1,0 +1,6 @@
+[
+  {"type" : "smartphone" },
+  {"type" : "tablet"  , "size" : 768  },
+  {"type" : "laptop"  , "size" : 1280 },
+  {"type" : "desktop" , "size" : 1600 }
+]
