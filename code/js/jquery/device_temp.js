@@ -67,7 +67,13 @@
     // [768, 1280, 1600] 기준으로 변경;
 
     // 외부에서 불러와서 deviceType에 저장
-    var deviceType = importDevice; 
+    var deviceType = [
+      {"type" : "smartphone" },
+      {"type" : "tablet"  , "size" : 768  },
+      {"type" : "laptop"  , "size" : 1280 },
+      {"type" : "desktop" , "size" : 1600 }
+    ]; 
+    // var deviceType = importDevice; 
     var checkType;   
     var winWidth = win.outerWidth(true);
 
