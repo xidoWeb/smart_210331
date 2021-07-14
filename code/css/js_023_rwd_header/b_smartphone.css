@@ -42,7 +42,31 @@
     background-color: #fa0;
   }
 
-  .gnb_list{ 
+  .gnb_btn{
+    position: relative; z-index: 100;
+    width: 100%; height: 100%;
+  }
+  .gnb_btn button {
+    width: 100%; height: 100%; 
+    padding: 0;
+  }
+  .line {
+    display: block; position: absolute; top:0; bottom:0; left:0; right:0; 
+    width: 100%; height: 3px; margin:auto;
+    background-color: #171717;
+    transition:all 300ms linear;
+  }
+  .line1 { transform:translateY(-0.7rem); }
+  .line3 { transform: translateY(0.7rem); }
+
+  /* #gnb.act .line1{ transform: translateY(0) rotate(45deg);} */
+  #gnb.act .line1{ width: 0;}
+  /* #gnb.act .line2{ width: 0; height: 0; opacity: 0;} */
+  /* #gnb.act .line3{ transform: translateY(0) rotate(-45deg);} */
+  #gnb.act .line3{ width: 0;}
+  #gnb.act .gnb_list{display: block;}
+
+  .gnb_list{ display: none;
     position: fixed;
     top:0; left: 0;
     width: 100%; height:100%;

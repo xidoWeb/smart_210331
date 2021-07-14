@@ -19,8 +19,8 @@
   }
 
   h1{
-    float:left; top: 0; left: 0; right: 0;
-    width:150px; height:3rem; margin:auto;
+    float:left;
+    width:150px; height:3rem; 
     background-color: #755;
   }
 
