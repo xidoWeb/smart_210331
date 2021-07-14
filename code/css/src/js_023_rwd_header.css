@@ -1,0 +1,13 @@
+/* js_023_rwd_header.css */
+
+/* @import url("../js_023_rwd_header/a_basic_content.css"); */
+@import url("../js_023_rwd_header/b_smartphone.css");
+@import url("../js_023_rwd_header/c_tablet.css");
+@import url("../js_023_rwd_header/d_laptop.css");
+@import url("../js_023_rwd_header/e_pc.css");
+
+/* 1. a_basic_content.css : 전체 */
+/* 2. b_smartphone.css : 스마트폰 */
+/* 3. c_tablet.css : 태블릿 */
+/* 4. d_laptop.css : 노트북 */
+/* 5. e_pc.css : 데스크탑 */

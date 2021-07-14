@@ -1,0 +1,6 @@
+/* e_pc.css */
+
+/* 데스크탑(min-width:1600px) */
+@media screen  and (min-width:1600px) {
+  #wrap { background-color: #fac; }
+}/* @media screen  and (min-width:1600px) */

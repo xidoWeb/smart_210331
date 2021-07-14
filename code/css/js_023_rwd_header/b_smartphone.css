@@ -1,0 +1,52 @@
+/* b_smartphone.css */
+
+/* 스마트폰(max-width:767px) */
+@media screen and (max-width:767px) {
+
+  #wrap { width: 100%; min-width:320px; background-color: #acf; }
+  /* #headBox ============================================== */
+  #headBox{
+    position: relative;
+    width: 100%; height: 3rem;
+    background-color: #aca;
+  }
+
+  h1{
+    position: absolute; top: 0; left: 0; right: 0;
+    width: 100px; height: 3rem; margin:auto;
+    background-color: #755;
+  }
+
+  #unb {
+    float:left;
+    width:100px; height:3rem;
+    background-color: #fff;
+  }
+
+  #gnb {
+    float:right;
+    width: 3rem; height: 3rem;
+    padding:0.5rem; box-sizing: border-box;
+    background-color: #fff;
+  }
+
+ /* #viewBox ============================================== */
+  #viewBox{}
+
+ /* #contentBox ============================================== */
+  #contentBox{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}/* @media screen and (max-width:767px) */

@@ -1,0 +1,8 @@
+/* d_laptop.css */
+
+
+/* 노트북(max-width:1599px) */
+@media screen and (min-width:1280px) and (max-width:1599px) {
+  #wrap { background-color: #afa; }
+ }/* @media screen and (min-width:1280px) and (max-width:1599px)  */
+ 
