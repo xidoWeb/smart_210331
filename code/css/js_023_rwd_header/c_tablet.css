@@ -27,6 +27,18 @@
     background-color: #fff;
   }
 
+  .unb_list{
+    width: 100%; height: 100%;
+  }
+  .unb_list li {
+    float:right;
+    width:33.333333%; height:100%;
+    padding:0.125rem; box-sizing: border-box;
+    text-align: center; line-height:1.5rem;
+  }
+
+
+
   #gnb {
     float:right;
     width: 3rem; height: 3rem;
@@ -34,8 +46,65 @@
     background-color: #fa0;
   }
 
-  .unb_list{ display: none; }
-  .gnb_list{ display: none; }
+ 
+  .gnb_btn{
+    position: relative; z-index: 100;
+    width: 100%; height: 100%;
+  }
+  .gnb_btn button {
+    width: 100%; height: 100%; 
+    padding: 0;
+  }
+  .line {
+    display: block; position: absolute; top:0; bottom:0; left:0; right:0; 
+    width: 100%; height: 3px; margin:auto;
+    background-color: #171717;
+    transition:all 300ms linear;
+  }
+  .line1 { transform:translateY(-0.7rem); }
+  .line3 { transform: translateY(0.7rem); }
+
+  #gnb.act .line1{ transform: translateY(0) rotate(45deg);}
+  /* #gnb.act .line1{ width: 0;} */
+  #gnb.act .line2{ width: 0; height: 0; opacity: 0;}
+  #gnb.act .line3{ transform: translateY(0) rotate(-45deg);}
+  /* #gnb.act .line3{ width: 0;} */
+  #gnb.act .gnb_list{display: block;}
+
+  .gnb_list{ display: none;
+    position: fixed;
+    top:0; left: 0;
+    width: 100%; height:100%;
+    padding:1rem;  padding-top:4rem; box-sizing: border-box;
+    background-color: #fff;
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
+  .gnb_list li {
+    width: 100%; height: auto; 
+    padding:0.5rem;  box-sizing: border-box;
+   
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+  .nav_title {
+    width: 100%; height:auto; 
+    padding:0.5rem;  box-sizing: border-box;
+    border-bottom:1px solid #777; 
+    font-weight: 700;
+  }
+  .gnb_list li:last-child{ margin-bottom: 0;  }
+
+  .nav_content {
+    
+    padding-left:2rem;
+    background-color: #efefef;
+  }
+  .nav_content li {
+    list-style:disc;
+    padding-left: 0;
+  }
+
 
  /* #viewBox ============================================== */
   #viewBox{
