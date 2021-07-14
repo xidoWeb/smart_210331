@@ -10,6 +10,9 @@
     width: 100%; height: 3rem;
     background-color: #aca;
   }
+  .container {
+    width: 100%; height: 100%;
+  }
 
   h1{
     position: absolute; top: 0; left: 0; right: 0;
@@ -18,23 +21,33 @@
   }
 
   #unb {
-    float:left;
-    width:100px; height:3rem;
+    float:right;
+    width:6.25rem; height:3rem;
+    padding: 0.5em; box-sizing: border-box;
     background-color: #fff;
   }
 
   #gnb {
-    float:right;
+    float:left;
     width: 3rem; height: 3rem;
     padding:0.5rem; box-sizing: border-box;
-    background-color: #fff;
+    background-color: #fa0;
   }
 
+  .unb_list{ display: none; }
+  .gnb_list{ display: none; }
+
  /* #viewBox ============================================== */
-  #viewBox{}
+  #viewBox{
+    width: 100%; height:40rem;
+    background-color: #acc;
+  }
 
  /* #contentBox ============================================== */
-  #contentBox{}
+  #contentBox{
+    width: 100%; height:62.5rem;
+    background-color: #fdd;
+  }
 
 
 

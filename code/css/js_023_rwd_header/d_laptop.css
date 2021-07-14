@@ -1,8 +1,58 @@
 /* d_laptop.css */
 
 
-/* 노트북(max-width:1599px) */
+/* 노트북 (max-width:1599px) vw기준: 1280*/
+
 @media screen and (min-width:1280px) and (max-width:1599px) {
   #wrap { background-color: #afa; }
+
+  
+  #headBox{
+    position: relative;
+    width: 100%; height:4.5rem;
+    padding:1rem; box-sizing: border-box;
+    background-color: #fdd;
+  }
+  .container {
+    width: 100%; max-width:87.5rem; height: 100%;
+    margin:auto;
+  }
+
+  h1{
+    float:left; top: 0; left: 0; right: 0;
+    width:150px; height:3rem; margin:auto;
+    background-color: #755;
+  }
+
+  #unb {
+    float:right;
+    width:6.25rem; height:3rem;
+    padding: 0.5em; box-sizing: border-box;
+    background-color: #fff;
+  }
+
+  #gnb {
+    float:right;
+    width:400px; height:2rem;
+    margin-top: 1rem; margin-right: 3rem;
+     padding:0.5rem; box-sizing: border-box;
+    background-color: #fa0;
+  }
+
+  .unb_list{ display: none; }
+  .gnb_list{ display: none; }
+
+ /* #viewBox ============================================== */
+  #viewBox{
+    width: 100%; height:40rem;
+    background-color: #acc;
+  }
+
+ /* #contentBox ============================================== */
+  #contentBox{
+    width: 100%; height:62.5rem;
+    background-color: #fdd;
+  }
+  
  }/* @media screen and (min-width:1280px) and (max-width:1599px)  */
  
