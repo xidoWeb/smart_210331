@@ -107,4 +107,17 @@
    상자크기 / 브라우저기준크기 * 100 -> 300/600*100 ->  50vw
 
 
+  display
+  position
+  width, height
+  margin, padding, border
+  overflow
+  font
+  background
+  기타효과
+
+  p{width:10px;}
+  
+  $('p').css({'width':'100px'})
+  <p style="width:100px"></p>
 */

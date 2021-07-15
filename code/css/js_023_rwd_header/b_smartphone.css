@@ -64,7 +64,7 @@
   #gnb.act .line2{ width: 0; height: 0; opacity: 0;}
   #gnb.act .line3{ transform: translateY(0) rotate(-45deg);}
   /* #gnb.act .line3{ width: 0;} */
-  #gnb.act .gnb_list{display: block;}
+  /* #gnb.act .gnb_list{display: block;} */
 
   .gnb_list{ display: none;
     position: fixed;
