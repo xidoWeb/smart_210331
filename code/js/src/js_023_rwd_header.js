@@ -6,8 +6,8 @@
     context:document.body
   }).done(function(data){
     var dataType = data;
-    var jsurl = '../js/rwd_header';
-    var scriptCode = '<script class="device"></script>';
+    var jsurl = '../js/rwd_header/';
+    // var scriptCode = '<script class="device"></script>';
     var dataUseJS ={
       smartphone:'heder_smartphone.js',
       tablet:'heder_smartphone.js',
@@ -31,12 +31,17 @@
       }
     }
 
-    // devictType = 'laptop'
-    console.log('deviceType: ', deviceType,  dataUseJS[deviceType] );
 
+    // console.log('deviceType: ', deviceType,  dataUseJS[deviceType] );
     // $('body').append('<script src="'+jsurl + dataUseJS[deviceType] +'"></script>');
-    $('body').append(scriptCode);
-    $('.device').attr({src: jsurl + dataUseJS[deviceType] });
+
+    var scriptCodeFn = function(source){
+      var src = jsurl + source;
+      var script = '<script src="'+ src +'"></script>';
+      $('body').append(script);
+    };
+    
+    scriptCodeFn(dataUseJS[deviceType]);
 
   }); // $.ajax
 })(jQuery);
