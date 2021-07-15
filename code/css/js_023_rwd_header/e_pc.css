@@ -55,7 +55,7 @@
 
   .gnb_list>li{
     float:left;
-    width:25%; height:auto; 
+    width:100px; height:auto; 
     padding-left:0.5rem; box-sizing: border-box;
   }
   .gnb_list>li:first-child{padding-left: 0;}

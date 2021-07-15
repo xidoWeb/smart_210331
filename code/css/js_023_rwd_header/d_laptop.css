@@ -69,7 +69,7 @@
     margin-top: 1rem;
     background-color: #fff;
   }
-  .gnb_list>li:hover .nav_content {display: block;}
+  /* .gnb_list>li:hover .nav_content {display: block;} */
 
   .gnb_list li:last-child{ margin-bottom: 0;  }
 
