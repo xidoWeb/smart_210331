@@ -7,10 +7,9 @@
   }).done(function(data){
     var dataType = data;
     var jsurl = '../js/rwd_header/';
-    // var scriptCode = '<script class="device"></script>';
     var dataUseJS ={
       smartphone:'heder_smartphone.js',
-      tablet:'heder_smartphone.js',
+      tablet:'heder_tablet.js',
       laptop:'heder_laptop.js',
       desktop:'heder_laptop.js'
     };
@@ -32,15 +31,12 @@
     }
 
 
-    // console.log('deviceType: ', deviceType,  dataUseJS[deviceType] );
-    // $('body').append('<script src="'+jsurl + dataUseJS[deviceType] +'"></script>');
-
     var scriptCodeFn = function(source){
       var src = jsurl + source;
       var script = '<script src="'+ src +'"></script>';
       $('body').append(script);
     };
-    
+
     scriptCodeFn(dataUseJS[deviceType]);
 
   }); // $.ajax

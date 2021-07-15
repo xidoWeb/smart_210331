@@ -2,6 +2,8 @@
 
 /* 타블렛(max-width:1279px) */
 @media screen and (min-width:768px) and (max-width:1279px) {
+
+  body{overflow-x: hidden;}
   #wrap { background-color: #fda; }
 
 
@@ -69,11 +71,11 @@
   #gnb.act .line2{ width: 0; height: 0; opacity: 0;}
   #gnb.act .line3{ transform: translateY(0) rotate(-45deg);}
   /* #gnb.act .line3{ width: 0;} */
-  #gnb.act .gnb_list{display: block;}
+  /* #gnb.act .gnb_list{display: block;} */
 
   .gnb_list{ display: none;
     position: fixed;
-    top:0; left: 0;
+    top:0; right: -100%;
     width: 100%; height:100%;
     padding:1rem;  padding-top:4rem; box-sizing: border-box;
     background-color: #fff;

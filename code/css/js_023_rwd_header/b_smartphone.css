@@ -5,6 +5,8 @@
 
   #wrap { width: 100%; min-width:320px; background-color: #acf; }
   /* #headBox ============================================== */
+  body{overflow-x: hidden;}
+
   #headBox{
     position: relative;
     width: 100%; height: 3rem;
@@ -69,7 +71,7 @@
   .gnb_list{ display: none;
     position: fixed;
     top:0; left: 0;
-    width: 100%; height:100%;
+    width: calc(100% + 15px); height:100%;
     padding:1rem;  padding-top:4rem; box-sizing: border-box;
     background-color: #fff;
     overflow-x:hidden;
