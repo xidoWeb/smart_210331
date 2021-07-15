@@ -52,7 +52,7 @@
             if(ckIndex !== -1){
               //'반응형 웹 가능한 브라우저';
               useRwd = true;
-              console.log('사용브라우저:', browser[n].type);
+              // console.log('사용브라우저:', browser[n].type);
               // 체크된 상황에서 반복수행하지 않도록 처리
               break; 
             }
@@ -67,8 +67,8 @@
     // 반응형웹구현이 불가능할경우
     if(!rwdCheck){
       console.log('접속 브라우저가 반응형구현 또는 flex 구조가 아니기 때문에 사용하기 불편할 수 있습니다.');
-      $('.device').hide();
-      $('.old').show();
+      // $('.device').hide();
+      // $('.old').show();
     }else{
       // ie가 아닌 반응형가능한 브라우저
       // 범위는 하위 전부~~~resize까지
@@ -125,13 +125,13 @@
 
     var beforeWidth = deviceWidth();
     console.log('브라우저 변경 전 가로 크기 : ', beforeWidth);
-    $('.device').hide();
-    $('.' + beforeWidth).show();
+    // $('.device').hide();
+    // $('.' + beforeWidth).show();
 
     // 브라우저의 크기가 변경되면 해당 수치를 파악
     win.on('resize', function(){
       var afterWidth = deviceWidth();
-      console.log('브라우저 변경 후 가로 크기 : ', afterWidth);
+      // console.log('브라우저 변경 후 가로 크기 : ', afterWidth);
 
       // 디바이스 환경이 변경되면(같지 않으면)
       if(beforeWidth !== afterWidth){
