@@ -1,0 +1,23 @@
+/* main.css */
+#headBox {
+  width: 100%; height:auto;
+  background-color: #ddd;
+}
+
+.container {
+  width:100%; max-width:1400px; height:auto;
+  margin:auto; padding:1rem; box-sizing: border-box;
+}
+.container:after{ content:""; display: block; clear:both; }
+
+h1{
+  float:left; width:200px; height: 70px;
+  background-color: #7af;
+}
+
+#gnb {
+  float:right;
+  width:700px; height:50px;
+  margin-top:20px;
+  background-color: #fff;
+}
