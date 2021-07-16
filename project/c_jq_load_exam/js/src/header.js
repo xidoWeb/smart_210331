@@ -4,7 +4,7 @@
     {page:'회사소개', link:"./about.html"},
     {page:'제품소개', link:"./product.html"},
     {page:'게시판', link:"./notice.html"},
-    {page:'이벤트', link:"./event.html"}
+    {page:'이벤트', link:"./event/event.html"}
   ];
 
   // 1. gnb내부에 list를 생성하여, 4개정도의 요소링크 생성
