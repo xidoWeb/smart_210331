@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- html/js_024_parallax_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--[if IE]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/ie9js/ie9.min.js"></script>
+    <script src="../ie/csspie/PIE.js"></script>
+    <script src="../ie/responsive.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  
+  <!-- font.google : noto sans -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- fontawesome5 -->
+  <link rel="stylesheet" href="../fonts/fontawesome5/css/all.min.css">
+  
+  <!-- css design -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/js_024_parallax_01.css">
+
+  <title>웹 기초</title>
+  
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <div class="info">
+      <h1><a href="./all_contents.html">웹표준</a></h1><hr />
+      <h2>parallax웹 구현</h2>
+      <p>스크롤이나, 마우스의 움직임에의해 시차를 느끼게 만드는 효과</p>
+
+      <ul>
+        <li>1. event - scroll</li>
+        <li>2. background-position: 0~100%</li>
+        <li>3. 화면의 하단(시작부분) 상단에있는 영역(끝부분)</li>
+        <li>4. 화면의 영역을 0~100%로 구분하는 방법</li>
+      </ul>
+    </div>
+
+    <div class="part">
+      <h2>리스트형식 내용</h2>
+      <!-- ul>li*4>(.img_box+dl>dt{title}+dd{lorem15}+dd>a[href="#"]{내용 자세히보기}) -->
+      <ul>
+        <li>
+          <div class="img_box"><span class="blind">이미지에 대한 설명</span></div>
+          <dl>
+            <dt>title_1</dt>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nam accusamus dolor qui nostrum dolores?</dd>
+            <dd><a href="#">내용 자세히보기</a></dd>
+          </dl>
+        </li>
+        <li>
+          <div class="img_box"><span class="blind">이미지에 대한 설명</span></div>
+          <dl>
+            <dt>title_2</dt>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. In suscipit est dolorum, omnis eum officiis natus unde porro quasi sit.</dd>
+            <dd><a href="#">내용 자세히보기</a></dd>
+          </dl>
+        </li>
+        <li>
+          <div class="img_box"><span class="blind">이미지에 대한 설명</span></div>
+          <dl>
+            <dt>title_3</dt>
+            <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi accusamus ad dolores temporibus laborum culpa.</dd>
+            <dd><a href="#">내용 자세히보기</a></dd>
+          </dl>
+        </li>
+        <li>
+          <div class="img_box"><span class="blind">이미지에 대한 설명</span></div>
+          <dl>
+            <dt>title_4</dt>
+            <dd>Lorem, ipsum dolor., ipsum dolor sit amet consectetur adipisicing elit. Ea suscipit, neque inventore optio sunt at?</dd>
+            <dd><a href="#">내용 자세히보기</a></dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+  <!-- script -->
+  <script src="../js/jquery/jquery-3.6.0.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <script src="../js/src/js_024_parallax_01.js"></script>
+</body>
+</html>
