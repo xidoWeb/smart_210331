@@ -24,15 +24,17 @@ var partLi = part.find('li');
 // 기준치가 li의 시장점이 아닌 중간지점으로 교체
 // 실제 이동하는 이미지의 background-position-y의 값이 반영
 
-var partLi_0_H = partLi.eq(0).outerHeight() / 2;
-var partLi_0_offset = partLi.eq(0).offset().top + partLi_0_H;
-var partLi_0_img = partLi.eq(0).find('.img_box');
+// var partLi_0_H = partLi.eq(0).outerHeight() / 2;
+// var liOffset = partLi.eq(0).offset().top + partLi_0_H;
+// var partLi_0_img = partLi.eq(0).find('.img_box');
+
+
 
 // 함수
-var setScrollFn = function(){
+var setScrollFn = function(liOffset){
   var scrollGage = win.scrollTop();
-  // console.log( scrollGage - partLi_0_offset + winH);
-  var moveCheck = scrollGage - partLi_0_offset + winH;
+  // console.log( scrollGage - liOffset + winH);
+  var moveCheck = scrollGage - liOffset + winH;
 
   var movePercent =  parseInt(moveCheck / winH * 100);
   if(movePercent < 0 ){ 
@@ -40,16 +42,39 @@ var setScrollFn = function(){
   }else if(movePercent > 100){
     movePercent = 100;
   }
-  // console.log(movePercent);
+  console.log(movePercent);
   return movePercent;
 };
-var st;
-setScrollFn();
+
+var setLiFn = function(){
+
+  // partLi의 각각의 순서에 맞는곳에 적용
+  // li의 갯수파악, 그 갯수만큼 반복
+  
+  var st, liEq, liH, liLocation, liImg;
+  var i = 0;
+  var liLen = partLi.length;
+  for(; i < liLen; i+=1){
+    liEq       = partLi.eq(i);
+    liH        = liEq.outerHeight() / 2;
+    liLocation = liEq.offset().top + liH;
+    liImg      = liEq.find('.img_box');
+    st         = setScrollFn(liH);
+    liImg.css({backgroundPositionY:st+'%'});
+  }
+
+}// setLiFn();
+
+
+
+// var st;
+// setScrollFn();
 
 // 이벤트
 win.on('scroll', function(e){
-  st = setScrollFn() / 2;
-  partLi_0_img.css({backgroundPositionY:st+'%'});
+  // st = 100 - setScrollFn();
+  // partLi_0_img.css({backgroundPositionY:st+'%'});
+  setLiFn();
 });
 
 

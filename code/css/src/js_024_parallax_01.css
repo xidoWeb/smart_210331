@@ -1,7 +1,7 @@
 /* js_024_parallax_01.css */
 #wrap {
   width: 100%; min-width:1300px; max-width:1600px; height:auto;
-  margin:auto; 
+  margin:auto; padding-bottom: 1000px;
 }
 
 .info { 
