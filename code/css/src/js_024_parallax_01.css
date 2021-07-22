@@ -106,9 +106,10 @@ p { padding: 1rem; background-color: #fdd; margin-bottom: 1rem;}
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: 100% auto;
-    top:30%; left:-20%; 
+    top:50%; left:-20%; 
     width:140%; height:50%;
   }
+
 
   .part2 li:nth-child(2n-1) .img_box{ float:right;}
   .part2 li:nth-child(1) .img_box{ background-color:#f70; }
@@ -120,4 +121,3 @@ p { padding: 1rem; background-color: #fdd; margin-bottom: 1rem;}
   .part2 li:nth-child(3) .position_img{
     background-position: 0 0; background-size: 30% auto;
     background-image: url("../../img/parallax2/02.about_About_Obj_03x2_opkj75.png");}
-    
