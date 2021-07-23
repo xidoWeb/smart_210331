@@ -34,15 +34,26 @@
   <div id="wrap">
     <div class="info">
       <h1><a href="./all_contents.html">웹표준</a></h1>
-      <h2>landing 구현</h2>
-      <p>스크롤이나, 마우스의 움직임에의해 일정위치에서 기능이 구현되는 효과</p>
 
-      <ul>
-        <li>scroll 이벤트</li>
-        <li>이미지가 나타나는 방법 opacity 0~1</li>
-        <li>나타나는 것을 효과를 좀더 풍부하기위해서는 transform:translate()   ||  margin-top  ||  top</li>
-        <li>나타나는 시점은 화면상의 하단에서부터 약 1/3 ~ 1/4 에서 나타나야 자연스럽다.</li>
-      </ul>
+      <div class="narr">
+        <h2>landing 구현</h2>
+        <p>스크롤이나, 마우스의 움직임에의해 일정위치에서 기능이 구현되는 효과</p>
+        <ul>
+          <li>scroll 이벤트</li>
+          <li>이미지가 나타나는 방법 opacity 0~1</li>
+          <li>나타나는 것을 효과를 좀더 풍부하기위해서는 transform:translate()   ||  margin-top  ||  top</li>
+          <li>나타나는 시점은 화면상의 하단에서부터 약 1/3 ~ 1/4 에서 나타나야 자연스럽다.</li>
+        </ul>
+      </div>
+
+      <hr />
+      
+      <div class="narr">
+        <h2>mousewheel 처리</h2>
+        <p>firefox에서는 DOMMouseScroll 이벤트를 가지고, 이외는 mousewheel 이벤트를 가진다.</p>
+        <p>이때, 수치는 DOMMouseScroll에서는 -3/3의 수치를 가지고, mousewheel에서는 120/-120의 값을 가지고 있다.</p>
+        <p>그렇기에 둘의 동일한 수치를 만들고 이를 수행할 수 있도록 처리</p>
+      </div>
     </div>
 
     <div class="part">
@@ -88,5 +99,6 @@
   <script src="../js/jquery/jquery-3.6.0.min.js"></script>
   <script src="../js/jquery/jquery-ui.min.js"></script>
   <script src="../js/src/js_025_landing_01.js"></script>
+  <script src="../js/src/js_025_mousewheel.js"></script>
 </body>
 </html>
