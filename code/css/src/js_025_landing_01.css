@@ -46,8 +46,8 @@ p { padding: 1rem; background-color: #fdd; margin-bottom: 1rem;}
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size:cover;
-  opacity:0.2;
-  transform:translateY(5rem);
+  opacity:0;
+  transform:translate(3rem, 5rem);
   transition:all 400ms ease;
 }
 
@@ -57,7 +57,7 @@ p { padding: 1rem; background-color: #fdd; margin-bottom: 1rem;}
 
 .part li.act .img_box { 
     opacity: 1; 
-    transform:translateY(0); 
+    transform:translate(0); 
     box-shadow:0.3rem 0.3rem 0.3rem rgba(0,0,0,0.3);
   }
 

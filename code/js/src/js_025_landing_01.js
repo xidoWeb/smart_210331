@@ -11,6 +11,7 @@
 // 6. 스크롤을 이동시 지정한 offset값 ( setOffset )과 비교하여 이보다 커지면 체크
 // 7. 체크되는 곳에서 li에 act 클래스이름 부여 
 // 8. 옵션: 반대의 경우에는 act빼기
+// 9. li요소 전부 동작
 
 // =====================================================
 // 변수 ------------------------------------------------
@@ -20,25 +21,32 @@ var li = part.find('li');
 
 // 기능수행체크 
 var winH = win.outerHeight();
-// li.첫번째의 위치
-var liSelect = li.eq(0);
-var liOffset = liSelect.offset().top;
-var setOffset = liOffset - (winH / 3 * 2);  // liOffset + winH - (winH/3);
+
+var setLiFn = function(scroll){
+  // li.각각 수행 
+  var liSelect; // = li.eq(0);
+  var liOffset; // = liSelect.offset().top;
+  var setOffset; // = liOffset - (winH / 3 * 2);  // liOffset + winH - (winH/3);
+  var resultN;
+
+  var i=0; 
+  var liLen = li.length;
+  for(; i<liLen; i += 1){
+    liSelect = li.eq(i);
+    liOffset = liSelect.offset().top;
+    setOffset = liOffset - (winH / 3 * 2);
+
+    resultN = scroll - setOffset;
+    (resultN >= 0) ? liSelect.addClass('act') : liSelect.removeClass('act');    
+  }
+}
 
 
 // 이벤트 ===============================================
 
 win.on('scroll', function(){
   var winScroll = win.scrollTop();
-  // console.log( winScroll );
-  var resultN = winScroll - setOffset;
-  if(resultN >= 0){
-    // console.log( '수치체크: ', resultN );    
-    liSelect.addClass('act');
-  }else{
-    liSelect.removeClass('act');
-  }
-
+  setLiFn(winScroll);
 });
 
 })(jQuery);
