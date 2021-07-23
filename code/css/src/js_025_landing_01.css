@@ -6,8 +6,9 @@
 }
 
 .info { 
-  width: 100%; height:150vh;
+  width: 100%; height:100vh;
   padding: 1rem; box-sizing:border-box;
+  background-image:linear-gradient(45deg, #adf, #ffa);
 }
 
 h1{ font-size: 2rem; padding: 0.5rem; }
@@ -45,9 +46,21 @@ p { padding: 1rem; background-color: #fdd; margin-bottom: 1rem;}
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size:cover;
+  opacity:0.2;
+  transform:translateY(-5rem);
+  transition:all 300ms ease;
 }
 
-.part li:nth-child(2n + 1) > .img_box { float:right; margin-right: 0; }
+.part li:nth-child(2n + 1) > .img_box { 
+  float:right; 
+  margin-right: 0; }
+
+.part li.act .img_box { 
+    opacity: 1; 
+    transform:translateY(0); 
+    box-shadow:0.3rem 0.3rem 0.3rem rgba(0,0,0,0.3);
+  }
+
 .part li:nth-child(1) > .img_box { background-image: url("../../img/parallax/img_01.jpg");}
 .part li:nth-child(2) > .img_box { background-image: url("../../img/parallax/img_02.jpg");}
 .part li:nth-child(3) > .img_box { background-image: url("../../img/parallax/img_03.jpg");}
