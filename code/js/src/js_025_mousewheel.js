@@ -11,20 +11,31 @@ var win = $(window);
 var viewDoc = $('html,body');
 var info = $('.info');
 var recommend = true;
-
+var countScroll = 0;
+var winH;
 // 기능 
 // 함수
 var setWinHFn = function(){
-  var winH = win.outerHeight();
+  winH = win.outerHeight();
   info.css({height:winH + 'px'});
 };
-setWinHFn();
-// ==========================================
-// 이벤트
 
+var setScrollFn = function(n){
+  viewDoc.animate({scrollTop:n +'px'}, function(){
+    recommend = true;
+  });
+};
+
+// ==========================================
+setWinHFn();
+setScrollFn(0);
+
+// 이벤트
 win.on('resize', function(){ setWinHFn();  });
 
 viewDoc.on('mousewheel DOMMouseScroll', function(e){
+  var winScrollTop = win.scrollTop();
+
   if(recommend){
     recommend = false;
     var evt = e.originalEvent;
@@ -35,6 +46,15 @@ viewDoc.on('mousewheel DOMMouseScroll', function(e){
     var delta = 0;
     (e.type === 'DOMMouseScroll') ? delta = evt.detail * -40 :  delta = evt.wheelDelta;
     console.log( delta );  
+    
+    if(delta < 0 && countScroll <= 1){
+      countScroll += 1;
+      setScrollFn(winH);
+    }else if(winScrollTop < winH){
+      // countScroll = 0;
+      setScrollFn(0);
+    }
+
   }
 });
 
