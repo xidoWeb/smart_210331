@@ -47,8 +47,8 @@ p { padding: 1rem; background-color: #fdd; margin-bottom: 1rem;}
   background-position: 50% 50%;
   background-size:cover;
   opacity:0.2;
-  transform:translateY(-5rem);
-  transition:all 300ms ease;
+  transform:translateY(5rem);
+  transition:all 400ms ease;
 }
 
 .part li:nth-child(2n + 1) > .img_box { 
