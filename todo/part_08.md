@@ -66,6 +66,18 @@
   - [ ] 나타나는 것을 효과를 좀더 풍부하기위해서는 **transform:translate()   ||  margin-top  ||  top**
   - [ ] 나타나는 시점은 화면상의 하단에서부터 약 1/3 ~ 1/4 에서 나타나야 자연스럽다.
 
+---
+
+마우스휠 이벤트
+
+- mousewheel, DOMMouseScroll
+
+- 마우스휠에 의해 반응하는 기능 => 휠값이 아래/위
+
+- mousewheel => 120 / -120
+
+- DOMMouseScroll => -3 / 3
+
 
 
 ---
