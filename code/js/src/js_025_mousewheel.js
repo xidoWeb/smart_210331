@@ -21,7 +21,9 @@ var setWinHFn = function(){
 };
 
 var setScrollFn = function(n){
-  viewDoc.animate({scrollTop:n +'px'}, function(){
+  recommend = false;
+  var moveH = winH * n;
+  viewDoc.animate({scrollTop:moveH + 'px'}, function(){
     recommend = true;
   });
 };
@@ -35,27 +37,27 @@ win.on('resize', function(){ setWinHFn();  });
 
 viewDoc.on('mousewheel DOMMouseScroll', function(e){
   var winScrollTop = win.scrollTop();
-
+                         
+  var evt = e.originalEvent;
+  // console.log(e.type);
+  // mousewheel: evt.wheelDelta -> -120 | 120
+  // mousewheel: evt.detail -> 0
+  // DOMMouseScroll: evt.detail -> 3 | -3
+  var delta = 0;
+  (e.type === 'DOMMouseScroll') ? delta = evt.detail * -40 :  delta = evt.wheelDelta;
+  // console.log( delta );  
+  
   if(recommend){
-    recommend = false;
-    var evt = e.originalEvent;
-    // console.log(e.type);
-    // mousewheel: evt.wheelDelta -> -120 | 120
-    // mousewheel: evt.detail -> 0
-    // DOMMouseScroll: evt.detail -> 3 | -3
-    var delta = 0;
-    (e.type === 'DOMMouseScroll') ? delta = evt.detail * -40 :  delta = evt.wheelDelta;
-    console.log( delta );  
-    
-    if(delta < 0 && countScroll <= 1){
+    if(delta < 0 && winScrollTop >= 0 && countScroll <= 0){
       countScroll += 1;
-      setScrollFn(winH);
-    }else if(winScrollTop < winH){
-      // countScroll = 0;
-      setScrollFn(0);
+      setScrollFn(countScroll);
+    }else if(winScrollTop <= winH && delta > 0 && countScroll > 0){
+      countScroll = 0;
+      setScrollFn(countScroll);
     }
-
+    // console.log(winH, winScrollTop, countScroll);
   }
+
 });
 
 })(jQuery);
