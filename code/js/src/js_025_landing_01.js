@@ -24,10 +24,7 @@ var winH = win.outerHeight();
 
 var setLiFn = function(scroll){
   // li.각각 수행 
-  var liSelect; // = li.eq(0);
-  var liOffset; // = liSelect.offset().top;
-  var setOffset; // = liOffset - (winH / 3 * 2);  // liOffset + winH - (winH/3);
-  var resultN;
+  var liSelect, liOffset, setOffset, resultN;
 
   var i=0; 
   var liLen = li.length;
@@ -37,7 +34,7 @@ var setLiFn = function(scroll){
     setOffset = liOffset - (winH / 3 * 2);
 
     resultN = scroll - setOffset;
-    (resultN >= 0) ? liSelect.addClass('act') : liSelect.removeClass('act');    
+    (resultN >= 0) ? liSelect.addClass('act') : liSelect.removeClass('act');
   }
 }
 
