@@ -46,16 +46,27 @@
 
 #### 코딩과정
 
-- [ ] 스크롤에 따른 parallax1
+- [x] 스크롤에 따른 parallax1
 
-  - [ ] ##### hint
+  - [x] ##### hint
 
     1. event - scroll
     2. background-position: 0~100%
     3. 화면의 하단(시작부분) 상단에있는 영역(끝부분)
     4. 화면의 영역을 0~100%로 구분하는 방법
 
-    
+
+---
+
+**landing** : 스크롤이 일정위치가 오면, 필요한 동작을 처리해서 우리가 보고자하는 형태로 안착하는 것
+
+- [ ] **hint**
+  - [ ] scroll 이벤트
+  - [ ] 이미지가 나타나는 방법 **opacity 0~1**
+  - [ ] 나타나는 것을 효과를 좀더 풍부하기위해서는 **transform:translate()   ||  margin-top  ||  top**
+  - [ ] 나타나는 시점은 화면상의 하단에서부터 약 1/3 ~ 1/4 에서 나타나야 자연스럽다.
+
+
 
 ---
 
@@ -67,3 +78,11 @@
 - https://delassus.com/en/about
 - https://www.firewatchgame.com/
 - https://www.hotelcapolagala.com/
+
+**landing web sample**
+
+- https://mailchimp.com/features/landing-pages/
+
+- https://hyorom.github.io/audi-project/html/audi_index.html
+- https://choiyubin0604.github.io/lush/html/main.html
+- https://joowonh93.github.io/midoriweb/html/midori_web.html
