@@ -10,39 +10,32 @@
 var win = $(window);
 var viewDoc = $('html,body');
 var info = $('.info');
-
+var recommend = true;
 
 // 기능 
-
-
 // 함수
 var setWinHFn = function(){
   var winH = win.outerHeight();
   info.css({height:winH + 'px'});
 };
 setWinHFn();
-
-
 // ==========================================
 // 이벤트
-win.on('resize', function(){
-  setWinHFn();
-});
+
+win.on('resize', function(){ setWinHFn();  });
 
 viewDoc.on('mousewheel DOMMouseScroll', function(e){
-  // console.log(e.type);
-  var evt = e.originalEvent;
-  // mousewheel: evt.wheelDelta -> -120 | 120
-  // mousewheel: evt.detail -> 0
-  // DOMMouseScroll: evt.detail -> 3 | -3
-  var delta = 0;
-  (e.type === 'DOMMouseScroll') ? delta = evt.detail * -40 :  delta = evt.wheelDelta;
-  
-
-  console.log( delta );
-
-  
+  if(recommend){
+    recommend = false;
+    var evt = e.originalEvent;
+    // console.log(e.type);
+    // mousewheel: evt.wheelDelta -> -120 | 120
+    // mousewheel: evt.detail -> 0
+    // DOMMouseScroll: evt.detail -> 3 | -3
+    var delta = 0;
+    (e.type === 'DOMMouseScroll') ? delta = evt.detail * -40 :  delta = evt.wheelDelta;
+    console.log( delta );  
+  }
 });
-
 
 })(jQuery);
