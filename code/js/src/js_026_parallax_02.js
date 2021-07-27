@@ -25,7 +25,7 @@ var setParallaxFn = function(move){
   for(;i < parLen; i++){
     result = -moveResult*(parLen-i-1);
     parList.eq(i).css({transform:'translateY('+ result +'px)'});
-    // parList.eq(i).css({bottom:-moveResult*(parLen-i) +'px'})
+    // parList.eq(i).css({bottom:-moveResult*(parLen-i) +'px'});
   }
 }
   
@@ -38,7 +38,5 @@ var moveImageFn = function(){
 //===============================================
 // 이벤트 ---------------------------------------
 win.on( 'scroll', moveImageFn );
-
-
 
 })(jQuery);
