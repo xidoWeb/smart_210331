@@ -1,0 +1,82 @@
+/* js_027_parallax_03.css */
+#wrap {
+  width: 100%; height: auto;
+}
+
+#headBox {
+  display: none;
+  position: fixed; top:-50px; left:50%; 
+  transform:translateX(-50%);
+  width: 100%; max-width:1280px; height: 50px;
+  padding:0.5rem; box-sizing: border-box;
+  background-color: #acf;
+}
+
+#viewBox {
+  position: relative;
+  width: 100%; height:1000vh;
+  background-color: #0181b2;
+}
+
+.logo {
+  /* display: none; */
+  position: fixed; top: -200px; bottom: 0; left: 0; right: 0; z-index:1000;
+  margin:auto;
+  width: 200px; height: 200px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-image: url("../../img/parallax_zoom/001-globe-grid.svg");
+}
+
+.cover_image_01{
+  position: fixed; top:30%; left: 0; z-index: 500;
+  width: 100%; height:100%;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-image: url("../../img/parallax_zoom/building.png");
+  background-size: 100%;
+}
+
+.cover_image_02 {
+  position: fixed; top:100%; left: 0; z-index:300;
+  width: 80%; height: 100%; 
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url("../../img/parallax_zoom/airplane.png");
+  background-size: contain;
+}
+
+.scroll_down {
+  position: absolute; top:85vh; left: 0; right:0;  z-index:700;
+  width: 35px; height:60px;
+  margin:auto;
+  border:8px solid #fff;
+  border-top:0;
+  border-bottom:0;
+  border-radius:20px;
+}
+.scroll_down a:before{
+  content:""; display: block; position: absolute;
+  left:0; right:0; top:-10px;
+  width:6px; height:30px; 
+  margin:auto; border-radius:8px;  
+  background-color: #fff;
+  animation:mousemove 800ms linear infinite alternate;
+}
+
+@keyframes mousemove{
+  0% { transform:translateY(0); opacity:0.5}
+  100% {transform:translateY(20px); opacity:1}
+}
+
+
+#conBox {
+  width: 100%; max-width:1600px; height:1500px;
+  margin:auto; padding:2rem; box-sizing: border-box;
+  background-color: #aca;
+}
+#footBox {
+  width: 100%; height: 400px;
+  background-color: #777;
+}
