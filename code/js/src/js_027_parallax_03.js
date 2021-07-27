@@ -17,12 +17,13 @@ var viewBox = $('#viewBox');
 var logo = $('.logo');
 var coverImg_01 = $('.cover_image_01');
 var coverImg_02 = $('.cover_image_02');
-
+$('html,body').animate({scrollTop:0});
 // 기능 ---------------------
 var img_01Top = parseInt(coverImg_01.css('top'));
 var img_02Top = parseInt(coverImg_02.css('top'));
 var img_02Left = parseInt(coverImg_02.css('left'));
 var winH = win.outerHeight();
+viewBox.css({height: winH*5 });
 
 // 함수 ---------------------
 var scrollFn = function(){
@@ -30,7 +31,7 @@ var scrollFn = function(){
   var coverImg_01_Top = img_01Top + winScroll;
   var coverImg_02_Left = img_02Left+ (winScroll/10);
   var coverImg_02_Top = img_02Top - winScroll;
-  var op, setOffsetHead;
+  var op;
   coverImg_01.css({top: coverImg_01_Top +'px'});
   coverImg_02.css({left: coverImg_02_Left +'px', top: coverImg_02_Top + 'px'});
 
@@ -42,8 +43,7 @@ var scrollFn = function(){
     if(op >= 1){ 
       headBox.show( function(){
         headBox.stop().animate({top:0});
-        setOffsetHead = headBox.offset().top;
-        viewBox.css({height: setOffsetHead + (winH*2) });
+        logo.fadeOut();        
       });  
     }else{
       headBox.removeAttr('style');
