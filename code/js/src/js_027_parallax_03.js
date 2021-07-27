@@ -11,13 +11,18 @@ var coverImg_01 = $('.cover_image_01');
 var coverImg_02 = $('.cover_image_02');
 
 // 기능 ---------------------
+var img_01Top = parseInt(coverImg_01.css('top'));
 var img_02Top = parseInt(coverImg_02.css('top'));
+var img_02Left = parseInt(coverImg_02.css('left'));
 
 // 함수 ---------------------
 var scrollFn = function(){
   var winScroll = win.scrollTop() / 2;
-  coverImg_01.css({backgroundPositionY:winScroll+'px'});
-  coverImg_02.css({left:winScroll/2 +'px', top: img_02Top - winScroll});
+  // coverImg_01.css({backgroundPositionY:winScroll+'px'});
+  // coverImg_01.css({transform:'translateY('+winScroll+'px)'});
+  coverImg_01.css({top: img_01Top + winScroll +'px'});
+  coverImg_02.css({left:img_02Left+ (winScroll/10) +'px', 
+                   top: img_02Top - winScroll});
 }
 
 // 이벤트 ---------------------
