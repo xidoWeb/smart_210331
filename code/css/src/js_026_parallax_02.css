@@ -5,6 +5,7 @@
 }
 
 #headBox {
+  position: fixed; top: 0; z-index: 1000;
   width: 100%; height:40px;
   background-color: #4f823c;
 }
@@ -46,7 +47,7 @@ text-align: center;}
   background-color: #ddd;
 }
 .parallax {
-  position: relative;
+  position: relative; overflow: hidden;
   width: 100%; height: 100%;
 }
 .parallax div {
@@ -63,7 +64,8 @@ text-align: center;}
 .par_03 { background-image: url("../../img/parallax_multi/parallax_03.png");}
 .par_04 { background-image: url("../../img/parallax_multi/parallax_04.png");}
 .par_05 { background-image: url("../../img/parallax_multi/parallax_05.png");}
-.par_06 { background-image: url("../../img/parallax_multi/parallax_06.png");}
+.par_06 { background-image: url("../../img/parallax_multi/parallax_06.png");
+padding-bottom: 1rem;}
 .par_07 { background-image: url("../../img/parallax_multi/parallax_07.png");}
 
 /* ====================== */
