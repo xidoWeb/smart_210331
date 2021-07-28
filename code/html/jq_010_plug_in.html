@@ -30,6 +30,9 @@
   
 </head>
 <body>
+  <div class="loading">
+    <div class="load_img"></div>
+  </div>
   <!-- layout -->
   <div id="wrap">
     <h1 class="center"><a href="./all_contents.html">웹표준</a></h1><hr />
@@ -59,7 +62,18 @@
   <!-- <script src="../js/src/jq_010_plug_in.js"></script> -->
   <script src="../js/src/jq_010_plug_in_002.js"></script>
   <script>
+    
     (function($){
+      var loadSel = $('.loading');
+      $(document).ready(function(){
+        // setTimeout(function(){
+          loadSel.fadeOut(function(){
+            $(this).remove();
+          // });
+        },5000);
+      });
+      
+    
       $('.one').makePlugIn_01().css({backgroundColor:'#faf'});
       $('.two').makePlugIn_01('#fff');
       $('.three').makePlugIn_01('rgba(255,100,50,0.7)');
