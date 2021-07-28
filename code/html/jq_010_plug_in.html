@@ -52,6 +52,14 @@
   <!-- script -->
   <script src="../js/jquery/jquery-3.6.0.min.js"></script>
   <script src="../js/jquery/jquery-ui.min.js"></script>
-  <script src="../js/src/jq_010_plug_in.js"></script>
+  <!-- <script src="../js/src/jq_010_plug_in.js"></script> -->
+  <script src="../js/src/jq_010_plug_in_002.js"></script>
+  <script>
+    (function($){
+      $('.one').makePlugIn_01().css({backgroundColor:'#faf'});
+      $('.two').makePlugIn_01('#fff');
+      $('.three').makePlugIn_01('rgba(255,100,50,0.7)');
+    })(jQuery);
+  </script>
 </body>
 </html>
