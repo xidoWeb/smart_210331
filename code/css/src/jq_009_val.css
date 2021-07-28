@@ -44,7 +44,5 @@ fieldset {
   color:#fff; font-weight: 700;
   border-radius:0.3rem;  box-sizing: border-box;}
 
-
-
 .send_btn input:focus { border:2px solid #171717; }
 .send_btn input:hover { box-shadow:0.3rem 0 0.3rem #777;}
