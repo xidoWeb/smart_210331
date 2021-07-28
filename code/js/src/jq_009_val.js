@@ -11,7 +11,14 @@ var sendBtn = $('#send');
 var rowResult = $('.row_result');
 
 // 함수
-var innerP = function(data, text){
+var innerP = function(i){
+  var result = [
+    {type:'error', text:'두글자 이상 작성해주세요.'},
+    {type:'success', text:'두글자 이상 작성되었습니다.'},
+  ];
+  var data = result[i].type;
+  var text = result[i].text;
+  
   rowResult.html('<p></p>');
   rowResult.find('p').eq(0).addClass(data);
   rowResult.find('p').eq(0).text(text);
@@ -21,13 +28,17 @@ var innerP2 = function(data, text){
   rowResult.find('p').eq(1).addClass(data);
   rowResult.find('p').eq(1).text(text);
 };
-inputR.on('keyup', function(){
+
+inputR.on('blur', function(){
   var inputValue = inputR.val();
   var typeNumCheck = $.isNumeric(inputValue);
   if(inputValue.length < 2){
-    innerP('error', '두글자 이상 작성해주세요');
+    // innerP('error', '두글자 이상 작성해주세요');
+    innerP(0);
   }else{
-    innerP('success', '두글자 이상 작성되었습니다.');
+    // innerP('success', '두글자 이상 작성되었습니다.');
+    innerP(1);
+
     if(!typeNumCheck){
       innerP2('success', '감사합니다.');
     }
