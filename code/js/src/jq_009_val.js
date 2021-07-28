@@ -5,7 +5,15 @@
 // 1. input(#inputResult)의 값을 확인
 // 2. 문제발생시 처리
 // 3. 작성된 값이 숫자인지 아닌지를 구분: $.isNumeric('값');
+// 4. 정규표현식 구분법 간단하게 학습해보기
 
+// 정규표현식 
+var ckNum = /[0-9]/;  // 숫자
+var ckAlp = /[a-zA-Z]/; // 영문
+var ckSpc = /[~!@#$%^&*()_+|<>?:{}]/;  // 특수문자
+var ckKor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;  // 한글
+
+// 변수
 var inputR = $('#inputResult');
 var sendBtn = $('#send');
 var rowResult = $('.row_result');
@@ -18,7 +26,7 @@ var innerP = function(i){
   ];
   var data = result[i].type;
   var text = result[i].text;
-  
+
   rowResult.html('<p></p>');
   rowResult.find('p').eq(0).addClass(data);
   rowResult.find('p').eq(0).text(text);
@@ -28,6 +36,13 @@ var innerP2 = function(data, text){
   rowResult.find('p').eq(1).addClass(data);
   rowResult.find('p').eq(1).text(text);
 };
+
+// 이벤트
+inputR.on('keyup', function(){
+  var result = inputR.val();
+  var dataType = !ckNum.test(result) && !ckAlp.test(result) && !ckSpc.test(result) && ckKor.test(result);
+  if(dataType){ console.log(' 한글을 작성하였습니다. ')}
+});
 
 inputR.on('blur', function(){
   var inputValue = inputR.val();
@@ -48,6 +63,8 @@ inputR.on('blur', function(){
     innerP2('error', inText);
   }
 });
+
+
 
 sendBtn.on('click', function(e){
   e.preventDefault();
