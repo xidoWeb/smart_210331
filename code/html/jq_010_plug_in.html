@@ -48,6 +48,10 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et rerum a exercitationem eos rem eveniet provident. Dicta a natus esse.</p>
     </div>
     
+    <div class="part four">
+      <button type="button">색상을 바꾸자</button>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et rerum a exercitationem eos rem eveniet provident. Dicta a natus esse.</p>
+    </div>
   </div>
   <!-- script -->
   <script src="../js/jquery/jquery-3.6.0.min.js"></script>
@@ -59,6 +63,7 @@
       $('.one').makePlugIn_01().css({backgroundColor:'#faf'});
       $('.two').makePlugIn_01('#fff');
       $('.three').makePlugIn_01('rgba(255,100,50,0.7)');
+      $('.four').makePlugIn_02({color:'#fff',bg:'#a70',fs:'1rem'});
     })(jQuery);
   </script>
 </body>
