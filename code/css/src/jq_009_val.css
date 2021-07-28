@@ -1,0 +1,50 @@
+/* jq_009_val.css */
+
+#wrap {
+  width: 800px; height:auto;
+  padding:3rem; margin:auto;
+}
+
+.part {width: 100%; height: auto;}
+form {
+  width: 100%; height:auto;
+  padding:1rem; box-sizing:border-box;
+  border:1px solid #999;
+}
+fieldset {
+  width: 100%; height:auto;
+  background-color: #9df;
+}
+
+.row {
+  width: 70%; height:50px;  padding:1rem;}
+.row > label { 
+  display: inline-block;  width: 100%; height: auto;
+  font-size:1.5rem; margin-bottom: 0.5rem;}
+.row > input {
+  width: 100%; height:40px; 
+  border-bottom:1px solid #555;
+  text-indent:1rem;  font-size: 1.7rem;
+  color:#357; font-weight: 700;
+  background-color: #fff;}
+  .row > input::placeholder{color:#575757; font-weight:100;}
+  .row > input:focus{ background-color: #fda;}
+.send_btn {
+  width: 70%; height: auto;
+  padding:1rem; margin-top: 1rem;}
+
+[type="reset"]{
+  padding:1rem; background-color: #555;
+  color:#fff;  border-radius:0.3rem;  box-sizing: border-box;}
+
+[type="submit"]{
+  float:left; /* float을 사용하면 display:block; */
+  margin-right: 2rem;
+  padding:1rem 3rem; background-color: #f00;
+  color:#fff; font-weight: 700;
+  border-radius:0.3rem;  box-sizing: border-box;}
+
+
+
+.send_btn input:focus { border:2px solid #171717; }
+.send_btn input:hover { box-shadow:0.3rem 0 0.3rem #777;}

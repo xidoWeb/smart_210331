@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- html/jq_009_val.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--[if IE]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/ie9js/ie9.min.js"></script>
+    <script src="../ie/csspie/PIE.js"></script>
+    <script src="../ie/responsive.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  
+  <!-- font.google : noto sans -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- fontawesome5 -->
+  <link rel="stylesheet" href="../fonts/fontawesome5/css/all.min.css">
+  
+  <!-- css design -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/jq_009_val.css">
+
+  <title>웹 기초</title>
+  
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1 class="center"><a href="./all_contents.html">웹표준</a></h1><hr />
+    <h2>form 간단한 기능 작성 및 체크</h2>
+    <p>jQuery에서는 form에서 작성한 여러 data를 확인하여, 값을 원활하게 작성하였는지 등을 체크</p>
+
+    <div class="part">
+      <form action="naver.com" method="POST">
+        <fieldset>
+          <legend>값 전송 확인</legend>
+
+          <div class="row">
+            <label for="inputResult">아침에 출근을 이용한 교통편을 작성해주세요.</label>
+            <input type="text" id="inputResult" name="input__Result" value="" 
+            placeholder="출근 교통편"
+            />
+          </div>
+          <div class="row_result"></div>
+
+          <div class="send_btn">
+            <input type="reset" id="cancle" value="취소" />
+            <input type="submit" id="send" value="전송" />
+          </div>
+
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- script -->
+  <script src="../js/jquery/jquery-3.6.0.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <script src="../js/src/jq_009_val.js"></script>
+</body>
+</html>
