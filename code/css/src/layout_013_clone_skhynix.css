@@ -1,7 +1,7 @@
 /* layout_013_clone_skhynix.css */
 
 #wrap {
-  width: 100%; min-width:1280px; 
+  width: 100%; /* min-width:1280px; */
   height:auto; margin: auto;
 
   padding-bottom: 500px;
@@ -43,8 +43,11 @@ h1 a { display: block; width: 100%; height: 100%;}
 
 /* viewBox */
 #viewBox {
+  position: relative;
   width: 100%; 
-  height: 35vw; min-height:400px; max-height:1000px;
+  /* height: 35vw;  */
+  height:50vw;
+  min-height:600px; max-height:1000px;
   padding:1rem; box-sizing: border-box;
   background-color: #aca;
 }
@@ -65,3 +68,50 @@ h1 a { display: block; width: 100%; height: 100%;}
   background-image: url("../../img/gallery_02/original/c-d-x-PDX_a_82obo-unsplash.jpg");
   background-size: cover;
 }
+
+.scroll_move {
+  position: absolute; 
+  left: 50%; bottom: 1.5rem;
+  width: 20px; height: 40px;
+  border:3px solid #fff;
+  border-radius:20px;
+  transform: translate(-50%);
+}
+
+.scroll_move:before{
+  content:""; display: block;
+  position: absolute; left: 50%; top:50%;
+  width: 3px; height: 8px;
+  border-radius:3px;
+  transform: translate(-50%);
+  background-color: #fff;
+
+  animation:mwheel 1000ms ease-out infinite alternate;
+}
+
+@keyframes mwheel {
+  0% {margin-top:0;}
+  100%{margin-top:-1rem;}
+}
+
+/* .scroll_move:after{} */
+
+#conBox {
+  display:flex;
+
+  width: 100%; height: auto;
+  margin-top: 1rem;
+  background-color: #aff;
+}
+
+#conBox>div{
+  padding: 2vw;
+}
+
+.dbl .inner_area{
+  background-color: #fca;
+}
+.esg .inner_area{
+  background-color: #faf;
+}
+
