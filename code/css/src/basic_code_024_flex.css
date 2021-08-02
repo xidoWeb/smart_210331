@@ -46,3 +46,25 @@
 }
 .origin_float p { line-height: 1.5;}
 
+/* -------------------------- */
+.card_wrap {
+  width: 100%; height: auto;
+}
+
+.card_wrap ul {
+  width: 100%; height: auto;
+  padding: 1rem; box-sizing: border-box;
+  background-color: #faa;
+}
+
+.card_wrap li {
+  float:left; margin-right:100px;
+  width: 180px; height: 400px; 
+  border:1px solid #333;
+  box-sizing: border-box;
+  border-radius:0.3rem;
+}
+.card_wrap li:last-child{margin-right: 0;}
+.card_wrap ul:after{
+  content:""; display: block; clear:both;
+}
