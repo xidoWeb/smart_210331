@@ -30,10 +30,12 @@ h1 a { display: block; width: 100%; height: 100%;}
   width: 100%; height: 100%;
   display:flex;
   justify-content: space-around;
-  /* align-content: center; */
+  /* align-items: center; */
 }
 
-#gnbBox li {padding: 1rem; background-color: #add;}
+#gnbBox li {
+  display:flex; align-items:center;
+  padding: 1rem; background-color: #add;}
 
 
 #navBox {
@@ -105,13 +107,50 @@ h1 a { display: block; width: 100%; height: 100%;}
 }
 
 #conBox>div{
+  width:auto; height: 300px;
   padding: 2vw;
 }
 
 .dbl .inner_area{
+  width: 100%; height: 100%;
   background-color: #fca;
 }
 .esg .inner_area{
+  width: 100%; height: 100%;
   background-color: #faf;
+}
+
+#dataBox {
+  width: 100%; max-width:1600px;
+  height:200px; 
+  margin-top: 3rem;
+}
+
+#dataBox ul {
+  display: flex;
+  width: 100%; height:100%;
+  background-color: #fff;
+}
+
+#dataBox li {
+  height: 100%;
+  text-align: center;
+  padding: 1rem; box-sizing: border-box;
+  border-right:1px solid #777;
+}
+#dataBox li:last-child {border: 0;}
+
+#dataBox dl {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%; height:100%;
+}
+#dataBox dt { font-size: 1.7rem; font-weight: 700; }
+#dataBox dt abbr {text-decoration: none;}
+#dataBox dt small {font-size:1.2rem;}
+#dataBox dd { 
+  padding-top: 0.5rem;
+  font-size:1.1rem; color:#777; 
 }
 
