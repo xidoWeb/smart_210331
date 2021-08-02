@@ -3,6 +3,7 @@
 #wrap {
   width: 800px; height:auto;
   margin:auto; padding: 1rem;
+  padding-bottom: 500px;
   background-color: #ddd;}
 
 .part {
@@ -29,7 +30,14 @@
 }
 
 .flex {
+  width: 100%;
   display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  /* justify-content:flex-end; */
+}
+.flex li {
+  box-sizing: border-box; border:1px solid #333;
 }
 
 .origin_float {
@@ -59,7 +67,7 @@
 
 .card_wrap li {
   float:left; margin-right:100px;
-  width: 180px; height: 400px; 
+  width: 180px; height: 300px; 
   border:1px solid #333;
   box-sizing: border-box;
   border-radius:0.3rem;
@@ -67,4 +75,25 @@
 .card_wrap li:last-child{margin-right: 0;}
 .card_wrap ul:after{
   content:""; display: block; clear:both;
+}
+
+/* ----------------------- */
+.new_card_wrap {
+  width: 100%; height: auto;  
+}
+
+.new_card_wrap ul{
+  display:flex;
+  /* justify-content: flex-end; */
+  /* justify-content: space-around; */
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 1rem; box-sizing:border-box;
+  background-color: #acf;
+}
+.new_card_wrap li{
+  width: 180px; height: 300px; 
+  border:1px solid #333;
+  box-sizing: border-box;
+  border-radius:0.3rem;
 }
