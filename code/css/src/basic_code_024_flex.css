@@ -1,0 +1,48 @@
+/* basic_code_024_flex.css */
+
+#wrap {
+  width: 800px; height:auto;
+  margin:auto; padding: 1rem;
+  background-color: #ddd;}
+
+.part {
+  width: 100%; height: auto;
+}
+
+.part > ul {
+  width: 100%; height: auto;
+  border:1px solid #777;
+  margin-bottom: 1rem;
+}
+
+.part li {
+  width: 200px; height:150px;
+  background-image:linear-gradient(45deg, #acf, #fc7);
+}
+
+.float::after {
+  content:""; display: block; clear:both;
+}
+
+.float > li {
+  float:left;
+}
+
+.flex {
+  display:flex;
+}
+
+.origin_float {
+  width: 100%; height:auto;
+  padding:1rem; box-sizing: border-box;
+  border:1px solid #333;
+}
+.inner_img { 
+  float:left;
+  width: 150px; height: 150px; 
+  margin-right:1rem;
+  border-radius:0.3rem;
+  background-color: #fff; 
+}
+.origin_float p { line-height: 1.5;}
+
