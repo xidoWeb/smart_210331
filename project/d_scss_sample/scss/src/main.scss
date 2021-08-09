@@ -52,12 +52,23 @@ p{
   @include media(1920){ width:100%; max-width:1440px;}
 }
 
-$n : 'juice';
-.#{$n}_latte { 
-  @include bg-img(#{n}+'_01.jpg');
+$n : 'juice_';
+$menu : ('latte','milk','ice','wiskey','wine','choco');
+
+@for $i from 1 through length($menu) {
+  .#{$n}#{nth($menu, $i)} { 
+    @include bg-img(#{$n}+'0'+#{$i}+'.jpg');
+  }
 }
-.#{$n}_milk { width: 80%;}
-.#{$n}_ice { width: 80%;}
-.#{$n}_wiskey { width: 80%;}
-.#{$n}_wine { width: 80%;}
-.#{$n}_choco { width: 80%;}
+
+// @import url();
+// @keyframes name {}
+// @media ...
+
+// @for ... {}
+// @if () {}
+// @elseif(){}
+// @function name(){}
+// @mixin name(){}
+// @include name;
+// @content;

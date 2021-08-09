@@ -90,7 +90,7 @@ p > a > span {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url("../img/bg/n_01.jpg");
+  background-image: url("../img/bg/juice_01.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -104,21 +104,86 @@ p > a > span {
 }
 
 .juice_milk {
-  width: 80%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg/juice_02.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.juice_milk > span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .juice_ice {
-  width: 80%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg/juice_03.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.juice_ice > span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .juice_wiskey {
-  width: 80%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg/juice_04.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.juice_wiskey > span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .juice_wine {
-  width: 80%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg/juice_05.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.juice_wine > span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .juice_choco {
-  width: 80%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg/juice_06.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.juice_choco > span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
