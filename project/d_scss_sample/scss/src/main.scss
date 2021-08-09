@@ -1,0 +1,63 @@
+// main.scss
+@import "../base/common";
+@import "../base/variable";
+
+
+#wrap { 
+  width: 100%; min-width:960px; 
+  margin:auto; 
+  background-color: #ddd;}
+
+#headBox { width: 100%; }
+h1 { height: 100px; height:200px;
+ > a {  $f: 100%; 
+   display: block; width: $f; height:$f; 
+  
+   &:hover > span {color:#7dd;}
+  } //a
+ span {  color:$red;  } //span
+}// h1
+
+@mixin bg-img($i:"img.jpg", $s:cover, $r:no-repeat, $x:0, $y:0){
+  display: block; 
+  width: 100%; height: 100%;
+
+  background-image: url($url + $i);
+  background-size: $s;
+  background-repeat: $r;
+  background-position: $x $y;
+
+  >span {
+    position: absolute; display: block;
+    width: 0; height: 0; overflow: hidden;
+  }
+} // @mixin bg-img
+$url : '../img/bg/';  // 경로의 기준은 최종 css문서
+
+@mixin media($size){
+  @media  screen and (max-width:$size+'px') {
+    @content;
+  }
+}
+
+
+
+ul>li>a{  @include bg-img($i:"set_img.png"); }
+p>a {  @include bg-img("location.jpg"); }
+
+
+p{
+  @include media(640){ width:100%; height:500px;}
+  @include media(1024){ width: 90%; height: 300px;}
+  @include media(1920){ width:100%; max-width:1440px;}
+}
+
+$n : 'juice';
+.#{$n}_latte { 
+  @include bg-img(#{n}+'_01.jpg');
+}
+.#{$n}_milk { width: 80%;}
+.#{$n}_ice { width: 80%;}
+.#{$n}_wiskey { width: 80%;}
+.#{$n}_wine { width: 80%;}
+.#{$n}_choco { width: 80%;}
