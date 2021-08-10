@@ -8,3 +8,7 @@
 # path.* -> path이름을 가진 모든 확장자
 # basic_*.html 
 
+# .gitignore git에 올리지 않는 폴더/파일세팅
+
+# node모듈
+**/node_modules/ 

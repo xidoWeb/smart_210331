@@ -40,9 +40,7 @@ $url : '../img/bg/';  // 경로의 기준은 최종 css문서
   }
 }
 
-
-
-ul>li>a{  @include bg-img($i:"set_img.png"); }
+ul>li>a{  @include bg-img($i:'set_img.png'); }
 p>a {  @include bg-img("location.jpg"); }
 
 
