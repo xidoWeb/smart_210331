@@ -1,0 +1,23 @@
+#wrap {
+  width: 100%;
+  height: auto;
+  background-color: #ddd; }
+
+#headBox {
+  width: 100%;
+  max-width: 1200px;
+  height: 100px;
+  margin: auto;
+  background-color: #aaf; }
+
+@media screen and (max-width: 768px) {
+  #headBox {
+    background-color: #acf; } }
+
+@media screen and (min-width: 1441px) {
+  #headBox {
+    background-color: #fff; } }
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  #headBox {
+    background-color: #fa0; } }

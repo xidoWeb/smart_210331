@@ -1,10 +1,23 @@
 // ------------------
 // color
-$white : #fff;
+$white : #fff; 
 $black : #171717;
 $primary: #06a;
+$sky : #aaf; 
 
-// text-color
+// text-color 
 $baseTColor : $black;
-$grayTColor : liten($black, 30%);
-$lightTColor : liten($black, 70%);
+$grayTColor : lighten($black, 30%);
+$lightTColor : lighten($black, 70%);
+ 
+// media query size
+$smart : 768;
+$tablet :1280;
+$laptop : 1440;
+
+// @media screen and (max-width:$smart + 'px'){}
+// @media screen and (min-width:($smart + 1) + 'px') and (max-width:$tablet + 'px'){}
+// @media screen and (min-width:($tablet + 1) + 'px') and (max-width:$laptop + 'px'){}
+// @media screen and (min-width:($laptop + 1) + 'px') {}
+
+

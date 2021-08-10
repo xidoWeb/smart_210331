@@ -1,2 +1,10 @@
 @import "../base/var";
+@import "../base/mix";
 
+#wrap {
+  width: 100%; height: auto;
+  background-color: #ddd;
+} 
+
+@import "../particle/common_header";
+    

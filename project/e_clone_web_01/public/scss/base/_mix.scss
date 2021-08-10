@@ -1,0 +1,18 @@
+
+@mixin docSmart($device:$smart) {
+  @media screen and (max-width:$device + 'px'){ 
+    @content; // 이곳에 외부에서 직업 내용을 작성할 수 있는 옵션을 적용
+  }
+}
+
+@mixin docPc($device:$laptop){
+  @media screen and (min-width:($device + 1)+ 'px'){ 
+    @content;
+  }
+}
+
+@mixin docDual($device1: $smart , $device2: $tablet){
+  @media screen and (min-width:($device1 + 1) + 'px') and (max-width:$device2 + 'px'){
+    @content;
+  }
+}

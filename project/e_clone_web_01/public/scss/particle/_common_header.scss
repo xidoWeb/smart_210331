@@ -1,0 +1,12 @@
+// headBox
+
+#headBox {
+  width:100%; max-width:1200px; height:100px;
+  margin:auto; background-color: $sky; 
+}
+
+@include docSmart {  #headBox { background-color: #acf;} }
+@include docPc {  #headBox {background-color: #fff;} }
+@include docDual($smart, $laptop){  #headBox { background-color: #fa0;} }
+
+
