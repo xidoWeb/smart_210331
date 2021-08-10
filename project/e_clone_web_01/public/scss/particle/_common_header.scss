@@ -1,12 +1,42 @@
 // headBox
+@use "../base/var";
 
 #headBox {
   width:100%; max-width:1200px; height:100px;
   margin:auto; background-color: $sky; 
+  @include docSmart {  background-color: #acf; }
 }
-
-@include docSmart {  #headBox { background-color: #acf;} }
 @include docPc {  #headBox {background-color: #fff;} }
 @include docDual($smart, $laptop){  #headBox { background-color: #fa0;} }
 
+// ---------------------------------
+h1{
+  float:left; width: 100px; height: 50px; background-color: $white;
+  &>a{ @include full; }
+  &>a:hover{background-color: $primary;}
+  &>a:focus{background-color: $sky;}
+}
 
+#gnbBox {
+
+  float:right;
+  width:340px / $smart * 100vw;
+  background-color: $sky;
+  @include clear;
+
+  & > h2 { @include blind } 
+  &>ul {
+    float:left; width: 100%; height: auto; 
+    @include padding(5px 20px);
+   }
+    li { float:left; 
+      // width:50px; 
+      // height: 30px; 
+      @include unit(width,50);
+      @include unit(height,30);
+      margin-right:10px; 
+      background-color: #fff;
+      // &:last-child{ margin-right: 0; }
+      @include last;
+    }
+} 

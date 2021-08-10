@@ -1,18 +1,37 @@
 
+// 생성: @mixin 만들이름(){}   
+// 사용(불러오기): @include 만든이름
+
+
 @mixin docSmart($device:$smart) {
-  @media screen and (max-width:$device + 'px'){ 
-    @content; // 이곳에 외부에서 직업 내용을 작성할 수 있는 옵션을 적용
+  &{
+    @media screen and (max-width:$device){ 
+      @content; // 이곳에 외부에서 직업 내용을 작성할 수 있는 옵션을 적용
+    }
   }
 }
 
 @mixin docPc($device:$laptop){
-  @media screen and (min-width:($device + 1)+ 'px'){ 
+  @media screen and (min-width:($device + 1)){ 
     @content;
   }
 }
 
 @mixin docDual($device1: $smart , $device2: $tablet){
-  @media screen and (min-width:($device1 + 1) + 'px') and (max-width:$device2 + 'px'){
+  @media screen and (min-width:($device1 + 1)) and (max-width:$device2){
     @content;
   }
+}
+
+
+@mixin blind(){ display: block; width: 0; height: 0; position: absolute; z-index:-1; overflow: hidden; }
+@mixin full(){
+  display: block;  width: 100%; height: 100%;  border:1px solid #333;
+  &>span { @include blind } }
+@mixin last($o:right){  &:last-child{ margin-#{$o}: 0;} }
+@mixin clear(){  &:after,  &::after{ content:""; display: block; clear:both; } }
+@mixin padding($unit){  padding:$unit; box-sizing: border-box;}
+@mixin unit($d, $s){
+  #{$d}:#{$s}px;
+  #{$d}:#{$s/16}rem;
 }

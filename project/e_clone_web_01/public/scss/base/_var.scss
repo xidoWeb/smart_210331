@@ -11,9 +11,9 @@ $grayTColor : lighten($black, 30%);
 $lightTColor : lighten($black, 70%);
  
 // media query size
-$smart : 768;
-$tablet :1280;
-$laptop : 1440;
+$smart : 768px;
+$tablet :1280px;
+$laptop : 1440px;
 
 // @media screen and (max-width:$smart + 'px'){}
 // @media screen and (min-width:($smart + 1) + 'px') and (max-width:$tablet + 'px'){}
